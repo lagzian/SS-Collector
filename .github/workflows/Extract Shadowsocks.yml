@@ -1,35 +1,45 @@
 name: Extract Shadowsocks
-
 on:
-  workflow_dispatch:  
   schedule:
     - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+env:
+  FILE_URL: "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt"
+  OUTPUT_FILE: "shadowsockes.txt"
+  PAT: ${{ secrets.GH_TOKEN1 }}
+  GIT_USERNAME: "lagzian"
+  GIT_EMAIL: "milad.lagzian@gmail.com"
 
 jobs:
-
-  extract:
-
+  extract_shadowsocks:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: Delete existing file  
-      run: |
-        rm -f shadowsockes.txt
-        
-    - name: Download and extract
-      run: |
-        curl https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt | grep '^ss://' > shadowsockes.txt
+      - name: Set Up Git Config
+        run: |
+          git config --global user.name "${GIT_USERNAME}"
+          git config --global user.email "${GIT_EMAIL}"
 
-    - name: Commit changes
-      run: |
-        git config --global user.name 'lagzian'
-        git config --global user.email 'milad.lagzian@gmail.com'
-        git add .
-        git commit -m "Extracted shadowsocks"
+      - name: Download TXT File
+        run: |
+          curl -o temp.txt -L "${FILE_URL}"
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.ACCESS_TOKEN }}
+      - name: Extract Lines Starting with "ss://"
+        run: |
+          grep '^ss://' temp.txt > "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
+
+      - name: Clean Up
+        run: |
+          rm temp.txt
+
+      - name: Commit and Push Changes
+        run: |
+          git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
+          git commit -m "Update shadowsockes.txt" || true
+          git push --set-upstream origin "${GITHUB_REF}" || true
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
