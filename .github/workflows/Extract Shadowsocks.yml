@@ -39,7 +39,6 @@ jobs:
         run: |
           git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
           git commit -m "Update shadowsockes.txt" || true
-          git remote set-url origin "https://${GIT_USERNAME}:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}"
-          git push --set-upstream origin "${GITHUB_REF}" || true
+          git push origin HEAD:${GITHUB_REF}
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN2 }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
