@@ -40,5 +40,3 @@ jobs:
           git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
           git commit -m "Update shadowsockes.txt" || true
           git push origin HEAD:${GITHUB_REF}
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
