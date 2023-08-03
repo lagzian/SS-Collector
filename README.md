@@ -1,6 +1,6 @@
 # Shadowsocks Configurations
 
-This repository contains a list of Shadowsocks configurations that you can use for secure and private internet browsing.
+This repository contains a list of Shadowsocks configurations that you can use for secure and private internet browsing. The configuration list is updated automatically every 12 hours.
 
 ## Subscribe to Shadowsocks Configs
 
