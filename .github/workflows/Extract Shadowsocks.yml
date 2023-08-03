@@ -39,4 +39,8 @@ jobs:
         run: |
           git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
           git commit -m "Update shadowsockes.txt" || true
+          git remote remove origin
+          git remote add origin "https://github.com/lagzian/SS-Collector.git"
           git push origin HEAD:${GITHUB_REF}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
