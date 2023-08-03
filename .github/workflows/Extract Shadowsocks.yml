@@ -7,7 +7,6 @@ on:
 env:
   FILE_URL: "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt"
   OUTPUT_FILE: "shadowsockes.txt"
-  PAT: ${{ secrets.GH_TOKEN1 }}
   GIT_USERNAME: "lagzian"
   GIT_EMAIL: "milad.lagzian@gmail.com"
 
@@ -40,6 +39,7 @@ jobs:
         run: |
           git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
           git commit -m "Update shadowsockes.txt" || true
+          git remote set-url origin "https://${GIT_USERNAME}:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}"
           git push --set-upstream origin "${GITHUB_REF}" || true
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN2 }}
