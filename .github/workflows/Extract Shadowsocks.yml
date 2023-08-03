@@ -1,4 +1,4 @@
-name: Extract Shadowsocks 
+name: Extract Shadowsocks
 
 on:
   workflow_dispatch:  
@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Delete existing file
+    - name: Delete existing file  
       run: |
         rm -f shadowsockes.txt
         
@@ -24,12 +24,12 @@ jobs:
 
     - name: Commit changes
       run: |
-        git config --global user.name 'Automated'
-        git config --global user.email 'actions@users.noreply.github.com'
+        git config --global user.name 'lagzian'
+        git config --global user.email 'milad.lagzian@gmail.com'
         git add .
         git commit -m "Extracted shadowsocks"
 
     - name: Push changes
       uses: ad-m/github-push-action@master
-      with: 
+      with:
         github_token: ${{ secrets.ACCESS_TOKEN }}
