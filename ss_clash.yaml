@@ -860,6 +860,8 @@ proxy-groups:
       - UA-5.188.6.8-9270
       - MD-45.145.0.31-17293
 rules:
+ - GEOIP,IR,DIRECT,
+ - DOMAIN-SUFFIX,ir,DIRECT,
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
  - IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
