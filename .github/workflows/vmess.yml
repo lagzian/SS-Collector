@@ -27,9 +27,9 @@ jobs:
         run: |
           curl -o temp1.txt -L "${FILE_URL}"
 
-      - name: Extract Lines Starting with "ss://"
+      - name: Extract Lines Starting with "vmess://"
         run: |
-          grep '^ss://' temp1.txt > "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
+          grep '^vmess://' temp1.txt > "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
 
       - name: Convert Lines to Base64 and Save
         run: |
