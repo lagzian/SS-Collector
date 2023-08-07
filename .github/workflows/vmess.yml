@@ -1,0 +1,56 @@
+name: Extract Vmess
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+env:
+  FILE_URL: "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt"
+  OUTPUT_FILE: "vmess.txt"
+  BASE64_FILE: "vmess_B64.txt"
+  CLASH_YAML_FILE: "vmess_clash.yaml"
+
+jobs:
+  extract_shadowsocks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Git Config
+        run: |
+          git config --global user.name "${{ secrets.GIT_USERNAME }}"
+          git config --global user.email "${{ secrets.GIT_EMAIL }}"
+
+      - name: Download TXT File
+        run: |
+          curl -o temp1.txt -L "${FILE_URL}"
+
+      - name: Extract Lines Starting with "ss://"
+        run: |
+          grep '^ss://' temp1.txt > "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
+
+      - name: Convert Lines to Base64 and Save
+        run: |
+          cat "${GITHUB_WORKSPACE}/${OUTPUT_FILE}" | base64 -w 0 > "${GITHUB_WORKSPACE}/${BASE64_FILE}"
+
+      - name: Fetch Content and Generate YAML
+        run: |
+          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt&insert=false"
+          # Optional: Convert to YAML format if needed
+          # cat "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" | yq eval -j - > "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
+
+      - name: Clean Up
+        run: |
+          rm temp1.txt
+
+      - name: Commit and Push Changes
+        run: |
+          git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${BASE64_FILE}" "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
+          git commit -m "Update vmess.txt, vmess_B64.txt, and vmess_clash.yaml" || true
+          git remote remove origin
+          git remote add origin "https://github.com/lagzian/SS-Collector.git"
+          git push origin HEAD:${GITHUB_REF}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
