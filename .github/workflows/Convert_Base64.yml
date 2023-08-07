@@ -1,0 +1,40 @@
+name: Convert to Base64
+
+on:
+  workflow_run:
+    workflows: ["Extract Shadowsocks"]
+    types:
+      - completed
+
+jobs:
+  convert_to_base64:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Convert Lines to Base64 and Save
+        run: |
+          cat "${GITHUB_WORKSPACE}/${OUTPUT_FILE}" | base64 -w 0 > "${GITHUB_WORKSPACE}/${BASE64_FILE}"
+
+      - name: Commit and Push Changes
+        run: |
+          git add "${GITHUB_WORKSPACE}/${BASE64_FILE}"
+          git commit -m "Update SS_B64.txt" || true
+          git push origin HEAD:${GITHUB_REF}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
+
+      - name: Trigger Third Workflow
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GH_TOKEN1 }}
+          script: |
+            const { data: workflow } = await github.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_file: 'path-to-third-workflow.yml',
+              ref: context.sha
+            });
+            console.log(`Workflow dispatched with ID: ${workflow.id}`);
