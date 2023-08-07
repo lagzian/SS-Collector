@@ -1,4 +1,4 @@
-name: Extract Shadowsocks_N1
+name: Extract Shadowsocks
 on:
   schedule:
     - cron: "0 */12 * * *"
@@ -16,7 +16,7 @@ jobs:
       
       - name: Clean Up
         run: |
-          rm temp.txt
+          if [ -f temp.txt ]; then rm temp.txt; fi
 
       - name: Commit and Push Changes
         run: |
