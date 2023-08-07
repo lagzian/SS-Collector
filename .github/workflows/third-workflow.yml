@@ -1,0 +1,29 @@
+name: Fetch Clash URL
+
+on:
+  workflow_run:
+    workflows: ["Convert to Base64"]
+    types:
+      - completed
+
+jobs:
+  fetch_clash_url:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Fetch Content and Save
+        run: |
+          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/ss_B64.txt&insert=false"
+          # Optional: Convert to YAML format if needed
+          # cat "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" | yq eval -j - > "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
+
+      - name: Commit and Push Changes
+        run: |
+          git add "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
+          git commit -m "Update ss_clash.yaml" || true
+          git push origin HEAD:${GITHUB_REF}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
