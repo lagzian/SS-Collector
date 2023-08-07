@@ -25,7 +25,7 @@ jobs:
 
       - name: Download TXT File
         run: |
-          curl -o temp.txt -L "${FILE_URL}"
+          curl -o temp1.txt -L "${FILE_URL}"
 
       - name: Extract Lines Starting with "vmess://"
         run: |
