@@ -1,0 +1,40 @@
+name: Extract Shadowsocks_N1
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  extract_shadowsocks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # Other steps to extract the shadowsocks configurations...
+      
+      - name: Clean Up
+        run: |
+          rm temp.txt
+
+      - name: Commit and Push Changes
+        run: |
+          git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
+          git commit -m "Update shadowsockes.txt" || true
+          git push origin HEAD:${GITHUB_REF}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
+
+      - name: Trigger Second Workflow
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GH_TOKEN1 }}
+          script: |
+            const { data: workflow } = await github.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_file: 'path-to-second-workflow.yml',
+              ref: context.sha
+            });
+            console.log(`Workflow dispatched with ID: ${workflow.id}`);
