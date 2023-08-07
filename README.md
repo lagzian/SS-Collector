@@ -1,15 +1,13 @@
-Here is an updated README with VMESS links added in a table:
-
 # Shadowsocks/VMESS Configurations
 
-This repository contains various Shadowsocks and VMESS configuration lists that get updated automatically every 12 hours. 
+This repository contains various Shadowsocks and VMESS configuration lists that get updated automatically every 12 hours.
 
 ## Subscription Links
 
 | Configuration | Normal | Base64 Encoded | Clash YAML |
 |-|-|-|-|  
-| ShadowSocks | https://raw.githubusercontent.com/lagzian/SS-Collector/main/shadowsockes.txt | https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS_B64.txt | https://raw.githubusercontent.com/lagzian/SS-Collector/main/ss_clash.yaml
-| VMESS | https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess.txt | https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt | https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_clash.yaml |
+| ShadowSocks | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/shadowsockes.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/ss_clash.yaml) |
+| VMESS | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_clash.yaml) |
 
 ## How to Use
 
