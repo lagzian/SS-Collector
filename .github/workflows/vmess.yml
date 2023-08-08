@@ -1,7 +1,7 @@
 name: Extract Vmess
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 env:
@@ -37,7 +37,7 @@ jobs:
 
       - name: Fetch Content and Generate YAML
         run: |
-          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fvmess_B64.txt&insert=false&emoji=true&list=false&tfo=false&scv=false&fdn=false&sort=false&new_name=true"
+          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://pxhryl-8080.csb.app/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt&type=clash&process=full"
           # Optional: Convert to YAML format if needed
           # cat "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" | yq eval -j - > "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
 
