@@ -1,14 +1,14 @@
 name: Extract Shadowsocks
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 env:
   FILE_URL: "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt"
   OUTPUT_FILE: "shadowsockes.txt"
   BASE64_FILE: "SS_B64.txt"
-  CLASH_YAML_FILE: "ss_clashTEST.yaml"
+  CLASH_YAML_FILE: "ss_clash.yaml"
 
 jobs:
   extract_shadowsocks:
@@ -48,7 +48,7 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${BASE64_FILE}" "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
-          git commit -m "Update shadowsockes.txt, SS_B64.txt, and ss_clashTEST.yaml" || true
+          git commit -m "Update shadowsockes.txt, SS_B64.txt, and ss_clash.yaml" || true
           git remote remove origin
           git remote add origin "https://github.com/lagzian/SS-Collector.git"
           git push origin HEAD:${GITHUB_REF}
