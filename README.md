@@ -4,7 +4,7 @@ This repository contains various Shadowsocks, VMESS, and Reality configuration l
 
 ## Subscription Links
 
-| Configuration | Normal | Base64 Encoded | Meta Clash |
+| Configuration | Normal | Base64 Encoded | Meta/Clash |
 |-|-|-|-|  
 | ShadowSocks | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/shadowsockes.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/ss_clash.yaml) |
 | VMESS | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_clash.yaml) |
