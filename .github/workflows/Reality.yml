@@ -37,7 +37,7 @@ jobs:
 
       - name: Fetch Content and Generate YAML
         run: |
-          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://pub-api-1.bianyuan.xyz/sub?target=clashR&url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/reality_B64.txt&insert=false"
+          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://pxhryl-8080.csb.app/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/reality_B64.txt&type=meta&process=full"
           # Optional: Convert to YAML format if needed
           # cat "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" | yq eval -j - > "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
 
