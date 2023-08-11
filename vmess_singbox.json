@@ -1,0 +1,3251 @@
+{
+    "log": {
+        "disabled": false,
+        "level": "fatal",
+        "timestamp": true
+    },
+    "experimental": {
+        "clash_api": {
+            "external_controller": "0.0.0.0:9090",
+            "external_ui": "yacd",
+            "external_ui_download_url": "https:\/\/github.com\/MetaCubeX\/Yacd-meta\/archive\/gh-pages.zip",
+            "external_ui_download_detour": "direct",
+            "secret": "YEBEKHE",
+            "default_mode": "rule",
+            "store_selected": true,
+            "cache_file": "clash.db"
+        }
+    },
+    "dns": {
+        "servers": [
+            {
+                "address": "https:\/\/8.8.4.4\/dns-query",
+                "address_resolver": "dns-direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-remote"
+            },
+            {
+                "address": "https:\/\/8.8.4.4\/dns-query",
+                "address_resolver": "dns-local",
+                "detour": "direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-direct"
+            },
+            {
+                "address": "local",
+                "detour": "direct",
+                "tag": "dns-local"
+            },
+            {
+                "address": "rcode:\/\/success",
+                "tag": "dns-block"
+            }
+        ],
+        "rules": [
+            {
+                "domain_suffix": [
+                    "ir"
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "outbound": "direct",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            },
+            {
+                "outbound": "any",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            }
+        ],
+        "reverse_mapping": true,
+        "strategy": "ipv4_only",
+        "independent_cache": true
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "listen_port": 6450,
+            "override_address": "8.8.4.4",
+            "override_port": 53,
+            "tag": "dns-in",
+            "type": "direct"
+        },
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "domain_strategy": "",
+            "interface_name": "tun0",
+            "inet4_address": "172.19.0.1\/30",
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "endpoint_independent_nat": true,
+            "sniff": true,
+            "sniff_override_destination": false
+        },
+        {
+            "domain_strategy": "",
+            "listen": "0.0.0.0",
+            "listen_port": 2080,
+            "sniff": true,
+            "sniff_override_destination": false,
+            "tag": "mixed-in",
+            "type": "mixed"
+        }
+    ],
+    "outbounds": [
+        {
+            "tag": "proxy",
+            "type": "selector",
+            "outbounds": [
+                "URL-TEST",
+                "🏁RELAY-172.67.219.19-0260 | 1",
+                "🏁RELAY-104.21.7.64-0189 | 2",
+                "🏁RELAY-104.17.151.185-0261 | 3",
+                "🇺🇸US-173.230.135.60-2175 | 4",
+                "🏁RELAY-172.67.156.223-0241 | 5",
+                "🇺🇸US-173.230.135.60-17133 | 6",
+                "🏁RELAY-104.21.56.221-1279 | 7",
+                "🇺🇸US-95.174.71.96-1193 | 8",
+                "🇺🇸US-107.167.20.183-1324 | 9",
+                "🇺🇸US-74.207.251.209-0220 | 10",
+                "🇺🇸US-64.32.10.216-1323 | 11",
+                "🇺🇸US-170.178.179.189-2162 | 12",
+                "🇺🇸US-107.167.20.183-18106 | 13",
+                "🇺🇸US-67.21.72.44-17375 | 14",
+                "🇺🇸US-140.99.120.187-18041 | 15",
+                "🇺🇸US-38.59.243.133-0732 | 16",
+                "🇺🇸US-142.4.115.172-0198 | 17",
+                "🇺🇸US-173.230.145.109-0205 | 18",
+                "🇺🇸US-45.12.144.68-17488 | 19",
+                "🇺🇸US-137.175.3.36-0236 | 20",
+                "🇺🇸US-198.2.223.3-0187 | 21",
+                "🇺🇸US-142.4.100.202-5257 | 22",
+                "🇺🇸US-192.74.228.169-0214 | 23",
+                "🇺🇸US-198.200.56.92-0229 | 24",
+                "🇺🇸US-38.54.250.37-0216 | 25",
+                "🇺🇸US-38.59.243.133-1988 | 26",
+                "🇺🇸US-74.217.182.119-1230 | 27",
+                "🇺🇸US-74.207.242.16-1078 | 28",
+                "🇺🇸US-74.207.242.16-17138 | 29",
+                "🇺🇸US-171.22.134.12-17877 | 30",
+                "🇬🇧GB-178.79.176.14-17148 | 31",
+                "🇺🇸US-142.0.132.12-3012 | 32",
+                "🇺🇸US-142.4.110.7-0256 | 33",
+                "🇺🇸US-137.175.9.216-5189 | 34",
+                "🇺🇸US-67.21.72.44-4066 | 35",
+                "🇺🇸US-67.21.72.44-4065 | 36",
+                "🇫🇷FR-51.15.105.39-0217 | 37",
+                "🇺🇸US-171.22.134.12-17876 | 38",
+                "🇺🇸US-45.33.41.97-4078 | 39",
+                "🇺🇸US-192.74.242.141-0191 | 40",
+                "🇺🇸US-38.63.0.85-9561 | 41",
+                "🇫🇷FR-51.15.105.39-17420 | 42",
+                "🇫🇷FR-141.94.222.208-0232 | 43",
+                "🇳🇱NL-209.250.244.74-9046 | 44",
+                "🇺🇸US-45.33.41.97-6632 | 45",
+                "🇩🇪DE-80.240.17.155-0785 | 46",
+                "🇩🇪DE-80.240.17.155-0222 | 47",
+                "🇩🇪DE-192.248.179.228-0790 | 48",
+                "🇩🇪DE-80.240.17.155-0201 | 49",
+                "🇩🇪DE-192.248.179.228-0210 | 50",
+                "🇺🇸US-142.4.126.56-0179 | 51",
+                "🏁RELAY-172.67.126.2-0285 | 52",
+                "🇳🇱NL-209.250.244.74-9048 | 53",
+                "🇺🇸US-74.217.179.133-0269 | 54",
+                "🇩🇪DE-130.162.47.123-8437 | 55",
+                "🇺🇸US-45.131.248.140-0848 | 56",
+                "🇺🇸US-74.207.242.16-17142 | 57",
+                "🇩🇪DE-130.162.47.123-18065 | 58",
+                "🇩🇪DE-139.144.73.22-17161 | 59",
+                "🇺🇸US-156.225.67.81-17920 | 60",
+                "🇩🇪DE-139.144.73.22-1553 | 61",
+                "🇩🇪DE-172.105.82.27-1071 | 62",
+                "🇺🇸US-45.131.248.140-1998 | 63",
+                "🇺🇸US-74.217.182.116-17370 | 64",
+                "🇺🇸US-140.99.128.125-18040 | 65",
+                "🇫🇷FR-51.15.105.39-9080 | 66",
+                "🇺🇸US-74.217.182.116-9724 | 67",
+                "🇨🇳CN-23.26.239.163-0252 | 68",
+                "🇺🇸US-137.175.11.155-18054 | 69",
+                "🇺🇸US-198.2.197.72-17683 | 70",
+                "🇺🇸US-198.2.204.161-17681 | 71",
+                "🏁RELAY-172.67.184.53-0258 | 72",
+                "🇬🇧GB-57.128.173.208-0855 | 73",
+                "🏁RELAY-172.67.184.53-0262 | 74",
+                "🏁RELAY-23.227.38.33-0466 | 75",
+                "🇺🇸US-45.12.112.123-0227 | 76",
+                "🇺🇸US-140.99.49.6-18036 | 77",
+                "🇺🇸US-45.131.248.140-0224 | 78",
+                "🇺🇸US-45.86.8.117-17470 | 79",
+                "🇺🇸US-45.86.8.117-17469 | 80",
+                "🇺🇸US-107.173.35.242-18104 | 81",
+                "🇺🇸US-135.148.47.240-15283 | 82",
+                "🇺🇸US-66.241.124.229-2178 | 83",
+                "🇫🇷FR-217.182.76.202-0832 | 84",
+                "🇺🇸US-38.63.0.89-15301 | 85",
+                "🇺🇸US-38.63.0.68-17507 | 86"
+            ]
+        },
+        {
+            "tag": "URL-TEST",
+            "type": "urltest",
+            "outbounds": [
+                "🏁RELAY-172.67.219.19-0260 | 1",
+                "🏁RELAY-104.21.7.64-0189 | 2",
+                "🏁RELAY-104.17.151.185-0261 | 3",
+                "🇺🇸US-173.230.135.60-2175 | 4",
+                "🏁RELAY-172.67.156.223-0241 | 5",
+                "🇺🇸US-173.230.135.60-17133 | 6",
+                "🏁RELAY-104.21.56.221-1279 | 7",
+                "🇺🇸US-95.174.71.96-1193 | 8",
+                "🇺🇸US-107.167.20.183-1324 | 9",
+                "🇺🇸US-74.207.251.209-0220 | 10",
+                "🇺🇸US-64.32.10.216-1323 | 11",
+                "🇺🇸US-170.178.179.189-2162 | 12",
+                "🇺🇸US-107.167.20.183-18106 | 13",
+                "🇺🇸US-67.21.72.44-17375 | 14",
+                "🇺🇸US-140.99.120.187-18041 | 15",
+                "🇺🇸US-38.59.243.133-0732 | 16",
+                "🇺🇸US-142.4.115.172-0198 | 17",
+                "🇺🇸US-173.230.145.109-0205 | 18",
+                "🇺🇸US-45.12.144.68-17488 | 19",
+                "🇺🇸US-137.175.3.36-0236 | 20",
+                "🇺🇸US-198.2.223.3-0187 | 21",
+                "🇺🇸US-142.4.100.202-5257 | 22",
+                "🇺🇸US-192.74.228.169-0214 | 23",
+                "🇺🇸US-198.200.56.92-0229 | 24",
+                "🇺🇸US-38.54.250.37-0216 | 25",
+                "🇺🇸US-38.59.243.133-1988 | 26",
+                "🇺🇸US-74.217.182.119-1230 | 27",
+                "🇺🇸US-74.207.242.16-1078 | 28",
+                "🇺🇸US-74.207.242.16-17138 | 29",
+                "🇺🇸US-171.22.134.12-17877 | 30",
+                "🇬🇧GB-178.79.176.14-17148 | 31",
+                "🇺🇸US-142.0.132.12-3012 | 32",
+                "🇺🇸US-142.4.110.7-0256 | 33",
+                "🇺🇸US-137.175.9.216-5189 | 34",
+                "🇺🇸US-67.21.72.44-4066 | 35",
+                "🇺🇸US-67.21.72.44-4065 | 36",
+                "🇫🇷FR-51.15.105.39-0217 | 37",
+                "🇺🇸US-171.22.134.12-17876 | 38",
+                "🇺🇸US-45.33.41.97-4078 | 39",
+                "🇺🇸US-192.74.242.141-0191 | 40",
+                "🇺🇸US-38.63.0.85-9561 | 41",
+                "🇫🇷FR-51.15.105.39-17420 | 42",
+                "🇫🇷FR-141.94.222.208-0232 | 43",
+                "🇳🇱NL-209.250.244.74-9046 | 44",
+                "🇺🇸US-45.33.41.97-6632 | 45",
+                "🇩🇪DE-80.240.17.155-0785 | 46",
+                "🇩🇪DE-80.240.17.155-0222 | 47",
+                "🇩🇪DE-192.248.179.228-0790 | 48",
+                "🇩🇪DE-80.240.17.155-0201 | 49",
+                "🇩🇪DE-192.248.179.228-0210 | 50",
+                "🇺🇸US-142.4.126.56-0179 | 51",
+                "🏁RELAY-172.67.126.2-0285 | 52",
+                "🇳🇱NL-209.250.244.74-9048 | 53",
+                "🇺🇸US-74.217.179.133-0269 | 54",
+                "🇩🇪DE-130.162.47.123-8437 | 55",
+                "🇺🇸US-45.131.248.140-0848 | 56",
+                "🇺🇸US-74.207.242.16-17142 | 57",
+                "🇩🇪DE-130.162.47.123-18065 | 58",
+                "🇩🇪DE-139.144.73.22-17161 | 59",
+                "🇺🇸US-156.225.67.81-17920 | 60",
+                "🇩🇪DE-139.144.73.22-1553 | 61",
+                "🇩🇪DE-172.105.82.27-1071 | 62",
+                "🇺🇸US-45.131.248.140-1998 | 63",
+                "🇺🇸US-74.217.182.116-17370 | 64",
+                "🇺🇸US-140.99.128.125-18040 | 65",
+                "🇫🇷FR-51.15.105.39-9080 | 66",
+                "🇺🇸US-74.217.182.116-9724 | 67",
+                "🇨🇳CN-23.26.239.163-0252 | 68",
+                "🇺🇸US-137.175.11.155-18054 | 69",
+                "🇺🇸US-198.2.197.72-17683 | 70",
+                "🇺🇸US-198.2.204.161-17681 | 71",
+                "🏁RELAY-172.67.184.53-0258 | 72",
+                "🇬🇧GB-57.128.173.208-0855 | 73",
+                "🏁RELAY-172.67.184.53-0262 | 74",
+                "🏁RELAY-23.227.38.33-0466 | 75",
+                "🇺🇸US-45.12.112.123-0227 | 76",
+                "🇺🇸US-140.99.49.6-18036 | 77",
+                "🇺🇸US-45.131.248.140-0224 | 78",
+                "🇺🇸US-45.86.8.117-17470 | 79",
+                "🇺🇸US-45.86.8.117-17469 | 80",
+                "🇺🇸US-107.173.35.242-18104 | 81",
+                "🇺🇸US-135.148.47.240-15283 | 82",
+                "🇺🇸US-66.241.124.229-2178 | 83",
+                "🇫🇷FR-217.182.76.202-0832 | 84",
+                "🇺🇸US-38.63.0.89-15301 | 85",
+                "🇺🇸US-38.63.0.68-17507 | 86"
+            ],
+            "url": "https:\/\/detectportal.firefox.com\/success.txt",
+            "interval": "60s",
+            "tolerance": 50
+        },
+        {
+            "tag": "🏁RELAY-172.67.219.19-0260 | 1",
+            "type": "vmess",
+            "server": "51fly11.win",
+            "server_port": 443,
+            "uuid": "9681f99e-d251-477a-d777-1d01ee550481",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "51fly11.win",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/myblog",
+                "headers": {
+                    "Host": "51fly11.win"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🏁RELAY-104.21.7.64-0189 | 2",
+            "type": "vmess",
+            "server": "51fly99.win",
+            "server_port": 443,
+            "uuid": "9681f99e-d251-477a-d777-1d01ee550481",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "51fly99.win",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/myblog",
+                "headers": {
+                    "Host": "51fly99.win"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🏁RELAY-104.17.151.185-0261 | 3",
+            "type": "vmess",
+            "server": "cfcdn2.sanfencdn.net",
+            "server_port": 2052,
+            "uuid": "bbb8d21c-44f2-4d21-b588-b50de8b7e830",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/zh-cn",
+                "headers": {
+                    "Host": "us5.sanfencdn2.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-173.230.135.60-2175 | 4",
+            "type": "vmess",
+            "server": "vus5.0bad.com",
+            "server_port": 443,
+            "uuid": "927094d3-d678-4763-8591-e240d0bcae87",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vus5.0bad.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/chat",
+                "headers": {
+                    "Host": "vus5.0bad.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🏁RELAY-172.67.156.223-0241 | 5",
+            "type": "vmess",
+            "server": "do-sg.lzz.app",
+            "server_port": 443,
+            "uuid": "5436474d-13a9-47ef-898a-7101c2921be9",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "do-sg.lzz.app",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/re",
+                "headers": {
+                    "Host": "do-sg.lzz.app"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-173.230.135.60-17133 | 6",
+            "type": "vmess",
+            "server": "vus5.0bad.com",
+            "server_port": 443,
+            "uuid": "927094d3-d678-4763-8591-e240d0bcae87",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vus5.0bad.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/chat",
+                "headers": {
+                    "Host": "vus5.0bad.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🏁RELAY-104.21.56.221-1279 | 7",
+            "type": "vmess",
+            "server": "cloudflare.piaole.me",
+            "server_port": 443,
+            "uuid": "fb3aef20-ef6d-44ea-8a5c-f38deab4424f",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cloudflare.piaole.me",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/huawei",
+                "headers": {
+                    "Host": "cloudflare.piaole.me"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-95.174.71.96-1193 | 8",
+            "type": "vmess",
+            "server": "95.174.71.96",
+            "server_port": 3331,
+            "uuid": "57e0cb4d-eae5-48ec-8091-149dc2b309e0",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "95.174.71.96",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/d\/082f26a.fm.apple.com:31859",
+                "headers": {
+                    "Host": "95.174.71.96"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-107.167.20.183-1324 | 9",
+            "type": "vmess",
+            "server": "107.167.20.183",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "107.167.20.183",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/243535322906",
+                "headers": {
+                    "Host": "107.167.20.183"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-74.207.251.209-0220 | 10",
+            "type": "vmess",
+            "server": "74.207.251.209",
+            "server_port": 36788,
+            "uuid": "89290b95-df4b-4c7c-cfe2-37294c9ed755",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "74.207.251.209"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-64.32.10.216-1323 | 11",
+            "type": "vmess",
+            "server": "64.32.10.216",
+            "server_port": 443,
+            "uuid": "1f17fb81-2c5a-48d2-aa74-b19a648778a3",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "64.32.10.216",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691318318420",
+                "headers": {
+                    "Host": "www.33436785.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-170.178.179.189-2162 | 12",
+            "type": "vmess",
+            "server": "170.178.179.189",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "170.178.179.189",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/031730091420",
+                "headers": {
+                    "Host": "170.178.179.189"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-107.167.20.183-18106 | 13",
+            "type": "vmess",
+            "server": "107.167.20.183",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "107.167.20.183",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/243535322906",
+                "headers": {
+                    "Host": "107.167.20.183"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-67.21.72.44-17375 | 14",
+            "type": "vmess",
+            "server": "67.21.72.44",
+            "server_port": 443,
+            "uuid": "2566d00f-218c-48f7-9a36-13d3d6f1a724",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "67.21.72.44",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/120208301422",
+                "headers": {
+                    "Host": "67.21.72.44"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-140.99.120.187-18041 | 15",
+            "type": "vmess",
+            "server": "140.99.120.187",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "140.99.120.187",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689935243027",
+                "headers": {
+                    "Host": "140.99.120.187"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-38.59.243.133-0732 | 16",
+            "type": "vmess",
+            "server": "38.59.243.133",
+            "server_port": 80,
+            "uuid": "58c76d75-563c-4694-84c4-a798d55e90ed",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "38.59.243.133"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-142.4.115.172-0198 | 17",
+            "type": "vmess",
+            "server": "142.4.115.172",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "142.4.115.172",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691489542385",
+                "headers": {
+                    "Host": "www.53997395.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-173.230.145.109-0205 | 18",
+            "type": "vmess",
+            "server": "173.230.145.109",
+            "server_port": 36788,
+            "uuid": "bce1410c-0257-47df-b5ad-cd93addd84ae",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "173.230.145.109"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-45.12.144.68-17488 | 19",
+            "type": "vmess",
+            "server": "45.12.144.68",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "45.12.144.68",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689849487190",
+                "headers": {
+                    "Host": "45.12.144.68"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-137.175.3.36-0236 | 20",
+            "type": "vmess",
+            "server": "137.175.3.36",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "137.175.3.36",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691143986594",
+                "headers": {
+                    "Host": "www.37419052.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-198.2.223.3-0187 | 21",
+            "type": "vmess",
+            "server": "198.2.223.3",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "198.2.223.3",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691403540577",
+                "headers": {
+                    "Host": "www.45202449.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-142.4.100.202-5257 | 22",
+            "type": "vmess",
+            "server": "142.4.100.202",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "142.4.100.202",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691318318420",
+                "headers": {
+                    "Host": "www.22567471.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-192.74.228.169-0214 | 23",
+            "type": "vmess",
+            "server": "192.74.228.169",
+            "server_port": 443,
+            "uuid": "051b844f-efe3-4847-92aa-66b5de0b6d4e",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.59274706.xyz",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691403540577",
+                "headers": {
+                    "Host": "www.59274706.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-198.200.56.92-0229 | 24",
+            "type": "vmess",
+            "server": "198.200.56.92",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.65510817.xyz",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691489542385",
+                "headers": {
+                    "Host": "www.65510817.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-38.54.250.37-0216 | 25",
+            "type": "vmess",
+            "server": "38.54.250.37",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "38.54.250.37",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691403540577",
+                "headers": {
+                    "Host": "www.80128693.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-38.59.243.133-1988 | 26",
+            "type": "vmess",
+            "server": "38.59.243.133",
+            "server_port": 80,
+            "uuid": "58c76d75-563c-4694-84c4-a798d55e90ed",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "38.59.243.133"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-74.217.182.119-1230 | 27",
+            "type": "vmess",
+            "server": "74.217.182.119",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "74.217.182.119",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691057598680",
+                "headers": {
+                    "Host": "74.217.182.119"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-74.207.242.16-1078 | 28",
+            "type": "vmess",
+            "server": "vus3.0bad.com",
+            "server_port": 443,
+            "uuid": "927094d3-d678-4763-8591-e240d0bcae87",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vus3.0bad.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/chat",
+                "headers": {
+                    "Host": "vus3.0bad.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-74.207.242.16-17138 | 29",
+            "type": "vmess",
+            "server": "vus3.0bad.com",
+            "server_port": 443,
+            "uuid": "927094d3-d678-4763-8591-e240d0bcae87",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vus3.0bad.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/chat",
+                "headers": {
+                    "Host": "vus3.0bad.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-171.22.134.12-17877 | 30",
+            "type": "vmess",
+            "server": "171.22.134.12",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "171.22.134.12",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689935243027",
+                "headers": {
+                    "Host": "171.22.134.12"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇬🇧GB-178.79.176.14-17148 | 31",
+            "type": "vmess",
+            "server": "vuk1.0bad.com",
+            "server_port": 443,
+            "uuid": "927094d3-d678-4763-8591-e240d0bcae87",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vuk1.0bad.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/chat",
+                "headers": {
+                    "Host": "vuk1.0bad.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-142.0.132.12-3012 | 32",
+            "type": "vmess",
+            "server": "142.0.132.12",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "142.0.132.12",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1690021167515",
+                "headers": {
+                    "Host": "142.0.132.12"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-142.4.110.7-0256 | 33",
+            "type": "vmess",
+            "server": "142.4.110.7",
+            "server_port": 443,
+            "uuid": "08fc4943-4c7a-4a69-9265-fb961eaea917",
+            "security": "auto",
+            "alter_id": 1,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "142.4.110.7",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/252617081903",
+                "headers": {
+                    "Host": "www.53846731.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-137.175.9.216-5189 | 34",
+            "type": "vmess",
+            "server": "137.175.9.216",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "137.175.9.216",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691575919722",
+                "headers": {
+                    "Host": "www.45176089.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-67.21.72.44-4066 | 35",
+            "type": "vmess",
+            "server": "67.21.72.44",
+            "server_port": 443,
+            "uuid": "2566d00f-218c-48f7-9a36-13d3d6f1a724",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "67.21.72.44",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/120208301422",
+                "headers": {
+                    "Host": "www.48816626.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-67.21.72.44-4065 | 36",
+            "type": "vmess",
+            "server": "67.21.72.44",
+            "server_port": 443,
+            "uuid": "2566d00f-218c-48f7-9a36-13d3d6f1a724",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "67.21.72.44",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/120208301422",
+                "headers": {
+                    "Host": "67.21.72.44"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇫🇷FR-51.15.105.39-0217 | 37",
+            "type": "vmess",
+            "server": "phosphorylative.aurorainiceland.com",
+            "server_port": 443,
+            "uuid": "6388bd92-6cbc-4b72-a9a6-931f071d0ffa",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "phosphorylative.aurorainiceland.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/nimvws",
+                "headers": {
+                    "Host": "phosphorylative.aurorainiceland.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-171.22.134.12-17876 | 38",
+            "type": "vmess",
+            "server": "171.22.134.12",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "171.22.134.12",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689849487190",
+                "headers": {
+                    "Host": "171.22.134.12"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-45.33.41.97-4078 | 39",
+            "type": "vmess",
+            "server": "vus4.0bad.com",
+            "server_port": 443,
+            "uuid": "927094d3-d678-4763-8591-e240d0bcae87",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vus4.0bad.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/chat",
+                "headers": {
+                    "Host": "vus4.0bad.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-192.74.242.141-0191 | 40",
+            "type": "vmess",
+            "server": "192.74.242.141",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "192.74.242.141",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691575919722",
+                "headers": {
+                    "Host": "www.67023582.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-38.63.0.85-9561 | 41",
+            "type": "vmess",
+            "server": "38.63.0.85",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "38.63.0.85",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689935243027",
+                "headers": {
+                    "Host": "38.63.0.85"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇫🇷FR-51.15.105.39-17420 | 42",
+            "type": "vmess",
+            "server": "51.15.105.39",
+            "server_port": 443,
+            "uuid": "6388bd92-6cbc-4b72-a9a6-931f071d0ffa",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "51.15.105.39",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/nimvws",
+                "headers": {
+                    "Host": "51.15.105.39"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇫🇷FR-141.94.222.208-0232 | 43",
+            "type": "vmess",
+            "server": "141.94.222.208",
+            "server_port": 2082,
+            "uuid": "a79e03ad-84a7-41f6-bce9-e4c53180c507",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/vmess",
+                "headers": {
+                    "Host": "141.94.222.208"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇳🇱NL-209.250.244.74-9046 | 44",
+            "type": "vmess",
+            "server": "ams.mjnl.store",
+            "server_port": 23027,
+            "uuid": "eb2a3f0e-80ef-48ab-8d86-833b08963ba3",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ams.mjnl.store",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "ams.mjnl.store"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-45.33.41.97-6632 | 45",
+            "type": "vmess",
+            "server": "vus4.0bad.com",
+            "server_port": 443,
+            "uuid": "927094d3-d678-4763-8591-e240d0bcae87",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vus4.0bad.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/chat",
+                "headers": {
+                    "Host": "vus4.0bad.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇩🇪DE-80.240.17.155-0785 | 46",
+            "type": "vmess",
+            "server": "80.240.17.155",
+            "server_port": 2083,
+            "uuid": "ce03a832-d6bb-45a3-9121-f7bd6f189469",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "80.240.17.155"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇩🇪DE-80.240.17.155-0222 | 47",
+            "type": "vmess",
+            "server": "80.240.17.155",
+            "server_port": 2053,
+            "uuid": "4134efe7-d935-416c-c2cc-24943e4a80ca",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "80.240.17.155"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇩🇪DE-192.248.179.228-0790 | 48",
+            "type": "vmess",
+            "server": "192.248.179.228",
+            "server_port": 8443,
+            "uuid": "3d0c8ee5-3329-4252-aa1c-65f3fdaa0343",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "192.248.179.228"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇩🇪DE-80.240.17.155-0201 | 49",
+            "type": "vmess",
+            "server": "80.240.17.155",
+            "server_port": 8443,
+            "uuid": "3d0c8ee5-3329-4252-aa1c-65f3fdaa0343",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "80.240.17.155"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇩🇪DE-192.248.179.228-0210 | 50",
+            "type": "vmess",
+            "server": "192.248.179.228",
+            "server_port": 2053,
+            "uuid": "4134efe7-d935-416c-c2cc-24943e4a80ca",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "192.248.179.228"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-142.4.126.56-0179 | 51",
+            "type": "vmess",
+            "server": "142.4.126.56",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "142.4.126.56",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691403540577",
+                "headers": {
+                    "Host": "www.29135019.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🏁RELAY-172.67.126.2-0285 | 52",
+            "type": "vmess",
+            "server": "cfcdn3.sanfencdn.net",
+            "server_port": 2052,
+            "uuid": "16582759-3d20-4804-9c9c-a58ad7b260a8",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/zh-cn",
+                "headers": {
+                    "Host": "sg3.sanfencdn2.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇳🇱NL-209.250.244.74-9048 | 53",
+            "type": "vmess",
+            "server": "209.250.244.74",
+            "server_port": 23027,
+            "uuid": "eb2a3f0e-80ef-48ab-8d86-833b08963ba3",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "209.250.244.74",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "209.250.244.74"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-74.217.179.133-0269 | 54",
+            "type": "vmess",
+            "server": "74.217.179.133",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "74.217.179.133",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1685783030182",
+                "headers": {
+                    "Host": "74.217.179.133"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇩🇪DE-130.162.47.123-8437 | 55",
+            "type": "vmess",
+            "server": "130.162.47.123",
+            "server_port": 6854,
+            "uuid": "b5f7e932-f730-4ad2-b425-40977b9db332",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "130.162.47.123",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/zBLPou",
+                "headers": {
+                    "Host": "130.162.47.123"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-45.131.248.140-0848 | 56",
+            "type": "vmess",
+            "server": "45.131.248.140",
+            "server_port": 50068,
+            "uuid": "557e532e-de4a-4b3e-9fb2-5d355ccb5da9",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "45.131.248.140"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-74.207.242.16-17142 | 57",
+            "type": "vmess",
+            "server": "vus3.0bad.com",
+            "server_port": 443,
+            "uuid": "927094d3-d678-4763-8591-e240d0bcae87",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vus3.0bad.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/chat",
+                "headers": {
+                    "Host": "vus3.0bad.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇩🇪DE-130.162.47.123-18065 | 58",
+            "type": "vmess",
+            "server": "130.162.47.123",
+            "server_port": 6854,
+            "uuid": "b5f7e932-f730-4ad2-b425-40977b9db332",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "130.162.47.123",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/zBLPou",
+                "headers": {
+                    "Host": "130.162.47.123"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇩🇪DE-139.144.73.22-17161 | 59",
+            "type": "vmess",
+            "server": "vde1.0bad.com",
+            "server_port": 443,
+            "uuid": "927094d3-d678-4763-8591-e240d0bcae87",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vde1.0bad.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/chat",
+                "headers": {
+                    "Host": "vde1.0bad.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-156.225.67.81-17920 | 60",
+            "type": "vmess",
+            "server": "156.225.67.81",
+            "server_port": 443,
+            "uuid": "3fd637ad-46fe-4f85-a6e8-86b00bca1122",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "156.225.67.81",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689767805929",
+                "headers": {
+                    "Host": "156.225.67.81"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇩🇪DE-139.144.73.22-1553 | 61",
+            "type": "vmess",
+            "server": "vde1.0bad.com",
+            "server_port": 443,
+            "uuid": "927094d3-d678-4763-8591-e240d0bcae87",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vde1.0bad.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/chat",
+                "headers": {
+                    "Host": "vde1.0bad.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇩🇪DE-172.105.82.27-1071 | 62",
+            "type": "vmess",
+            "server": "vde2.0bad.com",
+            "server_port": 443,
+            "uuid": "927094d3-d678-4763-8591-e240d0bcae87",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "vde2.0bad.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/chat",
+                "headers": {
+                    "Host": "vde2.0bad.com"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-45.131.248.140-1998 | 63",
+            "type": "vmess",
+            "server": "45.131.248.140",
+            "server_port": 50068,
+            "uuid": "557e532e-de4a-4b3e-9fb2-5d355ccb5da9",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "45.131.248.140"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-74.217.182.116-17370 | 64",
+            "type": "vmess",
+            "server": "74.217.182.116",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "74.217.182.116",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689673828070",
+                "headers": {
+                    "Host": "74.217.182.116"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-140.99.128.125-18040 | 65",
+            "type": "vmess",
+            "server": "140.99.128.125",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "140.99.128.125",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689849487190",
+                "headers": {
+                    "Host": "140.99.128.125"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇫🇷FR-51.15.105.39-9080 | 66",
+            "type": "vmess",
+            "server": "51.15.105.39",
+            "server_port": 443,
+            "uuid": "6388bd92-6cbc-4b72-a9a6-931f071d0ffa",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "51.15.105.39",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/nimvws",
+                "headers": {
+                    "Host": "51.15.105.39"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-74.217.182.116-9724 | 67",
+            "type": "vmess",
+            "server": "74.217.182.116",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "74.217.182.116",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689673828070",
+                "headers": {
+                    "Host": "74.217.182.116"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇨🇳CN-23.26.239.163-0252 | 68",
+            "type": "vmess",
+            "server": "23.26.239.163",
+            "server_port": 18420,
+            "uuid": "65578c09-f23e-49cc-abee-4ad2a1850f9a",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "23.26.239.163"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-137.175.11.155-18054 | 69",
+            "type": "vmess",
+            "server": "137.175.11.155",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "137.175.11.155",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689935243027",
+                "headers": {
+                    "Host": "137.175.11.155"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-198.2.197.72-17683 | 70",
+            "type": "vmess",
+            "server": "198.2.197.72",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "198.2.197.72",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689935243027",
+                "headers": {
+                    "Host": "198.2.197.72"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-198.2.204.161-17681 | 71",
+            "type": "vmess",
+            "server": "198.2.204.161",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "198.2.204.161",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689935243027",
+                "headers": {
+                    "Host": "198.2.204.161"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🏁RELAY-172.67.184.53-0258 | 72",
+            "type": "vmess",
+            "server": "cloudconebbb.gorgorchicken.one",
+            "server_port": 8443,
+            "uuid": "aa0c4744-9568-4bee-a08b-73668a9b2a42",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cloudconebbb.gorgorchicken.one",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/cloudconebbb",
+                "headers": {
+                    "Host": "cloudconebbb.gorgorchicken.one"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇬🇧GB-57.128.173.208-0855 | 73",
+            "type": "vmess",
+            "server": "uk2-vmess.greenssh.xyz",
+            "server_port": 80,
+            "uuid": "4e66e7d6-bab0-403d-8ab2-6397090d3612",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "uk2-vmess.greenssh.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🏁RELAY-172.67.184.53-0262 | 74",
+            "type": "vmess",
+            "server": "cloudconeaaa.gorgorchicken.one",
+            "server_port": 8443,
+            "uuid": "1cec1ebc-b489-4769-f2d9-e079b5832a60",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cloudconeaaa.gorgorchicken.one",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/cloudconeaaa",
+                "headers": {
+                    "Host": "cloudconeaaa.gorgorchicken.one"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🏁RELAY-23.227.38.33-0466 | 75",
+            "type": "vmess",
+            "server": "Shopify.com",
+            "server_port": 2086,
+            "uuid": "250f4331-8c3e-4b87-a86b-5c5fbf9ddba8",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/aries",
+                "headers": {
+                    "Host": "Fr.cloudflare.quest"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-45.12.112.123-0227 | 76",
+            "type": "vmess",
+            "server": "45.12.112.123",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "45.12.112.123",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691489542385",
+                "headers": {
+                    "Host": "www.80952070.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-140.99.49.6-18036 | 77",
+            "type": "vmess",
+            "server": "140.99.49.6",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "140.99.49.6",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689500157855",
+                "headers": {
+                    "Host": "140.99.49.6"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-45.131.248.140-0224 | 78",
+            "type": "vmess",
+            "server": "45.131.248.140",
+            "server_port": 50068,
+            "uuid": "557e532e-de4a-4b3e-9fb2-5d355ccb5da9",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "45.131.248.140"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-45.86.8.117-17470 | 79",
+            "type": "vmess",
+            "server": "45.86.8.117",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "45.86.8.117",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689767805929",
+                "headers": {
+                    "Host": "45.86.8.117"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-45.86.8.117-17469 | 80",
+            "type": "vmess",
+            "server": "45.86.8.117",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "45.86.8.117",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1689935243027",
+                "headers": {
+                    "Host": "45.86.8.117"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-107.173.35.242-18104 | 81",
+            "type": "vmess",
+            "server": "107.173.35.242",
+            "server_port": 8443,
+            "uuid": "1074988f-51da-41df-9db9-36bf3d6f3d94",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "107.173.35.242",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/xpyrvws?ed=2048",
+                "headers": {
+                    "Host": "107.173.35.242"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-135.148.47.240-15283 | 82",
+            "type": "vmess",
+            "server": "135.148.47.240",
+            "server_port": 80,
+            "uuid": "33fe2f6e-14e1-4349-988d-c0d7f4e12ad4",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/vmess",
+                "headers": {
+                    "Host": "135.148.47.240"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-66.241.124.229-2178 | 83",
+            "type": "vmess",
+            "server": "cold-dawn-9246.fly.dev",
+            "server_port": 443,
+            "uuid": "ea4909ef-7ca6-4b46-bf2e-6c07896ef338",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cold-dawn-9246.fly.dev",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm",
+                "headers": {
+                    "Host": "cold-dawn-9246.fly.dev"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇫🇷FR-217.182.76.202-0832 | 84",
+            "type": "vmess",
+            "server": "pl2-vmess.greenssh.xyz",
+            "server_port": 80,
+            "uuid": "a60d4d2f-6a61-4c16-9d63-94a97e65d1f3",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "pl2-vmess.greenssh.xyz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-38.63.0.89-15301 | 85",
+            "type": "vmess",
+            "server": "38.63.0.89",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "38.63.0.89",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1691057598680",
+                "headers": {
+                    "Host": "38.63.0.89"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇺🇸US-38.63.0.68-17507 | 86",
+            "type": "vmess",
+            "server": "38.63.0.68",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "38.63.0.68",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/path\/1683715826870",
+                "headers": {
+                    "Host": "38.63.0.68"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "bypass",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        }
+    ],
+    "route": {
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "proxy",
+        "geoip": {
+            "download_url": "https:\/\/github.com\/malikshi\/sing-box-geo\/releases\/latest\/download\/geoip.db",
+            "download_detour": "direct"
+        },
+        "geosite": {
+            "download_url": "https:\/\/github.com\/malikshi\/v2ray-rules-dat\/releases\/latest\/download\/geosite.db",
+            "download_detour": "direct"
+        },
+        "rules": [
+            {
+                "outbound": "dns-out",
+                "port": [
+                    53
+                ]
+            },
+            {
+                "inbound": [
+                    "dns-in"
+                ],
+                "outbound": "dns-out"
+            },
+            {
+                "domain_suffix": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "geoip": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ],
+                "outbound": "block",
+                "source_ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ]
+            }
+        ]
+    }
+}
