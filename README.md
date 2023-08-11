@@ -6,10 +6,11 @@ This repository contains various Shadowsocks, VMESS, SING-BOX and Reality config
 
 | Configuration | Normal | Base64 Encoded | Meta/Clash |
 |-|-|-|-|  
-| ShadowSocks | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/shadowsockes.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/ss_clash.yaml) |
+| ShadowSocks (SS) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/shadowsockes.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/ss_clash.yaml) |
 | VMESS | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_clash.yaml) |
 | Reality | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/reality.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/reality_B64.txt) | [Meta Clash](https://raw.githubusercontent.com/lagzian/SS-Collector/main/reality_clash.yaml) |
-| Singbox JSON | [Shadowsocks](https://raw.githubusercontent.com/lagzian/SS-Collector/main/ss_singbox.json) | [VMESS](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_singbox.json) | |
+| MIX(VMESS/SS) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mix.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mix_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mix_clash.yaml) | |
+| Singbox JSON | [Shadowsocks](https://raw.githubusercontent.com/lagzian/SS-Collector/main/ss_singbox.json) | [VMESS](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_singbox.json) | [MIX](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mix_singbox.json) | |
 
 ## How to Use
 
