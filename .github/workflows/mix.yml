@@ -1,0 +1,61 @@
+name: Extract MIX
+on:
+  schedule:
+    - cron: "0 */1 * * *"
+  workflow_dispatch:
+
+env:
+  FILE_URL: "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt"
+  OUTPUT_FILE: "mix.txt"
+  BASE64_FILE: "mix_B64.txt"
+  CLASH_YAML_FILE: "mix_clash.yaml"
+  SINGBOX_URL: "https://yebekhe.serv00.net/api/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fmix.txt&limit=0&tun=true"
+  SINGBOX_JSON_FILE: "mix_singbox.json"
+
+jobs:
+  extract_shadowsocks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Git Config
+        run: |
+          git config --global user.name "${{ secrets.GIT_USERNAME }}"
+          git config --global user.email "${{ secrets.GIT_EMAIL }}"
+
+      - name: Download TXT File
+        run: |
+          curl -o temp7.txt -L "${FILE_URL}"
+
+      - name: Extract Lines Starting with "ss://" and "vmess://"
+        run: |
+          grep -E '^ss://|^vmess://' temp7.txt > "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
+
+
+      - name: Convert Lines to Base64 and Save
+        run: |
+          cat "${GITHUB_WORKSPACE}/${OUTPUT_FILE}" | base64 -w 0 > "${GITHUB_WORKSPACE}/${BASE64_FILE}"
+
+      - name: Fetch Content and Generate YAML
+        run: |
+          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/mix_B64.txt&type=clash&process=full"
+
+          curl -o "${GITHUB_WORKSPACE}/${SINGBOX_JSON_FILE}" -L "${SINGBOX_URL}"
+          # Optional: Convert to YAML format if needed
+          # cat "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" | yq eval -j - > "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
+
+      - name: Clean Up
+        run: |
+          rm temp7.txt
+
+      - name: Commit and Push Changes
+        run: |
+          git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${BASE64_FILE}" "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/${SINGBOX_JSON_FILE}"
+          git commit -m "Update mix.txt, mix_B64.txt, mix_clash.yaml, and mix_singbox.json" || true
+          git remote remove origin
+          git remote add origin "https://github.com/lagzian/SS-Collector.git"
+          git push origin HEAD:${GITHUB_REF}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
