@@ -9,6 +9,8 @@ env:
   OUTPUT_FILE: "vmess.txt"
   BASE64_FILE: "vmess_B64.txt"
   CLASH_YAML_FILE: "vmess_clash.yaml"
+  SINGBOX_URL: "https://yebekhe.serv00.net/api/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fvmess.txt&limit=0&tun=true"
+  SINGBOX_JSON_FILE: "vmess_singbox.json"
 
 jobs:
   extract_shadowsocks:
@@ -38,6 +40,8 @@ jobs:
       - name: Fetch Content and Generate YAML
         run: |
           curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt&type=clash&process=full"
+         
+          curl -o "${GITHUB_WORKSPACE}/${SINGBOX_JSON_FILE}" -L "${SINGBOX_URL}"
           # Optional: Convert to YAML format if needed
           # cat "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" | yq eval -j - > "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
 
@@ -47,8 +51,8 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${BASE64_FILE}" "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
-          git commit -m "Update vmess.txt, vmess_B64.txt, and vmess_clash.yaml" || true
+          git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${BASE64_FILE}" "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/${SINGBOX_JSON_FILE}"
+          git commit -m "Update vmess.txt, vmess_B64.txt, vmess_clash.yaml, and vmess_singbox.json" || true
           git remote remove origin
           git remote add origin "https://github.com/lagzian/SS-Collector.git"
           git push origin HEAD:${GITHUB_REF}
