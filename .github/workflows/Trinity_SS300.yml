@@ -37,11 +37,13 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
+          cd SS # Change directory to the "SS" folder
           git add "${GITHUB_WORKSPACE}/SS/${CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/SS/${SINGBOX_JSON_FILE}"
           git commit -m "Update trinity_clash.yaml and trinity_singbox.json" || true
           git remote remove origin
           git remote add origin "https://github.com/lagzian/SS-Collector.git"
           git push origin HEAD:${GITHUB_REF}
+
 
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
