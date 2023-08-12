@@ -7,9 +7,9 @@ out_json = './out.json'
 
 sub_all_base64 = "./sub/sub_merge_base64.txt"
 sub_all = "./sub/sub_merge.txt"
-Eternity_file_base64 = "./Eternity"
-Eternity_file = "./Eternity.txt"
-Eternity_Base = "./EternityBase"
+Trinity_file_base64 = "./SS/Trinity"
+Trinity_file = "./SS/Trinity.txt"
+Trinity_Base = "./SS/TrinityBase"
 
 splitted_output = "./sub/splitted/"
 
@@ -98,7 +98,7 @@ def output(list, num):
         print('Write All Base64 Success!')
         f.close()
 
-    with open(Eternity_file_base64, 'w+', encoding='utf-8') as f:
+    with open(Trinity_file_base64, 'w+', encoding='utf-8') as f:
         f.write(content_base64_part)
         print('Write Part Base64 Success!')
         f.close()
@@ -108,12 +108,12 @@ def output(list, num):
         print('Write All Success!')
         f.close()
 
-    with open(Eternity_Base, 'w') as f:
+    with open(Trinity_Base, 'w') as f:
         f.write(content)
         print('Write Base Success!')
         f.close()
 
-    with open(Eternity_file, 'w') as f:
+    with open(Trinity_file, 'w') as f:
         f.write('\n'.join(output_list[0:num]))
         print('Write Part Base Success!')
         f.close()
@@ -121,6 +121,6 @@ def output(list, num):
     return content
 
 if __name__ == '__main__':
-    num = 200
+    num = 300
     value = read_json(out_json)
     output(value, value.__len__() if value.__len__() <= num else num)
