@@ -1,6 +1,6 @@
 # Shadowsocks/VMESS/Reality/SING-BOX Configurations
 
-This repository contains various Shadowsocks, VMESS, SING-BOX and Reality configuration lists that get updated automatically. Shadowsocks, SIG-BOX and VMESS lists are updated every 12 hours, while Reality lists are updated every 1 hour.
+This repository contains various Shadowsocks, VMESS, SING-BOX and Reality configuration lists that get updated automatically. Shadowsocks, SIG-BOX and VMESS lists are updated every 12 hours, while Reality lists are updated every 1 hour. The Trinity links will be updated every 5 hours. 
 
 ## Subscription Links
 
