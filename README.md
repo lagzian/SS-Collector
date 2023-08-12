@@ -12,7 +12,7 @@ This repository contains various Shadowsocks, VMESS, SING-BOX and Reality config
 | MIX(VMESS/SS) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mix.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mix_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mix_clash.yaml) |[JSON](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mix_singbox.json) |
 
 
-## Trinity Shadowsocks Links (300 configs Speed Tested)
+## Trinity Shadowsocks Links (300 Speed Tested Configs )
 
 | Configuration | Normal | Base64 Encoded | Meta/Clash | SING-BOX |
 |-|-|-|-|-|  
