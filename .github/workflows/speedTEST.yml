@@ -2,11 +2,8 @@ name: Speed Test
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "./EternityBase"
-      - "./sub/sub_merge_base64.txt"
-      - "./sub/sub_merge_yaml.yml"
+  schedule:
+    - cron: "0 */5 * * *"
 
 jobs:
   main:
