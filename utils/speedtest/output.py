@@ -52,13 +52,13 @@ def output(list, num):
     ss_outputs = []
 
     for output in output_list:
-        if str(output).startswith("vmess://"):
+        if str(output).startswith("vmess2://"):
             vmess_outputs.append(output)
-        elif str(output).startswith("vless://"):
+        elif str(output).startswith("vless2://"):
             vless_outputs.append(output)
         elif str(output).startswith("trojan://"):
             trojan_outputs.append(output)
-        elif str(output).startswith("ssr://"):
+        elif str(output).startswith("ssr2://"):
             ssr_outputs.append(output)
         elif str(output).startswith("ss://"):
             ss_outputs.append(output)
