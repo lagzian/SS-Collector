@@ -4,6 +4,11 @@ on:
   push:
     paths:
       - SS/Trinity.txt
+  workflow_run:
+    workflows:
+      - "Speed Test"
+    types:
+      - completed
   workflow_dispatch:
 
 env:
