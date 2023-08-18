@@ -1,7 +1,9 @@
 name: Trinity_SS300
+
 on:
-  schedule:
-    - cron: "0 */5 * * *"
+  push:
+    paths:
+      - SS/Trinity.txt
   workflow_dispatch:
 
 env:
@@ -25,15 +27,13 @@ jobs:
           git config --global user.name "${{ secrets.GIT_USERNAME }}"
           git config --global user.email "${{ secrets.GIT_EMAIL }}"
 
-
       - name: Fetch Content and Generate YAML
         run: |
           curl -o "${GITHUB_WORKSPACE}/SS/${CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/Trinity.txt&type=clash&process=full"
-         
+
           curl -o "${GITHUB_WORKSPACE}/SS/${SINGBOX_JSON_FILE}" -L "${SINGBOX_URL}"
           # Optional: Convert to YAML format if needed
           # cat "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" | yq eval -j - > "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
-
 
       - name: Commit and Push Changes
         run: |
@@ -43,7 +43,6 @@ jobs:
           git remote remove origin
           git remote add origin "https://github.com/lagzian/SS-Collector.git"
           git push origin HEAD:${GITHUB_REF}
-
 
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
