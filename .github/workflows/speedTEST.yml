@@ -24,13 +24,6 @@ jobs:
       - name: Set Timezone
         run: sudo timedatectl set-timezone 'Asia/Tehran'
 
-      - name: Upgrade setuptools and wheel
-        run: |
-          python -m pip install --upgrade setuptools wheel
-
-      - name: Install libyaml
-        run: sudo apt-get install libyaml-dev
-
       - name: Install Requirements
         run: |
           pip install -r ./utils/requirements.txt
