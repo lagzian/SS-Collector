@@ -13,16 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "14.x"
-
       - uses: actions/setup-python@v2
         with:
-          python-version: "3.x"
+          python-version: "3.7"
 
-      - name: Set Timezone
-        run: sudo timedatectl set-timezone 'Asia/Tehran'
+      - name: Install cython
+        run: pip install cython
 
       - name: Install Requirements
         run: |
@@ -33,7 +29,6 @@ jobs:
           sleep 5
           sudo sh ./utils/speedtest/speedtest2.sh
           python ./utils/speedtest/output.py
-      
 
       - name: Commit Changes
         run: |
