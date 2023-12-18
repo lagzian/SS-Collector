@@ -1,0 +1,60 @@
+name: Extract Vmess_ye
+on:
+  schedule:
+    - cron: "0 */1 * * *"
+  workflow_dispatch:
+
+env:
+  FILE_URL: "https://raw.githubusercontent.com/lagzian/TelegramV2rayCollector/main/sub/normal/vmess"
+  OUTPUT_FILE: "vmess_ye.txt"
+  BASE64_FILE: "vmess_B64_ye.txt"
+  CLASH_YAML_FILE: "vmess_ye_clash.yaml"
+  SINGBOX_URL: "https://raw.githubusercontent.com/lagzian/TelegramV2rayCollector/main/singbox/sfasfi/vmess.json"
+  SINGBOX_JSON_FILE: "vmess_ye_singbox.json"
+
+jobs:
+  extract_shadowsocks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Git Config
+        run: |
+          git config --global user.name "${{ secrets.GIT_USERNAME }}"
+          git config --global user.email "${{ secrets.GIT_EMAIL }}"
+
+      - name: Download TXT File
+        run: |
+          curl -o temp11.txt -L "${FILE_URL}"
+
+      - name: Extract Lines Starting with "vmess://"
+        run: |
+          grep '^vmess://' temp11.txt > "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
+
+      - name: Convert Lines to Base64 and Save
+        run: |
+          cat "${GITHUB_WORKSPACE}/${OUTPUT_FILE}" | base64 -w 0 > "${GITHUB_WORKSPACE}/${BASE64_FILE}"
+
+      - name: Fetch Content and Generate YAML
+        run: |
+          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FTelegramV2rayCollector%2Fmain%2Fsub%2Fbase64%2Fvmess&type=clash&process=full"
+         
+          curl -o "${GITHUB_WORKSPACE}/${SINGBOX_JSON_FILE}" -L "${SINGBOX_URL}"
+          # Optional: Convert to YAML format if needed
+          # cat "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" | yq eval -j - > "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
+
+      - name: Clean Up
+        run: |
+          rm temp11.txt
+
+      - name: Commit and Push Changes
+        run: |
+          git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${BASE64_FILE}" "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/${SINGBOX_JSON_FILE}"
+          git commit -m "Update vmess_ye.txt, vmess_B64_ye.txt, vmess_ye_clash.yaml, and vmess_ye_singbox.json" || true
+          git remote remove origin
+          git remote add origin "https://github.com/lagzian/SS-Collector.git"
+          git push origin HEAD:${GITHUB_REF}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
