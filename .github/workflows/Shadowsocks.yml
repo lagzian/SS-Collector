@@ -39,7 +39,7 @@ jobs:
 
       - name: Fetch Content and Generate YAML
         run: |
-          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS_B64.txt&type=clash&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2FSS_B64.txt&type=clash&process=full"
 
           curl -o "${GITHUB_WORKSPACE}/${SINGBOX_JSON_FILE}" -L "${SINGBOX_URL}"
           # Optional: Convert to YAML format if needed
