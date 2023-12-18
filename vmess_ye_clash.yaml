@@ -1,0 +1,237 @@
+mixed-port: 7890
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
+mode: rule
+log-level: error
+ipv6: true
+external-controller: 127.0.0.1:9090
+experimental:
+  ignore-resolve-fail: true
+  sniff-tls-sni: true
+  tracing: true
+hosts:
+  "localhost": 127.0.0.1
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    http: { ports: [1-442, 444-8442, 8444-65535], override-destination: true }
+    tls: { ports: [1-79, 81-8079, 8081-65535], override-destination: true }
+  force-domain:
+      - "+.v2ex.com"
+      - www.google.com
+      - google.com
+  skip-domain:
+      - Mijia Cloud
+      - dlg.io.mi.com
+  sniffing:
+    - tls
+    - http
+  port-whitelist:
+    - "80"
+    - "443"
+
+tun:
+  enable: true
+  prefer-h3: true
+  listen: 0.0.0.0:53
+  stack: gvisor
+  dns-hijack:
+     - "any:53"
+     - "tcp://any:53"
+  auto-redir: true
+  auto-route: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  ipv6: true
+  default-nameserver:
+    - '1.1.1.1'
+    - '8.8.8.8'
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - 'stun.*.*'
+    - 'stun.*.*.*'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+    - '*.lan'
+    - '+.msftncsi.com'
+    - msftconnecttest.com
+    - 'time?.*.com'
+    - 'time.*.com'
+    - 'time.*.gov'
+    - 'time.*.apple.com'
+    - time-ios.apple.com
+    - 'time1.*.com'
+    - 'time2.*.com'
+    - 'time3.*.com'
+    - 'time4.*.com'
+    - 'time5.*.com'
+    - 'time6.*.com'
+    - 'time7.*.com'
+    - 'ntp?.*.com'
+    - 'ntp.*.com'
+    - 'ntp1.*.com'
+    - 'ntp2.*.com'
+    - 'ntp3.*.com'
+    - 'ntp4.*.com'
+    - 'ntp5.*.com'
+    - 'ntp6.*.com'
+    - 'ntp7.*.com'
+    - '+.pool.ntp.org'
+    - '+.ipv6.microsoft.com'
+    - speedtest.cros.wr.pvp.net
+    - network-test.debian.org
+    - detectportal.firefox.com
+    - cable.auth.com
+    - miwifi.com
+    - routerlogin.com
+    - routerlogin.net
+    - tendawifi.com
+    - tendawifi.net
+    - tplinklogin.net
+    - tplinkwifi.net
+    - '*.xiami.com'
+    - tplinkrepeater.net
+    - router.asus.com
+    - '*.*.*.srv.nintendo.net'
+    - '*.*.stun.playstation.net'
+    - '*.openwrt.pool.ntp.org'
+    - resolver1.opendns.com
+    - 'GC._msDCS.*.*'
+    - 'DC._msDCS.*.*'
+    - 'PDC._msDCS.*.*'
+  use-hosts: true
+  nameserver:
+    - '8.8.4.4'
+    - '1.0.0.1'
+    - "https://1.0.0.1/dns-query"
+    - "https://8.8.4.4/dns-query"
+
+proxies:
+  - {"name":"رایگان | VMESS | @V2rayCollectorDonate | CA🇨🇦 | 0️⃣1️⃣ | 0️⃣1️⃣","type":"vmess","server":"5.226.179.194","port":"443","cipher":"auto","uuid":"1F7C900A-6AD7-41CF-A37E-85873E566C40","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"LosAngeles.gafn.online"}}}
+  - {"name":"رایگان | VMESS | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣2️⃣","type":"vmess","server":"sjfbdisovcfjsobfuxnfbsknsnhgisnzivjngdkjnodokkkdjbrbsnkosjdk.mohamadphp.ir","port":"2087","cipher":"auto","uuid":"cff83b1a-6b9d-4e7c-911b-4ec98e158062","alterId":"0","tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"vmess-grpc","grpc-mode":""}}
+  - {"name":"رایگان | VMESS | @V2rayCollectorDonate | FR🇫🇷 | 0️⃣3️⃣ | 0️⃣3️⃣","type":"vmess","server":"51.75.142.47","port":"8080","cipher":"chacha20-poly1305","uuid":"0225582e-d697-5cbf-86af-4b8cd3ccfb08","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"رایگان | VMESS | @v2ray_outlineir | FR🇫🇷 | 0️⃣1️⃣ | 0️⃣4️⃣","type":"vmess","server":"146.59.147.250","port":"29776","cipher":"auto","uuid":"82447abf-dcb9-408a-9ca6-79e0a7698d08","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"رایگان | VMESS | @mftizi | CA🇨🇦 | 0️⃣1️⃣ | 0️⃣5️⃣","type":"vmess","server":"c6.wuxianliulianng.xyz","port":"443","cipher":"auto","uuid":"1389986a-6eb6-4f7b-839c-9cfb83ab700d","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/apple","headers":{"host":"6666.golinkwuxian.top"}}}
+  - {"name":"رایگان | VMESS | @oneclickvpnkeys | BY🇧🇾 | 0️⃣2️⃣ | 0️⃣7️⃣","type":"vmess","server":"5.252.23.173","port":"80","cipher":"auto","uuid":"d70a32b5-5d4b-4ebe-adf6-8f34c73871d2","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"internet.life.com.by"}}}
+  - {"name":"رایگان | VMESS | @oneclickvpnkeys | SK🇸🇰 | 0️⃣3️⃣ | 0️⃣8️⃣","type":"vmess","server":"5.252.23.173","port":"2086","cipher":"auto","uuid":"d70a32b5-5d4b-4ebe-adf6-8f34c73871d2","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":""}}}
+  - {"name":"رایگان | VMESS | @oneclickvpnkeys | CA🇨🇦 | 0️⃣5️⃣ | 1️⃣0️⃣","type":"vmess","server":"104.21.30.195","port":"2096","cipher":"auto","uuid":"c7ccf81e-2f35-4170-aeb8-f84fb2ec2b29","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@FreeVPNHomes@FreeVPNHomes","headers":{"host":"PAnEl128.MookomeIlz.Homes"}}}
+  - {"name":"رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣1️⃣ | 1️⃣1️⃣","type":"vmess","server":"vpsteam.pages.dev","port":"443","cipher":"auto","uuid":"2b5775d7-bcb2-4263-a150-2a89b4fc9450","alterId":"0","tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"@Tigervpn_free/@Tigervpn_org","grpc-mode":"gun"}}
+  - {"name":"رایگان | VMESS | @v2ray1_ng | SE🇸🇪 | 0️⃣1️⃣ | 1️⃣3️⃣","type":"vmess","server":"hdfy1d1.cpionline.co","port":"443","cipher":"chacha20-poly1305","uuid":"b2fbaeb0-e27b-4434-a8e3-9c5ad41885e6","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/kWNsYSByc82sdH3qY7wwF","headers":{"host":"hdfy1d1.cpionline.co"}}}
+  - {"name":"رایگان | VMESS | @v2ray1_ng | FR🇫🇷 | 0️⃣3️⃣ | 1️⃣5️⃣","type":"vmess","server":"146.59.147.250","port":"29776","cipher":"auto","uuid":"82447abf-dcb9-408a-9ca6-79e0a7698d08","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣1️⃣ | 1️⃣6️⃣","type":"vmess","server":"173.245.58.24","port":"2096","cipher":"auto","uuid":"17eee6de-604f-46f8-823b-70bf209d3990","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"sNAppfoOD2.esMAIlkoREa.sHOp"}}}
+  - {"name":"رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣3️⃣ | 1️⃣8️⃣","type":"vmess","server":"snn.hydrashop.cfd","port":"8880","cipher":"auto","uuid":"4b5e4565-322f-4223-a891-78a84f189726","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/9sTFt5L554kPVWmuJ2k8baS4bEY83PZ66xb4twoBBtsiMPK2b","headers":{"host":"fra.yj2022.gq"}}}
+  - {"name":"رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣2️⃣ | 2️⃣0️⃣","type":"vmess","server":"164.92.80.223","port":"8080","cipher":"auto","uuid":"4b59fcc4-1ed0-4a7f-b31b-826fffccf6a0","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/grdhhgrdhhhhhhj?ed=2048","headers":{"host":"uszhang.sanfen002.top"}}}
+  - {"name":"رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣1️⃣ | 2️⃣8️⃣","type":"vmess","server":"v2line.telegram.channel.1383.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":"443","cipher":"auto","uuid":"bd32bdcc-1655-463d-bd85-392b61deadc2","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/racevpn","headers":{"host":""}}}
+  - {"name":"رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣2️⃣ | 2️⃣9️⃣","type":"vmess","server":"v2line.telegram.channel.1375.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":"443","cipher":"auto","uuid":"20042f24-d169-4086-a5a9-85bdc76bfb5b","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/racevpn","headers":{"host":""}}}
+  - {"name":"رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣ | 3️⃣0️⃣","type":"vmess","server":"v2line.telegram.channel.1371.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":"443","cipher":"auto","uuid":"540bfb2c-2b26-4154-b5be-55d08bf40add","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/racevpn","headers":{"host":""}}}
+  - {"name":"رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣1️⃣ | 3️⃣1️⃣","type":"vmess","server":"2876be99-f.3nvx.com","port":"443","cipher":"auto","uuid":"74dd674d-35fa-4f75-8b05-0f276e15c091","alterId":"1","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/assets","headers":{"host":"2876be99-f.3nvx.com"}}}
+  - {"name":"رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣2️⃣ | 3️⃣3️⃣","type":"vmess","server":"crownv2.ddns.net","port":"443","cipher":"auto","uuid":"62C3C9F9-0AFB-4BCE-96E0-A2C69506A5AD","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Kansas.bobbykotick.rip"}}}
+  - {"name":"رایگان | VMESS | @FoXrayIran | CA🇨🇦 | 0️⃣1️⃣ | 3️⃣5️⃣","type":"vmess","server":"tl.iranray.online","port":"8080","cipher":"auto","uuid":"839a223f-7510-4556-91fc-03c9dcd9056b","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tl.iranray.online"}}}
+  - {"name":"رایگان | VMESS | @FoXrayIran | CA🇨🇦 | 0️⃣2️⃣ | 3️⃣6️⃣","type":"vmess","server":"fx2.iranray.online","port":"80","cipher":"chacha20-poly1305","uuid":"7300c5af-8657-48ea-ba35-4cc1176c5220","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/RO4vpgRqVSLPRRQi97uOJujdeO","headers":{"host":"de55.v2-teh.fun"}}}
+proxy-groups:
+  - name: MANUAL
+    type: select
+    proxies:
+      - URL-TEST
+      - FALLBACK
+      - 'رایگان | VMESS | @V2rayCollectorDonate | CA🇨🇦 | 0️⃣1️⃣ | 0️⃣1️⃣'
+      - 'رایگان | VMESS | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣2️⃣'
+      - 'رایگان | VMESS | @V2rayCollectorDonate | FR🇫🇷 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | VMESS | @v2ray_outlineir | FR🇫🇷 | 0️⃣1️⃣ | 0️⃣4️⃣'
+      - 'رایگان | VMESS | @mftizi | CA🇨🇦 | 0️⃣1️⃣ | 0️⃣5️⃣'
+      - 'رایگان | VMESS | @oneclickvpnkeys | BY🇧🇾 | 0️⃣2️⃣ | 0️⃣7️⃣'
+      - 'رایگان | VMESS | @oneclickvpnkeys | SK🇸🇰 | 0️⃣3️⃣ | 0️⃣8️⃣'
+      - 'رایگان | VMESS | @oneclickvpnkeys | CA🇨🇦 | 0️⃣5️⃣ | 1️⃣0️⃣'
+      - 'رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣1️⃣ | 1️⃣1️⃣'
+      - 'رایگان | VMESS | @v2ray1_ng | SE🇸🇪 | 0️⃣1️⃣ | 1️⃣3️⃣'
+      - 'رایگان | VMESS | @v2ray1_ng | FR🇫🇷 | 0️⃣3️⃣ | 1️⃣5️⃣'
+      - 'رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣1️⃣ | 1️⃣6️⃣'
+      - 'رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣3️⃣ | 1️⃣8️⃣'
+      - 'رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣2️⃣ | 2️⃣0️⃣'
+      - 'رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣1️⃣ | 2️⃣8️⃣'
+      - 'رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣2️⃣ | 2️⃣9️⃣'
+      - 'رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣ | 3️⃣0️⃣'
+      - 'رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣1️⃣ | 3️⃣1️⃣'
+      - 'رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣2️⃣ | 3️⃣3️⃣'
+      - 'رایگان | VMESS | @FoXrayIran | CA🇨🇦 | 0️⃣1️⃣ | 3️⃣5️⃣'
+      - 'رایگان | VMESS | @FoXrayIran | CA🇨🇦 | 0️⃣2️⃣ | 3️⃣6️⃣'
+  - name: URL-TEST
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    proxies:
+      - 'رایگان | VMESS | @V2rayCollectorDonate | CA🇨🇦 | 0️⃣1️⃣ | 0️⃣1️⃣'
+      - 'رایگان | VMESS | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣2️⃣'
+      - 'رایگان | VMESS | @V2rayCollectorDonate | FR🇫🇷 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | VMESS | @v2ray_outlineir | FR🇫🇷 | 0️⃣1️⃣ | 0️⃣4️⃣'
+      - 'رایگان | VMESS | @mftizi | CA🇨🇦 | 0️⃣1️⃣ | 0️⃣5️⃣'
+      - 'رایگان | VMESS | @oneclickvpnkeys | BY🇧🇾 | 0️⃣2️⃣ | 0️⃣7️⃣'
+      - 'رایگان | VMESS | @oneclickvpnkeys | SK🇸🇰 | 0️⃣3️⃣ | 0️⃣8️⃣'
+      - 'رایگان | VMESS | @oneclickvpnkeys | CA🇨🇦 | 0️⃣5️⃣ | 1️⃣0️⃣'
+      - 'رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣1️⃣ | 1️⃣1️⃣'
+      - 'رایگان | VMESS | @v2ray1_ng | SE🇸🇪 | 0️⃣1️⃣ | 1️⃣3️⃣'
+      - 'رایگان | VMESS | @v2ray1_ng | FR🇫🇷 | 0️⃣3️⃣ | 1️⃣5️⃣'
+      - 'رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣1️⃣ | 1️⃣6️⃣'
+      - 'رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣3️⃣ | 1️⃣8️⃣'
+      - 'رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣2️⃣ | 2️⃣0️⃣'
+      - 'رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣1️⃣ | 2️⃣8️⃣'
+      - 'رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣2️⃣ | 2️⃣9️⃣'
+      - 'رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣ | 3️⃣0️⃣'
+      - 'رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣1️⃣ | 3️⃣1️⃣'
+      - 'رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣2️⃣ | 3️⃣3️⃣'
+      - 'رایگان | VMESS | @FoXrayIran | CA🇨🇦 | 0️⃣1️⃣ | 3️⃣5️⃣'
+      - 'رایگان | VMESS | @FoXrayIran | CA🇨🇦 | 0️⃣2️⃣ | 3️⃣6️⃣'
+  - name: FALLBACK
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - 'رایگان | VMESS | @V2rayCollectorDonate | CA🇨🇦 | 0️⃣1️⃣ | 0️⃣1️⃣'
+      - 'رایگان | VMESS | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣2️⃣'
+      - 'رایگان | VMESS | @V2rayCollectorDonate | FR🇫🇷 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | VMESS | @v2ray_outlineir | FR🇫🇷 | 0️⃣1️⃣ | 0️⃣4️⃣'
+      - 'رایگان | VMESS | @mftizi | CA🇨🇦 | 0️⃣1️⃣ | 0️⃣5️⃣'
+      - 'رایگان | VMESS | @oneclickvpnkeys | BY🇧🇾 | 0️⃣2️⃣ | 0️⃣7️⃣'
+      - 'رایگان | VMESS | @oneclickvpnkeys | SK🇸🇰 | 0️⃣3️⃣ | 0️⃣8️⃣'
+      - 'رایگان | VMESS | @oneclickvpnkeys | CA🇨🇦 | 0️⃣5️⃣ | 1️⃣0️⃣'
+      - 'رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣1️⃣ | 1️⃣1️⃣'
+      - 'رایگان | VMESS | @v2ray1_ng | SE🇸🇪 | 0️⃣1️⃣ | 1️⃣3️⃣'
+      - 'رایگان | VMESS | @v2ray1_ng | FR🇫🇷 | 0️⃣3️⃣ | 1️⃣5️⃣'
+      - 'رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣1️⃣ | 1️⃣6️⃣'
+      - 'رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣3️⃣ | 1️⃣8️⃣'
+      - 'رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣2️⃣ | 2️⃣0️⃣'
+      - 'رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣1️⃣ | 2️⃣8️⃣'
+      - 'رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣2️⃣ | 2️⃣9️⃣'
+      - 'رایگان | VMESS | @v2Line | US🇺🇸 | 0️⃣3️⃣ | 3️⃣0️⃣'
+      - 'رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣1️⃣ | 3️⃣1️⃣'
+      - 'رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣2️⃣ | 3️⃣3️⃣'
+      - 'رایگان | VMESS | @FoXrayIran | CA🇨🇦 | 0️⃣1️⃣ | 3️⃣5️⃣'
+      - 'رایگان | VMESS | @FoXrayIran | CA🇨🇦 | 0️⃣2️⃣ | 3️⃣6️⃣'
+rules:
+  - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
+  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve
+  - IP-CIDR,28.0.0.1/8,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,ip6-localhost,DIRECT
+  - DOMAIN-SUFFIX,ip6-loopback,DIRECT
+  - DOMAIN-SUFFIX,lan,DIRECT
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - DOMAIN-SUFFIX,ir,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,yacd.metacubex.one,DIRECT
+  - DOMAIN,clash.metacubex.one,DIRECT
+  - MATCH,MANUAL
