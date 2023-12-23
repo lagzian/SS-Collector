@@ -110,6 +110,7 @@
                 "FR🇫🇷",
                 "US🇺🇸",
                 "DE🇩🇪",
+                "TH🇹🇭",
                 "FI🇫🇮",
                 "JP🇯🇵",
                 "RU🇷🇺"
@@ -124,6 +125,8 @@
                 "رایگان | VMESS | @oneclickvpnkeys | CA🇨🇦 | 0️⃣3️⃣",
                 "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @ShadowProxy66 | CA🇨🇦 | 0️⃣1️⃣",
+                "رایگان | VMESS | @ShadowProxy66 | CA🇨🇦 | 0️⃣5️⃣",
+                "رایگان | VMESS | @ShadowProxy66 | CA🇨🇦 | 0️⃣6️⃣",
                 "رایگان | VMESS | @proxyymeliii | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @v2ray1_ng | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @v2ray1_ng | CA🇨🇦 | 0️⃣2️⃣",
@@ -147,6 +150,7 @@
                 "رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣5️⃣",
                 "رایگان | VMESS | @oneclickvpnkeys | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | VMESS | @Hope_Net | DE🇩🇪 | 0️⃣3️⃣",
+                "رایگان | VMESS | @ShadowProxy66 | TH🇹🇭 | 0️⃣3️⃣",
                 "رایگان | VMESS | @v2ray1_ng | FI🇫🇮 | 0️⃣4️⃣",
                 "رایگان | VMESS | @DailyV2RY | JP🇯🇵 | 0️⃣3️⃣",
                 "رایگان | VMESS | @DailyV2RY | JP🇯🇵 | 0️⃣5️⃣",
@@ -165,6 +169,8 @@
                 "رایگان | VMESS | @oneclickvpnkeys | CA🇨🇦 | 0️⃣3️⃣",
                 "رایگان | VMESS | @prrofile_purple | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @ShadowProxy66 | CA🇨🇦 | 0️⃣1️⃣",
+                "رایگان | VMESS | @ShadowProxy66 | CA🇨🇦 | 0️⃣5️⃣",
+                "رایگان | VMESS | @ShadowProxy66 | CA🇨🇦 | 0️⃣6️⃣",
                 "رایگان | VMESS | @proxyymeliii | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @v2ray1_ng | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @v2ray1_ng | CA🇨🇦 | 0️⃣2️⃣",
@@ -215,6 +221,16 @@
             "outbounds": [
                 "رایگان | VMESS | @oneclickvpnkeys | DE🇩🇪 | 0️⃣5️⃣",
                 "رایگان | VMESS | @Hope_Net | DE🇩🇪 | 0️⃣3️⃣"
+            ],
+            "url": "https:\/\/www.gstatic.com\/generate_204",
+            "interval": "5m",
+            "tolerance": 50
+        },
+        {
+            "tag": "TH🇹🇭",
+            "type": "urltest",
+            "outbounds": [
+                "رایگان | VMESS | @ShadowProxy66 | TH🇹🇭 | 0️⃣3️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -394,9 +410,43 @@
         {
             "tag": "رایگان | VMESS | @ShadowProxy66 | CA🇨🇦 | 0️⃣1️⃣",
             "type": "vmess",
-            "server": "nla.yj2022.gq",
-            "server_port": 8880,
-            "uuid": "4b5e4565-322f-4223-a891-78a84f189726",
+            "server": "ip.sb",
+            "server_port": 443,
+            "uuid": "a6292090-afe1-4640-97a7-4f1d1d877cf1",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "hdfy8c1.foriran.me",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Av8czorIlYC5KffvrsN6rqb",
+                "idle_timeout": "15s",
+                "ping_timeout": "15s",
+                "permit_without_stream": false
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @ShadowProxy66 | CA🇨🇦 | 0️⃣5️⃣",
+            "type": "vmess",
+            "server": "103.184.44.57",
+            "server_port": 80,
+            "uuid": "023c9d68-d3bc-4a5d-9568-0edb64fcddea",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -409,9 +459,35 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/doxwPZje9wMMZi4m9xY8GkU5zT3Hs4kRDL4W3nistSRmDw3x2",
+                "path": "\/023c9d68",
                 "headers": {
-                    "Host": "nla.yj2022.gq"
+                    "Host": "buyvm.nagisa.cyou"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @ShadowProxy66 | CA🇨🇦 | 0️⃣6️⃣",
+            "type": "vmess",
+            "server": "154.92.9.122",
+            "server_port": 80,
+            "uuid": "023c9d68-d3bc-4a5d-9568-0edb64fcddea",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/023c9d68",
+                "headers": {
+                    "Host": "buyvm.nagisa.cyou"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
@@ -1044,6 +1120,23 @@
             "server": "130.61.111.167",
             "server_port": 21872,
             "uuid": "9a7a75d4-ab7e-4ba0-bbfa-a4acddc18084",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @ShadowProxy66 | TH🇹🇭 | 0️⃣3️⃣",
+            "type": "vmess",
+            "server": "103.114.201.143",
+            "server_port": 59487,
+            "uuid": "51fb562e-0a9b-4c27-e4d8-6f4883bb5165",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
