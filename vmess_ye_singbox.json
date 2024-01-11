@@ -144,10 +144,8 @@
                 "رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣6️⃣",
                 "رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣7️⃣",
                 "رایگان | VMESS | @Hope_Net | CA🇨🇦 | 0️⃣2️⃣",
-                "رایگان | VMESS | @Hope_Net | CA🇨🇦 | 0️⃣3️⃣",
-                "رایگان | VMESS | @FAKEOFTVC | CA🇨🇦 | 0️⃣2️⃣",
+                "رایگان | VMESS | @Hope_Net | CA🇨🇦 | 0️⃣6️⃣",
                 "رایگان | VMESS | @FAKEOFTVC | CA🇨🇦 | 0️⃣3️⃣",
-                "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣4️⃣",
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣5️⃣",
@@ -200,10 +198,8 @@
                 "رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣6️⃣",
                 "رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣7️⃣",
                 "رایگان | VMESS | @Hope_Net | CA🇨🇦 | 0️⃣2️⃣",
-                "رایگان | VMESS | @Hope_Net | CA🇨🇦 | 0️⃣3️⃣",
-                "رایگان | VMESS | @FAKEOFTVC | CA🇨🇦 | 0️⃣2️⃣",
+                "رایگان | VMESS | @Hope_Net | CA🇨🇦 | 0️⃣6️⃣",
                 "رایگان | VMESS | @FAKEOFTVC | CA🇨🇦 | 0️⃣3️⃣",
-                "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣4️⃣",
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣5️⃣",
@@ -1060,9 +1056,9 @@
         {
             "tag": "رایگان | VMESS | @Hope_Net | CA🇨🇦 | 0️⃣2️⃣",
             "type": "vmess",
-            "server": "cname.volcengine.eu.org",
-            "server_port": 80,
-            "uuid": "ebc8ef6e-961d-4315-9258-46fb81605bd7",
+            "server": "srv1.hamedgeek.sbs",
+            "server_port": 2083,
+            "uuid": "b36e93b8-21b4-4495-ac81-0109f65cb1ad",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1073,44 +1069,28 @@
                 "protocol": "smux",
                 "max_streams": 32
             },
-            "transport": {
-                "type": "ws",
-                "path": "\/centos\/7.9.2009\/isos\/x86_64\/CentOS-7-x86_64-Minimal-2009.iso",
-                "headers": {
-                    "Host": "jp3-amazonwebservices.volcengine.eu.org"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "رایگان | VMESS | @Hope_Net | CA🇨🇦 | 0️⃣3️⃣",
-            "type": "vmess",
-            "server": "cname.volcengine.eu.org",
-            "server_port": 80,
-            "uuid": "ebc8ef6e-961d-4315-9258-46fb81605bd7",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
+            "tls": {
+                "enabled": true,
+                "server_name": "kingofilter2.hamedgeek.sbs",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
             },
             "transport": {
                 "type": "ws",
-                "path": "\/centos\/7.9.2009\/isos\/x86_64\/CentOS-7-x86_64-Minimal-2009.iso",
+                "path": "\/",
                 "headers": {
-                    "Host": "ca2-amazonwebservices.volcengine.eu.org"
+                    "Host": "kingofilter2.hamedgeek.sbs"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
-            "tag": "رایگان | VMESS | @FAKEOFTVC | CA🇨🇦 | 0️⃣2️⃣",
+            "tag": "رایگان | VMESS | @Hope_Net | CA🇨🇦 | 0️⃣6️⃣",
             "type": "vmess",
             "server": "hk1.wenpblog.buzz",
             "server_port": 443,
@@ -1176,42 +1156,6 @@
                 "path": "\/linkvws",
                 "headers": {
                     "Host": "alvvin.click"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣1️⃣",
-            "type": "vmess",
-            "server": "srv1.hamedgeek.sbs",
-            "server_port": 2083,
-            "uuid": "b36e93b8-21b4-4495-ac81-0109f65cb1ad",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "kingofilter2.hamedgeek.sbs",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "kingofilter2.hamedgeek.sbs"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
