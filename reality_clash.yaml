@@ -1,7 +1,208 @@
-<html>
-<head><title>502 Bad Gateway</title></head>
-<body>
-<center><h1>502 Bad Gateway</h1></center>
-<hr><center>nginx</center>
-</body>
-</html>
+mixed-port: 7890
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
+mode: rule
+log-level: error
+ipv6: true
+external-controller: 127.0.0.1:9090
+experimental:
+  ignore-resolve-fail: true
+  sniff-tls-sni: true
+  tracing: true
+hosts:
+  "localhost": 127.0.0.1
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    http: { ports: [1-442, 444-8442, 8444-65535], override-destination: true }
+    tls: { ports: [1-79, 81-8079, 8081-65535], override-destination: true }
+  force-domain:
+      - "+.v2ex.com"
+      - www.google.com
+      - google.com
+  skip-domain:
+      - Mijia Cloud
+      - dlg.io.mi.com
+  sniffing:
+    - tls
+    - http
+  port-whitelist:
+    - "80"
+    - "443"
+
+tun:
+  enable: true
+  prefer-h3: true
+  listen: 0.0.0.0:53
+  stack: gvisor
+  dns-hijack:
+     - "any:53"
+     - "tcp://any:53"
+  auto-redir: true
+  auto-route: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  ipv6: true
+  default-nameserver:
+    - '1.1.1.1'
+    - '8.8.8.8'
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - 'stun.*.*'
+    - 'stun.*.*.*'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+    - '*.lan'
+    - '+.msftncsi.com'
+    - msftconnecttest.com
+    - 'time?.*.com'
+    - 'time.*.com'
+    - 'time.*.gov'
+    - 'time.*.apple.com'
+    - time-ios.apple.com
+    - 'time1.*.com'
+    - 'time2.*.com'
+    - 'time3.*.com'
+    - 'time4.*.com'
+    - 'time5.*.com'
+    - 'time6.*.com'
+    - 'time7.*.com'
+    - 'ntp?.*.com'
+    - 'ntp.*.com'
+    - 'ntp1.*.com'
+    - 'ntp2.*.com'
+    - 'ntp3.*.com'
+    - 'ntp4.*.com'
+    - 'ntp5.*.com'
+    - 'ntp6.*.com'
+    - 'ntp7.*.com'
+    - '+.pool.ntp.org'
+    - '+.ipv6.microsoft.com'
+    - speedtest.cros.wr.pvp.net
+    - network-test.debian.org
+    - detectportal.firefox.com
+    - cable.auth.com
+    - miwifi.com
+    - routerlogin.com
+    - routerlogin.net
+    - tendawifi.com
+    - tendawifi.net
+    - tplinklogin.net
+    - tplinkwifi.net
+    - '*.xiami.com'
+    - tplinkrepeater.net
+    - router.asus.com
+    - '*.*.*.srv.nintendo.net'
+    - '*.*.stun.playstation.net'
+    - '*.openwrt.pool.ntp.org'
+    - resolver1.opendns.com
+    - 'GC._msDCS.*.*'
+    - 'DC._msDCS.*.*'
+    - 'PDC._msDCS.*.*'
+  use-hosts: true
+  nameserver:
+    - '8.8.4.4'
+    - '1.0.0.1'
+    - "https://1.0.0.1/dns-query"
+    - "https://8.8.4.4/dns-query"
+  nameserver-policy:
+    'RULE-SET:ir,ircidr,geoip:ir,+.ir,+.bonyan.co': ["217.218.155.155", "217.218.127.127", "https://dns.403.online/dns-query", "https://dns.shecan.ir/dns-query"]
+
+proxies:
+  - {"name":"رایگان | REALITY | @EliV2ray | PT🇵🇹 | 0️⃣1️⃣ | 0️⃣1️⃣","type":"vless","server":"37.59.166.156","port":48576,"udp":true,"uuid":"d8253715-9664-4c3b-9ecd-e4805c8430f8","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"ea.com","reality-opts":{"public-key":"i-TBCDM3b7W2NE5JavNy7XBTsQwIjYD7qG9VEVfnxjg","short-id":"b1b454f6"}}
+  - {"name":"رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣2️⃣","type":"vless","server":"49.13.126.64","port":2096,"udp":true,"uuid":"16747acc-95c8-44ba-9b66-3d8a0c035347","tls":true,"network":"grpc","client-fingerprint":"firefox","servername":"dash.cloudflare.com","reality-opts":{"public-key":"c3R5_lORnQd1X3A2E0ulHJn396G2X_ZYIs66ldEVQWI","short-id":"28f58957"}}
+  - {"name":"رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣","type":"vless","server":"167.235.130.207","port":2087,"udp":true,"uuid":"e4527384-4f20-4378-95dc-403996f12588","tls":true,"network":"grpc","client-fingerprint":"firefox","servername":"dash.cloudflare.com","grpc-opts":{"grpc-service-name":""},"reality-opts":{"public-key":"GicA8fPbS9LksttApqa8gzOstomRFncKNoYGLCOqQF8","short-id":"fc805835"}}
+  - {"name":"رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣","type":"vless","server":"kamyarservers.camdvr.org","port":443,"udp":true,"uuid":"7e2d1645-ee37-458e-bf31-d1694ff352c5","tls":true,"network":"grpc","client-fingerprint":"firefox","servername":"greenpepper.ir","grpc-opts":{"grpc-service-name":"@Fnet00"},"reality-opts":{"public-key":"pj7hhjVTqfsjNw7vIMQFwT6nzdbHLNAyUveeRhv5vw4","short-id":"0960546b"}}
+  - {"name":"رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣5️⃣","type":"vless","server":"kamyarservers.camdvr.org","port":443,"udp":true,"uuid":"2b89fcab-30cd-4665-8f2c-bafed9020d50","tls":true,"network":"grpc","client-fingerprint":"firefox","servername":"greenpepper.ir","grpc-opts":{"grpc-service-name":"@Fnet00"},"reality-opts":{"public-key":"pj7hhjVTqfsjNw7vIMQFwT6nzdbHLNAyUveeRhv5vw4","short-id":"0960546b"}}
+  - {"name":"رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣6️⃣","type":"vless","server":"kamyarservers.camdvr.org","port":443,"udp":true,"uuid":"b9bec4e7-0c93-4724-91da-368e285cc5b4","tls":true,"network":"grpc","client-fingerprint":"firefox","servername":"greenpepper.ir","grpc-opts":{"grpc-service-name":"@Fnet00"},"reality-opts":{"public-key":"pj7hhjVTqfsjNw7vIMQFwT6nzdbHLNAyUveeRhv5vw4","short-id":"0960546b"}}
+  - {"name":"رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣4️⃣ | 0️⃣7️⃣","type":"vless","server":"kamyarservers.camdvr.org","port":443,"udp":true,"uuid":"2b89fcab-30cd-4665-8f2c-bafed9020d50","tls":true,"network":"grpc","client-fingerprint":"firefox","servername":"greenpepper.ir","grpc-opts":{"grpc-service-name":"@Fnet00"},"reality-opts":{"public-key":"pj7hhjVTqfsjNw7vIMQFwT6nzdbHLNAyUveeRhv5vw4","short-id":"0960546b"}}
+  - {"name":"رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣8️⃣","type":"vless","server":"49.12.38.31","port":443,"udp":true,"uuid":"ee10f005-86ad-4c45-99a7-6560cd199079","tls":true,"network":"grpc","client-fingerprint":"firefox","servername":"q23.net","grpc-opts":{"grpc-service-name":"@ipV2Ray"},"reality-opts":{"public-key":"H0lU99Tk_Uug1qas2s9GPaS93HV4khg287eSQ_hy1QM","short-id":"961777e2"}}
+  - {"name":"رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣0️⃣","type":"vless","server":"167.235.143.177","port":443,"udp":true,"uuid":"2d108394-56db-4523-a8ae-bd7ba6de10cc","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"upmusics.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"Kb87OWrViwqYeR7NV3xg406NRviqZ6d0MdzcGf89qjI","short-id":"57b65cc1b228c7c1"}}
+proxy-groups:
+  - name: MANUAL
+    type: select
+    proxies:
+      - URL-TEST
+      - FALLBACK
+      - 'رایگان | REALITY | @EliV2ray | PT🇵🇹 | 0️⃣1️⃣ | 0️⃣1️⃣'
+      - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣2️⃣'
+      - 'رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣'
+      - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣5️⃣'
+      - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣6️⃣'
+      - 'رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣4️⃣ | 0️⃣7️⃣'
+      - 'رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣8️⃣'
+      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣0️⃣'
+  - name: URL-TEST
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    proxies:
+      - 'رایگان | REALITY | @EliV2ray | PT🇵🇹 | 0️⃣1️⃣ | 0️⃣1️⃣'
+      - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣2️⃣'
+      - 'رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣'
+      - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣5️⃣'
+      - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣6️⃣'
+      - 'رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣4️⃣ | 0️⃣7️⃣'
+      - 'رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣8️⃣'
+      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣0️⃣'
+  - name: FALLBACK
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - 'رایگان | REALITY | @EliV2ray | PT🇵🇹 | 0️⃣1️⃣ | 0️⃣1️⃣'
+      - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣2️⃣'
+      - 'رایگان | REALITY | @proxyymeliii | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣'
+      - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣5️⃣'
+      - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣6️⃣'
+      - 'رایگان | REALITY | @Outlinev2rayNG | DE🇩🇪 | 0️⃣4️⃣ | 0️⃣7️⃣'
+      - 'رایگان | REALITY | @Capoit | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣8️⃣'
+      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣0️⃣'
+rule-providers:
+  ir: {type: http, format: text, behavior: domain, path: ./ruleset/ir.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.txt, interval: 86400}
+  ads: {type: http, format: text, behavior: domain, path: ./ruleset/ads.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ads.txt, interval: 86400}
+  ircidr: {type: http, format: text, behavior: ipcidr, path: ./ruleset/ircidr.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.txt, interval: 86400}
+  private: {type: http, format: text, behavior: ipcidr, path: ./ruleset/private.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/private.txt, interval: 86400}
+  apps: {type: http, format: text, behavior: domain, path: ./ruleset/apps.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.txt, interval: 86400}
+  malware: {type: http, format: text, behavior: domain, path: ./ruleset/malware.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/malware.txt, interval: 86400}
+  phishing: {type: http, format: text, behavior: domain, path: ./ruleset/phishing.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/phishing.txt, interval: 86400}
+  cryptominers: {type: http, format: text, behavior: domain, path: ./ruleset/cryptominers.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/cryptominers.txt, interval: 86400}
+rules:
+  - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
+  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve
+  - IP-CIDR,28.0.0.1/8,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,ip6-localhost,DIRECT
+  - DOMAIN-SUFFIX,ip6-loopback,DIRECT
+  - DOMAIN-SUFFIX,lan,DIRECT
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - DOMAIN-SUFFIX,ir,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,yacd.metacubex.one,DIRECT
+  - DOMAIN,clash.metacubex.one,DIRECT
+  - RULE-SET,ads,REJECT
+  - RULE-SET,malware,REJECT
+  - RULE-SET,phishing,REJECT
+  - RULE-SET,cryptominers,REJECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,apps,DIRECT
+  - RULE-SET,ir,DIRECT
+  - RULE-SET,ircidr,DIRECT
+  - MATCH,MANUAL
