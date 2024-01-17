@@ -120,39 +120,43 @@ dns:
     'RULE-SET:ir,ircidr,geoip:ir,+.ir,+.bonyan.co': ["217.218.155.155", "217.218.127.127", "https://dns.403.online/dns-query", "https://dns.shecan.ir/dns-query"]
 
 proxies:
-  - {"name":"رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣1️⃣","type":"vless","server":"91.107.181.102","port":29790,"udp":true,"uuid":"75a747f3-f914-47dd-af5c-ec2f0a1438a6","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"ea.com","reality-opts":{"public-key":"gHpgh7fQoB9kzze4I6Pwvo8sXiAPIbja2ieX03dVjkE","short-id":"1bd52d06"}}
-  - {"name":"رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣5️⃣ | 1️⃣0️⃣","type":"vless","server":"128.140.7.39","port":2096,"udp":true,"uuid":"6dfcd92b-d9be-4d63-9e44-536f783bbcc4","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"www.sourceforge.net","grpc-opts":{"grpc-service-name":"@ZEDMODEON"},"reality-opts":{"public-key":"W910ZHwnBcC44iFG14G6oNxSJMReu4L5y4QPa1N4w0k","short-id":"45ee6a57"}}
-  - {"name":"رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣6️⃣ | 1️⃣1️⃣","type":"vless","server":"195.201.17.222","port":443,"udp":true,"uuid":"9acbeae9-54ca-4b22-8761-c7980700e10a","tls":true,"network":"grpc","client-fingerprint":"firefox","servername":"greenpepper.ir","grpc-opts":{"grpc-service-name":"@ipV2Ray"},"reality-opts":{"public-key":"---nFe9nTXuiuxMZYfQEDvBCN4j_Bq-pN4vcixiXHTI","short-id":"c50dbf82"}}
-  - {"name":"رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣3️⃣","type":"vless","server":"167.235.143.177","port":443,"udp":true,"uuid":"2d108394-56db-4523-a8ae-bd7ba6de10cc","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"upmusics.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"Kb87OWrViwqYeR7NV3xg406NRviqZ6d0MdzcGf89qjI","short-id":"57b65cc1b228c7c1"}}
+  - {"name":"رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣1️⃣","type":"vless","server":"91.107.181.102","port":29790,"udp":true,"uuid":"75a747f3-f914-47dd-af5c-ec2f0a1438a6","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"ea.com","reality-opts":{"public-key":"gHpgh7fQoB9kzze4I6Pwvo8sXiAPIbja2ieX03dVjkE","short-id":"1bd52d06"}}
+  - {"name":"رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣","type":"vless","server":"46.101.210.24","port":28506,"udp":true,"uuid":"b948b117-2658-4cbf-a7e0-0bb42da39760","tls":true,"network":"grpc","client-fingerprint":"firefox","servername":"ilovepdf.com","grpc-opts":{"grpc-service-name":""},"reality-opts":{"public-key":"d2nmrwxk6TZt36feMWvWMgguXdT7oY1waIPlby8ytSY","short-id":"e1ac4cea"}}
+  - {"name":"رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣5️⃣ | 1️⃣2️⃣","type":"vless","server":"128.140.7.39","port":2096,"udp":true,"uuid":"6dfcd92b-d9be-4d63-9e44-536f783bbcc4","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"www.sourceforge.net","grpc-opts":{"grpc-service-name":"@ZEDMODEON"},"reality-opts":{"public-key":"W910ZHwnBcC44iFG14G6oNxSJMReu4L5y4QPa1N4w0k","short-id":"45ee6a57"}}
+  - {"name":"رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣6️⃣ | 1️⃣3️⃣","type":"vless","server":"195.201.17.222","port":443,"udp":true,"uuid":"9acbeae9-54ca-4b22-8761-c7980700e10a","tls":true,"network":"grpc","client-fingerprint":"firefox","servername":"greenpepper.ir","grpc-opts":{"grpc-service-name":"@ipV2Ray"},"reality-opts":{"public-key":"---nFe9nTXuiuxMZYfQEDvBCN4j_Bq-pN4vcixiXHTI","short-id":"c50dbf82"}}
+  - {"name":"رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣5️⃣","type":"vless","server":"167.235.143.177","port":443,"udp":true,"uuid":"2d108394-56db-4523-a8ae-bd7ba6de10cc","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"upmusics.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"Kb87OWrViwqYeR7NV3xg406NRviqZ6d0MdzcGf89qjI","short-id":"57b65cc1b228c7c1"}}
 proxy-groups:
   - name: MANUAL
     type: select
     proxies:
       - URL-TEST
       - FALLBACK
-      - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣1️⃣'
-      - 'رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣5️⃣ | 1️⃣0️⃣'
-      - 'رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣6️⃣ | 1️⃣1️⃣'
-      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣3️⃣'
+      - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣1️⃣'
+      - 'رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣5️⃣ | 1️⃣2️⃣'
+      - 'رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣6️⃣ | 1️⃣3️⃣'
+      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣5️⃣'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 60
     tolerance: 50
     proxies:
-      - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣1️⃣'
-      - 'رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣5️⃣ | 1️⃣0️⃣'
-      - 'رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣6️⃣ | 1️⃣1️⃣'
-      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣3️⃣'
+      - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣1️⃣'
+      - 'رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣5️⃣ | 1️⃣2️⃣'
+      - 'رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣6️⃣ | 1️⃣3️⃣'
+      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣5️⃣'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
-      - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣1️⃣'
-      - 'رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣5️⃣ | 1️⃣0️⃣'
-      - 'رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣6️⃣ | 1️⃣1️⃣'
-      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣3️⃣'
+      - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣1️⃣'
+      - 'رایگان | REALITY | @V2rayCollectorDonate | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | REALITY | @DailyV2RY | DE🇩🇪 | 0️⃣5️⃣ | 1️⃣2️⃣'
+      - 'رایگان | REALITY | @flyv2ray | DE🇩🇪 | 0️⃣6️⃣ | 1️⃣3️⃣'
+      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 1️⃣5️⃣'
 rule-providers:
   ir: {type: http, format: text, behavior: domain, path: ./ruleset/ir.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.txt, interval: 86400}
   ads: {type: http, format: text, behavior: domain, path: ./ruleset/ads.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ads.txt, interval: 86400}
