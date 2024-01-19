@@ -123,7 +123,6 @@ proxies:
   - {"name":"رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣2️⃣ | 0️⃣1️⃣","type":"vless","server":"5.42.86.225","port":2058,"udp":true,"uuid":"18d0c2b1-7f35-4954-bb74-b86d3a0e66c5","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"www.who.int","grpc-opts":{"grpc-service-name":""},"reality-opts":{"public-key":"1yjMDe_3ZcrJDc4fGqWPmy-udJRLW502p2EjplmCWx8","short-id":"76753364"}}
   - {"name":"رایگان | REALITY | @FAKEOFTVC | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣2️⃣","type":"vless","server":"91.107.181.102","port":29790,"udp":true,"uuid":"75a747f3-f914-47dd-af5c-ec2f0a1438a6","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"ea.com","reality-opts":{"public-key":"gHpgh7fQoB9kzze4I6Pwvo8sXiAPIbja2ieX03dVjkE","short-id":"1bd52d06"}}
   - {"name":"رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣","type":"vless","server":"167.235.143.177","port":443,"udp":true,"uuid":"2d108394-56db-4523-a8ae-bd7ba6de10cc","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"upmusics.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"Kb87OWrViwqYeR7NV3xg406NRviqZ6d0MdzcGf89qjI","short-id":"57b65cc1b228c7c1"}}
-  - {"name":"رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣ | 0️⃣5️⃣","type":"vless","server":"pr.dadnetiran.xyz","port":12754,"udp":true,"uuid":"fa1661aa-a1e3-4b74-9a2d-1d4d62050bc5","tls":true,"network":"tcp","client-fingerprint":"firefox","servername":"discord.com","reality-opts":{"public-key":"7Ig5GBzwQkBPQ-3gEPgBjTt-6N14VNcW6qgsTW2dKxA","short-id":"02085b77"}}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -133,7 +132,6 @@ proxy-groups:
       - 'رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣2️⃣ | 0️⃣1️⃣'
       - 'رایگان | REALITY | @FAKEOFTVC | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣2️⃣'
       - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣'
-      - 'رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣ | 0️⃣5️⃣'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -143,7 +141,6 @@ proxy-groups:
       - 'رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣2️⃣ | 0️⃣1️⃣'
       - 'رایگان | REALITY | @FAKEOFTVC | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣2️⃣'
       - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣'
-      - 'رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣ | 0️⃣5️⃣'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -152,7 +149,6 @@ proxy-groups:
       - 'رایگان | REALITY | @VmessProtocol | SE🇸🇪 | 0️⃣2️⃣ | 0️⃣1️⃣'
       - 'رایگان | REALITY | @FAKEOFTVC | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣2️⃣'
       - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣'
-      - 'رایگان | REALITY | @Good_V2rayy | IR🇮🇷 | 0️⃣1️⃣ | 0️⃣5️⃣'
 rule-providers:
   ir: {type: http, format: text, behavior: domain, path: ./ruleset/ir.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.txt, interval: 86400}
   ads: {type: http, format: text, behavior: domain, path: ./ruleset/ads.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ads.txt, interval: 86400}
