@@ -123,6 +123,8 @@ proxies:
   - {"name":"رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣1️⃣","type":"vless","server":"88.151.194.252","port":8443,"udp":true,"uuid":"115cb25a-154f-4899-8437-983c6b4b77c4","tls":true,"network":"tcp","client-fingerprint":"chrome","servername":"speed.cloudflare.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"_lZAF6sNv2UN3Dw1J-onN3DDunvHo4t5FmOXMPAYLBw","short-id":"4bc2f303"}}
   - {"name":"رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣5️⃣ | 0️⃣3️⃣","type":"vless","server":"91.107.249.141","port":52391,"udp":true,"uuid":"fd881ed5-1c65-422e-a0ef-505690c4c3f3","tls":true,"network":"tcp","client-fingerprint":"chrome","servername":"discord.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"aLE5KaEL109tMDAisa1qRPFMzgBsNiZXCLzNZ0S-hmY","short-id":"366fba16"}}
   - {"name":"رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣5️⃣","type":"vless","server":"49.13.72.241","port":443,"udp":true,"uuid":"ac4ca222-1c50-4f96-bd13-7a9498f8ea28","tls":true,"network":"grpc","client-fingerprint":"firefox","servername":"greenpepper.ir","grpc-opts":{"grpc-service-name":"@Fnet00"},"reality-opts":{"public-key":"pj7hhjVTqfsjNw7vIMQFwT6nzdbHLNAyUveeRhv5vw4","short-id":"0960546b"}}
+  - {"name":"رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣7️⃣","type":"vless","server":"45.76.89.236","port":443,"udp":true,"uuid":"d5ed6cb7-7088-4ebb-9240-e12d241ca81f","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"reversereality.cpionline.us","grpc-opts":{"grpc-service-name":""},"reality-opts":{"public-key":"9rx7JwMO-KRZZEM9TQBO19BOAmmGjJyjN86ll2J7uVc"}}
+  - {"name":"رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣ | 0️⃣8️⃣","type":"vless","server":"185.237.15.168","port":2096,"udp":true,"uuid":"72ea5c0d-a669-4dad-b851-7dfee40376f6","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"ilovepdf.com","grpc-opts":{"grpc-service-name":""},"reality-opts":{"public-key":"s89SzOdVwK1EupCJIFvHEsVw0uAfOaFsRvx_Ayqe3UI","short-id":"cdd251af"}}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -132,6 +134,8 @@ proxy-groups:
       - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣1️⃣'
       - 'رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣5️⃣ | 0️⃣3️⃣'
       - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣5️⃣'
+      - 'رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣7️⃣'
+      - 'رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣ | 0️⃣8️⃣'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -141,6 +145,8 @@ proxy-groups:
       - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣1️⃣'
       - 'رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣5️⃣ | 0️⃣3️⃣'
       - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣5️⃣'
+      - 'رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣7️⃣'
+      - 'رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣ | 0️⃣8️⃣'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -149,6 +155,8 @@ proxy-groups:
       - 'رایگان | REALITY | @EliV2ray | DE🇩🇪 | 0️⃣2️⃣ | 0️⃣1️⃣'
       - 'رایگان | REALITY | @VmessProtocol | DE🇩🇪 | 0️⃣5️⃣ | 0️⃣3️⃣'
       - 'رایگان | REALITY | @fnet00 | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣5️⃣'
+      - 'رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣7️⃣'
+      - 'رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣5️⃣ | 0️⃣8️⃣'
 rule-providers:
   ir: {type: http, format: text, behavior: domain, path: ./ruleset/ir.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.txt, interval: 86400}
   ads: {type: http, format: text, behavior: domain, path: ./ruleset/ads.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ads.txt, interval: 86400}
