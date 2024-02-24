@@ -145,7 +145,7 @@
                 "رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣3️⃣",
                 "رایگان | VMESS | @v2Line | CA🇨🇦 | 0️⃣4️⃣",
-                "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣5️⃣",
+                "رایگان | VMESS | @forwardv2ray | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣6️⃣",
                 "رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣2️⃣",
@@ -153,9 +153,9 @@
                 "رایگان | VMESS | @SINABIGO | CA🇨🇦 | 0️⃣5️⃣",
                 "رایگان | VMESS | @DeamNet_Proxy | IS🇮🇸 | 0️⃣2️⃣",
                 "رایگان | VMESS | @DeamNet_Proxy | IR🇮🇷 | 0️⃣4️⃣",
-                "رایگان | VMESS | @kingofilter | IR🇮🇷 | 0️⃣2️⃣",
                 "رایگان | VMESS | @ShadowProxy66 | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @ShadowProxy66 | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | VMESS | @SINABIGO | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | VMESS | @ShadowProxy66 | UA🇺🇦 | 0️⃣3️⃣",
                 "رایگان | VMESS | @v2Line | UA🇺🇦 | 0️⃣2️⃣",
@@ -196,7 +196,7 @@
                 "رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @yaney_01 | CA🇨🇦 | 0️⃣3️⃣",
                 "رایگان | VMESS | @v2Line | CA🇨🇦 | 0️⃣4️⃣",
-                "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣5️⃣",
+                "رایگان | VMESS | @forwardv2ray | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣6️⃣",
                 "رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣2️⃣",
@@ -221,8 +221,7 @@
             "tag": "IR🇮🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | VMESS | @DeamNet_Proxy | IR🇮🇷 | 0️⃣4️⃣",
-                "رایگان | VMESS | @kingofilter | IR🇮🇷 | 0️⃣2️⃣"
+                "رایگان | VMESS | @DeamNet_Proxy | IR🇮🇷 | 0️⃣4️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -234,6 +233,7 @@
             "outbounds": [
                 "رایگان | VMESS | @ShadowProxy66 | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @ShadowProxy66 | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | VMESS | @SINABIGO | US🇺🇸 | 0️⃣2️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -1154,7 +1154,7 @@
             }
         },
         {
-            "tag": "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣5️⃣",
+            "tag": "رایگان | VMESS | @forwardv2ray | CA🇨🇦 | 0️⃣2️⃣",
             "type": "vmess",
             "server": "nelly.homes",
             "server_port": 443,
@@ -1393,23 +1393,6 @@
             }
         },
         {
-            "tag": "رایگان | VMESS | @kingofilter | IR🇮🇷 | 0️⃣2️⃣",
-            "type": "vmess",
-            "server": "45.11.182.108",
-            "server_port": 80,
-            "uuid": "ea122eac-3ea3-47e3-9c43-a0393dade8c8",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
             "tag": "رایگان | VMESS | @ShadowProxy66 | US🇺🇸 | 0️⃣1️⃣",
             "type": "vmess",
             "server": "jpcft01.xqc.best",
@@ -1479,6 +1462,23 @@
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣2️⃣",
+            "type": "vmess",
+            "server": "45.11.182.108",
+            "server_port": 80,
+            "uuid": "ea122eac-3ea3-47e3-9c43-a0393dade8c8",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
             }
         },
         {
