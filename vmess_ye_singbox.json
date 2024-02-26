@@ -139,6 +139,7 @@
                 "رایگان | VMESS | @v2ray1_ng | CA🇨🇦 | 0️⃣6️⃣",
                 "رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣7️⃣",
+                "رایگان | VMESS | @ConfigsHUB | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @proxystore11 | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @proxystore11 | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @proxystore11 | CA🇨🇦 | 0️⃣4️⃣",
@@ -149,7 +150,6 @@
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣5️⃣",
                 "رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣3️⃣",
-                "رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣4️⃣",
                 "رایگان | VMESS | @FoXrayIran | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @SINABIGO | CA🇨🇦 | 0️⃣5️⃣",
                 "رایگان | VMESS | @ShadowProxy66 | UA🇺🇦 | 0️⃣1️⃣",
@@ -189,6 +189,7 @@
                 "رایگان | VMESS | @v2ray1_ng | CA🇨🇦 | 0️⃣6️⃣",
                 "رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @DailyV2RY | CA🇨🇦 | 0️⃣7️⃣",
+                "رایگان | VMESS | @ConfigsHUB | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @proxystore11 | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @proxystore11 | CA🇨🇦 | 0️⃣2️⃣",
                 "رایگان | VMESS | @proxystore11 | CA🇨🇦 | 0️⃣4️⃣",
@@ -199,7 +200,6 @@
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @kingofilter | CA🇨🇦 | 0️⃣5️⃣",
                 "رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣3️⃣",
-                "رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣4️⃣",
                 "رایگان | VMESS | @FoXrayIran | CA🇨🇦 | 0️⃣1️⃣",
                 "رایگان | VMESS | @SINABIGO | CA🇨🇦 | 0️⃣5️⃣"
             ],
@@ -932,6 +932,42 @@
             }
         },
         {
+            "tag": "رایگان | VMESS | @ConfigsHUB | CA🇨🇦 | 0️⃣2️⃣",
+            "type": "vmess",
+            "server": "172.67.152.214",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "meroiy.icu",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "meroiy.icu"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
             "tag": "رایگان | VMESS | @proxystore11 | CA🇨🇦 | 0️⃣1️⃣",
             "type": "vmess",
             "server": "172.67.68.246",
@@ -1246,32 +1282,6 @@
                 "path": "\/linkvws",
                 "headers": {
                     "Host": "janett.click"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "رایگان | VMESS | @eliya_chiter0 | CA🇨🇦 | 0️⃣4️⃣",
-            "type": "vmess",
-            "server": "104.21.90.218",
-            "server_port": 2086,
-            "uuid": "e690ff9e-1676-4be3-d136-dcae586cb1e7",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "index.zhaal.ir"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
