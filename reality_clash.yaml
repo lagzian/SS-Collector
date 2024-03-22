@@ -121,8 +121,9 @@ dns:
 
 proxies:
   - {"name":"رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣6️⃣ | 0️⃣2️⃣","type":"vless","server":"143.244.207.133","port":46217,"udp":true,"uuid":"835607d0-6d60-444e-bc0b-ebc9cd9594ad","tls":true,"network":"tcp","client-fingerprint":"firefox","servername":"yahoo.com","reality-opts":{"public-key":"Qdg7LVP5VmLr7xzv556ry5RNc3QaeAj4TwOUxndA23M","short-id":"e3f89b63"}}
-  - {"name":"رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣","type":"vless","server":"503.quickvpn.shop","port":567,"udp":true,"uuid":"8aea43f9-77a8-4089-9402-428f623cc6f7","tls":true,"network":"http","client-fingerprint":"chrome","servername":"kodular.io","reality-opts":{"public-key":"L-3BNMN89itwyzSnsv4WihvszKdDONmUN9ewQYDMN1Y","short-id":"a63e2394f0e08731"}}
-  - {"name":"رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣","type":"vless","server":"167.235.143.177","port":443,"udp":true,"uuid":"2d108394-56db-4523-a8ae-bd7ba6de10cc","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"upmusics.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"Kb87OWrViwqYeR7NV3xg406NRviqZ6d0MdzcGf89qjI","short-id":"57b65cc1b228c7c1"}}
+  - {"name":"رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣","type":"vless","server":"49.13.192.157","port":5555,"udp":true,"uuid":"6b9f7ef6-5dd5-4433-9edd-12a13219a020","tls":true,"network":"grpc","client-fingerprint":"randomized","servername":"www.sourceforge.net","grpc-opts":{"grpc-service-name":""},"reality-opts":{"public-key":"vHlFJfSPB7t2b3NbFX-YFGB5sD5L6HeUehGBsWO12yY","short-id":"9d09dee45e5b7a86"}}
+  - {"name":"رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣4️⃣","type":"vless","server":"503.quickvpn.shop","port":567,"udp":true,"uuid":"8aea43f9-77a8-4089-9402-428f623cc6f7","tls":true,"network":"http","client-fingerprint":"chrome","servername":"kodular.io","reality-opts":{"public-key":"L-3BNMN89itwyzSnsv4WihvszKdDONmUN9ewQYDMN1Y","short-id":"a63e2394f0e08731"}}
+  - {"name":"رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣5️⃣","type":"vless","server":"167.235.143.177","port":443,"udp":true,"uuid":"2d108394-56db-4523-a8ae-bd7ba6de10cc","tls":true,"network":"grpc","client-fingerprint":"chrome","servername":"upmusics.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"Kb87OWrViwqYeR7NV3xg406NRviqZ6d0MdzcGf89qjI","short-id":"57b65cc1b228c7c1"}}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -130,8 +131,9 @@ proxy-groups:
       - URL-TEST
       - FALLBACK
       - 'رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣6️⃣ | 0️⃣2️⃣'
-      - 'رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
-      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣'
+      - 'رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣4️⃣'
+      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣5️⃣'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -139,16 +141,18 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 'رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣6️⃣ | 0️⃣2️⃣'
-      - 'رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
-      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣'
+      - 'رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣4️⃣'
+      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣5️⃣'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
       - 'رایگان | REALITY | @ShadowProxy66 | DE🇩🇪 | 0️⃣6️⃣ | 0️⃣2️⃣'
-      - 'رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
-      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣4️⃣'
+      - 'رایگان | REALITY | @forwardv2ray | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣3️⃣'
+      - 'رایگان | REALITY | @kingofilter | DE🇩🇪 | 0️⃣3️⃣ | 0️⃣4️⃣'
+      - 'رایگان | REALITY | @freeconfigv2 | DE🇩🇪 | 0️⃣1️⃣ | 0️⃣5️⃣'
 rule-providers:
   ir: {type: http, format: text, behavior: domain, path: ./ruleset/ir.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.txt, interval: 86400}
   ads: {type: http, format: text, behavior: domain, path: ./ruleset/ads.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ads.txt, interval: 86400}
