@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  FILE_URL: "https://raw.githubusercontent.com/lagzian/TelegramV2rayCollector/main/sub/normal/reality"
+  FILE_URL: "https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/normal/reality"
   OUTPUT_FILE: "reality.txt"
   BASE64_FILE: "reality_B64.txt"
   CLASH_YAML_FILE: "reality_clash.yaml"
@@ -37,7 +37,7 @@ jobs:
 
       - name: Fetch Content and Generate YAML
         run: |
-          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Freality_B64.txt&type=meta&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/reality&type=meta&process=full"
           # Optional: Convert to YAML format if needed
           # cat "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" | yq eval -j - > "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
 
