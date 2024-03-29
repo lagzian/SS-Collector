@@ -29,9 +29,9 @@ jobs:
         run: |
           curl -o temp25.txt -L "${FILE_URL}"
 
-      - name: Extract Lines Starting with "vmess://" & "vless://"
+      - name: Extract Lines Starting with "vmess://" and "vless://"
         run: |
-          grep '^vmess://' temp25.txt > "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
+          grep -E '^vless://|^vmess://' temp25.txt > "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
 
       - name: Convert Lines to Base64 and Save
         run: |
@@ -39,7 +39,7 @@ jobs:
 
       - name: Fetch Content and Generate YAML
         run: |
-          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/vmess&type=clash&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/xc0000e9/deatnote/main/Hiddify-next.fragment&type=meta&process=full"
          
           curl -o "${GITHUB_WORKSPACE}/${SINGBOX_JSON_FILE}" -L "${SINGBOX_URL}"
           # Optional: Convert to YAML format if needed
@@ -47,12 +47,12 @@ jobs:
 
       - name: Clean Up
         run: |
-          rm temp11.txt
+          rm temp25.txt
 
       - name: Commit and Push Changes
         run: |
           git add "${GITHUB_WORKSPACE}/${OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${BASE64_FILE}" "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/${SINGBOX_JSON_FILE}"
-          git commit -m "Update vmess_tvc.txt, vmess_B64_tvc.txt, vmess_tvc_clash.yaml, and vmess_tvc_singbox.json" || true
+          git commit -m "Update vmess_vless.txt, vmess_vless_B64.txt, vmess_vless_clash.yaml, and vmess_vless_singbox.json" || true
           git remote remove origin
           git remote add origin "https://github.com/lagzian/SS-Collector.git"
           git push origin HEAD:${GITHUB_REF}
