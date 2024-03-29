@@ -20,6 +20,7 @@ This repository contains various Shadowsocks, VMESS, and Reality configuration i
 | Configuration | Normal | Base64 Encoded | Meta/Clash | SING-BOX |
 |-|-|-|-|-|  
 | Trinity (SS) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/Trinity.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/Trinity) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_clash.yaml) | [JSON](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_singbox.json) |
+| Trinity (VMESS) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_Trinity.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_Trinity) | [Clash YAML](N/A) | [JSON](N/A) |
 
 
 ## How to Use
