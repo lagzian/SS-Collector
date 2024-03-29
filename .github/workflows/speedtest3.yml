@@ -3,7 +3,7 @@ name: Speed Test3
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */5 * * *"
+    - cron: "0 */6 * * *"
 
 jobs:
   main:
@@ -28,7 +28,7 @@ jobs:
         run: |
           sleep 5
           sudo sh ./utils/speedtest/speedtest3.sh
-          python ./utils/speedtest/output.py
+          python ./utils/speedtest/output2.py
 
       - name: Commit Changes
         run: |
