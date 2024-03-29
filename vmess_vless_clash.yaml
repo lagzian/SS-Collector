@@ -1,0 +1,260 @@
+mixed-port: 7890
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
+mode: rule
+log-level: error
+ipv6: true
+external-controller: 127.0.0.1:9090
+experimental:
+  ignore-resolve-fail: true
+  sniff-tls-sni: true
+  tracing: true
+hosts:
+  "localhost": 127.0.0.1
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    http: { ports: [1-442, 444-8442, 8444-65535], override-destination: true }
+    tls: { ports: [1-79, 81-8079, 8081-65535], override-destination: true }
+  force-domain:
+      - "+.v2ex.com"
+      - www.google.com
+      - google.com
+  skip-domain:
+      - Mijia Cloud
+      - dlg.io.mi.com
+  sniffing:
+    - tls
+    - http
+  port-whitelist:
+    - "80"
+    - "443"
+
+tun:
+  enable: true
+  prefer-h3: true
+  listen: 0.0.0.0:53
+  stack: gvisor
+  dns-hijack:
+     - "any:53"
+     - "tcp://any:53"
+  auto-redir: true
+  auto-route: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  ipv6: true
+  default-nameserver:
+    - '1.1.1.1'
+    - '8.8.8.8'
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - 'stun.*.*'
+    - 'stun.*.*.*'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+    - '*.lan'
+    - '+.msftncsi.com'
+    - msftconnecttest.com
+    - 'time?.*.com'
+    - 'time.*.com'
+    - 'time.*.gov'
+    - 'time.*.apple.com'
+    - time-ios.apple.com
+    - 'time1.*.com'
+    - 'time2.*.com'
+    - 'time3.*.com'
+    - 'time4.*.com'
+    - 'time5.*.com'
+    - 'time6.*.com'
+    - 'time7.*.com'
+    - 'ntp?.*.com'
+    - 'ntp.*.com'
+    - 'ntp1.*.com'
+    - 'ntp2.*.com'
+    - 'ntp3.*.com'
+    - 'ntp4.*.com'
+    - 'ntp5.*.com'
+    - 'ntp6.*.com'
+    - 'ntp7.*.com'
+    - '+.pool.ntp.org'
+    - '+.ipv6.microsoft.com'
+    - speedtest.cros.wr.pvp.net
+    - network-test.debian.org
+    - detectportal.firefox.com
+    - cable.auth.com
+    - miwifi.com
+    - routerlogin.com
+    - routerlogin.net
+    - tendawifi.com
+    - tendawifi.net
+    - tplinklogin.net
+    - tplinkwifi.net
+    - '*.xiami.com'
+    - tplinkrepeater.net
+    - router.asus.com
+    - '*.*.*.srv.nintendo.net'
+    - '*.*.stun.playstation.net'
+    - '*.openwrt.pool.ntp.org'
+    - resolver1.opendns.com
+    - 'GC._msDCS.*.*'
+    - 'DC._msDCS.*.*'
+    - 'PDC._msDCS.*.*'
+  use-hosts: true
+  nameserver:
+    - '8.8.4.4'
+    - '1.0.0.1'
+    - "https://1.0.0.1/dns-query"
+    - "https://8.8.4.4/dns-query"
+  nameserver-policy:
+    'RULE-SET:ir,ircidr,geoip:ir,+.ir,+.bonyan.co': ["217.218.155.155", "217.218.127.127", "https://dns.403.online/dns-query", "https://dns.shecan.ir/dns-query"]
+
+proxies:
+  - {"name":"crolinde %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣2️⃣","type":"vless","server":"stats.defisaver.com","port":443,"udp":false,"uuid":"e5e34431-e29e-4821-a986-f3231933beb9","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"mitsuri.yaemiko.cloudns.org","ws-opts":{"path":"/ed?=2048","headers":{"host":"mitsuri.yaemiko.cloudns.org"}}}
+  - {"name":"%F0%9F%87%AB%F0%9F%87%B7 furina %F0%9F%87%AB%F0%9F%87%B7  | 0️⃣3️⃣","type":"vless","server":"admin.ozonedesk.com","port":443,"udp":false,"uuid":"38535031-ccc3-4a94-bd54-c68806486406","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"ffvhyfhibfrhhddrhh965ommcdwwr5furina.yaemiko.cloudns.org","ws-opts":{"path":"/ed?=2048","headers":{"host":"furina.yaemiko.cloudns.org"}}}
+  - {"name":"🇬🇧 🇫🇷 | 0️⃣4️⃣","type":"vmess","server":"www.eligasht.com","port":"443","cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.sbs/linkws","headers":{"host":"mikasa.yaemiko.cloudns.org"}}}
+  - {"name":"%E2%9D%84%EF%B8%8F eula %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣5️⃣","type":"vless","server":"www.eligasht.com","port":443,"udp":false,"uuid":"31aa719b-742f-430d-8a59-6abfbf538842","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"eula.yaemiko.cloudns.org","ws-opts":{"path":"&nbsp;/ed?=2048","headers":{"host":"eula.yaemiko.cloudns.org"}}}
+  - {"name":"%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9%0A   %F0%9F%87%A9%F0%9F%87%AA   azn | 0️⃣6️⃣","type":"vless","server":"www.asamserver.com","port":443,"udp":false,"uuid":"0b4b623c-2914-494d-b6b8-b03fbf4d6655","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"ndt3G6HHYuKepav839navia.yaemiko.cloudns.org","ws-opts":{"path":"/ed?=2048","headers":{"host":"navia.yaemiko.cloudns.org"}}}
+  - {"name":"%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9 %0Adg oc %F0%9F%87%AC%F0%9F%87%A7  | 0️⃣7️⃣","type":"vless","server":"www.1000site.ir","port":443,"udp":false,"uuid":"7bedf632-b4c2-4e90-9d8b-f42ee7145534","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"uufeyjjbhjjjavia.yaemiko.cloudns.org","ws-opts":{"path":"/ed?=2048","headers":{"host":"yaemiko.yaemiko.cloudns.org"}}}
+  - {"name":"  🇫🇷 👀 🇫🇷 🇫🇷  | 0️⃣8️⃣","type":"vmess","server":"mcdowellsrepair.com","port":"443","cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/afrhms16v.bestxray.buzz/linkws","headers":{"host":"mikasa.yaemiko.cloudns.org"}}}
+  - {"name":"paris 🇫🇷  | 0️⃣9️⃣","type":"vmess","server":"caretaker.com","port":"443","cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/gwdef.sbs/linkws","headers":{"host":"mikasa.yaemiko.cloudns.org"}}}
+  - {"name":"🇫🇷 🙂 🇩🇪 🇩🇪 | 1️⃣0️⃣","type":"vmess","server":"www.teletrans.ro","port":"443","cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/obdii.cfd/linkws","headers":{"host":"mikasa.yaemiko.cloudns.org"}}}
+  - {"name":"🇺🇦 🇺🇦 🇺🇦  Gpt | 1️⃣2️⃣","type":"vmess","server":"shop-bmw.fr","port":"443","cipher":"auto","uuid":"43d0bf70-edab-11ee-be17-57f0191a9e1e","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vpnjantit/ua3.vpnjantit.com","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+  - {"name":"%F0%9F%87%AA%F0%9F%87%AA %E2%9C%8C%F0%9F%8F%BB %F0%9F%87%AA%F0%9F%87%AA | 1️⃣3️⃣","type":"vless","server":"proordemonline.com.br","port":443,"udp":false,"uuid":"7f0bfb2d-d6d5-4998-9382-2baabcf69a70","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"nejf9f902o2o2pdkjdnwnjwkwonezuko.yaemiko.cloudns.org","ws-opts":{"path":"/vless/ee3-vless.sshmax.xyz","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+  - {"name":"🇬🇧 💷 🇬🇧 🇬🇧 gpt | 1️⃣4️⃣","type":"vmess","server":"www.jeguue.com","port":"443","cipher":"auto","uuid":"d4f779fc-edac-11ee-9c45-f7b53253f7d2","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vpnjantit/premiuk2.vpnjantit.com","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+  - {"name":"%F0%9F%87%B8%F0%9F%87%AA gpt | 1️⃣5️⃣","type":"vless","server":"offsitevisibility.com","port":443,"udp":false,"uuid":"eb7c76ea-edad-11ee-9260-00163cfb5321","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"randdghg13dtffikgff685guihnezuko.yaemiko.cloudns.org","ws-opts":{"path":"/vpnjantit/se2.vpnjantit.com","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+  - {"name":"%F0%9F%87%A7%F0%9F%87%AA %F0%9F%AB%B0%F0%9F%8F%BB %F0%9F%87%A7%F0%9F%87%AA gpt | 1️⃣6️⃣","type":"vless","server":"goldreviews.online","port":443,"udp":false,"uuid":"a0d3145b-d15c-4bbd-902b-ed14c671059d","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"nezuko.yaemiko.cloudns.org","ws-opts":{"path":"/vless/be3-vless.sshmax.xyz","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+  - {"name":"%F0%9F%87%A6%F0%9F%87%B9    %F0%9F%87%A6%F0%9F%87%B9  | 1️⃣7️⃣","type":"vless","server":"media1.catholicireland.net","port":443,"udp":false,"uuid":"71250eb7-e219-412a-8b03-3e360ed23c8b","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"nezujf9f9o3jejejejrkrorijnezuko.yaemiko.cloudns.org","ws-opts":{"path":"/vless/at3-vless.sshmax.xyz","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+  - {"name":"%F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%8D%95 %F0%9F%8D%95  | 1️⃣9️⃣","type":"vless","server":"proordemonline.com.br","port":443,"udp":false,"uuid":"5fe2569d-c481-4abc-876d-a005b47ba528","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"nezujcufjfjfifkf23835ko.yaemiko.cloudns.org","ws-opts":{"path":"/VLESS/it-full.privateip.net","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+  - {"name":"🍷 🇫🇷 🇩🇪  🇬🇧  | 2️⃣0️⃣","type":"vmess","server":"carlsbergbackend.hummingfood.com","port":"443","cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.cfd/linkws","headers":{"host":"mikasa.yaemiko.cloudns.org"}}}
+  - {"name":"🇹🇷 🇹🇷 🇹🇷  | 2️⃣2️⃣","type":"vmess","server":"shop-bmw.fr","port":"443","cipher":"auto","uuid":"063513f4-edac-11ee-bc77-23f64eab9e27","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vpnjantit/tr5.vpnjantit.com","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+  - {"name":"🇦🇪 🐫 🇦🇪 🐫  | 2️⃣4️⃣","type":"vmess","server":"lc.org","port":"443","cipher":"auto","uuid":"b7e8d9d6-ed8a-11ee-b731-8f73a5d78934","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vpnjantit/ae1.vpnjantit.com","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+  - {"name":"germany %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA  | 2️⃣5️⃣","type":"vless","server":"www.quiminet.com","port":443,"udp":false,"uuid":"59fcb9c6-10d2-4854-8a98-e68fa6a551c1","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"nezuko.yaemiko.cloudns.org","ws-opts":{"path":"/VLESS/de2-full.privateip.net","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+  - {"name":"%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E %F0%9F%87%BA%F0%9F%87%B2 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E  | 2️⃣6️⃣","type":"vless","server":"alecanton.com","port":443,"udp":false,"uuid":"d99a65e2-9f29-44dc-af0f-365029588d77","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"nezuko.yaemiko.cloudns.org","ws-opts":{"path":"/VLESS/us-full.privateip.net","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+  - {"name":"%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 2️⃣7️⃣","type":"vless","server":"agenda.culturaenlinea.uy","port":443,"udp":false,"uuid":"4a3a2a49-388c-4263-ba6a-893181d72b62","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"nezufdffgyghui78yffdesko.yaemiko.cloudns.org","ws-opts":{"path":"/VLESS/kz-full.privateip.net","headers":{"host":"nezuko.yaemiko.cloudns.org"}}}
+proxy-groups:
+  - name: MANUAL
+    type: select
+    proxies:
+      - URL-TEST
+      - FALLBACK
+      - 'crolinde %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣2️⃣'
+      - '%F0%9F%87%AB%F0%9F%87%B7 furina %F0%9F%87%AB%F0%9F%87%B7  | 0️⃣3️⃣'
+      - '🇬🇧 🇫🇷 | 0️⃣4️⃣'
+      - '%E2%9D%84%EF%B8%8F eula %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣5️⃣'
+      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9%0A   %F0%9F%87%A9%F0%9F%87%AA   azn | 0️⃣6️⃣'
+      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9 %0Adg oc %F0%9F%87%AC%F0%9F%87%A7  | 0️⃣7️⃣'
+      - '  🇫🇷 👀 🇫🇷 🇫🇷  | 0️⃣8️⃣'
+      - 'paris 🇫🇷  | 0️⃣9️⃣'
+      - '🇫🇷 🙂 🇩🇪 🇩🇪 | 1️⃣0️⃣'
+      - '🇺🇦 🇺🇦 🇺🇦  Gpt | 1️⃣2️⃣'
+      - '%F0%9F%87%AA%F0%9F%87%AA %E2%9C%8C%F0%9F%8F%BB %F0%9F%87%AA%F0%9F%87%AA | 1️⃣3️⃣'
+      - '🇬🇧 💷 🇬🇧 🇬🇧 gpt | 1️⃣4️⃣'
+      - '%F0%9F%87%B8%F0%9F%87%AA gpt | 1️⃣5️⃣'
+      - '%F0%9F%87%A7%F0%9F%87%AA %F0%9F%AB%B0%F0%9F%8F%BB %F0%9F%87%A7%F0%9F%87%AA gpt | 1️⃣6️⃣'
+      - '%F0%9F%87%A6%F0%9F%87%B9    %F0%9F%87%A6%F0%9F%87%B9  | 1️⃣7️⃣'
+      - '%F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%8D%95 %F0%9F%8D%95  | 1️⃣9️⃣'
+      - '🍷 🇫🇷 🇩🇪  🇬🇧  | 2️⃣0️⃣'
+      - '🇹🇷 🇹🇷 🇹🇷  | 2️⃣2️⃣'
+      - '🇦🇪 🐫 🇦🇪 🐫  | 2️⃣4️⃣'
+      - 'germany %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA  | 2️⃣5️⃣'
+      - '%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E %F0%9F%87%BA%F0%9F%87%B2 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E  | 2️⃣6️⃣'
+      - '%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 2️⃣7️⃣'
+  - name: URL-TEST
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    proxies:
+      - 'crolinde %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣2️⃣'
+      - '%F0%9F%87%AB%F0%9F%87%B7 furina %F0%9F%87%AB%F0%9F%87%B7  | 0️⃣3️⃣'
+      - '🇬🇧 🇫🇷 | 0️⃣4️⃣'
+      - '%E2%9D%84%EF%B8%8F eula %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣5️⃣'
+      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9%0A   %F0%9F%87%A9%F0%9F%87%AA   azn | 0️⃣6️⃣'
+      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9 %0Adg oc %F0%9F%87%AC%F0%9F%87%A7  | 0️⃣7️⃣'
+      - '  🇫🇷 👀 🇫🇷 🇫🇷  | 0️⃣8️⃣'
+      - 'paris 🇫🇷  | 0️⃣9️⃣'
+      - '🇫🇷 🙂 🇩🇪 🇩🇪 | 1️⃣0️⃣'
+      - '🇺🇦 🇺🇦 🇺🇦  Gpt | 1️⃣2️⃣'
+      - '%F0%9F%87%AA%F0%9F%87%AA %E2%9C%8C%F0%9F%8F%BB %F0%9F%87%AA%F0%9F%87%AA | 1️⃣3️⃣'
+      - '🇬🇧 💷 🇬🇧 🇬🇧 gpt | 1️⃣4️⃣'
+      - '%F0%9F%87%B8%F0%9F%87%AA gpt | 1️⃣5️⃣'
+      - '%F0%9F%87%A7%F0%9F%87%AA %F0%9F%AB%B0%F0%9F%8F%BB %F0%9F%87%A7%F0%9F%87%AA gpt | 1️⃣6️⃣'
+      - '%F0%9F%87%A6%F0%9F%87%B9    %F0%9F%87%A6%F0%9F%87%B9  | 1️⃣7️⃣'
+      - '%F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%8D%95 %F0%9F%8D%95  | 1️⃣9️⃣'
+      - '🍷 🇫🇷 🇩🇪  🇬🇧  | 2️⃣0️⃣'
+      - '🇹🇷 🇹🇷 🇹🇷  | 2️⃣2️⃣'
+      - '🇦🇪 🐫 🇦🇪 🐫  | 2️⃣4️⃣'
+      - 'germany %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA  | 2️⃣5️⃣'
+      - '%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E %F0%9F%87%BA%F0%9F%87%B2 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E  | 2️⃣6️⃣'
+      - '%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 2️⃣7️⃣'
+  - name: FALLBACK
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - 'crolinde %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣2️⃣'
+      - '%F0%9F%87%AB%F0%9F%87%B7 furina %F0%9F%87%AB%F0%9F%87%B7  | 0️⃣3️⃣'
+      - '🇬🇧 🇫🇷 | 0️⃣4️⃣'
+      - '%E2%9D%84%EF%B8%8F eula %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣5️⃣'
+      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9%0A   %F0%9F%87%A9%F0%9F%87%AA   azn | 0️⃣6️⃣'
+      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9 %0Adg oc %F0%9F%87%AC%F0%9F%87%A7  | 0️⃣7️⃣'
+      - '  🇫🇷 👀 🇫🇷 🇫🇷  | 0️⃣8️⃣'
+      - 'paris 🇫🇷  | 0️⃣9️⃣'
+      - '🇫🇷 🙂 🇩🇪 🇩🇪 | 1️⃣0️⃣'
+      - '🇺🇦 🇺🇦 🇺🇦  Gpt | 1️⃣2️⃣'
+      - '%F0%9F%87%AA%F0%9F%87%AA %E2%9C%8C%F0%9F%8F%BB %F0%9F%87%AA%F0%9F%87%AA | 1️⃣3️⃣'
+      - '🇬🇧 💷 🇬🇧 🇬🇧 gpt | 1️⃣4️⃣'
+      - '%F0%9F%87%B8%F0%9F%87%AA gpt | 1️⃣5️⃣'
+      - '%F0%9F%87%A7%F0%9F%87%AA %F0%9F%AB%B0%F0%9F%8F%BB %F0%9F%87%A7%F0%9F%87%AA gpt | 1️⃣6️⃣'
+      - '%F0%9F%87%A6%F0%9F%87%B9    %F0%9F%87%A6%F0%9F%87%B9  | 1️⃣7️⃣'
+      - '%F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%8D%95 %F0%9F%8D%95  | 1️⃣9️⃣'
+      - '🍷 🇫🇷 🇩🇪  🇬🇧  | 2️⃣0️⃣'
+      - '🇹🇷 🇹🇷 🇹🇷  | 2️⃣2️⃣'
+      - '🇦🇪 🐫 🇦🇪 🐫  | 2️⃣4️⃣'
+      - 'germany %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA  | 2️⃣5️⃣'
+      - '%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E %F0%9F%87%BA%F0%9F%87%B2 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E  | 2️⃣6️⃣'
+      - '%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 2️⃣7️⃣'
+rule-providers:
+  ir: {type: http, format: text, behavior: domain, path: ./ruleset/ir.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.txt, interval: 86400}
+  ads: {type: http, format: text, behavior: domain, path: ./ruleset/ads.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ads.txt, interval: 86400}
+  ircidr: {type: http, format: text, behavior: ipcidr, path: ./ruleset/ircidr.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.txt, interval: 86400}
+  private: {type: http, format: text, behavior: ipcidr, path: ./ruleset/private.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/private.txt, interval: 86400}
+  apps: {type: http, format: text, behavior: domain, path: ./ruleset/apps.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.txt, interval: 86400}
+  malware: {type: http, format: text, behavior: domain, path: ./ruleset/malware.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/malware.txt, interval: 86400}
+  phishing: {type: http, format: text, behavior: domain, path: ./ruleset/phishing.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/phishing.txt, interval: 86400}
+  cryptominers: {type: http, format: text, behavior: domain, path: ./ruleset/cryptominers.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/cryptominers.txt, interval: 86400}
+rules:
+  - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
+  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve
+  - IP-CIDR,28.0.0.1/8,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,ip6-localhost,DIRECT
+  - DOMAIN-SUFFIX,ip6-loopback,DIRECT
+  - DOMAIN-SUFFIX,lan,DIRECT
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - DOMAIN-SUFFIX,ir,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,yacd.metacubex.one,DIRECT
+  - DOMAIN,clash.metacubex.one,DIRECT
+  - RULE-SET,ads,REJECT
+  - RULE-SET,malware,REJECT
+  - RULE-SET,phishing,REJECT
+  - RULE-SET,cryptominers,REJECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,apps,DIRECT
+  - RULE-SET,ir,DIRECT
+  - RULE-SET,ircidr,DIRECT
+  - MATCH,MANUAL
