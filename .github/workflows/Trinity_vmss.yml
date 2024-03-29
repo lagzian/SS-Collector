@@ -1,0 +1,53 @@
+name: Trinity_vmess
+
+on:
+  push:
+    paths:
+      - SS/Trinity_vmess.txt
+  workflow_run:
+    workflows:
+      - "Speed Test"
+    types:
+      - completed
+  workflow_dispatch:
+
+env:
+  FILE_URL: "https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/Trinity_vmess.txt"
+  OUTPUT_FILE: "Trinity_vmess.txt"
+  BASE64_FILE: "Trinity_vmessB64"
+  CLASH_YAML_FILE: "trinity_clash_vmess.yaml"
+  SINGBOX_URL: "https://yebekhe.serv00.net/api/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2FSS%2FTrinity_vmessB64.txt&limit=0&tun=true"
+  SINGBOX_JSON_FILE: "trinity_singbox_vmess.json"
+
+jobs:
+  extract_shadowsocks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Git Config
+        run: |
+          git config --global user.name "${{ secrets.GIT_USERNAME }}"
+          git config --global user.email "${{ secrets.GIT_EMAIL }}"
+
+      - name: Fetch Content and Generate YAML
+        run: |
+          curl -o "${GITHUB_WORKSPACE}/SS/${CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/Trinity_vmessB64.txt&type=clash&process=full"
+
+          curl -o "${GITHUB_WORKSPACE}/SS/${SINGBOX_JSON_FILE}" -L "${SINGBOX_URL}"
+          # Optional: Convert to YAML format if needed
+          # cat "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" | yq eval -j - > "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
+
+      - name: Commit and Push Changes
+        run: |
+          cd SS # Change directory to the "SS" folder
+          git add "${GITHUB_WORKSPACE}/SS/${CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/SS/${SINGBOX_JSON_FILE}"
+          git commit -m "Update trinity_clash_vmess.yaml and trinity_singbox_vmess.json" || true
+          git remote remove origin
+          git remote add origin "https://github.com/lagzian/SS-Collector.git"
+          git push origin HEAD:${GITHUB_REF}
+
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
