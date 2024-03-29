@@ -13,7 +13,7 @@ env:
   SINGBOX_JSON_FILE: "vmess_vless_singbox.json"
 
 jobs:
-  extract_shadowsocks:
+  extract_configs:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,11 +27,11 @@ jobs:
 
       - name: Download TXT File
         run: |
-          curl -o temp11.txt -L "${FILE_URL}"
+          curl -o temp25.txt -L "${FILE_URL}"
 
-      - name: Extract Lines Starting with "vmess://"
+      - name: Extract Lines Starting with "vmess://" & "vless://"
         run: |
-          grep '^vmess://' temp11.txt > "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
+          grep '^vmess://' temp25.txt > "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
 
       - name: Convert Lines to Base64 and Save
         run: |
