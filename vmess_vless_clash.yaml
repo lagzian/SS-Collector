@@ -147,6 +147,7 @@ proxies:
   - {"name":"%F0%9F%87%A7%F0%9F%87%AA %F0%9F%87%A7%F0%9F%87%AA  | 2️⃣6️⃣","type":"vless","server":"www.bmcollege.gov.bd","port":443,"udp":false,"uuid":"a96e0567-2150-4d3b-89cc-e2e19b91f03e","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/vless/be1.v2vless.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
   - {"name":"%F0%9F%87%AC%F0%9F%87%A7  %F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%AC%F0%9F%87%A7  | 2️⃣7️⃣","type":"vless","server":"www.smartsupp.com","port":2096,"udp":false,"uuid":"5c626eb8-1765-4f92-b026-9189231241cd","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/vless/uk1.v2vless.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
   - {"name":"%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7  | 2️⃣8️⃣","type":"vless","server":"jive-germany.com","port":443,"udp":false,"uuid":"14b7dc80-5444-4819-bcf2-9bca437e36dc","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/fr-freevmess.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
+  - {"name":"%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 2️⃣9️⃣","type":"vless","server":"headbrookeincharge.com","port":443,"udp":false,"uuid":"fc5348ee-1fb4-4050-af65-bba3580df5fd","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","flow":"xtls-rprx-vision","ws-opts":{"path":"/VLESS/kz-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -180,6 +181,7 @@ proxy-groups:
       - '%F0%9F%87%A7%F0%9F%87%AA %F0%9F%87%A7%F0%9F%87%AA  | 2️⃣6️⃣'
       - '%F0%9F%87%AC%F0%9F%87%A7  %F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%AC%F0%9F%87%A7  | 2️⃣7️⃣'
       - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7  | 2️⃣8️⃣'
+      - '%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 2️⃣9️⃣'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -213,6 +215,7 @@ proxy-groups:
       - '%F0%9F%87%A7%F0%9F%87%AA %F0%9F%87%A7%F0%9F%87%AA  | 2️⃣6️⃣'
       - '%F0%9F%87%AC%F0%9F%87%A7  %F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%AC%F0%9F%87%A7  | 2️⃣7️⃣'
       - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7  | 2️⃣8️⃣'
+      - '%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 2️⃣9️⃣'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -245,6 +248,7 @@ proxy-groups:
       - '%F0%9F%87%A7%F0%9F%87%AA %F0%9F%87%A7%F0%9F%87%AA  | 2️⃣6️⃣'
       - '%F0%9F%87%AC%F0%9F%87%A7  %F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%AC%F0%9F%87%A7  | 2️⃣7️⃣'
       - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7  | 2️⃣8️⃣'
+      - '%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 2️⃣9️⃣'
 rule-providers:
   ir: {type: http, format: text, behavior: domain, path: ./ruleset/ir.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.txt, interval: 86400}
   ads: {type: http, format: text, behavior: domain, path: ./ruleset/ads.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ads.txt, interval: 86400}
