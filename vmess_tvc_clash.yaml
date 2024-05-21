@@ -161,7 +161,6 @@ proxies:
   - {"name":"🚩CF | 🟢 | vmess | @v2Line | 6 | 4️⃣6️⃣","type":"vmess","server":"172.67.170.13","port":"443","cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
   - {"name":"🚩CF | 🟢 | vmess | @nofiltering2 | 1 | 4️⃣8️⃣","type":"vmess","server":"172.67.74.4","port":"443","cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ivideos.sbs/linkws","headers":{"host":"mikasa.yaemiko.cloudns.org"}}}
   - {"name":"🇮🇷IR | 🟢 | vmess | @ROMAX_VPN | 0 | 4️⃣9️⃣","type":"vmess","server":"178.239.150.170","port":"80","cipher":"auto","uuid":"2b7ce1d2-0372-4104-aa06-f7d999f26e1d","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"❔XX | 🟢 | vmess | @ROMAX_VPN | 2 | 5️⃣0️⃣","type":"vmess","server":"f42.maryam1500.top","port":"2098","cipher":"auto","uuid":"83876222-64a4-4912-aa18-b7d9d34959de","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -211,7 +210,6 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @v2Line | 6 | 4️⃣6️⃣'
       - '🚩CF | 🟢 | vmess | @nofiltering2 | 1 | 4️⃣8️⃣'
       - '🇮🇷IR | 🟢 | vmess | @ROMAX_VPN | 0 | 4️⃣9️⃣'
-      - '❔XX | 🟢 | vmess | @ROMAX_VPN | 2 | 5️⃣0️⃣'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -261,7 +259,6 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @v2Line | 6 | 4️⃣6️⃣'
       - '🚩CF | 🟢 | vmess | @nofiltering2 | 1 | 4️⃣8️⃣'
       - '🇮🇷IR | 🟢 | vmess | @ROMAX_VPN | 0 | 4️⃣9️⃣'
-      - '❔XX | 🟢 | vmess | @ROMAX_VPN | 2 | 5️⃣0️⃣'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -310,7 +307,6 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @v2Line | 6 | 4️⃣6️⃣'
       - '🚩CF | 🟢 | vmess | @nofiltering2 | 1 | 4️⃣8️⃣'
       - '🇮🇷IR | 🟢 | vmess | @ROMAX_VPN | 0 | 4️⃣9️⃣'
-      - '❔XX | 🟢 | vmess | @ROMAX_VPN | 2 | 5️⃣0️⃣'
 rules:
   - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
   - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve
