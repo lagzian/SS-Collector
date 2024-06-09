@@ -154,6 +154,7 @@ proxies:
   - {"name":" 🇩🇪  fr | 3️⃣2️⃣","type":"vmess","server":"download.osgrid.org","port":"443","cipher":"auto","uuid":"1dc14910-92b3-488c-a92d-764ff6e09b8e","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Frankfurt.fghgdddgvss.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
   - {"name":"%F0%9F%87%A8%F0%9F%87%A6  | 3️⃣3️⃣","type":"vless","server":"zula.ir","port":443,"udp":false,"uuid":"314c294f-31b0-4714-a58b-eb613ed49542","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/ca-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
   - {"name":"%F0%9F%87%A9%F0%9F%87%AA | 3️⃣4️⃣","type":"vless","server":"www.syphilisisback.ca","port":2096,"udp":false,"uuid":"1f61d666-59d2-42cb-b390-3ebaf6c51839","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"akenohimejima.yaemiko.cloudns.biz","ws-opts":{"path":"/","headers":{"host":"akenohimejima.yaemiko.cloudns.biz"}}}
+  - {"name":"%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%BA%F0%9F%87%B8  | 3️⃣5️⃣","type":"vless","server":"intra.ninja","port":443,"udp":false,"uuid":"ebfdccb6-7416-4b6e-860d-98587344d500","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","flow":"xtls-rprx-vision","ws-opts":{"path":"/xyakws/lg1.freessr2.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -194,6 +195,7 @@ proxy-groups:
       - ' 🇩🇪  fr | 3️⃣2️⃣'
       - '%F0%9F%87%A8%F0%9F%87%A6  | 3️⃣3️⃣'
       - '%F0%9F%87%A9%F0%9F%87%AA | 3️⃣4️⃣'
+      - '%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%BA%F0%9F%87%B8  | 3️⃣5️⃣'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -234,6 +236,7 @@ proxy-groups:
       - ' 🇩🇪  fr | 3️⃣2️⃣'
       - '%F0%9F%87%A8%F0%9F%87%A6  | 3️⃣3️⃣'
       - '%F0%9F%87%A9%F0%9F%87%AA | 3️⃣4️⃣'
+      - '%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%BA%F0%9F%87%B8  | 3️⃣5️⃣'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -273,6 +276,7 @@ proxy-groups:
       - ' 🇩🇪  fr | 3️⃣2️⃣'
       - '%F0%9F%87%A8%F0%9F%87%A6  | 3️⃣3️⃣'
       - '%F0%9F%87%A9%F0%9F%87%AA | 3️⃣4️⃣'
+      - '%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%BA%F0%9F%87%B8  | 3️⃣5️⃣'
 rule-providers:
   ir: {type: http, format: text, behavior: domain, path: ./ruleset/ir.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.txt, interval: 86400}
   ads: {type: http, format: text, behavior: domain, path: ./ruleset/ads.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ads.txt, interval: 86400}
