@@ -109,8 +109,7 @@
                 "US🇺🇸",
                 "NO🇳🇴",
                 "DE🇩🇪",
-                "NL🇳🇱",
-                "TW🇹🇼"
+                "NL🇳🇱"
             ]
         },
         {
@@ -158,8 +157,7 @@
                 "رایگان | VMESS | @vless_vmess | DE🇩🇪 | 0️⃣2️⃣",
                 "رایگان | VMESS | @vmess_vless_v2rayng | DE🇩🇪 | 0️⃣3️⃣",
                 "رایگان | VMESS | @ShadowProxy66 | NL🇳🇱 | 0️⃣2️⃣",
-                "رایگان | VMESS | @Hope_Net | NL🇳🇱 | 0️⃣6️⃣",
-                "رایگان | VMESS | @ConfigsHUB | TW🇹🇼 | 0️⃣1️⃣"
+                "رایگان | VMESS | @Hope_Net | NL🇳🇱 | 0️⃣6️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -238,16 +236,6 @@
             "outbounds": [
                 "رایگان | VMESS | @ShadowProxy66 | NL🇳🇱 | 0️⃣2️⃣",
                 "رایگان | VMESS | @Hope_Net | NL🇳🇱 | 0️⃣6️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "TW🇹🇼",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | VMESS | @ConfigsHUB | TW🇹🇼 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -1573,23 +1561,6 @@
                 },
                 "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "رایگان | VMESS | @ConfigsHUB | TW🇹🇼 | 0️⃣1️⃣",
-            "type": "vmess",
-            "server": "in06.dns2024.org",
-            "server_port": 61017,
-            "uuid": "9eac8830-5da5-3ee2-a4b2-b49598275623",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
             }
         },
         {
