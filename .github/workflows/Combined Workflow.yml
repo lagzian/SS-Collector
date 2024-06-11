@@ -1,0 +1,106 @@
+name: Combined Workflow
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"  # Adjust as needed for the combined schedule
+  workflow_dispatch:
+
+env:
+  REALITY_FILE_URL: "https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/normal/reality"
+  VMESS_TVC_FILE_URL: "https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/normal/vmess"
+  VMESS_FILE_URL: "https://raw.githubusercontent.com/lagzian/V2RayAggregator/master/Eternity.txt"
+  OUTPUT_FILE_REALITY: "reality.txt"
+  BASE64_FILE_REALITY: "reality_B64.txt"
+  CLASH_YAML_FILE_REALITY: "reality_clash.yaml"
+  OUTPUT_FILE_VMESS_TVC: "vmess_tvc.txt"
+  BASE64_FILE_VMESS_TVC: "vmess_B64_tvc.txt"
+  CLASH_YAML_FILE_VMESS_TVC: "vmess_tvc_clash.yaml"
+  SINGBOX_URL_VMESS_TVC: "https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/singbox/vmess.json"
+  SINGBOX_JSON_FILE_VMESS_TVC: "vmess_tvc_singbox.json"
+  OUTPUT_FILE_VMESS: "vmess.txt"
+  BASE64_FILE_VMESS: "vmess_B64.txt"
+  CLASH_YAML_FILE_VMESS: "vmess_clash.yaml"
+  SINGBOX_URL_VMESS: "https://yebekhe.serv00.net/api/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fvmess.txt&limit=0&tun=true"
+  SINGBOX_JSON_FILE_VMESS: "vmess_singbox.json"
+
+jobs:
+  extract_files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Git Config
+        run: |
+          git config --global user.name "${{ secrets.GIT_USERNAME }}"
+          git config --global user.email "${{ secrets.GIT_EMAIL }}"
+
+      # Reality Workflow
+      - name: Download Reality TXT File
+        run: |
+          curl -o temp2.txt -L "${{ env.REALITY_FILE_URL }}"
+
+      - name: Extract Lines Starting with "vless://" for Reality
+        run: |
+          grep '^vless://' temp2.txt > "${{ github.workspace }}/${{ env.OUTPUT_FILE_REALITY }}"
+
+      - name: Convert Lines to Base64 and Save for Reality
+        run: |
+          cat "${{ github.workspace }}/${{ env.OUTPUT_FILE_REALITY }}" | base64 -w 0 > "${{ github.workspace }}/${{ env.BASE64_FILE_REALITY }}"
+
+      - name: Fetch Content and Generate YAML for Reality
+        run: |
+          curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_REALITY }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/reality&type=meta&process=full"
+          rm temp2.txt
+
+      # Vmess_tvc Workflow
+      - name: Download Vmess_tvc TXT File
+        run: |
+          curl -o temp11.txt -L "${{ env.VMESS_TVC_FILE_URL }}"
+
+      - name: Extract Lines Starting with "vmess://" for Vmess_tvc
+        run: |
+          grep '^vmess://' temp11.txt > "${{ github.workspace }}/${{ env.OUTPUT_FILE_VMESS_TVC }}"
+
+      - name: Convert Lines to Base64 and Save for Vmess_tvc
+        run: |
+          cat "${{ github.workspace }}/${{ env.OUTPUT_FILE_VMESS_TVC }}" | base64 -w 0 > "${{ github.workspace }}/${{ env.BASE64_FILE_VMESS_TVC }}"
+
+      - name: Fetch Content and Generate YAML for Vmess_tvc
+        run: |
+          curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS_TVC }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/vmess&type=clash&process=full"
+          curl -o "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS_TVC }}" -L "${{ env.SINGBOX_URL_VMESS_TVC }}"
+          rm temp11.txt
+
+      # Vmess Workflow
+      - name: Download Vmess TXT File
+        run: |
+          curl -o temp1.txt -L "${{ env.VMESS_FILE_URL }}"
+
+      - name: Extract Lines Starting with "vmess://" for Vmess
+        run: |
+          grep '^vmess://' temp1.txt > "${{ github.workspace }}/${{ env.OUTPUT_FILE_VMESS }}"
+
+      - name: Convert Lines to Base64 and Save for Vmess
+        run: |
+          cat "${{ github.workspace }}/${{ env.OUTPUT_FILE_VMESS }}" | base64 -w 0 > "${{ github.workspace }}/${{ env.BASE64_FILE_VMESS }}"
+
+      - name: Fetch Content and Generate YAML for Vmess
+        run: |
+          curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS }}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt&type=clash&process=full"
+          curl -o "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS }}" -L "${{ env.SINGBOX_URL_VMESS }}"
+          rm temp1.txt
+
+      # Commit and Push Changes
+      - name: Commit and Push Changes
+        run: |
+          git add "${{ github.workspace }}/${{ env.OUTPUT_FILE_REALITY }}" "${{ github.workspace }}/${{ env.BASE64_FILE_REALITY }}" "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_REALITY }}"
+          git add "${{ github.workspace }}/${{ env.OUTPUT_FILE_VMESS_TVC }}" "${{ github.workspace }}/${{ env.BASE64_FILE_VMESS_TVC }}" "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS_TVC }}" "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS_TVC }}"
+          git add "${{ github.workspace }}/${{ env.OUTPUT_FILE_VMESS }}" "${{ github.workspace }}/${{ env.BASE64_FILE_VMESS }}" "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS }}" "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS }}"
+          git commit -m "Update reality.txt, vmess_tvc.txt, vmess.txt and related files" || true
+          git remote remove origin
+          git remote add origin "https://github.com/lagzian/SS-Collector.git"
+          git push origin HEAD:${GITHUB_REF}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
