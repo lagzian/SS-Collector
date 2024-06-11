@@ -48,20 +48,22 @@ jobs:
           retry() {
             local retries=15
             local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
+            local cmd="$@"
+            until $cmd; do
+                exit_code=$?
+                wait=$((2 ** $count))
+                count=$((count + 1))
+                if [ $count -lt $retries ]; then
+                    echo "Retry $count/$retries exited with code $exit_code, retrying in $wait seconds..."
+                    sleep $wait
+                else
+                    echo "Retry $count/$retries exited with code $exit_code, no more retries left."
+                    return $exit_code
+                fi
             done
             return 0
           }
+
           retry curl -o temp11.txt -L "${VMESS_V2RAY_FILE_URL}"
 
       - name: Debug Vmess_V2rayCollector File
@@ -75,17 +77,18 @@ jobs:
           retry() {
             local retries=15
             local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
+            local cmd="$@"
+            until $cmd; do
+                exit_code=$?
+                wait=$((2 ** $count))
+                count=$((count + 1))
+                if [ $count -lt $retries ]; then
+                    echo "Retry $count/$retries exited with code $exit_code, retrying in $wait seconds..."
+                    sleep $wait
+                else
+                    echo "Retry $count/$retries exited with code $exit_code, no more retries left."
+                    return $exit_code
+                fi
             done
             return 0
           }
@@ -100,17 +103,18 @@ jobs:
           retry() {
             local retries=15
             local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
+            local cmd="$@"
+            until $cmd; do
+                exit_code=$?
+                wait=$((2 ** $count))
+                count=$((count + 1))
+                if [ $count -lt $retries ]; then
+                    echo "Retry $count/$retries exited with code $exit_code, retrying in $wait seconds..."
+                    sleep $wait
+                else
+                    echo "Retry $count/$retries exited with code $exit_code, no more retries left."
+                    return $exit_code
+                fi
             done
             return 0
           }
@@ -123,17 +127,18 @@ jobs:
           retry() {
             local retries=15
             local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
+            local cmd="$@"
+            until $cmd; do
+                exit_code=$?
+                wait=$((2 ** $count))
+                count=$((count + 1))
+                if [ $count -lt $retries ]; then
+                    echo "Retry $count/$retries exited with code $exit_code, retrying in $wait seconds..."
+                    sleep $wait
+                else
+                    echo "Retry $count/$retries exited with code $exit_code, no more retries left."
+                    return $exit_code
+                fi
             done
             return 0
           }
@@ -150,17 +155,18 @@ jobs:
           retry() {
             local retries=15
             local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
+            local cmd="$@"
+            until $cmd; do
+                exit_code=$?
+                wait=$((2 ** $count))
+                count=$((count + 1))
+                if [ $count -lt $retries ]; then
+                    echo "Retry $count/$retries exited with code $exit_code, retrying in $wait seconds..."
+                    sleep $wait
+                else
+                    echo "Retry $count/$retries exited with code $exit_code, no more retries left."
+                    return $exit_code
+                fi
             done
             return 0
           }
@@ -175,17 +181,18 @@ jobs:
           retry() {
             local retries=15
             local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
+            local cmd="$@"
+            until $cmd; do
+                exit_code=$?
+                wait=$((2 ** $count))
+                count=$((count + 1))
+                if [ $count -lt $retries ]; then
+                    echo "Retry $count/$retries exited with code $exit_code, retrying in $wait seconds..."
+                    sleep $wait
+                else
+                    echo "Retry $count/$retries exited with code $exit_code, no more retries left."
+                    return $exit_code
+                fi
             done
             return 0
           }
@@ -198,17 +205,18 @@ jobs:
           retry() {
             local retries=15
             local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
+            local cmd="$@"
+            until $cmd; do
+                exit_code=$?
+                wait=$((2 ** $count))
+                count=$((count + 1))
+                if [ $count -lt $retries ]; then
+                    echo "Retry $count/$retries exited with code $exit_code, retrying in $wait seconds..."
+                    sleep $wait
+                else
+                    echo "Retry $count/$retries exited with code $exit_code, no more retries left."
+                    return $exit_code
+                fi
             done
             return 0
           }
@@ -225,17 +233,18 @@ jobs:
           retry() {
             local retries=15
             local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
+            local cmd="$@"
+            until $cmd; do
+                exit_code=$?
+                wait=$((2 ** $count))
+                count=$((count + 1))
+                if [ $count -lt $retries ]; then
+                    echo "Retry $count/$retries exited with code $exit_code, retrying in $wait seconds..."
+                    sleep $wait
+                else
+                    echo "Retry $count/$retries exited with code $exit_code, no more retries left."
+                    return $exit_code
+                fi
             done
             return 0
           }
@@ -250,17 +259,18 @@ jobs:
           retry() {
             local retries=15
             local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
+            local cmd="$@"
+            until $cmd; do
+                exit_code=$?
+                wait=$((2 ** $count))
+                count=$((count + 1))
+                if [ $count -lt $retries ]; then
+                    echo "Retry $count/$retries exited with code $exit_code, retrying in $wait seconds..."
+                    sleep $wait
+                else
+                    echo "Retry $count/$retries exited with code $exit_code, no more retries left."
+                    return $exit_code
+                fi
             done
             return 0
           }
