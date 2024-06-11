@@ -1,0 +1,113 @@
+name: Combine2 Configs
+on:
+  schedule:
+    - cron: "*/45 * * * *" # Run every 45 minutes
+  workflow_dispatch:
+
+env:
+  # Vmess_V2rayCollector
+  VMESS_V2RAY_FILE_URL: "https://raw.githubusercontent.com/lagzian/TelegramV2rayCollector/main/sub/normal/vmess"
+  VMESS_V2RAY_OUTPUT_FILE: "vmess_ye.txt"
+  VMESS_V2RAY_BASE64_FILE: "vmess_B64_ye.txt"
+  VMESS_V2RAY_CLASH_YAML_FILE: "vmess_ye_clash.yaml"
+  VMESS_V2RAY_SINGBOX_URL: "https://raw.githubusercontent.com/lagzian/TelegramV2rayCollector/main/singbox/sfasfi/vmess.json"
+  VMESS_V2RAY_SINGBOX_JSON_FILE: "vmess_ye_singbox.json"
+
+  # Vmess_Vless
+  VMESS_VLESS_FILE_URL: "https://raw.githubusercontent.com/xc0000e9/deatnote/main/Hiddify-next.fragment"
+  VMESS_VLESS_OUTPUT_FILE: "vmess_vless.txt"
+  VMESS_VLESS_BASE64_FILE: "vmess_vless_B64.txt"
+  VMESS_VLESS_CLASH_YAML_FILE: "vmess_vless_clash.yaml"
+  VMESS_VLESS_SINGBOX_URL: "https://api.yebekhe.link/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fxc0000e9%2Fdeatnote%2Fmain%2FHiddify-next.fragment&limit=0&tun=true"
+  VMESS_VLESS_SINGBOX_JSON_FILE: "vmess_vless_singbox.json"
+
+  # Shadowsocks
+  SHADOWSOCKS_FILE_URL: "https://raw.githubusercontent.com/lagzian/V2RayAggregator/master/Eternity.txt"
+  SHADOWSOCKS_OUTPUT_FILE: "shadowsockes.txt"
+  SHADOWSOCKS_BASE64_FILE: "SS_B64.txt"
+  SHADOWSOCKS_CLASH_YAML_FILE: "ss_clash.yaml"
+  SHADOWSOCKS_SINGBOX_URL: "https://yebekhe.serv00.net/api/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fshadowsockes.txt&limit=0&tun=true"
+  SHADOWSOCKS_SINGBOX_JSON_FILE: "ss_singbox.json"
+
+jobs:
+  extract_configs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Git Config
+        run: |
+          git config --global user.name "${{ secrets.GIT_USERNAME }}"
+          git config --global user.email "${{ secrets.GIT_EMAIL }}"
+
+      # Vmess_V2rayCollector
+      - name: Download Vmess_V2rayCollector TXT File
+        run: |
+          curl -o temp11.txt -L "${VMESS_V2RAY_FILE_URL}"
+
+      - name: Extract Vmess_V2rayCollector Lines Starting with "vmess://"
+        run: |
+          grep '^vmess://' temp11.txt > "${GITHUB_WORKSPACE}/${VMESS_V2RAY_OUTPUT_FILE}"
+
+      - name: Convert Vmess_V2rayCollector Lines to Base64 and Save
+        run: |
+          cat "${GITHUB_WORKSPACE}/${VMESS_V2RAY_OUTPUT_FILE}" | base64 -w 0 > "${GITHUB_WORKSPACE}/${VMESS_V2RAY_BASE64_FILE}"
+
+      - name: Fetch Vmess_V2rayCollector Content and Generate YAML
+        run: |
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FTelegramV2rayCollector%2Fmain%2Fsub%2Fbase64%2Fvmess&type=clash&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_SINGBOX_JSON_FILE}" -L "${VMESS_V2RAY_SINGBOX_URL}"
+
+      # Vmess_Vless
+      - name: Download Vmess_Vless TXT File
+        run: |
+          curl -o temp25.txt -L "${VMESS_VLESS_FILE_URL}"
+
+      - name: Extract Vmess_Vless Lines Starting with "vmess://" and "vless://"
+        run: |
+          grep -E '^vless://|^vmess://' temp25.txt > "${GITHUB_WORKSPACE}/${VMESS_VLESS_OUTPUT_FILE}"
+
+      - name: Convert Vmess_Vless Lines to Base64 and Save
+        run: |
+          cat "${GITHUB_WORKSPACE}/${VMESS_VLESS_OUTPUT_FILE}" | base64 -w 0 > "${GITHUB_WORKSPACE}/${VMESS_VLESS_BASE64_FILE}"
+
+      - name: Fetch Vmess_Vless Content and Generate YAML
+        run: |
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/xc0000e9/deatnote/main/Hiddify-next.fragment&type=meta&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_SINGBOX_JSON_FILE}" -L "${VMESS_VLESS_SINGBOX_URL}"
+
+      # Shadowsocks
+      - name: Download Shadowsocks TXT File
+        run: |
+          curl -o temp4.txt -L "${SHADOWSOCKS_FILE_URL}"
+
+      - name: Extract Shadowsocks Lines Starting with "ss://"
+        run: |
+          grep '^ss://' temp4.txt > "${GITHUB_WORKSPACE}/${SHADOWSOCKS_OUTPUT_FILE}"
+
+      - name: Convert Shadowsocks Lines to Base64 and Save
+        run: |
+          cat "${GITHUB_WORKSPACE}/${SHADOWSOCKS_OUTPUT_FILE}" | base64 -w 0 > "${GITHUB_WORKSPACE}/${SHADOWSOCKS_BASE64_FILE}"
+
+      - name: Fetch Shadowsocks Content and Generate YAML
+        run: |
+          curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2FSS_B64.txt&type=clash&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_SINGBOX_JSON_FILE}" -L "${SHADOWSOCKS_SINGBOX_URL}"
+
+      - name: Clean Up
+        run: |
+          rm temp11.txt temp25.txt temp4.txt
+
+      - name: Commit and Push Changes
+        run: |
+          git add "${GITHUB_WORKSPACE}/${VMESS_V2RAY_OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${VMESS_V2RAY_BASE64_FILE}" "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/${VMESS_V2RAY_SINGBOX_JSON_FILE}"
+          git add "${GITHUB_WORKSPACE}/${VMESS_VLESS_OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${VMESS_VLESS_BASE64_FILE}" "${GITHUB_WORKSPACE}/${VMESS_VLESS_CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/${VMESS_VLESS_SINGBOX_JSON_FILE}"
+          git add "${GITHUB_WORKSPACE}/${SHADOWSOCKS_OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${SHADOWSOCKS_BASE64_FILE}" "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/${SHADOWSOCKS_SINGBOX_JSON_FILE}"
+          git commit -m "Update configs" || true
+          git remote remove origin
+          git remote add origin "https://github.com/lagzian/SS-Collector.git"
+          git push origin HEAD:${GITHUB_REF}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
