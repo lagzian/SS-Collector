@@ -36,15 +36,15 @@ jobs:
           git config --global user.name "${{ secrets.GIT_USERNAME }}"
           git config --global user.email "${{ secrets.GIT_EMAIL }}"
 
-      # Define a function for retrying curl commands
-      - name: Define retry function
+      # Reality Workflow
+      - name: Download Reality TXT File
         run: |
           retry() {
             local n=1
             local max=5
             local delay=5
             while true; do
-              "$@" && break || {
+              curl -o temp2.txt -L "${{ env.REALITY_FILE_URL }}" && break || {
                 if [[ $n -lt $max ]]; then
                   ((n++))
                   echo "Command failed. Attempt $n/$max:"
@@ -56,11 +56,7 @@ jobs:
               }
             done
           }
-
-      # Reality Workflow
-      - name: Download Reality TXT File
-        run: |
-          retry curl -o temp2.txt -L "${{ env.REALITY_FILE_URL }}"
+          retry
 
       - name: Extract Lines Starting with "vless://" for Reality
         run: |
@@ -72,13 +68,47 @@ jobs:
 
       - name: Fetch Content and Generate YAML for Reality
         run: |
-          retry curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_REALITY }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/reality&type=meta&process=full"
+          retry() {
+            local n=1
+            local max=5
+            local delay=5
+            while true; do
+              curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_REALITY }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/reality&type=meta&process=full" && break || {
+                if [[ $n -lt $max ]]; then
+                  ((n++))
+                  echo "Command failed. Attempt $n/$max:"
+                  sleep $delay;
+                else
+                  echo "The command has failed after $n attempts."
+                  return 1
+                fi
+              }
+            done
+          }
+          retry
           rm temp2.txt
 
       # Vmess_tvc Workflow
       - name: Download Vmess_tvc TXT File
         run: |
-          retry curl -o temp11.txt -L "${{ env.VMESS_TVC_FILE_URL }}"
+          retry() {
+            local n=1
+            local max=5
+            local delay=5
+            while true; do
+              curl -o temp11.txt -L "${{ env.VMESS_TVC_FILE_URL }}" && break || {
+                if [[ $n -lt $max ]]; then
+                  ((n++))
+                  echo "Command failed. Attempt $n/$max:"
+                  sleep $delay;
+                else
+                  echo "The command has failed after $n attempts."
+                  return 1
+                fi
+              }
+            done
+          }
+          retry
 
       - name: Extract Lines Starting with "vmess://" for Vmess_tvc
         run: |
@@ -90,14 +120,65 @@ jobs:
 
       - name: Fetch Content and Generate YAML for Vmess_tvc
         run: |
-          retry curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS_TVC }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/vmess&type=clash&process=full"
-          retry curl -o "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS_TVC }}" -L "${{ env.SINGBOX_URL_VMESS_TVC }}"
+          retry() {
+            local n=1
+            local max=5
+            local delay=5
+            while true; do
+              curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS_TVC }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/vmess&type=clash&process=full" && break || {
+                if [[ $n -lt $max ]]; then
+                  ((n++))
+                  echo "Command failed. Attempt $n/$max:"
+                  sleep $delay;
+                else
+                  echo "The command has failed after $n attempts."
+                  return 1
+                fi
+              }
+            done
+          }
+          retry
+          retry() {
+            local n=1
+            local max=5
+            local delay=5
+            while true; do
+              curl -o "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS_TVC }}" -L "${{ env.SINGBOX_URL_VMESS_TVC }}" && break || {
+                if [[ $n -lt $max ]]; then
+                  ((n++))
+                  echo "Command failed. Attempt $n/$max:"
+                  sleep $delay;
+                else
+                  echo "The command has failed after $n attempts."
+                  return 1
+                fi
+              }
+            done
+          }
+          retry
           rm temp11.txt
 
       # Vmess Workflow
       - name: Download Vmess TXT File
         run: |
-          retry curl -o temp1.txt -L "${{ env.VMESS_FILE_URL }}"
+          retry() {
+            local n=1
+            local max=5
+            local delay=5
+            while true; do
+              curl -o temp1.txt -L "${{ env.VMESS_FILE_URL }}" && break || {
+                if [[ $n -lt $max ]]; then
+                  ((n++))
+                  echo "Command failed. Attempt $n/$max:"
+                  sleep $delay;
+                else
+                  echo "The command has failed after $n attempts."
+                  return 1
+                fi
+              }
+            done
+          }
+          retry
 
       - name: Extract Lines Starting with "vmess://" for Vmess
         run: |
@@ -109,8 +190,42 @@ jobs:
 
       - name: Fetch Content and Generate YAML for Vmess
         run: |
-          retry curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS }}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt&type=clash&process=full"
-          retry curl -o "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS }}" -L "${{ env.SINGBOX_URL_VMESS }}"
+          retry() {
+            local n=1
+            local max=5
+            local delay=5
+            while true; do
+              curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS }}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt&type=clash&process=full" && break || {
+                if [[ $n -lt $max ]]; then
+                  ((n++))
+                  echo "Command failed. Attempt $n/$max:"
+                  sleep $delay;
+                else
+                  echo "The command has failed after $n attempts."
+                  return 1
+                fi
+              }
+            done
+          }
+          retry
+          retry() {
+            local n=1
+            local max=5
+            local delay=5
+            while true; do
+              curl -o "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS }}" -L "${{ env.SINGBOX_URL_VMESS }}" && break || {
+                if [[ $n -lt $max ]]; then
+                  ((n++))
+                  echo "Command failed. Attempt $n/$max:"
+                  sleep $delay;
+                else
+                  echo "The command has failed after $n attempts."
+                  return 1
+                fi
+              }
+            done
+          }
+          retry
           rm temp1.txt
 
       # Commit and Push Changes
