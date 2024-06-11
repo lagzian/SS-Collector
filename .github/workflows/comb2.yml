@@ -1,4 +1,4 @@
-name: Combine2 Configs
+name: Extract Configs
 on:
   schedule:
     - cron: "*/45 * * * *" # Run every 45 minutes
@@ -26,7 +26,7 @@ env:
   SHADOWSOCKS_OUTPUT_FILE: "shadowsockes.txt"
   SHADOWSOCKS_BASE64_FILE: "SS_B64.txt"
   SHADOWSOCKS_CLASH_YAML_FILE: "ss_clash.yaml"
-  SHADOWSOCKS_SINGBOX_URL: "https://api.yebekhe.link/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fshadowsockes.txt&limit=0&tun=true"
+  SHADOWSOCKS_SINGBOX_URL: "https://yebekhe.serv00.net/api/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fshadowsockes.txt&limit=0&tun=true"
   SHADOWSOCKS_SINGBOX_JSON_FILE: "ss_singbox.json"
 
 jobs:
@@ -45,51 +45,11 @@ jobs:
       # Vmess_V2rayCollector
       - name: Download Vmess_V2rayCollector TXT File
         run: |
-          retry() {
-            local retries=5
-            local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
-            done
-            return 0
-          }
-          retry curl -o temp11.txt -L "${VMESS_V2RAY_FILE_URL}"
-
-      - name: Debug Vmess_V2rayCollector File
-        run: |
-          echo "Contents of temp11.txt:"
-          cat temp11.txt
-          echo "End of file contents."
+          curl -o temp11.txt -L "${VMESS_V2RAY_FILE_URL}"
 
       - name: Extract Vmess_V2rayCollector Lines Starting with "vmess://"
         run: |
-          retry() {
-            local retries=5
-            local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
-            done
-            return 0
-          }
-          retry grep '^vmess://' temp11.txt > "${GITHUB_WORKSPACE}/${VMESS_V2RAY_OUTPUT_FILE}"
+          grep '^vmess://' temp11.txt > "${GITHUB_WORKSPACE}/${VMESS_V2RAY_OUTPUT_FILE}"
 
       - name: Convert Vmess_V2rayCollector Lines to Base64 and Save
         run: |
@@ -97,74 +57,17 @@ jobs:
 
       - name: Fetch Vmess_V2rayCollector Content and Generate YAML
         run: |
-          retry() {
-            local retries=5
-            local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
-            done
-            return 0
-          }
-          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FTelegramV2rayCollector%2Fmain%2Fsub%2Fbase64%2Fvmess&type=clash&process=full"
-          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_SINGBOX_JSON_FILE}" -L "${VMESS_V2RAY_SINGBOX_URL}"
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FTelegramV2rayCollector%2Fmain%2Fsub%2Fbase64%2Fvmess&type=clash&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_SINGBOX_JSON_FILE}" -L "${VMESS_V2RAY_SINGBOX_URL}"
 
       # Vmess_Vless
       - name: Download Vmess_Vless TXT File
         run: |
-          retry() {
-            local retries=5
-            local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
-            done
-            return 0
-          }
-          retry curl -o temp25.txt -L "${VMESS_VLESS_FILE_URL}"
-
-      - name: Debug Vmess_Vless File
-        run: |
-          echo "Contents of temp25.txt:"
-          cat temp25.txt
-          echo "End of file contents."
+          curl -o temp25.txt -L "${VMESS_VLESS_FILE_URL}"
 
       - name: Extract Vmess_Vless Lines Starting with "vmess://" and "vless://"
         run: |
-          retry() {
-            local retries=5
-            local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
-            done
-            return 0
-          }
-          retry grep -E '^vless://|^vmess://' temp25.txt > "${GITHUB_WORKSPACE}/${VMESS_VLESS_OUTPUT_FILE}"
+          grep -E '^vless://|^vmess://' temp25.txt > "${GITHUB_WORKSPACE}/${VMESS_VLESS_OUTPUT_FILE}"
 
       - name: Convert Vmess_Vless Lines to Base64 and Save
         run: |
@@ -172,74 +75,17 @@ jobs:
 
       - name: Fetch Vmess_Vless Content and Generate YAML
         run: |
-          retry() {
-            local retries=5
-            local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
-            done
-            return 0
-          }
-          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/xc0000e9/deatnote/main/Hiddify-next.fragment&type=meta&process=full"
-          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_SINGBOX_JSON_FILE}" -L "${VMESS_VLESS_SINGBOX_URL}"
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/xc0000e9/deatnote/main/Hiddify-next.fragment&type=meta&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_SINGBOX_JSON_FILE}" -L "${VMESS_VLESS_SINGBOX_URL}"
 
       # Shadowsocks
       - name: Download Shadowsocks TXT File
         run: |
-          retry() {
-            local retries=5
-            local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
-            done
-            return 0
-          }
-          retry curl -o temp38.txt -L "${SHADOWSOCKS_FILE_URL}"
-
-      - name: Debug Shadowsocks File
-        run: |
-          echo "Contents of temp38.txt:"
-          cat temp38.txt
-          echo "End of file contents."
+          curl -o temp4.txt -L "${SHADOWSOCKS_FILE_URL}"
 
       - name: Extract Shadowsocks Lines Starting with "ss://"
         run: |
-          retry() {
-            local retries=5
-            local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
-            done
-            return 0
-          }
-          retry grep '^ss://' temp38.txt > "${GITHUB_WORKSPACE}/${SHADOWSOCKS_OUTPUT_FILE}"
+          grep '^ss://' temp4.txt > "${GITHUB_WORKSPACE}/${SHADOWSOCKS_OUTPUT_FILE}"
 
       - name: Convert Shadowsocks Lines to Base64 and Save
         run: |
@@ -247,31 +93,21 @@ jobs:
 
       - name: Fetch Shadowsocks Content and Generate YAML
         run: |
-          retry() {
-            local retries=5
-            local count=0
-            until "$@"; do
-              exit=$?
-              wait=$((2 ** $count))
-              count=$((count + 1))
-              if [ $count -lt $retries ]; then
-                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
-                sleep $wait
-              else
-                echo "Retry $count/$retries exited $exit, no more retries left."
-                return $exit
-              fi
-            done
-            return 0
-          }
-          retry curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/V2RayAggregator/master/Eternity.txt&type=ss&process=full"
-          retry curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_SINGBOX_JSON_FILE}" -L "${SHADOWSOCKS_SINGBOX_URL}"
+          curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2FSS_B64.txt&type=clash&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_SINGBOX_JSON_FILE}" -L "${SHADOWSOCKS_SINGBOX_URL}"
 
-      # Commit and push the changes
+      - name: Clean Up
+        run: |
+          rm temp11.txt temp25.txt temp4.txt
+
       - name: Commit and Push Changes
         run: |
-          git add .
-          git commit -m "Updated config files"
+          git add "${GITHUB_WORKSPACE}/${VMESS_V2RAY_OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${VMESS_V2RAY_BASE64_FILE}" "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/${VMESS_V2RAY_SINGBOX_JSON_FILE}"
+          git add "${GITHUB_WORKSPACE}/${VMESS_VLESS_OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${VMESS_VLESS_BASE64_FILE}" "${GITHUB_WORKSPACE}/${VMESS_VLESS_CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/${VMESS_VLESS_SINGBOX_JSON_FILE}"
+          git add "${GITHUB_WORKSPACE}/${SHADOWSOCKS_OUTPUT_FILE}" "${GITHUB_WORKSPACE}/${SHADOWSOCKS_BASE64_FILE}" "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" "${GITHUB_WORKSPACE}/${SHADOWSOCKS_SINGBOX_JSON_FILE}"
+          git commit -m "Update configs" || true
+          git remote remove origin
+          git remote add origin "https://github.com/lagzian/SS-Collector.git"
           git push origin HEAD:${GITHUB_REF}
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
