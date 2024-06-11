@@ -268,11 +268,7 @@ jobs:
           retry curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_SINGBOX_JSON_FILE}" -L "${SHADOWSOCKS_SINGBOX_URL}"
 
       # Commit and push the changes
-      - name: Commit and Push Changes
-        run: |
-          git add .
-          git commit -m "Updated config files"
-          git push origin HEAD:${GITHUB_REF}
+      
       - name: Commit and Push Changes
         run: |
           if [ -n "$(git status --porcelain)" ]; then
