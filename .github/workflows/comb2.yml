@@ -42,14 +42,41 @@ jobs:
           git config --global user.name "${{ secrets.GIT_USERNAME }}"
           git config --global user.email "${{ secrets.GIT_EMAIL }}"
 
+      # Retry mechanism function
+      - name: Define retry function
+        run: |
+          retry() {
+            local retries=5
+            local count=0
+            until "$@"; do
+              exit=$?
+              wait=$((2 ** $count))
+              count=$((count + 1))
+              if [ $count -lt $retries ]; then
+                echo "Retry $count/$retries exited $exit, retrying in $wait seconds..."
+                sleep $wait
+              else
+                echo "Retry $count/$retries exited $exit, no more retries left."
+                return $exit
+              fi
+            done
+            return 0
+          }
+
       # Vmess_V2rayCollector
       - name: Download Vmess_V2rayCollector TXT File
         run: |
-          curl -o temp11.txt -L "${VMESS_V2RAY_FILE_URL}"
+          retry curl -o temp11.txt -L "${VMESS_V2RAY_FILE_URL}"
+
+      - name: Debug Vmess_V2rayCollector File
+        run: |
+          echo "Contents of temp11.txt:"
+          cat temp11.txt
+          echo "End of file contents."
 
       - name: Extract Vmess_V2rayCollector Lines Starting with "vmess://"
         run: |
-          grep '^vmess://' temp11.txt > "${GITHUB_WORKSPACE}/${VMESS_V2RAY_OUTPUT_FILE}"
+          retry grep '^vmess://' temp11.txt > "${GITHUB_WORKSPACE}/${VMESS_V2RAY_OUTPUT_FILE}"
 
       - name: Convert Vmess_V2rayCollector Lines to Base64 and Save
         run: |
@@ -57,17 +84,23 @@ jobs:
 
       - name: Fetch Vmess_V2rayCollector Content and Generate YAML
         run: |
-          curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FTelegramV2rayCollector%2Fmain%2Fsub%2Fbase64%2Fvmess&type=clash&process=full"
-          curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_SINGBOX_JSON_FILE}" -L "${VMESS_V2RAY_SINGBOX_URL}"
+          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FTelegramV2rayCollector%2Fmain%2Fsub%2Fbase64%2Fvmess&type=clash&process=full"
+          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_SINGBOX_JSON_FILE}" -L "${VMESS_V2RAY_SINGBOX_URL}"
 
       # Vmess_Vless
       - name: Download Vmess_Vless TXT File
         run: |
-          curl -o temp25.txt -L "${VMESS_VLESS_FILE_URL}"
+          retry curl -o temp25.txt -L "${VMESS_VLESS_FILE_URL}"
+
+      - name: Debug Vmess_Vless File
+        run: |
+          echo "Contents of temp25.txt:"
+          cat temp25.txt
+          echo "End of file contents."
 
       - name: Extract Vmess_Vless Lines Starting with "vmess://" and "vless://"
         run: |
-          grep -E '^vless://|^vmess://' temp25.txt > "${GITHUB_WORKSPACE}/${VMESS_VLESS_OUTPUT_FILE}"
+          retry grep -E '^vless://|^vmess://' temp25.txt > "${GITHUB_WORKSPACE}/${VMESS_VLESS_OUTPUT_FILE}"
 
       - name: Convert Vmess_Vless Lines to Base64 and Save
         run: |
@@ -75,17 +108,23 @@ jobs:
 
       - name: Fetch Vmess_Vless Content and Generate YAML
         run: |
-          curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/xc0000e9/deatnote/main/Hiddify-next.fragment&type=meta&process=full"
-          curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_SINGBOX_JSON_FILE}" -L "${VMESS_VLESS_SINGBOX_URL}"
+          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/xc0000e9/deatnote/main/Hiddify-next.fragment&type=meta&process=full"
+          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_SINGBOX_JSON_FILE}" -L "${VMESS_VLESS_SINGBOX_URL}"
 
       # Shadowsocks
       - name: Download Shadowsocks TXT File
         run: |
-          curl -o temp4.txt -L "${SHADOWSOCKS_FILE_URL}"
+          retry curl -o temp4.txt -L "${SHADOWSOCKS_FILE_URL}"
+
+      - name: Debug Shadowsocks File
+        run: |
+          echo "Contents of temp4.txt:"
+          cat temp4.txt
+          echo "End of file contents."
 
       - name: Extract Shadowsocks Lines Starting with "ss://"
         run: |
-          grep '^ss://' temp4.txt > "${GITHUB_WORKSPACE}/${SHADOWSOCKS_OUTPUT_FILE}"
+          retry grep '^ss://' temp4.txt > "${GITHUB_WORKSPACE}/${SHADOWSOCKS_OUTPUT_FILE}"
 
       - name: Convert Shadowsocks Lines to Base64 and Save
         run: |
@@ -93,8 +132,8 @@ jobs:
 
       - name: Fetch Shadowsocks Content and Generate YAML
         run: |
-          curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2FSS_B64.txt&type=clash&process=full"
-          curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_SINGBOX_JSON_FILE}" -L "${SHADOWSOCKS_SINGBOX_URL}"
+          retry curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2FSS_B64.txt&type=clash&process=full"
+          retry curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_SINGBOX_JSON_FILE}" -L "${SHADOWSOCKS_SINGBOX_URL}"
 
       - name: Clean Up
         run: |
