@@ -69,7 +69,7 @@ jobs:
 
       - name: Fetch Content and Generate YAML for Vmess_tvc
         run: |
-          curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS_TVC }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/vmess&type=clash&process=full"
+          curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS_TVC }}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/vmess&type=clash&process=full"
           curl -o "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS_TVC }}" -L "${{ env.SINGBOX_URL_VMESS_TVC }}"
           rm temp11.txt
 
