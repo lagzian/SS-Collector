@@ -1,7 +1,7 @@
 name: Combine2 Configs
 on:
   schedule:
-    - cron: "*/45 * * * *" # Run every 45 minutes
+    - cron: "5 */1 * * *" # Run every 45 minutes
   workflow_dispatch:
 
 env:
