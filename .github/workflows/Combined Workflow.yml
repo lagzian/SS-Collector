@@ -2,7 +2,7 @@ name: Combined Workflow
 
 on:
   schedule:
-    - cron: "*/66 * * * *"  # Adjust as needed for the combined schedule
+    - cron: "*/30 * * * *"  # Adjust as needed for the combined schedule
   workflow_dispatch:
 
 env:
@@ -20,7 +20,7 @@ env:
   OUTPUT_FILE_VMESS: "vmess.txt"
   BASE64_FILE_VMESS: "vmess_B64.txt"
   CLASH_YAML_FILE_VMESS: "vmess_clash.yaml"
-  SINGBOX_URL_VMESS: "https://api.yebekhe.link/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fvmess.txt&limit=0&tun=true"
+  SINGBOX_URL_VMESS: "https://yebekhe.serv00.net/api/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fvmess.txt&limit=0&tun=true"
   SINGBOX_JSON_FILE_VMESS: "vmess_singbox.json"
 
 jobs:
@@ -36,10 +36,31 @@ jobs:
           git config --global user.name "${{ secrets.GIT_USERNAME }}"
           git config --global user.email "${{ secrets.GIT_EMAIL }}"
 
+      # Define a function for retrying curl commands
+      - name: Define retry function
+        run: |
+          retry() {
+            local n=1
+            local max=5
+            local delay=5
+            while true; do
+              "$@" && break || {
+                if [[ $n -lt $max ]]; then
+                  ((n++))
+                  echo "Command failed. Attempt $n/$max:"
+                  sleep $delay;
+                else
+                  echo "The command has failed after $n attempts."
+                  return 1
+                fi
+              }
+            done
+          }
+
       # Reality Workflow
       - name: Download Reality TXT File
         run: |
-          curl -o temp2.txt -L "${{ env.REALITY_FILE_URL }}"
+          retry curl -o temp2.txt -L "${{ env.REALITY_FILE_URL }}"
 
       - name: Extract Lines Starting with "vless://" for Reality
         run: |
@@ -51,13 +72,13 @@ jobs:
 
       - name: Fetch Content and Generate YAML for Reality
         run: |
-          curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_REALITY }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/reality&type=meta&process=full"
+          retry curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_REALITY }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/reality&type=meta&process=full"
           rm temp2.txt
 
       # Vmess_tvc Workflow
       - name: Download Vmess_tvc TXT File
         run: |
-          curl -o temp11.txt -L "${{ env.VMESS_TVC_FILE_URL }}"
+          retry curl -o temp11.txt -L "${{ env.VMESS_TVC_FILE_URL }}"
 
       - name: Extract Lines Starting with "vmess://" for Vmess_tvc
         run: |
@@ -69,14 +90,14 @@ jobs:
 
       - name: Fetch Content and Generate YAML for Vmess_tvc
         run: |
-          curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS_TVC }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/vmess&type=clash&process=full"
-          curl -o "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS_TVC }}" -L "${{ env.SINGBOX_URL_VMESS_TVC }}"
+          retry curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS_TVC }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/vmess&type=clash&process=full"
+          retry curl -o "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS_TVC }}" -L "${{ env.SINGBOX_URL_VMESS_TVC }}"
           rm temp11.txt
 
       # Vmess Workflow
       - name: Download Vmess TXT File
         run: |
-          curl -o temp1.txt -L "${{ env.VMESS_FILE_URL }}"
+          retry curl -o temp1.txt -L "${{ env.VMESS_FILE_URL }}"
 
       - name: Extract Lines Starting with "vmess://" for Vmess
         run: |
@@ -88,8 +109,8 @@ jobs:
 
       - name: Fetch Content and Generate YAML for Vmess
         run: |
-          curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt&type=clash&process=full"
-          curl -o "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS }}" -L "${{ env.SINGBOX_URL_VMESS }}"
+          retry curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS }}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64.txt&type=clash&process=full"
+          retry curl -o "${{ github.workspace }}/${{ env.SINGBOX_JSON_FILE_VMESS }}" -L "${{ env.SINGBOX_URL_VMESS }}"
           rm temp1.txt
 
       # Commit and Push Changes
