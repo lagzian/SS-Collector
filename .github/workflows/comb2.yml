@@ -46,7 +46,7 @@ jobs:
       - name: Download Vmess_V2rayCollector TXT File
         run: |
           retry() {
-            local retries=5
+            local retries=15
             local count=0
             until "$@"; do
               exit=$?
@@ -73,7 +73,7 @@ jobs:
       - name: Extract Vmess_V2rayCollector Lines Starting with "vmess://"
         run: |
           retry() {
-            local retries=5
+            local retries=15
             local count=0
             until "$@"; do
               exit=$?
@@ -98,7 +98,7 @@ jobs:
       - name: Fetch Vmess_V2rayCollector Content and Generate YAML
         run: |
           retry() {
-            local retries=5
+            local retries=15
             local count=0
             until "$@"; do
               exit=$?
@@ -121,7 +121,7 @@ jobs:
       - name: Download Vmess_Vless TXT File
         run: |
           retry() {
-            local retries=5
+            local retries=15
             local count=0
             until "$@"; do
               exit=$?
@@ -148,7 +148,7 @@ jobs:
       - name: Extract Vmess_Vless Lines Starting with "vmess://" and "vless://"
         run: |
           retry() {
-            local retries=5
+            local retries=15
             local count=0
             until "$@"; do
               exit=$?
@@ -173,7 +173,7 @@ jobs:
       - name: Fetch Vmess_Vless Content and Generate YAML
         run: |
           retry() {
-            local retries=5
+            local retries=15
             local count=0
             until "$@"; do
               exit=$?
@@ -196,7 +196,7 @@ jobs:
       - name: Download Shadowsocks TXT File
         run: |
           retry() {
-            local retries=5
+            local retries=15
             local count=0
             until "$@"; do
               exit=$?
@@ -223,7 +223,7 @@ jobs:
       - name: Extract Shadowsocks Lines Starting with "ss://"
         run: |
           retry() {
-            local retries=5
+            local retries=15
             local count=0
             until "$@"; do
               exit=$?
@@ -248,7 +248,7 @@ jobs:
       - name: Fetch Shadowsocks Content and Generate YAML
         run: |
           retry() {
-            local retries=5
+            local retries=15
             local count=0
             until "$@"; do
               exit=$?
