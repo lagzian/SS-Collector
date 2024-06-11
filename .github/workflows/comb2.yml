@@ -273,5 +273,14 @@ jobs:
           git add .
           git commit -m "Updated config files"
           git push origin HEAD:${GITHUB_REF}
+      - name: Commit and Push Changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+           git add .
+           git commit -m "Updated config files"
+           git push origin HEAD:${GITHUB_REF}
+          else
+           echo "No changes to commit."
+          fi
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
+         GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
