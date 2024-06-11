@@ -2,7 +2,7 @@ name: Combined Workflow
 
 on:
   schedule:
-    - cron: "*/65 * * * *"  # Adjust as needed for the combined schedule
+    - cron: "15 */1 * * *"  # Adjust as needed for the combined schedule
   workflow_dispatch:
 
 env:
