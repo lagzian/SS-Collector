@@ -1,332 +1,185 @@
-mixed-port: 7890
+port: 7890
+socks-port: 7891
 allow-lan: true
-tcp-concurrent: true
-enable-process: true
-find-process-mode: always
-mode: rule
-log-level: error
+mode: Rule
+log-level: info
 ipv6: true
-external-controller: 127.0.0.1:9090
-experimental:
-  ignore-resolve-fail: true
-  sniff-tls-sni: true
-  tracing: true
-hosts:
-  "localhost": 127.0.0.1
-profile:
-  store-selected: true
-  store-fake-ip: true
-
-sniffer:
-  enable: true
-  sniff:
-    http: { ports: [1-442, 444-8442, 8444-65535], override-destination: true }
-    tls: { ports: [1-79, 81-8079, 8081-65535], override-destination: true }
-  force-domain:
-      - "+.v2ex.com"
-      - www.google.com
-      - google.com
-  skip-domain:
-      - Mijia Cloud
-      - dlg.io.mi.com
-  sniffing:
-    - tls
-    - http
-  port-whitelist:
-    - "80"
-    - "443"
-
-tun:
-  enable: true
-  prefer-h3: true
-  listen: 0.0.0.0:53
-  stack: gvisor
-  dns-hijack:
-     - "any:53"
-     - "tcp://any:53"
-  auto-redir: true
-  auto-route: true
-  auto-detect-interface: true
-
-dns:
-  enable: true
-  ipv6: true
-  default-nameserver:
-    - '1.1.1.1'
-    - '8.8.8.8'
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-    - 'stun.*.*'
-    - 'stun.*.*.*'
-    - '+.stun.*.*'
-    - '+.stun.*.*.*'
-    - '+.stun.*.*.*.*'
-    - '+.stun.*.*.*.*.*'
-    - '*.lan'
-    - '+.msftncsi.com'
-    - msftconnecttest.com
-    - 'time?.*.com'
-    - 'time.*.com'
-    - 'time.*.gov'
-    - 'time.*.apple.com'
-    - time-ios.apple.com
-    - 'time1.*.com'
-    - 'time2.*.com'
-    - 'time3.*.com'
-    - 'time4.*.com'
-    - 'time5.*.com'
-    - 'time6.*.com'
-    - 'time7.*.com'
-    - 'ntp?.*.com'
-    - 'ntp.*.com'
-    - 'ntp1.*.com'
-    - 'ntp2.*.com'
-    - 'ntp3.*.com'
-    - 'ntp4.*.com'
-    - 'ntp5.*.com'
-    - 'ntp6.*.com'
-    - 'ntp7.*.com'
-    - '+.pool.ntp.org'
-    - '+.ipv6.microsoft.com'
-    - speedtest.cros.wr.pvp.net
-    - network-test.debian.org
-    - detectportal.firefox.com
-    - cable.auth.com
-    - miwifi.com
-    - routerlogin.com
-    - routerlogin.net
-    - tendawifi.com
-    - tendawifi.net
-    - tplinklogin.net
-    - tplinkwifi.net
-    - '*.xiami.com'
-    - tplinkrepeater.net
-    - router.asus.com
-    - '*.*.*.srv.nintendo.net'
-    - '*.*.stun.playstation.net'
-    - '*.openwrt.pool.ntp.org'
-    - resolver1.opendns.com
-    - 'GC._msDCS.*.*'
-    - 'DC._msDCS.*.*'
-    - 'PDC._msDCS.*.*'
-  use-hosts: true
-  nameserver:
-    - '8.8.4.4'
-    - '1.0.0.1'
-    - "https://1.0.0.1/dns-query"
-    - "https://8.8.4.4/dns-query"
-  nameserver-policy:
-    'RULE-SET:ir,ircidr,geoip:ir,+.ir,+.bonyan.co': ["217.218.155.155", "217.218.127.127", "https://dns.403.online/dns-query", "https://dns.shecan.ir/dns-query"]
-
+external-controller: 0.0.0.0:9090
 proxies:
-  - {"name":"https%3A%2F%2Ft.me%2Funlocked_worlld | 0️⃣1️⃣","type":"vless","server":"unlocked_worlld","port":1080,"udp":false,"uuid":"d07e0e50-0a47-44df-a98d-95ae9447e892","tls":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9 %0A%F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣2️⃣","type":"vless","server":"ashleynishee.com","port":443,"udp":false,"uuid":"96c437b3-c993-4217-b228-21fbb67d5ff8","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yaemiko.raidenshogun.cloudns.org","ws-opts":{"path":"/","headers":{"host":"yaemiko.raidenshogun.cloudns.org"}}}
-  - {"name":"%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E %F0%9F%87%BA%F0%9F%87%B2  | 0️⃣3️⃣","type":"vless","server":"download.osgrid.org","port":443,"udp":false,"uuid":"55e9e0e5-c68e-43ce-b1a3-9ba93ea65f71","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelhhjan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/us-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":" 🇩🇪  🕊🕊 | 0️⃣4️⃣","type":"vmess","server":"download.osgrid.org","port":"443","cipher":"auto","uuid":"0b029e19-8426-420b-8739-ef355dd287f0","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Frankfurt.fghgdddgvss.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 0️⃣5️⃣","type":"vless","server":"web.onecheer.cn","port":443,"udp":false,"uuid":"38ec77d6-3e68-44b5-966d-1ecde09e2ce4","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelannn.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/kz-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%87%B8%F0%9F%87%AA %F0%9F%9A%81 | 0️⃣6️⃣","type":"vless","server":"www.plothost.com","port":443,"udp":false,"uuid":"dfce7434-9994-47ee-8795-63c3a5d6bb39","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yellxan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/se-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%A7%F0%9F%87%B6 %F0%9F%87%B3%F0%9F%87%B1  | 0️⃣7️⃣","type":"vless","server":"www.vzug.com","port":443,"udp":false,"uuid":"6a41c2f7-6fc1-45ae-9a3c-d7aab5ba8eef","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/nl2-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%E2%9D%84%EF%B8%8F eula %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣8️⃣","type":"vless","server":"www.wheatleygaso.com","port":443,"udp":false,"uuid":"31aa719b-742f-430d-8a59-6abfbf538842","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"eula.raidenshogun.cloudns.org","ws-opts":{"path":"/?ed=2560","headers":{"host":"eula.raidenshogun.cloudns.org"}}}
-  - {"name":"%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9%0A   %F0%9F%87%A9%F0%9F%87%AA   azn | 0️⃣9️⃣","type":"vless","server":"www.svep.com","port":443,"udp":false,"uuid":"0b4b623c-2914-494d-b6b8-b03fbf4d6655","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"navia.raidenshogun.cloudns.org","ws-opts":{"path":"/?ed=2560","headers":{"host":"navia.raidenshogun.cloudns.org"}}}
-  - {"name":"🇫🇷 | 1️⃣0️⃣","type":"vmess","server":"loulakis.gr","port":"443","cipher":"auto","uuid":"93ea486a-bada-42a4-ac38-d088b320fa1e","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/xmivideo.cfd","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"  🇫🇷 👀 🇺🇸 🇩🇪  | 1️⃣1️⃣","type":"vmess","server":"mcdowellsrepair.com","port":"443","cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/afrhms16v.bestxray.buzz","headers":{"host":"nezuko.raidenshogun.cloudns.org"}}}
-  - {"name":"%F0%9F%87%BA%F0%9F%87%A6                          %F0%9F%87%BA%F0%9F%87%A6  | 1️⃣2️⃣","type":"vless","server":"www.bmcollege.gov.bd","port":443,"udp":false,"uuid":"a5ae3d6d-77e1-44c7-b07f-2b51dbc56517","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/ua-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"🇫🇷 🙂 🇩🇪 🇩🇪 | 1️⃣3️⃣","type":"vmess","server":"www.teletrans.ro","port":"443","cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/obdii.cfd","headers":{"host":"nezuko.raidenshogun.cloudns.org"}}}
-  - {"name":"%F0%9F%87%A9%F0%9F%87%AA shinobu %F0%9F%87%A9%F0%9F%87%AA  | 1️⃣4️⃣","type":"vless","server":"tastewp.com","port":443,"udp":false,"uuid":"7bedf632-b4c2-4e90-9d8b-f42ee7145534","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"mitsuri.raidenshogun.cloudns.org","ws-opts":{"path":"/?ed=2560","headers":{"host":"mitsuri.raidenshogun.cloudns.org"}}}
-  - {"name":"🍷 🇫🇷 🇩🇪  🇬🇧  | 1️⃣5️⃣","type":"vmess","server":"carlsbergbackend.hummingfood.com","port":"443","cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.cfd/linkws","headers":{"host":"mikasa.raidenshogun.cloudns.org"}}}
-  - {"name":"germany %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA  | 1️⃣6️⃣","type":"vless","server":"www.wheatleygaso.com","port":443,"udp":false,"uuid":"291d75ef-fdb6-481f-9303-543696f7bc45","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"nezuko.raidenshogun.cloudns.org","ws-opts":{"path":"/VLESS/de-full.privateip.net","headers":{"host":"nezuko.raidenshogun.cloudns.org"}}}
-  - {"name":"%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 OVH | 1️⃣7️⃣","type":"vless","server":"www.arrendify.com","port":443,"udp":false,"uuid":"a7eb4a81-4300-46c1-a6c3-851fad9d8920","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"nezuko.raidenshogun.cloudns.org","ws-opts":{"path":"/VLESS/fr-full.privateip.net","headers":{"host":"nezuko.raidenshogun.cloudns.org"}}}
-  - {"name":"🇫🇷 🇫🇷 and 🇩🇪 🇩🇪  | 1️⃣8️⃣","type":"vmess","server":"www.jeguue.com","port":"443","cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/afrhms16v.bestxray.buzz","headers":{"host":"nezuko.raidenshogun.cloudns.org"}}}
-  - {"name":"%F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%98%8F | 1️⃣9️⃣","type":"vless","server":"www.tadartcom.com","port":443,"udp":false,"uuid":"50b68499-fda4-4e56-bbfd-b608284f1a0f","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"nezuko.raidenshogun.cloudns.org","ws-opts":{"path":"/VLESS/de2-full.privateip.net","headers":{"host":"nezuko.raidenshogun.cloudns.org"}}}
-  - {"name":"🇺🇸 ✌🏻 | 2️⃣0️⃣","type":"vmess","server":"www.chrisp.zone","port":"443","cipher":"auto","uuid":"7e0109e0-709f-4dcb-b100-695d6b6b322c","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/LosAngeles.gafnode.sbs","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%87%AC%F0%9F%87%A7  UK %F0%9F%87%AC%F0%9F%87%A7  | 2️⃣1️⃣","type":"vless","server":"headbrookeincharge.com","port":443,"udp":false,"uuid":"b8b1cad2-af20-4e44-9347-49af03908474","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/uk-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA     %F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA  | 2️⃣2️⃣","type":"vless","server":"www.360heymedia.com","port":2096,"udp":false,"uuid":"95ca2c9b-d135-48cf-94d1-6c710f062188","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"crolinde.raidenshogun.cloudns.org","ws-opts":{"path":"/","headers":{"host":"crolinde.raidenshogun.cloudns.org"}}}
-  - {"name":"%F0%9F%87%B9%F0%9F%87%B7  | 2️⃣3️⃣","type":"vless","server":"headbrookeincharge.com","port":443,"udp":false,"uuid":"6d2f1d2e-b85e-4730-a5e9-688475657c62","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/tr-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"🇩🇪 🇬🇧 🇺🇸 🌎 🤔 | 2️⃣4️⃣","type":"vmess","server":"www.svep.com","port":"443","cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/ivideos.sbs","headers":{"host":"nezuko.raidenshogun.cloudns.org"}}}
-  - {"name":"🇷🇺 🥶  | 2️⃣5️⃣","type":"vmess","server":"exwm.cc","port":"443","cipher":"auto","uuid":"da9ee068-7a4e-478d-bf1d-2af168fe6668","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Moscow.fghgdddgvss.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":" %F0%9F%87%A9%F0%9F%87%AA         %F0%9F%9A%81          %E2%9C%8C%F0%9F%8F%BB | 2️⃣6️⃣","type":"vless","server":"www.smartsupp.com","port":2096,"udp":false,"uuid":"e94000b3-3fe6-45ef-90c4-4965917a408e","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"riasgremory.raidenshogun.cloudns.org","ws-opts":{"path":"/?ed=2560","headers":{"host":"riasgremory.raidenshogun.cloudns.org"}}}
-  - {"name":"🇳🇱 🕊 | 2️⃣7️⃣","type":"vmess","server":"www.lagrandetoile.com","port":"443","cipher":"auto","uuid":"5447d5d4-2a0c-4b03-b6ea-a31496a4c00b","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Amsterdam.fghgdddgvss.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%87%AB%F0%9F%87%AE       %F0%9F%87%AB%F0%9F%87%AE    %F0%9F%87%AB%F0%9F%87%AE       %F0%9F%87%AB%F0%9F%87%AE  | 2️⃣8️⃣","type":"vless","server":"www.bmcollege.gov.bd","port":443,"udp":false,"uuid":"0b96b54b-d38c-42b4-8484-5d00f84cccdb","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/vless/fi1.v2vless.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%8D%95  | 2️⃣9️⃣","type":"vless","server":"www.arrendify.com","port":443,"udp":false,"uuid":"e25aa0ce-6896-4a60-bfbe-a992c789320c","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/it-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":" 🇩🇪  | 3️⃣0️⃣","type":"vmess","server":"download.osgrid.org","port":"443","cipher":"auto","uuid":"c12fba98-5a15-47f9-b022-26f5fcee2189","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Frankfurt.fghgdddgvss.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%87%A7%F0%9F%87%AA %F0%9F%87%A7%F0%9F%87%AA  | 3️⃣1️⃣","type":"vless","server":"www.bmcollege.gov.bd","port":443,"udp":false,"uuid":"5e29decc-a0ef-44be-a407-33d498683a9f","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/vless/be1.v2vless.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%87%AC%F0%9F%87%A7  %F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%AC%F0%9F%87%A7  | 3️⃣2️⃣","type":"vless","server":"www.smartsupp.com","port":2096,"udp":false,"uuid":"e364b787-6545-42dd-aaa4-9ee76fd21e89","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/uk2-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":" 🇩🇪  fr | 3️⃣3️⃣","type":"vmess","server":"download.osgrid.org","port":"443","cipher":"auto","uuid":"3be825bd-cc1c-4106-a22f-d673ebd4c5aa","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Frankfurt.fghgdddgvss.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7  | 3️⃣4️⃣","type":"vless","server":"jive-germany.com","port":443,"udp":false,"uuid":"6a752599-02da-440b-9e25-2cd9938b552d","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"nezuko.raidenshogun.cloudns.org","ws-opts":{"path":"/VLESS/fr-freevmess.privateip.net","headers":{"host":"nezuko.raidenshogun.cloudns.org"}}}
-  - {"name":"%F0%9F%87%A8%F0%9F%87%A6  | 3️⃣5️⃣","type":"vless","server":"prolifeaction.org","port":443,"udp":false,"uuid":"d6254663-e357-42e8-9edb-4251aba42911","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/ca-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"🇺🇸 🤌🏻 | 3️⃣6️⃣","type":"vmess","server":"webtimeclock.com","port":"443","cipher":"auto","uuid":"3e38503c-5c04-4407-8c7b-6fa3d1a8ecf7","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/LosAngeles.gafnode.sbs","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%87%A9%F0%9F%87%AA | 3️⃣7️⃣","type":"vless","server":"www.syphilisisback.ca","port":2096,"udp":false,"uuid":"1f61d666-59d2-42cb-b390-3ebaf6c51839","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"akenohimejima.yaemiko.cloudns.biz","ws-opts":{"path":"/","headers":{"host":"akenohimejima.yaemiko.cloudns.biz"}}}
-  - {"name":"%F0%9F%87%AA%F0%9F%87%B8 %F0%9F%87%AA%F0%9F%87%B8 %F0%9F%87%AA%F0%9F%87%B8  | 3️⃣8️⃣","type":"vless","server":"intra.ninja","port":443,"udp":false,"uuid":"c6dd02e0-e229-4ccf-91b3-25c9f10ae9af","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"yelan.yaemiko.cloudns.biz","ws-opts":{"path":"/VLESS/es-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}}}
-  - {"name":"🇺🇸  ln 🇩🇪  | 3️⃣9️⃣","type":"vmess","server":"www.reedexport.cn","port":"443","cipher":"auto","uuid":"a1655f51-1e20-4a92-8a11-b7ca30a7a353","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/afrhms07.xfixedfloat.cfd","headers":{"host":"nezuko.raidenshogun.cloudns.org"}}}
-  - {"name":"🕊🇺🇸 🇫🇷  🇩🇪 🕊 | 4️⃣0️⃣","type":"vmess","server":"carlsbergbackend.hummingfood.com","port":"443","cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link/hms02.fxiaomi.sbs","headers":{"host":"nezuko.raidenshogun.cloudns.org"}}}
+  - {"name":"https%3A%2F%2Ft.me%2Funlocked_worlld","type":"vless","server":"unlocked_worlld","port":1080,"udp":false,"uuid":"d07e0e50-0a47-44df-a98d-95ae9447e892","tls":true,"network":"tcp","client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%87%AE%F0%9F%87%B9%20%0A%F0%9F%87%AC%F0%9F%87%A7%20%F0%9F%87%A9%F0%9F%87%AA%20","type":"vless","server":"ashleynishee.com","port":443,"udp":false,"uuid":"96c437b3-c993-4217-b228-21fbb67d5ff8","tls":true,"servername":"yaemiko.raidenshogun.cloudns.org","network":"ws","ws-opts":{"path":"/","headers":{"host":"yaemiko.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20","type":"vless","server":"download.osgrid.org","port":443,"udp":false,"uuid":"55e9e0e5-c68e-43ce-b1a3-9ba93ea65f71","tls":true,"servername":"yelhhjan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/us-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":" 🇩🇪  🕊🕊","type":"vmess","server":"download.osgrid.org","port":443,"cipher":"auto","uuid":"0b029e19-8426-420b-8739-ef355dd287f0","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Frankfurt.fghgdddgvss.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%B0%F0%9F%87%BF%20%F0%9F%87%B0%F0%9F%87%BF%20","type":"vless","server":"web.onecheer.cn","port":443,"udp":false,"uuid":"38ec77d6-3e68-44b5-966d-1ecde09e2ce4","tls":true,"servername":"yelannn.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/kz-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%B8%F0%9F%87%AA%20%F0%9F%9A%81","type":"vless","server":"www.plothost.com","port":443,"udp":false,"uuid":"dfce7434-9994-47ee-8795-63c3a5d6bb39","tls":true,"servername":"yellxan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/se-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%A7%F0%9F%87%B6%20%F0%9F%87%B3%F0%9F%87%B1%20","type":"vless","server":"www.vzug.com","port":443,"udp":false,"uuid":"6a41c2f7-6fc1-45ae-9a3c-d7aab5ba8eef","tls":true,"servername":"yelan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/nl2-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%E2%9D%84%EF%B8%8F%20eula%20%F0%9F%87%A9%F0%9F%87%AA%20","type":"vless","server":"www.wheatleygaso.com","port":443,"udp":false,"uuid":"31aa719b-742f-430d-8a59-6abfbf538842","tls":true,"servername":"eula.raidenshogun.cloudns.org","network":"ws","ws-opts":{"path":"/?ed=2560","headers":{"host":"eula.raidenshogun.cloudns.org"}},"client-fingerprint":"randomized"}
+  - {"name":"%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%87%AE%F0%9F%87%B9%0A%20%20%20%F0%9F%87%A9%F0%9F%87%AA%20%20%20azn","type":"vless","server":"www.svep.com","port":443,"udp":false,"uuid":"0b4b623c-2914-494d-b6b8-b03fbf4d6655","tls":true,"servername":"navia.raidenshogun.cloudns.org","network":"ws","ws-opts":{"path":"/?ed=2560","headers":{"host":"navia.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"🇫🇷","type":"vmess","server":"loulakis.gr","port":443,"cipher":"auto","uuid":"93ea486a-bada-42a4-ac38-d088b320fa1e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/xmivideo.cfd","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"  🇫🇷 👀 🇺🇸 🇩🇪 ","type":"vmess","server":"mcdowellsrepair.com","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/afrhms16v.bestxray.buzz","headers":{"host":"nezuko.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%BA%F0%9F%87%A6%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%F0%9F%87%BA%F0%9F%87%A6%20","type":"vless","server":"www.bmcollege.gov.bd","port":443,"udp":false,"uuid":"a5ae3d6d-77e1-44c7-b07f-2b51dbc56517","tls":true,"servername":"yelan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/ua-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"🇫🇷 🙂 🇩🇪 🇩🇪","type":"vmess","server":"www.teletrans.ro","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/obdii.cfd","headers":{"host":"nezuko.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%A9%F0%9F%87%AA%20shinobu%20%F0%9F%87%A9%F0%9F%87%AA%20","type":"vless","server":"tastewp.com","port":443,"udp":false,"uuid":"7bedf632-b4c2-4e90-9d8b-f42ee7145534","tls":true,"servername":"mitsuri.raidenshogun.cloudns.org","network":"ws","ws-opts":{"path":"/?ed=2560","headers":{"host":"mitsuri.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"🍷 🇫🇷 🇩🇪  🇬🇧 ","type":"vmess","server":"carlsbergbackend.hummingfood.com","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.cfd/linkws","headers":{"host":"mikasa.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"germany%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20","type":"vless","server":"www.wheatleygaso.com","port":443,"udp":false,"uuid":"291d75ef-fdb6-481f-9303-543696f7bc45","tls":true,"servername":"nezuko.raidenshogun.cloudns.org","network":"ws","ws-opts":{"path":"/VLESS/de-full.privateip.net","headers":{"host":"nezuko.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20OVH","type":"vless","server":"www.arrendify.com","port":443,"udp":false,"uuid":"a7eb4a81-4300-46c1-a6c3-851fad9d8920","tls":true,"servername":"nezuko.raidenshogun.cloudns.org","network":"ws","ws-opts":{"path":"/VLESS/fr-full.privateip.net","headers":{"host":"nezuko.raidenshogun.cloudns.org"}},"client-fingerprint":"randomized"}
+  - {"name":"🇫🇷 🇫🇷 and 🇩🇪 🇩🇪 ","type":"vmess","server":"www.jeguue.com","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/afrhms16v.bestxray.buzz","headers":{"host":"nezuko.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%98%8F","type":"vless","server":"www.tadartcom.com","port":443,"udp":false,"uuid":"50b68499-fda4-4e56-bbfd-b608284f1a0f","tls":true,"servername":"nezuko.raidenshogun.cloudns.org","network":"ws","ws-opts":{"path":"/VLESS/de2-full.privateip.net","headers":{"host":"nezuko.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"🇺🇸 ✌🏻","type":"vmess","server":"www.chrisp.zone","port":443,"cipher":"auto","uuid":"7e0109e0-709f-4dcb-b100-695d6b6b322c","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/LosAngeles.gafnode.sbs","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%AC%F0%9F%87%A7%20%20UK%20%F0%9F%87%AC%F0%9F%87%A7%20","type":"vless","server":"headbrookeincharge.com","port":443,"udp":false,"uuid":"b8b1cad2-af20-4e44-9347-49af03908474","tls":true,"servername":"yelan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/uk-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA%20%20%20%20%20%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA%20","type":"vless","server":"www.360heymedia.com","port":2096,"udp":false,"uuid":"95ca2c9b-d135-48cf-94d1-6c710f062188","tls":true,"servername":"crolinde.raidenshogun.cloudns.org","network":"ws","ws-opts":{"path":"/","headers":{"host":"crolinde.raidenshogun.cloudns.org"}},"client-fingerprint":"randomized"}
+  - {"name":"%F0%9F%87%B9%F0%9F%87%B7%20","type":"vless","server":"headbrookeincharge.com","port":443,"udp":false,"uuid":"6d2f1d2e-b85e-4730-a5e9-688475657c62","tls":true,"servername":"yelan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/tr-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"🇩🇪 🇬🇧 🇺🇸 🌎 🤔","type":"vmess","server":"www.svep.com","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/ivideos.sbs","headers":{"host":"nezuko.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"🇷🇺 🥶 ","type":"vmess","server":"exwm.cc","port":443,"cipher":"auto","uuid":"da9ee068-7a4e-478d-bf1d-2af168fe6668","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Moscow.fghgdddgvss.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%20%F0%9F%87%A9%F0%9F%87%AA%20%20%20%20%20%20%20%20%20%F0%9F%9A%81%20%20%20%20%20%20%20%20%20%20%E2%9C%8C%F0%9F%8F%BB","type":"vless","server":"www.smartsupp.com","port":2096,"udp":false,"uuid":"e94000b3-3fe6-45ef-90c4-4965917a408e","tls":true,"servername":"riasgremory.raidenshogun.cloudns.org","network":"ws","ws-opts":{"path":"/?ed=2560","headers":{"host":"riasgremory.raidenshogun.cloudns.org"}},"client-fingerprint":"randomized"}
+  - {"name":"🇳🇱 🕊","type":"vmess","server":"www.lagrandetoile.com","port":443,"cipher":"auto","uuid":"5447d5d4-2a0c-4b03-b6ea-a31496a4c00b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Amsterdam.fghgdddgvss.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20","type":"vless","server":"www.bmcollege.gov.bd","port":443,"udp":false,"uuid":"0b96b54b-d38c-42b4-8484-5d00f84cccdb","tls":true,"servername":"yelan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/vless/fi1.v2vless.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%8D%95%20","type":"vless","server":"www.arrendify.com","port":443,"udp":false,"uuid":"e25aa0ce-6896-4a60-bfbe-a992c789320c","tls":true,"servername":"yelan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/it-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":" 🇩🇪 ","type":"vmess","server":"download.osgrid.org","port":443,"cipher":"auto","uuid":"c12fba98-5a15-47f9-b022-26f5fcee2189","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Frankfurt.fghgdddgvss.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%A7%F0%9F%87%AA%20%F0%9F%87%A7%F0%9F%87%AA%20","type":"vless","server":"www.bmcollege.gov.bd","port":443,"udp":false,"uuid":"5e29decc-a0ef-44be-a407-33d498683a9f","tls":true,"servername":"yelan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/vless/be1.v2vless.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%AC%F0%9F%87%A7%20%20%F0%9F%87%AC%F0%9F%87%A7%20%F0%9F%87%AC%F0%9F%87%A7%20","type":"vless","server":"www.smartsupp.com","port":2096,"udp":false,"uuid":"e364b787-6545-42dd-aaa4-9ee76fd21e89","tls":true,"servername":"yelan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/uk2-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":" 🇩🇪  fr","type":"vmess","server":"download.osgrid.org","port":443,"cipher":"auto","uuid":"3be825bd-cc1c-4106-a22f-d673ebd4c5aa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/Frankfurt.fghgdddgvss.xyz","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20","type":"vless","server":"jive-germany.com","port":443,"udp":false,"uuid":"6a752599-02da-440b-9e25-2cd9938b552d","tls":true,"servername":"nezuko.raidenshogun.cloudns.org","network":"ws","ws-opts":{"path":"/VLESS/fr-freevmess.privateip.net","headers":{"host":"nezuko.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%A8%F0%9F%87%A6%20","type":"vless","server":"prolifeaction.org","port":443,"udp":false,"uuid":"d6254663-e357-42e8-9edb-4251aba42911","tls":true,"servername":"yelan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/ca-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"🇺🇸 🤌🏻","type":"vmess","server":"webtimeclock.com","port":443,"cipher":"auto","uuid":"3e38503c-5c04-4407-8c7b-6fa3d1a8ecf7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest/LosAngeles.gafnode.sbs","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%A9%F0%9F%87%AA","type":"vless","server":"www.syphilisisback.ca","port":2096,"udp":false,"uuid":"1f61d666-59d2-42cb-b390-3ebaf6c51839","tls":true,"servername":"akenohimejima.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/","headers":{"host":"akenohimejima.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%AA%F0%9F%87%B8%20%F0%9F%87%AA%F0%9F%87%B8%20%F0%9F%87%AA%F0%9F%87%B8%20","type":"vless","server":"intra.ninja","port":443,"udp":false,"uuid":"c6dd02e0-e229-4ccf-91b3-25c9f10ae9af","tls":true,"servername":"yelan.yaemiko.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/es-full.privateip.net","headers":{"host":"yelan.yaemiko.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"🇺🇸  ln 🇩🇪 ","type":"vmess","server":"www.reedexport.cn","port":443,"cipher":"auto","uuid":"a1655f51-1e20-4a92-8a11-b7ca30a7a353","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/afrhms07.xfixedfloat.cfd","headers":{"host":"nezuko.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
+  - {"name":"🕊🇺🇸 🇫🇷  🇩🇪 🕊","type":"vmess","server":"carlsbergbackend.hummingfood.com","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link/hms02.fxiaomi.sbs","headers":{"host":"nezuko.raidenshogun.cloudns.org"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
     proxies:
       - URL-TEST
       - FALLBACK
-      - 'https%3A%2F%2Ft.me%2Funlocked_worlld | 0️⃣1️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9 %0A%F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣2️⃣'
-      - '%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E %F0%9F%87%BA%F0%9F%87%B2  | 0️⃣3️⃣'
-      - ' 🇩🇪  🕊🕊 | 0️⃣4️⃣'
-      - '%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 0️⃣5️⃣'
-      - '%F0%9F%87%B8%F0%9F%87%AA %F0%9F%9A%81 | 0️⃣6️⃣'
-      - '%F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%A7%F0%9F%87%B6 %F0%9F%87%B3%F0%9F%87%B1  | 0️⃣7️⃣'
-      - '%E2%9D%84%EF%B8%8F eula %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣8️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9%0A   %F0%9F%87%A9%F0%9F%87%AA   azn | 0️⃣9️⃣'
-      - '🇫🇷 | 1️⃣0️⃣'
-      - '  🇫🇷 👀 🇺🇸 🇩🇪  | 1️⃣1️⃣'
-      - '%F0%9F%87%BA%F0%9F%87%A6                          %F0%9F%87%BA%F0%9F%87%A6  | 1️⃣2️⃣'
-      - '🇫🇷 🙂 🇩🇪 🇩🇪 | 1️⃣3️⃣'
-      - '%F0%9F%87%A9%F0%9F%87%AA shinobu %F0%9F%87%A9%F0%9F%87%AA  | 1️⃣4️⃣'
-      - '🍷 🇫🇷 🇩🇪  🇬🇧  | 1️⃣5️⃣'
-      - 'germany %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA  | 1️⃣6️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 OVH | 1️⃣7️⃣'
-      - '🇫🇷 🇫🇷 and 🇩🇪 🇩🇪  | 1️⃣8️⃣'
-      - '%F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%98%8F | 1️⃣9️⃣'
-      - '🇺🇸 ✌🏻 | 2️⃣0️⃣'
-      - '%F0%9F%87%AC%F0%9F%87%A7  UK %F0%9F%87%AC%F0%9F%87%A7  | 2️⃣1️⃣'
-      - '%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA     %F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA  | 2️⃣2️⃣'
-      - '%F0%9F%87%B9%F0%9F%87%B7  | 2️⃣3️⃣'
-      - '🇩🇪 🇬🇧 🇺🇸 🌎 🤔 | 2️⃣4️⃣'
-      - '🇷🇺 🥶  | 2️⃣5️⃣'
-      - ' %F0%9F%87%A9%F0%9F%87%AA         %F0%9F%9A%81          %E2%9C%8C%F0%9F%8F%BB | 2️⃣6️⃣'
-      - '🇳🇱 🕊 | 2️⃣7️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%AE       %F0%9F%87%AB%F0%9F%87%AE    %F0%9F%87%AB%F0%9F%87%AE       %F0%9F%87%AB%F0%9F%87%AE  | 2️⃣8️⃣'
-      - '%F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%8D%95  | 2️⃣9️⃣'
-      - ' 🇩🇪  | 3️⃣0️⃣'
-      - '%F0%9F%87%A7%F0%9F%87%AA %F0%9F%87%A7%F0%9F%87%AA  | 3️⃣1️⃣'
-      - '%F0%9F%87%AC%F0%9F%87%A7  %F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%AC%F0%9F%87%A7  | 3️⃣2️⃣'
-      - ' 🇩🇪  fr | 3️⃣3️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7  | 3️⃣4️⃣'
-      - '%F0%9F%87%A8%F0%9F%87%A6  | 3️⃣5️⃣'
-      - '🇺🇸 🤌🏻 | 3️⃣6️⃣'
-      - '%F0%9F%87%A9%F0%9F%87%AA | 3️⃣7️⃣'
-      - '%F0%9F%87%AA%F0%9F%87%B8 %F0%9F%87%AA%F0%9F%87%B8 %F0%9F%87%AA%F0%9F%87%B8  | 3️⃣8️⃣'
-      - '🇺🇸  ln 🇩🇪  | 3️⃣9️⃣'
-      - '🕊🇺🇸 🇫🇷  🇩🇪 🕊 | 4️⃣0️⃣'
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%87%AE%F0%9F%87%B9%20%0A%F0%9F%87%AC%F0%9F%87%A7%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20'
+      - ' 🇩🇪  🕊🕊'
+      - '%F0%9F%87%B0%F0%9F%87%BF%20%F0%9F%87%B0%F0%9F%87%BF%20'
+      - '%F0%9F%87%B8%F0%9F%87%AA%20%F0%9F%9A%81'
+      - '%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%A7%F0%9F%87%B6%20%F0%9F%87%B3%F0%9F%87%B1%20'
+      - '%E2%9D%84%EF%B8%8F%20eula%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%87%AE%F0%9F%87%B9%0A%20%20%20%F0%9F%87%A9%F0%9F%87%AA%20%20%20azn'
+      - '🇫🇷'
+      - '  🇫🇷 👀 🇺🇸 🇩🇪 '
+      - '%F0%9F%87%BA%F0%9F%87%A6%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%F0%9F%87%BA%F0%9F%87%A6%20'
+      - '🇫🇷 🙂 🇩🇪 🇩🇪'
+      - '%F0%9F%87%A9%F0%9F%87%AA%20shinobu%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '🍷 🇫🇷 🇩🇪  🇬🇧 '
+      - 'germany%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20OVH'
+      - '🇫🇷 🇫🇷 and 🇩🇪 🇩🇪 '
+      - '%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%98%8F'
+      - '🇺🇸 ✌🏻'
+      - '%F0%9F%87%AC%F0%9F%87%A7%20%20UK%20%F0%9F%87%AC%F0%9F%87%A7%20'
+      - '%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA%20%20%20%20%20%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%B9%F0%9F%87%B7%20'
+      - '🇩🇪 🇬🇧 🇺🇸 🌎 🤔'
+      - '🇷🇺 🥶 '
+      - '%20%F0%9F%87%A9%F0%9F%87%AA%20%20%20%20%20%20%20%20%20%F0%9F%9A%81%20%20%20%20%20%20%20%20%20%20%E2%9C%8C%F0%9F%8F%BB'
+      - '🇳🇱 🕊'
+      - '%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20'
+      - '%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%8D%95%20'
+      - ' 🇩🇪 '
+      - '%F0%9F%87%A7%F0%9F%87%AA%20%F0%9F%87%A7%F0%9F%87%AA%20'
+      - '%F0%9F%87%AC%F0%9F%87%A7%20%20%F0%9F%87%AC%F0%9F%87%A7%20%F0%9F%87%AC%F0%9F%87%A7%20'
+      - ' 🇩🇪  fr'
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20'
+      - '%F0%9F%87%A8%F0%9F%87%A6%20'
+      - '🇺🇸 🤌🏻'
+      - '%F0%9F%87%A9%F0%9F%87%AA'
+      - '%F0%9F%87%AA%F0%9F%87%B8%20%F0%9F%87%AA%F0%9F%87%B8%20%F0%9F%87%AA%F0%9F%87%B8%20'
+      - '🇺🇸  ln 🇩🇪 '
+      - '🕊🇺🇸 🇫🇷  🇩🇪 🕊'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 60
     tolerance: 50
     proxies:
-      - 'https%3A%2F%2Ft.me%2Funlocked_worlld | 0️⃣1️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9 %0A%F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣2️⃣'
-      - '%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E %F0%9F%87%BA%F0%9F%87%B2  | 0️⃣3️⃣'
-      - ' 🇩🇪  🕊🕊 | 0️⃣4️⃣'
-      - '%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 0️⃣5️⃣'
-      - '%F0%9F%87%B8%F0%9F%87%AA %F0%9F%9A%81 | 0️⃣6️⃣'
-      - '%F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%A7%F0%9F%87%B6 %F0%9F%87%B3%F0%9F%87%B1  | 0️⃣7️⃣'
-      - '%E2%9D%84%EF%B8%8F eula %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣8️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9%0A   %F0%9F%87%A9%F0%9F%87%AA   azn | 0️⃣9️⃣'
-      - '🇫🇷 | 1️⃣0️⃣'
-      - '  🇫🇷 👀 🇺🇸 🇩🇪  | 1️⃣1️⃣'
-      - '%F0%9F%87%BA%F0%9F%87%A6                          %F0%9F%87%BA%F0%9F%87%A6  | 1️⃣2️⃣'
-      - '🇫🇷 🙂 🇩🇪 🇩🇪 | 1️⃣3️⃣'
-      - '%F0%9F%87%A9%F0%9F%87%AA shinobu %F0%9F%87%A9%F0%9F%87%AA  | 1️⃣4️⃣'
-      - '🍷 🇫🇷 🇩🇪  🇬🇧  | 1️⃣5️⃣'
-      - 'germany %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA  | 1️⃣6️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 OVH | 1️⃣7️⃣'
-      - '🇫🇷 🇫🇷 and 🇩🇪 🇩🇪  | 1️⃣8️⃣'
-      - '%F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%98%8F | 1️⃣9️⃣'
-      - '🇺🇸 ✌🏻 | 2️⃣0️⃣'
-      - '%F0%9F%87%AC%F0%9F%87%A7  UK %F0%9F%87%AC%F0%9F%87%A7  | 2️⃣1️⃣'
-      - '%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA     %F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA  | 2️⃣2️⃣'
-      - '%F0%9F%87%B9%F0%9F%87%B7  | 2️⃣3️⃣'
-      - '🇩🇪 🇬🇧 🇺🇸 🌎 🤔 | 2️⃣4️⃣'
-      - '🇷🇺 🥶  | 2️⃣5️⃣'
-      - ' %F0%9F%87%A9%F0%9F%87%AA         %F0%9F%9A%81          %E2%9C%8C%F0%9F%8F%BB | 2️⃣6️⃣'
-      - '🇳🇱 🕊 | 2️⃣7️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%AE       %F0%9F%87%AB%F0%9F%87%AE    %F0%9F%87%AB%F0%9F%87%AE       %F0%9F%87%AB%F0%9F%87%AE  | 2️⃣8️⃣'
-      - '%F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%8D%95  | 2️⃣9️⃣'
-      - ' 🇩🇪  | 3️⃣0️⃣'
-      - '%F0%9F%87%A7%F0%9F%87%AA %F0%9F%87%A7%F0%9F%87%AA  | 3️⃣1️⃣'
-      - '%F0%9F%87%AC%F0%9F%87%A7  %F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%AC%F0%9F%87%A7  | 3️⃣2️⃣'
-      - ' 🇩🇪  fr | 3️⃣3️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7  | 3️⃣4️⃣'
-      - '%F0%9F%87%A8%F0%9F%87%A6  | 3️⃣5️⃣'
-      - '🇺🇸 🤌🏻 | 3️⃣6️⃣'
-      - '%F0%9F%87%A9%F0%9F%87%AA | 3️⃣7️⃣'
-      - '%F0%9F%87%AA%F0%9F%87%B8 %F0%9F%87%AA%F0%9F%87%B8 %F0%9F%87%AA%F0%9F%87%B8  | 3️⃣8️⃣'
-      - '🇺🇸  ln 🇩🇪  | 3️⃣9️⃣'
-      - '🕊🇺🇸 🇫🇷  🇩🇪 🕊 | 4️⃣0️⃣'
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%87%AE%F0%9F%87%B9%20%0A%F0%9F%87%AC%F0%9F%87%A7%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20'
+      - ' 🇩🇪  🕊🕊'
+      - '%F0%9F%87%B0%F0%9F%87%BF%20%F0%9F%87%B0%F0%9F%87%BF%20'
+      - '%F0%9F%87%B8%F0%9F%87%AA%20%F0%9F%9A%81'
+      - '%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%A7%F0%9F%87%B6%20%F0%9F%87%B3%F0%9F%87%B1%20'
+      - '%E2%9D%84%EF%B8%8F%20eula%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%87%AE%F0%9F%87%B9%0A%20%20%20%F0%9F%87%A9%F0%9F%87%AA%20%20%20azn'
+      - '🇫🇷'
+      - '  🇫🇷 👀 🇺🇸 🇩🇪 '
+      - '%F0%9F%87%BA%F0%9F%87%A6%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%F0%9F%87%BA%F0%9F%87%A6%20'
+      - '🇫🇷 🙂 🇩🇪 🇩🇪'
+      - '%F0%9F%87%A9%F0%9F%87%AA%20shinobu%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '🍷 🇫🇷 🇩🇪  🇬🇧 '
+      - 'germany%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20OVH'
+      - '🇫🇷 🇫🇷 and 🇩🇪 🇩🇪 '
+      - '%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%98%8F'
+      - '🇺🇸 ✌🏻'
+      - '%F0%9F%87%AC%F0%9F%87%A7%20%20UK%20%F0%9F%87%AC%F0%9F%87%A7%20'
+      - '%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA%20%20%20%20%20%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%B9%F0%9F%87%B7%20'
+      - '🇩🇪 🇬🇧 🇺🇸 🌎 🤔'
+      - '🇷🇺 🥶 '
+      - '%20%F0%9F%87%A9%F0%9F%87%AA%20%20%20%20%20%20%20%20%20%F0%9F%9A%81%20%20%20%20%20%20%20%20%20%20%E2%9C%8C%F0%9F%8F%BB'
+      - '🇳🇱 🕊'
+      - '%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20'
+      - '%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%8D%95%20'
+      - ' 🇩🇪 '
+      - '%F0%9F%87%A7%F0%9F%87%AA%20%F0%9F%87%A7%F0%9F%87%AA%20'
+      - '%F0%9F%87%AC%F0%9F%87%A7%20%20%F0%9F%87%AC%F0%9F%87%A7%20%F0%9F%87%AC%F0%9F%87%A7%20'
+      - ' 🇩🇪  fr'
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20'
+      - '%F0%9F%87%A8%F0%9F%87%A6%20'
+      - '🇺🇸 🤌🏻'
+      - '%F0%9F%87%A9%F0%9F%87%AA'
+      - '%F0%9F%87%AA%F0%9F%87%B8%20%F0%9F%87%AA%F0%9F%87%B8%20%F0%9F%87%AA%F0%9F%87%B8%20'
+      - '🇺🇸  ln 🇩🇪 '
+      - '🕊🇺🇸 🇫🇷  🇩🇪 🕊'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
-      - 'https%3A%2F%2Ft.me%2Funlocked_worlld | 0️⃣1️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9 %0A%F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣2️⃣'
-      - '%F0%9F%87%BA%F0%9F%87%B8 %F0%9F%8C%8E %F0%9F%87%BA%F0%9F%87%B2  | 0️⃣3️⃣'
-      - ' 🇩🇪  🕊🕊 | 0️⃣4️⃣'
-      - '%F0%9F%87%B0%F0%9F%87%BF %F0%9F%87%B0%F0%9F%87%BF  | 0️⃣5️⃣'
-      - '%F0%9F%87%B8%F0%9F%87%AA %F0%9F%9A%81 | 0️⃣6️⃣'
-      - '%F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%A7%F0%9F%87%B6 %F0%9F%87%B3%F0%9F%87%B1  | 0️⃣7️⃣'
-      - '%E2%9D%84%EF%B8%8F eula %F0%9F%87%A9%F0%9F%87%AA  | 0️⃣8️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%B3%F0%9F%87%B1 %F0%9F%87%BA%F0%9F%87%B8 %F0%9F%87%AE%F0%9F%87%B9%0A   %F0%9F%87%A9%F0%9F%87%AA   azn | 0️⃣9️⃣'
-      - '🇫🇷 | 1️⃣0️⃣'
-      - '  🇫🇷 👀 🇺🇸 🇩🇪  | 1️⃣1️⃣'
-      - '%F0%9F%87%BA%F0%9F%87%A6                          %F0%9F%87%BA%F0%9F%87%A6  | 1️⃣2️⃣'
-      - '🇫🇷 🙂 🇩🇪 🇩🇪 | 1️⃣3️⃣'
-      - '%F0%9F%87%A9%F0%9F%87%AA shinobu %F0%9F%87%A9%F0%9F%87%AA  | 1️⃣4️⃣'
-      - '🍷 🇫🇷 🇩🇪  🇬🇧  | 1️⃣5️⃣'
-      - 'germany %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA  | 1️⃣6️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 OVH | 1️⃣7️⃣'
-      - '🇫🇷 🇫🇷 and 🇩🇪 🇩🇪  | 1️⃣8️⃣'
-      - '%F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%87%A9%F0%9F%87%AA %F0%9F%98%8F | 1️⃣9️⃣'
-      - '🇺🇸 ✌🏻 | 2️⃣0️⃣'
-      - '%F0%9F%87%AC%F0%9F%87%A7  UK %F0%9F%87%AC%F0%9F%87%A7  | 2️⃣1️⃣'
-      - '%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA     %F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA  | 2️⃣2️⃣'
-      - '%F0%9F%87%B9%F0%9F%87%B7  | 2️⃣3️⃣'
-      - '🇩🇪 🇬🇧 🇺🇸 🌎 🤔 | 2️⃣4️⃣'
-      - '🇷🇺 🥶  | 2️⃣5️⃣'
-      - ' %F0%9F%87%A9%F0%9F%87%AA         %F0%9F%9A%81          %E2%9C%8C%F0%9F%8F%BB | 2️⃣6️⃣'
-      - '🇳🇱 🕊 | 2️⃣7️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%AE       %F0%9F%87%AB%F0%9F%87%AE    %F0%9F%87%AB%F0%9F%87%AE       %F0%9F%87%AB%F0%9F%87%AE  | 2️⃣8️⃣'
-      - '%F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%87%AE%F0%9F%87%B9 %F0%9F%8D%95  | 2️⃣9️⃣'
-      - ' 🇩🇪  | 3️⃣0️⃣'
-      - '%F0%9F%87%A7%F0%9F%87%AA %F0%9F%87%A7%F0%9F%87%AA  | 3️⃣1️⃣'
-      - '%F0%9F%87%AC%F0%9F%87%A7  %F0%9F%87%AC%F0%9F%87%A7 %F0%9F%87%AC%F0%9F%87%A7  | 3️⃣2️⃣'
-      - ' 🇩🇪  fr | 3️⃣3️⃣'
-      - '%F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7 %F0%9F%87%AB%F0%9F%87%B7  | 3️⃣4️⃣'
-      - '%F0%9F%87%A8%F0%9F%87%A6  | 3️⃣5️⃣'
-      - '🇺🇸 🤌🏻 | 3️⃣6️⃣'
-      - '%F0%9F%87%A9%F0%9F%87%AA | 3️⃣7️⃣'
-      - '%F0%9F%87%AA%F0%9F%87%B8 %F0%9F%87%AA%F0%9F%87%B8 %F0%9F%87%AA%F0%9F%87%B8  | 3️⃣8️⃣'
-      - '🇺🇸  ln 🇩🇪  | 3️⃣9️⃣'
-      - '🕊🇺🇸 🇫🇷  🇩🇪 🕊 | 4️⃣0️⃣'
-rule-providers:
-  ir: {type: http, format: text, behavior: domain, path: ./ruleset/ir.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.txt, interval: 86400}
-  ads: {type: http, format: text, behavior: domain, path: ./ruleset/ads.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ads.txt, interval: 86400}
-  ircidr: {type: http, format: text, behavior: ipcidr, path: ./ruleset/ircidr.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.txt, interval: 86400}
-  private: {type: http, format: text, behavior: ipcidr, path: ./ruleset/private.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/private.txt, interval: 86400}
-  apps: {type: http, format: text, behavior: domain, path: ./ruleset/apps.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.txt, interval: 86400}
-  malware: {type: http, format: text, behavior: domain, path: ./ruleset/malware.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/malware.txt, interval: 86400}
-  phishing: {type: http, format: text, behavior: domain, path: ./ruleset/phishing.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/phishing.txt, interval: 86400}
-  cryptominers: {type: http, format: text, behavior: domain, path: ./ruleset/cryptominers.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/cryptominers.txt, interval: 86400}
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%87%AE%F0%9F%87%B9%20%0A%F0%9F%87%AC%F0%9F%87%A7%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20'
+      - ' 🇩🇪  🕊🕊'
+      - '%F0%9F%87%B0%F0%9F%87%BF%20%F0%9F%87%B0%F0%9F%87%BF%20'
+      - '%F0%9F%87%B8%F0%9F%87%AA%20%F0%9F%9A%81'
+      - '%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%A7%F0%9F%87%B6%20%F0%9F%87%B3%F0%9F%87%B1%20'
+      - '%E2%9D%84%EF%B8%8F%20eula%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%B3%F0%9F%87%B1%20%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%87%AE%F0%9F%87%B9%0A%20%20%20%F0%9F%87%A9%F0%9F%87%AA%20%20%20azn'
+      - '🇫🇷'
+      - '  🇫🇷 👀 🇺🇸 🇩🇪 '
+      - '%F0%9F%87%BA%F0%9F%87%A6%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%F0%9F%87%BA%F0%9F%87%A6%20'
+      - '🇫🇷 🙂 🇩🇪 🇩🇪'
+      - '%F0%9F%87%A9%F0%9F%87%AA%20shinobu%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '🍷 🇫🇷 🇩🇪  🇬🇧 '
+      - 'germany%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20OVH'
+      - '🇫🇷 🇫🇷 and 🇩🇪 🇩🇪 '
+      - '%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%98%8F'
+      - '🇺🇸 ✌🏻'
+      - '%F0%9F%87%AC%F0%9F%87%A7%20%20UK%20%F0%9F%87%AC%F0%9F%87%A7%20'
+      - '%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA%20%20%20%20%20%F0%9F%95%8A%F0%9F%87%A9%F0%9F%87%AA%20'
+      - '%F0%9F%87%B9%F0%9F%87%B7%20'
+      - '🇩🇪 🇬🇧 🇺🇸 🌎 🤔'
+      - '🇷🇺 🥶 '
+      - '%20%F0%9F%87%A9%F0%9F%87%AA%20%20%20%20%20%20%20%20%20%F0%9F%9A%81%20%20%20%20%20%20%20%20%20%20%E2%9C%8C%F0%9F%8F%BB'
+      - '🇳🇱 🕊'
+      - '%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20%20%20%20%20%20%20%F0%9F%87%AB%F0%9F%87%AE%20'
+      - '%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%87%AE%F0%9F%87%B9%20%F0%9F%8D%95%20'
+      - ' 🇩🇪 '
+      - '%F0%9F%87%A7%F0%9F%87%AA%20%F0%9F%87%A7%F0%9F%87%AA%20'
+      - '%F0%9F%87%AC%F0%9F%87%A7%20%20%F0%9F%87%AC%F0%9F%87%A7%20%F0%9F%87%AC%F0%9F%87%A7%20'
+      - ' 🇩🇪  fr'
+      - '%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20%F0%9F%87%AB%F0%9F%87%B7%20'
+      - '%F0%9F%87%A8%F0%9F%87%A6%20'
+      - '🇺🇸 🤌🏻'
+      - '%F0%9F%87%A9%F0%9F%87%AA'
+      - '%F0%9F%87%AA%F0%9F%87%B8%20%F0%9F%87%AA%F0%9F%87%B8%20%F0%9F%87%AA%F0%9F%87%B8%20'
+      - '🇺🇸  ln 🇩🇪 '
+      - '🕊🇺🇸 🇫🇷  🇩🇪 🕊'
 rules:
-  - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
-  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve
-  - IP-CIDR,28.0.0.1/8,DIRECT,no-resolve
-  - IP-CIDR6,::1/128,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,local,DIRECT
-  - DOMAIN-SUFFIX,ip6-localhost,DIRECT
-  - DOMAIN-SUFFIX,ip6-loopback,DIRECT
-  - DOMAIN-SUFFIX,lan,DIRECT
-  - DOMAIN-SUFFIX,localhost,DIRECT
-  - DOMAIN-SUFFIX,ir,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - DOMAIN,yacd.metacubex.one,DIRECT
-  - DOMAIN,clash.metacubex.one,DIRECT
-  - RULE-SET,ads,REJECT
-  - RULE-SET,malware,REJECT
-  - RULE-SET,phishing,REJECT
-  - RULE-SET,cryptominers,REJECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,apps,DIRECT
-  - RULE-SET,ir,DIRECT
-  - RULE-SET,ircidr,DIRECT
-  - MATCH,MANUAL
+ - GEOIP,IR,DIRECT
+ - MATCH,MANUAL
