@@ -18,7 +18,7 @@ env:
   VMESS_VLESS_OUTPUT_FILE: "vmess_vless.txt"
   VMESS_VLESS_BASE64_FILE: "vmess_vless_B64.txt"
   VMESS_VLESS_CLASH_YAML_FILE: "vmess_vless_clash.yaml"
-  VMESS_VLESS_SINGBOX_URL: "https://api.yebekhe.link/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fxc0000e9%2Fdeatnote%2Fmain%2FHiddify-next.fragment&limit=0&tun=true"
+  VMESS_VLESS_SINGBOX_URL: "https://yebekhe.serv00.net/api/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fxc0000e9%2Fdeatnote%2Fmain%2FHiddify-next.fragment&limit=0&tun=true"
   VMESS_VLESS_SINGBOX_JSON_FILE: "vmess_vless_singbox.json"
 
   # Shadowsocks
@@ -26,7 +26,7 @@ env:
   SHADOWSOCKS_OUTPUT_FILE: "shadowsockes.txt"
   SHADOWSOCKS_BASE64_FILE: "SS_B64.txt"
   SHADOWSOCKS_CLASH_YAML_FILE: "ss_clash.yaml"
-  SHADOWSOCKS_SINGBOX_URL: "https://api.yebekhe.link/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fshadowsockes.txt&limit=0&tun=true"
+  SHADOWSOCKS_SINGBOX_URL: "https://yebekhe.serv00.net/api/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fshadowsockes.txt&limit=0&tun=true"
   SHADOWSOCKS_SINGBOX_JSON_FILE: "ss_singbox.json"
 
 jobs:
@@ -118,7 +118,7 @@ jobs:
             done
             return 0
           }
-          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FTelegramV2rayCollector%2Fmain%2Fsub%2Fbase64%2Fvmess&type=clash&process=full"
+          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FTelegramV2rayCollector%2Fmain%2Fsub%2Fbase64%2Fvmess&type=clash&process=full"
           retry curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_SINGBOX_JSON_FILE}" -L "${VMESS_V2RAY_SINGBOX_URL}"
 
       # Vmess_Vless
@@ -196,7 +196,7 @@ jobs:
             done
             return 0
           }
-          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/xc0000e9/deatnote/main/Hiddify-next.fragment&type=meta&process=full"
+          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/xc0000e9/deatnote/main/Hiddify-next.fragment&type=meta&process=full"
           retry curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_SINGBOX_JSON_FILE}" -L "${VMESS_VLESS_SINGBOX_URL}"
 
       # Shadowsocks
@@ -274,7 +274,7 @@ jobs:
             done
             return 0
           }
-          retry curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/V2RayAggregator/master/Eternity.txt&type=ss&process=full"
+          retry curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/V2RayAggregator/master/Eternity.txt&type=ss&process=full"
           retry curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_SINGBOX_JSON_FILE}" -L "${SHADOWSOCKS_SINGBOX_URL}"
 
       # Commit and push the changes
