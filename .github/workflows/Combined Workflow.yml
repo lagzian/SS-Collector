@@ -73,7 +73,7 @@ jobs:
             local max=5
             local delay=5
             while true; do
-              curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_REALITY }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/reality&type=meta&process=full" && break || {
+              curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_REALITY }}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/reality&type=meta&process=full" && break || {
                 if [[ $n -lt $max ]]; then
                   ((n++))
                   echo "Command failed. Attempt $n/$max:"
@@ -125,7 +125,7 @@ jobs:
             local max=5
             local delay=5
             while true; do
-              curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS_TVC }}" -L "https://api.yebekhe.link/toClash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/vmess&type=clash&process=full" && break || {
+              curl -o "${{ github.workspace }}/${{ env.CLASH_YAML_FILE_VMESS_TVC }}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/base64/vmess&type=clash&process=full" && break || {
                 if [[ $n -lt $max ]]; then
                   ((n++))
                   echo "Command failed. Attempt $n/$max:"
