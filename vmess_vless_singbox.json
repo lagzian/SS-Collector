@@ -126,8 +126,8 @@
                 "🕊🇩🇪     🕊🇩🇪  | 22",
                 "🇹🇷  | 23",
                 "🇩🇪 🇬🇧 🇺🇸 🌎 🤔 | 24",
-                "🇷🇺 🥶  | 25",
-                " 🇩🇪         🚁          ✌🏻 | 26",
+                " 🇩🇪         🚁          ✌🏻 | 25",
+                "🇷🇺 🥶  | 26",
                 "🇳🇱 🕊 | 27",
                 "🇫🇮       🇫🇮    🇫🇮       🇫🇮  | 28",
                 "🇮🇹 🇮🇹 🇮🇹 🍕  | 29",
@@ -172,8 +172,8 @@
                 "🕊🇩🇪     🕊🇩🇪  | 22",
                 "🇹🇷  | 23",
                 "🇩🇪 🇬🇧 🇺🇸 🌎 🤔 | 24",
-                "🇷🇺 🥶  | 25",
-                " 🇩🇪         🚁          ✌🏻 | 26",
+                " 🇩🇪         🚁          ✌🏻 | 25",
+                "🇷🇺 🥶  | 26",
                 "🇳🇱 🕊 | 27",
                 "🇫🇮       🇫🇮    🇫🇮       🇫🇮  | 28",
                 "🇮🇹 🇮🇹 🇮🇹 🍕  | 29",
@@ -253,7 +253,7 @@
             "type": "vless",
             "server": "download.osgrid.org",
             "server_port": 443,
-            "uuid": "55e9e0e5-c68e-43ce-b1a3-9ba93ea65f71",
+            "uuid": "3502ad6e-76db-4d87-97e8-9f169c113f75",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -285,7 +285,7 @@
             "type": "vmess",
             "server": "download.osgrid.org",
             "server_port": 443,
-            "uuid": "38566f86-6372-4a35-a2a0-7ea66a0572d9",
+            "uuid": "79421a89-3e8c-4895-ae0c-150a7eacebb6",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -385,7 +385,7 @@
             "type": "vless",
             "server": "www.vzug.com",
             "server_port": 443,
-            "uuid": "6a41c2f7-6fc1-45ae-9a3c-d7aab5ba8eef",
+            "uuid": "3d66d33d-7c42-45a4-8eb6-21a554b87dcb",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -789,7 +789,7 @@
             "type": "vless",
             "server": "www.tadartcom.com",
             "server_port": 443,
-            "uuid": "50b68499-fda4-4e56-bbfd-b608284f1a0f",
+            "uuid": "89c5f150-36d9-451b-8020-1b9492a75674",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -985,7 +985,39 @@
             }
         },
         {
-            "tag": "🇷🇺 🥶  | 25",
+            "tag": " 🇩🇪         🚁          ✌🏻 | 25",
+            "type": "vless",
+            "server": "www.smartsupp.com",
+            "server_port": 2096,
+            "uuid": "e94000b3-3fe6-45ef-90c4-4965917a408e",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "riasgremory.raidenshogun.cloudns.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/?ed=2560",
+                "headers": {
+                    "Host": "riasgremory.raidenshogun.cloudns.org"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇷🇺 🥶  | 26",
             "type": "vmess",
             "server": "exwm.cc",
             "server_port": 443,
@@ -1021,43 +1053,11 @@
             }
         },
         {
-            "tag": " 🇩🇪         🚁          ✌🏻 | 26",
-            "type": "vless",
-            "server": "www.smartsupp.com",
-            "server_port": 2096,
-            "uuid": "e94000b3-3fe6-45ef-90c4-4965917a408e",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "riasgremory.raidenshogun.cloudns.org",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/\/?ed=2560",
-                "headers": {
-                    "Host": "riasgremory.raidenshogun.cloudns.org"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
             "tag": "🇳🇱 🕊 | 27",
             "type": "vmess",
             "server": "www.lagrandetoile.com",
             "server_port": 443,
-            "uuid": "5447d5d4-2a0c-4b03-b6ea-a31496a4c00b",
+            "uuid": "0767f02b-a654-4edb-a161-4390cacf84a1",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1157,7 +1157,7 @@
             "type": "vmess",
             "server": "download.osgrid.org",
             "server_port": 443,
-            "uuid": "c12fba98-5a15-47f9-b022-26f5fcee2189",
+            "uuid": "f7d45c6f-c5bd-4869-aa15-ec4858cbe6f5",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1257,7 +1257,7 @@
             "type": "vmess",
             "server": "download.osgrid.org",
             "server_port": 443,
-            "uuid": "3be825bd-cc1c-4106-a22f-d673ebd4c5aa",
+            "uuid": "2c5569ef-6a97-4afc-848b-5eb9bc4d2537",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1293,7 +1293,7 @@
             "type": "vless",
             "server": "jive-germany.com",
             "server_port": 443,
-            "uuid": "6a752599-02da-440b-9e25-2cd9938b552d",
+            "uuid": "fb1fde98-c282-48cc-991b-6e8dd40cf2ff",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -1325,7 +1325,7 @@
             "type": "vless",
             "server": "prolifeaction.org",
             "server_port": 443,
-            "uuid": "d6254663-e357-42e8-9edb-4251aba42911",
+            "uuid": "d671bed2-c140-4bf9-ab17-4d1c04deb300",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
