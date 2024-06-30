@@ -140,6 +140,7 @@
                 "🇮🇷IR | 🟢 | vmess | @vless_vmess | 5",
                 "❔XX | 🟢 | vmess | @DailyV2RY | 88",
                 "🚩CF | 🟢 | vmess | @DailyV2RY | 95",
+                "🚩CF | 🟢 | vmess | @ConfigsHUB | 6",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -207,6 +208,7 @@
                 "🇮🇷IR | 🟢 | vmess | @vless_vmess | 5",
                 "❔XX | 🟢 | vmess | @DailyV2RY | 88",
                 "🚩CF | 🟢 | vmess | @DailyV2RY | 95",
+                "🚩CF | 🟢 | vmess | @ConfigsHUB | 6",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -1037,6 +1039,40 @@
                 "path": "\/link",
                 "headers": {
                     "Host": "hms02.fxiaomi.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @ConfigsHUB | 6",
+            "type": "vmess",
+            "server": "172.67.164.164",
+            "server_port": 443,
+            "uuid": "a1655f51-1e20-4a92-8a11-b7ca30a7a353",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "afrhms07.xfixedfloat.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "afrhms07.xfixedfloat.cfd"
                 }
             }
         },
