@@ -1,6 +1,6 @@
-# Shadowsocks/VMESS/Reality Configurations in Normal, Clash, and SING-BOX Formats
+# Shadowsocks/VMESS/VLESS/Reality Configurations in Normal, Clash, and SING-BOX Formats
 
-This repository contains various Shadowsocks, VMESS, and Reality configuration in 3 formats including Normal, Clash/Meta, and SING-BOX (ready for use). All of them get updated automatically. Shadowsocks,  and VMESS lists are updated every 12 hours, while other lists are updated every 1 hour. The Trinity links that contain 200 speed tested SS/VMESS configs will be updated every 5 hours. 
+This repository contains various Shadowsocks, VMESS, VLESS and Reality configuration in various formats including Normal, Clash/Meta, and SING-BOX (ready for use). All of them get updated automatically. Shadowsocks,  and VMESS lists are updated every 12 hours, while other lists are updated every 1 hour. The Trinity links that contain 300 speed tested SS/VMESS configs will be updated every 5 hours. 
 
 ## Subscription Links
 
