@@ -120,7 +120,7 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 10",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 16",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 17",
-                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 7",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 7",
                 "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 2",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
@@ -132,6 +132,8 @@
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 6",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 6",
                 "❔XX | 🟢 | vmess | @DailyV2RY | 83",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 0",
+                "🚩CF | 🟢 | vmess | @ConfigsHUB | 14",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -173,7 +175,7 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 10",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 16",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 17",
-                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 7",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 7",
                 "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 2",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
@@ -185,6 +187,8 @@
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 6",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 6",
                 "❔XX | 🟢 | vmess | @DailyV2RY | 83",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 0",
+                "🚩CF | 🟢 | vmess | @ConfigsHUB | 14",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -539,7 +543,7 @@
             }
         },
         {
-            "tag": "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 7",
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 7",
             "type": "vmess",
             "server": "linde06.indiavideo.sbs",
             "server_port": 443,
@@ -822,6 +826,64 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 0",
+            "type": "vmess",
+            "server": "zula.ir",
+            "server_port": 443,
+            "uuid": "950db6aa-4926-4616-816e-ec0312dcb87b",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "jahfkjha.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "jahfkjha.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @ConfigsHUB | 14",
+            "type": "vmess",
+            "server": "188.114.97.3",
+            "server_port": 80,
+            "uuid": "b79a6959-6feb-43ba-b3c7-f1afae9ea32c",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/vmess",
+                "headers": {
+                    "Host": ""
+                }
             }
         },
         {
