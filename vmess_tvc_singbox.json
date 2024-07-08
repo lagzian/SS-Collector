@@ -123,13 +123,14 @@
                 "🇺🇸US | 🟢 | vmess | @mftizi | 18",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 2",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 10",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
-                "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 1",
+                "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 0",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 2",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 3",
                 "🇨🇭CH | 🟢 | vmess | @ShadowProxy66 | 13",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 15",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 19",
+                "🚩CF | 🟢 | vmess | @v2ray1_ng | 0",
                 "❔XX | 🟢 | vmess | @DailyV2RY | 69",
                 "🇺🇸US | 🟢 | vmess | @DailyV2RY | 76",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
@@ -176,13 +177,14 @@
                 "🇺🇸US | 🟢 | vmess | @mftizi | 18",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 2",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 10",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
-                "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 1",
+                "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 0",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 2",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 3",
                 "🇨🇭CH | 🟢 | vmess | @ShadowProxy66 | 13",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 15",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 19",
+                "🚩CF | 🟢 | vmess | @v2ray1_ng | 0",
                 "❔XX | 🟢 | vmess | @DailyV2RY | 69",
                 "🇺🇸US | 🟢 | vmess | @DailyV2RY | 76",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
@@ -624,7 +626,24 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
+            "tag": "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 0",
+            "type": "vmess",
+            "server": "23.162.152.6",
+            "server_port": 22324,
+            "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
             "type": "vmess",
             "server": "172.67.171.43",
             "server_port": 80,
@@ -645,23 +664,6 @@
                 "headers": {
                     "Host": ""
                 }
-            }
-        },
-        {
-            "tag": "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 1",
-            "type": "vmess",
-            "server": "23.162.152.6",
-            "server_port": 22324,
-            "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
             }
         },
         {
@@ -797,6 +799,30 @@
                 "path": "\/linkvws",
                 "headers": {
                     "Host": "aveiror.com"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @v2ray1_ng | 0",
+            "type": "vmess",
+            "server": "188.114.98.40",
+            "server_port": 80,
+            "uuid": "f491cbe4-7548-446c-8d3e-64008e3b1325",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/vmess",
+                "headers": {
+                    "Host": ""
                 }
             }
         },
