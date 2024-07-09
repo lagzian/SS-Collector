@@ -141,6 +141,7 @@
                 "❔XX | 🟢 | vmess | @DailyV2RY | 92",
                 "🇺🇸US | 🟢 | vmess | @DailyV2RY | 98",
                 "🇺🇸US | 🟢 | vmess | @DailyV2RY | 106",
+                "🚩CF | 🟢 | vmess | @ConfigsHUB | 5",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -152,7 +153,8 @@
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 4",
                 "🚩CF | 🟢 | vmess | @v2rayng_config_amin | 0",
                 "🇺🇸US | 🟢 | vmess | @v2rayng_config_amin | 3",
-                "🚩CF | 🟢 | vmess | @v2Line | 0",
+                "🇺🇸US | 🟢 | vmess | @v2Line | 0",
+                "🚩CF | 🟢 | vmess | @v2Line | 1",
                 "🇸🇪SE | 🟢 | vmess | @FreakConfig | 4",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 1",
                 "🇧🇿BZ | 🟢 | vmess | @kingofilter | 2",
@@ -206,6 +208,7 @@
                 "❔XX | 🟢 | vmess | @DailyV2RY | 92",
                 "🇺🇸US | 🟢 | vmess | @DailyV2RY | 98",
                 "🇺🇸US | 🟢 | vmess | @DailyV2RY | 106",
+                "🚩CF | 🟢 | vmess | @ConfigsHUB | 5",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -217,7 +220,8 @@
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 4",
                 "🚩CF | 🟢 | vmess | @v2rayng_config_amin | 0",
                 "🇺🇸US | 🟢 | vmess | @v2rayng_config_amin | 3",
-                "🚩CF | 🟢 | vmess | @v2Line | 0",
+                "🇺🇸US | 🟢 | vmess | @v2Line | 0",
+                "🚩CF | 🟢 | vmess | @v2Line | 1",
                 "🇸🇪SE | 🟢 | vmess | @FreakConfig | 4",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 1",
                 "🇧🇿BZ | 🟢 | vmess | @kingofilter | 2",
@@ -1145,6 +1149,40 @@
             }
         },
         {
+            "tag": "🚩CF | 🟢 | vmess | @ConfigsHUB | 5",
+            "type": "vmess",
+            "server": "188.114.97.210",
+            "server_port": 443,
+            "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "linde06.indiavideo.sbs",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "linde06.indiavideo.sbs"
+                }
+            }
+        },
+        {
             "tag": "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
             "type": "vmess",
             "server": "45.199.138.217",
@@ -1472,7 +1510,41 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @v2Line | 0",
+            "tag": "🇺🇸US | 🟢 | vmess | @v2Line | 0",
+            "type": "vmess",
+            "server": "zula.ir",
+            "server_port": 443,
+            "uuid": "950db6aa-4926-4616-816e-ec0312dcb87b",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "jahfkjha.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "jahfkjha.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @v2Line | 1",
             "type": "vmess",
             "server": "172.67.175.56",
             "server_port": 443,
