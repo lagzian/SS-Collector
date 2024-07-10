@@ -159,7 +159,8 @@
                 "🇺🇸US | 🟢 | vmess | @v2Line | 0",
                 "🇺🇸US | 🟢 | vmess | @v2Line | 1",
                 "🇺🇸US | 🟢 | vmess | @v2Line | 2",
-                "🚩CF | 🟢 | vmess | @v2Line | 3",
+                "🇺🇸US | 🟢 | vmess | @v2Line | 3",
+                "🚩CF | 🟢 | vmess | @v2Line | 4",
                 "🇸🇪SE | 🟢 | vmess | @FreakConfig | 7",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 1",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 4",
@@ -227,7 +228,8 @@
                 "🇺🇸US | 🟢 | vmess | @v2Line | 0",
                 "🇺🇸US | 🟢 | vmess | @v2Line | 1",
                 "🇺🇸US | 🟢 | vmess | @v2Line | 2",
-                "🚩CF | 🟢 | vmess | @v2Line | 3",
+                "🇺🇸US | 🟢 | vmess | @v2Line | 3",
+                "🚩CF | 🟢 | vmess | @v2Line | 4",
                 "🇸🇪SE | 🟢 | vmess | @FreakConfig | 7",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 1",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 4",
@@ -1569,6 +1571,40 @@
         {
             "tag": "🇺🇸US | 🟢 | vmess | @v2Line | 0",
             "type": "vmess",
+            "server": "nodejs.org",
+            "server_port": 443,
+            "uuid": "6b880b07-e952-4c0b-b4a3-6c9ac4cf9d3f",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "hdfy1c1.cpiforpersia.uk",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/QvtvPdDXXIlSdZMqnuxG",
+                "headers": {
+                    "Host": "hdfy1c1.cpiforpersia.uk"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @v2Line | 1",
+            "type": "vmess",
             "server": "zula.ir",
             "server_port": 443,
             "uuid": "950db6aa-4926-4616-816e-ec0312dcb87b",
@@ -1601,7 +1637,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @v2Line | 1",
+            "tag": "🇺🇸US | 🟢 | vmess | @v2Line | 2",
             "type": "vmess",
             "server": "jahfkjha.cfd",
             "server_port": 443,
@@ -1635,7 +1671,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @v2Line | 2",
+            "tag": "🇺🇸US | 🟢 | vmess | @v2Line | 3",
             "type": "vmess",
             "server": "zula.ir",
             "server_port": 443,
@@ -1669,7 +1705,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @v2Line | 3",
+            "tag": "🚩CF | 🟢 | vmess | @v2Line | 4",
             "type": "vmess",
             "server": "172.67.175.56",
             "server_port": 443,
