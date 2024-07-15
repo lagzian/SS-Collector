@@ -123,7 +123,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 12",
                 "❔XX | 🟢 | vmess | @mftizi | 13",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 19",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 7",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 0",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 3",
                 "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 0",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
@@ -175,7 +176,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 12",
                 "❔XX | 🟢 | vmess | @mftizi | 13",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 19",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 7",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 0",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 3",
                 "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 0",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
@@ -581,11 +583,11 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 7",
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 0",
             "type": "vmess",
-            "server": "188.114.99.134",
+            "server": "172.67.71.160",
             "server_port": 443,
-            "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+            "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -598,7 +600,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "linde06.indiavideo.sbs",
+                "server_name": "obdii.cfd",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -610,7 +612,31 @@
                 "type": "ws",
                 "path": "\/linkws",
                 "headers": {
-                    "Host": "linde06.indiavideo.sbs"
+                    "Host": "obdii.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 3",
+            "type": "vmess",
+            "server": "s1c.v2.v001sss.xyz",
+            "server_port": 2082,
+            "uuid": "112ac36f-3f53-4e26-8371-d25c028e1b9a",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "s1c.v2.v001sss.xyz"
                 }
             }
         },
