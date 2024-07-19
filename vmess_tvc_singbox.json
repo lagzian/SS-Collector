@@ -122,7 +122,8 @@
                 "❔XX | 🟢 | vmess | @mftizi | 13",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "❔XX | 🟢 | vmess | @mftizi | 15",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 2",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🇸🇪SE | 🟢 | vmess | @oneclickvpnkeys | 0",
                 "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 2",
@@ -148,7 +149,7 @@
                 "🚩CF | 🟢 | vmess | @iP_CF | 5",
                 "🚩CF | 🟢 | vmess | @iP_CF | 6",
                 "🚩CF | 🟢 | vmess | @iP_CF | 7",
-                "🇺🇸US | 🟢 | vmess | @kingofilter | 3",
+                "🇺🇸US | 🟢 | vmess | @kingofilter | 1",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 5",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 7",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 9",
@@ -175,7 +176,8 @@
                 "❔XX | 🟢 | vmess | @mftizi | 13",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "❔XX | 🟢 | vmess | @mftizi | 15",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 2",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🇸🇪SE | 🟢 | vmess | @oneclickvpnkeys | 0",
                 "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 2",
@@ -201,7 +203,7 @@
                 "🚩CF | 🟢 | vmess | @iP_CF | 5",
                 "🚩CF | 🟢 | vmess | @iP_CF | 6",
                 "🚩CF | 🟢 | vmess | @iP_CF | 7",
-                "🇺🇸US | 🟢 | vmess | @kingofilter | 3",
+                "🇺🇸US | 🟢 | vmess | @kingofilter | 1",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 5",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 7",
                 "🇺🇸US | 🟢 | vmess | @kingofilter | 9",
@@ -559,11 +561,11 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 2",
             "type": "vmess",
-            "server": "104.19.47.248",
-            "server_port": 8080,
-            "uuid": "b551aa22-22af-11ee-b8d8-f23c932eb68d",
+            "server": "sareikela.com",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -574,11 +576,55 @@
                 "protocol": "smux",
                 "max_streams": 32
             },
+            "tls": {
+                "enabled": true,
+                "server_name": "sareikela.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
             "transport": {
                 "type": "ws",
-                "path": "\/&Telegram🇨🇳 @WangCai2",
+                "path": "\/linkvws",
                 "headers": {
-                    "Host": "104.19.47.248"
+                    "Host": "sareikela.com"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 10",
+            "type": "vmess",
+            "server": "speed.cloudflare.com",
+            "server_port": 8443,
+            "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "withered-disk-c4c0.wwwjoecartoonscom-vaalco.workers.dev",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/glweidf.sbs\/linkws",
+                "headers": {
+                    "Host": "withered-disk-c4c0.wwwjoecartoonscom-vaalco.workers.dev"
                 }
             }
         },
@@ -1271,11 +1317,11 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @kingofilter | 3",
+            "tag": "🇺🇸US | 🟢 | vmess | @kingofilter | 1",
             "type": "vmess",
             "server": "zula.ir",
             "server_port": 2096,
-            "uuid": "30cab746-5ca5-46ef-aa9b-537f20f6a40c",
+            "uuid": "f92701e4-2394-4771-9599-5f291edc19ff",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1309,7 +1355,7 @@
             "type": "vmess",
             "server": "zula.ir",
             "server_port": 2096,
-            "uuid": "a8205f07-37bf-4882-acff-88c83c5695fa",
+            "uuid": "30cab746-5ca5-46ef-aa9b-537f20f6a40c",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1343,7 +1389,7 @@
             "type": "vmess",
             "server": "zula.ir",
             "server_port": 2096,
-            "uuid": "6647660f-9cfb-4ba3-8ca3-6214cfcdb8f0",
+            "uuid": "a8205f07-37bf-4882-acff-88c83c5695fa",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1377,7 +1423,7 @@
             "type": "vmess",
             "server": "zula.ir",
             "server_port": 2096,
-            "uuid": "3a5bd596-9642-4816-ab00-e90fc611c682",
+            "uuid": "6647660f-9cfb-4ba3-8ca3-6214cfcdb8f0",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1411,7 +1457,7 @@
             "type": "vmess",
             "server": "zula.ir",
             "server_port": 2096,
-            "uuid": "2ffbfa07-7161-47fc-8a3b-f94e02a28f49",
+            "uuid": "3a5bd596-9642-4816-ab00-e90fc611c682",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
