@@ -37,7 +37,7 @@ jobs:
 
       - name: Fetch Content and Generate YAML
         run: |
-          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://api.yebekhe.link/toClash/?url=https://hin.isherv.in/&type=meta&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://hin.isherv.in/&type=meta&process=full"
          
           # Optional: Convert to YAML format if needed
           # cat "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}" | yq eval -j - > "${GITHUB_WORKSPACE}/${CLASH_YAML_FILE}"
