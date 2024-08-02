@@ -6,7 +6,6 @@ log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
 proxies:
-  - {"name":"رایگان | VMESS | @V2rayCollectorDonate | US🇺🇸 | 0️⃣1️⃣","type":"vmess","server":"172.67.71.160","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"obdii.cfd"}},"client-fingerprint":"chrome"}
   - {"name":"رایگان | VMESS | @mftizi | US🇺🇸 | 0️⃣1️⃣","type":"vmess","server":"cfcdn3.sanfencdn9.com","port":2052,"cipher":"auto","uuid":"afa7ee50-d214-4a54-a558-e5c96480916d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/video/9TfVEyku","headers":{"host":"wtywwcrzjp5.yofnhkfc.xyz"}},"client-fingerprint":"chrome"}
   - {"name":"رایگان | VMESS | @DeamNet_Proxy | IE🇮🇪 | 0️⃣1️⃣","type":"vmess","server":"85.159.229.8","port":8443,"cipher":"auto","uuid":"afe57557-df24-43e5-9cea-5d2acc2cad08","alterId":0,"tls":false,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"","grpc-mode":"gun"},"client-fingerprint":"chrome"}
   - {"name":"رایگان | VMESS | @DeamNet_Proxy | US🇺🇸 | 0️⃣2️⃣","type":"vmess","server":"172.67.170.11","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}},"client-fingerprint":"chrome"}
@@ -29,7 +28,6 @@ proxy-groups:
     proxies:
       - URL-TEST
       - FALLBACK
-      - 'رایگان | VMESS | @mftizi | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @DeamNet_Proxy | IE🇮🇪 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @DeamNet_Proxy | US🇺🇸 | 0️⃣2️⃣'
       - 'رایگان | VMESS | @prrofile_purple | NL🇳🇱 | 0️⃣1️⃣'
@@ -51,7 +49,6 @@ proxy-groups:
     interval: 60
     tolerance: 50
     proxies:
-      - 'رایگان | VMESS | @mftizi | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @DeamNet_Proxy | IE🇮🇪 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @DeamNet_Proxy | US🇺🇸 | 0️⃣2️⃣'
       - 'رایگان | VMESS | @prrofile_purple | NL🇳🇱 | 0️⃣1️⃣'
@@ -72,7 +69,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
-      - 'رایگان | VMESS | @mftizi | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @DeamNet_Proxy | IE🇮🇪 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @DeamNet_Proxy | US🇺🇸 | 0️⃣2️⃣'
       - 'رایگان | VMESS | @prrofile_purple | NL🇳🇱 | 0️⃣1️⃣'
