@@ -128,11 +128,12 @@
                 "🇫🇮       🇫🇮    🇫🇮       🇫🇮  | 24",
                 "🇫🇷          🇩🇪  | 25",
                 "🇮🇹 🇮🇹 🇮🇹 🍕  | 26",
-                "🇫🇷 🇫🇷 🇫🇷  | 27",
-                "🇨🇦  | 28",
-                "🇩🇪 | 29",
-                "🇺🇸  ln 🇩🇪  | 30",
-                "🕊🇺🇸 🇫🇷  🇩🇪 🕊 | 31"
+                " 🇩🇪 lucy 🇩🇪 ✌🏻 | 27",
+                "🇫🇷 🇫🇷 🇫🇷  | 28",
+                "🇨🇦  | 29",
+                "🇩🇪 | 30",
+                "🇺🇸  ln 🇩🇪  | 31",
+                "🕊🇺🇸 🇫🇷  🇩🇪 🕊 | 32"
             ]
         },
         {
@@ -165,11 +166,12 @@
                 "🇫🇮       🇫🇮    🇫🇮       🇫🇮  | 24",
                 "🇫🇷          🇩🇪  | 25",
                 "🇮🇹 🇮🇹 🇮🇹 🍕  | 26",
-                "🇫🇷 🇫🇷 🇫🇷  | 27",
-                "🇨🇦  | 28",
-                "🇩🇪 | 29",
-                "🇺🇸  ln 🇩🇪  | 30",
-                "🕊🇺🇸 🇫🇷  🇩🇪 🕊 | 31"
+                " 🇩🇪 lucy 🇩🇪 ✌🏻 | 27",
+                "🇫🇷 🇫🇷 🇫🇷  | 28",
+                "🇨🇦  | 29",
+                "🇩🇪 | 30",
+                "🇺🇸  ln 🇩🇪  | 31",
+                "🕊🇺🇸 🇫🇷  🇩🇪 🕊 | 32"
             ],
             "url": "https:\/\/detectportal.firefox.com\/success.txt",
             "interval": "60s",
@@ -1039,7 +1041,39 @@
             }
         },
         {
-            "tag": "🇫🇷 🇫🇷 🇫🇷  | 27",
+            "tag": " 🇩🇪 lucy 🇩🇪 ✌🏻 | 27",
+            "type": "vless",
+            "server": "witson.ai",
+            "server_port": 443,
+            "uuid": "aaa2f81a-6d2c-47a3-bdda-d977f9a94cb6",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "lucycberpunk.rebecca.cloudns.biz",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/?ed=2560",
+                "headers": {
+                    "Host": "lucycyberpunk.rebecca.cloudns.biz"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇫🇷 🇫🇷 🇫🇷  | 28",
             "type": "vless",
             "server": "jive-germany.com",
             "server_port": 443,
@@ -1071,7 +1105,7 @@
             }
         },
         {
-            "tag": "🇨🇦  | 28",
+            "tag": "🇨🇦  | 29",
             "type": "vless",
             "server": "prolifeaction.org",
             "server_port": 443,
@@ -1103,7 +1137,7 @@
             }
         },
         {
-            "tag": "🇩🇪 | 29",
+            "tag": "🇩🇪 | 30",
             "type": "vless",
             "server": "www.syphilisisback.ca",
             "server_port": 2096,
@@ -1135,7 +1169,7 @@
             }
         },
         {
-            "tag": "🇺🇸  ln 🇩🇪  | 30",
+            "tag": "🇺🇸  ln 🇩🇪  | 31",
             "type": "vmess",
             "server": "whynationsfail.com",
             "server_port": 443,
@@ -1171,7 +1205,7 @@
             }
         },
         {
-            "tag": "🕊🇺🇸 🇫🇷  🇩🇪 🕊 | 31",
+            "tag": "🕊🇺🇸 🇫🇷  🇩🇪 🕊 | 32",
             "type": "vmess",
             "server": "carlsbergbackend.hummingfood.com",
             "server_port": 443,
