@@ -23,9 +23,6 @@ proxies:
   - {"name":"رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣1️⃣","type":"vmess","server":"172.67.220.83","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linja05.hwcar.sbs"}},"client-fingerprint":"chrome"}
   - {"name":"رایگان | VMESS | @FreakConfig | US🇺🇸 | 0️⃣1️⃣","type":"vmess","server":"104.21.4.6","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.cfd"}},"client-fingerprint":"chrome"}
   - {"name":"رایگان | VMESS | @FreakConfig | NL🇳🇱 | 0️⃣5️⃣","type":"vmess","server":"www.zula.ir","port":80,"cipher":"auto","uuid":"3e5cda0a-6122-4f54-9e3c-3f49e7a526f9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"nlch.blueberrynetwork.store"}},"client-fingerprint":"chrome"}
-  - {"name":"رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣1️⃣","type":"vmess","server":"zula.ir","port":2096,"cipher":"auto","uuid":"f849605a-be3e-4a22-95ec-a2662a684de2","alterId":,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"cloud.hightechservice.ir"}},"client-fingerprint":"chrome"}
-  - {"name":"رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣2️⃣","type":"vmess","server":"zula.ir","port":2096,"cipher":"auto","uuid":"58d7ba5c-7717-4d94-b94b-4099611e6b7f","alterId":,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"cloud.hightechservice.ir"}},"client-fingerprint":"chrome"}
-  - {"name":"رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣3️⃣","type":"vmess","server":"zula.ir","port":2096,"cipher":"auto","uuid":"da2aa762-9c57-49c1-9ecd-cdc1f18493a7","alterId":,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"join.hightechservice.ir"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -48,9 +45,6 @@ proxy-groups:
       - 'رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @FreakConfig | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @FreakConfig | NL🇳🇱 | 0️⃣5️⃣'
-      - 'رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣1️⃣'
-      - 'رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣2️⃣'
-      - 'رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣3️⃣'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -73,9 +67,6 @@ proxy-groups:
       - 'رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @FreakConfig | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @FreakConfig | NL🇳🇱 | 0️⃣5️⃣'
-      - 'رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣1️⃣'
-      - 'رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣2️⃣'
-      - 'رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣3️⃣'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -97,9 +88,6 @@ proxy-groups:
       - 'رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @FreakConfig | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @FreakConfig | NL🇳🇱 | 0️⃣5️⃣'
-      - 'رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣1️⃣'
-      - 'رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣2️⃣'
-      - 'رایگان | VMESS | @kingofilter | US🇺🇸 | 0️⃣3️⃣'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
