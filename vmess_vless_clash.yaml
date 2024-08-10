@@ -6,6 +6,7 @@ log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
 proxies:
+  - {"name":"%E2%97%BD%EF%B8%8F%E2%96%AB%EF%B8%8Fa%20d%20%20%20%20%20%20%20%20%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%A9%F0%9F%87%AA","type":"vless","server":"www.asamserver.com","port":443,"udp":false,"uuid":"e31d5ad8-4288-48e7-98f4-f4fdf4dd8907","tls":true,"servername":"yaemiko.eula.cloudns.org","flow":"xtls-rprx-vision","network":"ws","ws-opts":{"path":"/?ed=2560","headers":{"host":"yaemiko.eula.cloudns.org"}},"client-fingerprint":"chrome"}
   - {"name":"%F0%9F%95%8A%E2%9C%8C%F0%9F%8F%BBjoin%F0%9F%91%89%F0%9F%8F%BBunlocked_worlld%E2%9C%8C%F0%9F%8F%BB%F0%9F%95%8A","type":"vless","server":"unlocked_worlld","port":1080,"udp":false,"uuid":"d07e0e50-0a47-44df-a98d-95ae9447e892","tls":true,"servername":"https://t.me/unlocked_worlld","network":"tcp","client-fingerprint":"chrome"}
   - {"name":"%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20","type":"vless","server":"download.osgrid.org","port":443,"udp":false,"uuid":"bac2daeb-5028-40d0-9d3a-2182946e621c","tls":true,"servername":"yelan.rebecca.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/us-full.privateip.net","headers":{"host":"yelan.rebecca.cloudns.biz"}},"client-fingerprint":"chrome"}
   - {"name":"%F0%9F%87%A9%F0%9F%87%AA%20dg","type":"vless","server":"web.onecheer.cn","port":443,"udp":false,"uuid":"5f299a44-dc47-4b42-bb72-6ede91e41f2b","tls":true,"servername":"najhida.rebecca.cloudns.biz","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"nahida.rebecca.cloudns.biz"}},"client-fingerprint":"chrome"}
@@ -36,6 +37,7 @@ proxy-groups:
     proxies:
       - URL-TEST
       - FALLBACK
+      - '%F0%9F%95%8A%E2%9C%8C%F0%9F%8F%BBjoin%F0%9F%91%89%F0%9F%8F%BBunlocked_worlld%E2%9C%8C%F0%9F%8F%BB%F0%9F%95%8A'
       - '%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20'
       - '%F0%9F%87%A9%F0%9F%87%AA%20dg'
       - '%F0%9F%87%B0%F0%9F%87%BF%20%F0%9F%87%B0%F0%9F%87%BF%20'
@@ -65,6 +67,7 @@ proxy-groups:
     interval: 60
     tolerance: 50
     proxies:
+      - '%F0%9F%95%8A%E2%9C%8C%F0%9F%8F%BBjoin%F0%9F%91%89%F0%9F%8F%BBunlocked_worlld%E2%9C%8C%F0%9F%8F%BB%F0%9F%95%8A'
       - '%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20'
       - '%F0%9F%87%A9%F0%9F%87%AA%20dg'
       - '%F0%9F%87%B0%F0%9F%87%BF%20%F0%9F%87%B0%F0%9F%87%BF%20'
@@ -93,6 +96,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
+      - '%F0%9F%95%8A%E2%9C%8C%F0%9F%8F%BBjoin%F0%9F%91%89%F0%9F%8F%BBunlocked_worlld%E2%9C%8C%F0%9F%8F%BB%F0%9F%95%8A'
       - '%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20'
       - '%F0%9F%87%A9%F0%9F%87%AA%20dg'
       - '%F0%9F%87%B0%F0%9F%87%BF%20%F0%9F%87%B0%F0%9F%87%BF%20'
