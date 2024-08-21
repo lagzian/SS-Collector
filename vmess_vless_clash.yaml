@@ -6,6 +6,7 @@ log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
 proxies:
+  - {"name":"%F0%9F%87%A9%F0%9F%87%AA%20%20%20%20%20%20%20%20%20%20%20%F0%9F%95%8A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%F0%9F%87%A9%F0%9F%87%AA%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%F0%9F%87%A9%F0%9F%87%AA%20","type":"vless","server":"www.vzug.com","port":443,"udp":false,"uuid":"0d89a36e-36bc-41d2-8bd3-bbd639991f29","tls":true,"servername":"nicorobin.eula.cloudns.org","flow":"xtls-rprx-vision","network":"ws","ws-opts":{"path":"/?ed=2560","headers":{"host":"nicorobin.eula.cloudns.org"}},"client-fingerprint":"chrome"}
   - {"name":"%F0%9F%95%8A%E2%9C%8C%F0%9F%8F%BBjoin%F0%9F%91%89%F0%9F%8F%BBunlocked_worlld%E2%9C%8C%F0%9F%8F%BB%F0%9F%95%8A","type":"vless","server":"unlocked_worlld","port":1080,"udp":false,"uuid":"d07e0e50-0a47-44df-a98d-95ae9447e892","tls":true,"servername":"https://t.me/unlocked_worlld","network":"tcp","client-fingerprint":"chrome"}
   - {"name":"%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20","type":"vless","server":"download.osgrid.org","port":443,"udp":false,"uuid":"b587751d-83f6-47b4-aa8c-3c2d032c6264","tls":true,"servername":"yelan.rebecca.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/us-full.privateip.net","headers":{"host":"yelan.rebecca.cloudns.biz"}},"client-fingerprint":"chrome"}
   - {"name":"%F0%9F%87%A9%F0%9F%87%AA%20dg","type":"vless","server":"web.onecheer.cn","port":443,"udp":false,"uuid":"5f299a44-dc47-4b42-bb72-6ede91e41f2b","tls":true,"servername":"najhida.rebecca.cloudns.biz","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"nahida.rebecca.cloudns.biz"}},"client-fingerprint":"chrome"}
@@ -31,12 +32,14 @@ proxies:
   - {"name":"%F0%9F%87%A8%F0%9F%87%A6%20","type":"vless","server":"prolifeaction.org","port":443,"udp":false,"uuid":"6403d110-af0d-401e-985a-1a41e18e1079","tls":true,"servername":"yehohlan.rebecca.cloudns.biz","network":"ws","ws-opts":{"path":"/VLESS/ca-full.privateip.net","headers":{"host":"yelan.rebecca.cloudns.biz"}},"client-fingerprint":"chrome"}
   - {"name":"🇺🇸  ln 🇩🇪 ","type":"vmess","server":"whynationsfail.com","port":443,"cipher":"auto","uuid":"a1655f51-1e20-4a92-8a11-b7ca30a7a353","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws/afrhms07.xfixedfloat.cfd","headers":{"host":"yelan.rebecca.cloudns.biz"}},"client-fingerprint":"chrome"}
   - {"name":"🕊🇺🇸 🇫🇷  🇩🇪 🕊","type":"vmess","server":"carlsbergbackend.hummingfood.com","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link/hms02.fxiaomi.sbs","headers":{"host":"yelan.rebecca.cloudns.biz"}},"client-fingerprint":"chrome"}
+  - {"name":"%F0%9F%87%A9%F0%9F%87%AA%20%20%E2%9A%AA%EF%B8%8F%E2%9A%AB%EF%B8%8F%20%20%F0%9F%87%A9%F0%9F%87%AA%20","type":"vless","server":"download.osgrid.org","port":2096,"udp":false,"uuid":"95ca2c9b-d135-48cf-94d1-6c710f062188","tls":true,"servername":"yaemiko.eula.cloudns.org","flow":"xtls-rprx-vision","network":"ws","ws-opts":{"path":"/","headers":{"host":"yaemiko.eula.cloudns.org"}},"client-fingerprint":"randomized"}
 proxy-groups:
   - name: MANUAL
     type: select
     proxies:
       - URL-TEST
       - FALLBACK
+      - '%F0%9F%95%8A%E2%9C%8C%F0%9F%8F%BBjoin%F0%9F%91%89%F0%9F%8F%BBunlocked_worlld%E2%9C%8C%F0%9F%8F%BB%F0%9F%95%8A'
       - '%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20'
       - '%F0%9F%87%A9%F0%9F%87%AA%20dg'
       - '%F0%9F%87%B0%F0%9F%87%BF%20%F0%9F%87%B0%F0%9F%87%BF%20'
@@ -61,12 +64,14 @@ proxy-groups:
       - '%F0%9F%87%A8%F0%9F%87%A6%20'
       - '🇺🇸  ln 🇩🇪 '
       - '🕊🇺🇸 🇫🇷  🇩🇪 🕊'
+      - '%F0%9F%87%A9%F0%9F%87%AA%20%20%E2%9A%AA%EF%B8%8F%E2%9A%AB%EF%B8%8F%20%20%F0%9F%87%A9%F0%9F%87%AA%20'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 60
     tolerance: 50
     proxies:
+      - '%F0%9F%95%8A%E2%9C%8C%F0%9F%8F%BBjoin%F0%9F%91%89%F0%9F%8F%BBunlocked_worlld%E2%9C%8C%F0%9F%8F%BB%F0%9F%95%8A'
       - '%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20'
       - '%F0%9F%87%A9%F0%9F%87%AA%20dg'
       - '%F0%9F%87%B0%F0%9F%87%BF%20%F0%9F%87%B0%F0%9F%87%BF%20'
@@ -91,11 +96,13 @@ proxy-groups:
       - '%F0%9F%87%A8%F0%9F%87%A6%20'
       - '🇺🇸  ln 🇩🇪 '
       - '🕊🇺🇸 🇫🇷  🇩🇪 🕊'
+      - '%F0%9F%87%A9%F0%9F%87%AA%20%20%E2%9A%AA%EF%B8%8F%E2%9A%AB%EF%B8%8F%20%20%F0%9F%87%A9%F0%9F%87%AA%20'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
+      - '%F0%9F%95%8A%E2%9C%8C%F0%9F%8F%BBjoin%F0%9F%91%89%F0%9F%8F%BBunlocked_worlld%E2%9C%8C%F0%9F%8F%BB%F0%9F%95%8A'
       - '%F0%9F%87%BA%F0%9F%87%B8%20%F0%9F%8C%8E%20%F0%9F%87%BA%F0%9F%87%B2%20'
       - '%F0%9F%87%A9%F0%9F%87%AA%20dg'
       - '%F0%9F%87%B0%F0%9F%87%BF%20%F0%9F%87%B0%F0%9F%87%BF%20'
@@ -120,6 +127,7 @@ proxy-groups:
       - '%F0%9F%87%A8%F0%9F%87%A6%20'
       - '🇺🇸  ln 🇩🇪 '
       - '🕊🇺🇸 🇫🇷  🇩🇪 🕊'
+      - '%F0%9F%87%A9%F0%9F%87%AA%20%20%E2%9A%AA%EF%B8%8F%E2%9A%AB%EF%B8%8F%20%20%F0%9F%87%A9%F0%9F%87%AA%20'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
