@@ -123,20 +123,20 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 14",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 15",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
-                "🇭🇰HK | 🟢 | vmess | @oneclickvpnkeys | 2",
-                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 3",
-                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 4",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 6",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 2",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
+                "🇭🇰HK | 🟢 | vmess | @oneclickvpnkeys | 4",
+                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 5",
+                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 6",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 7",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 8",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 1",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 2",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 3",
                 "❔XX | 🟢 | vmess | @DailyV2RY | 215",
                 "🚩CF | 🟢 | vmess | @proxystore11 | 0",
-                "🚩CF | 🟢 | vmess | @proxystore11 | 2",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -175,20 +175,20 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 14",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 15",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
-                "🇭🇰HK | 🟢 | vmess | @oneclickvpnkeys | 2",
-                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 3",
-                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 4",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 6",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 2",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
+                "🇭🇰HK | 🟢 | vmess | @oneclickvpnkeys | 4",
+                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 5",
+                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 6",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 7",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 8",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 1",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 2",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 3",
                 "❔XX | 🟢 | vmess | @DailyV2RY | 215",
                 "🚩CF | 🟢 | vmess | @proxystore11 | 0",
-                "🚩CF | 🟢 | vmess | @proxystore11 | 2",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -619,7 +619,41 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
+            "type": "vmess",
+            "server": "104.26.13.72",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cake.capellare.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "cake.capellare.com"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 2",
             "type": "vmess",
             "server": "104.26.12.72",
             "server_port": 443,
@@ -653,7 +687,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
             "type": "vmess",
             "server": "104.21.15.36",
             "server_port": 443,
@@ -687,7 +721,7 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @oneclickvpnkeys | 2",
+            "tag": "🇭🇰HK | 🟢 | vmess | @oneclickvpnkeys | 4",
             "type": "vmess",
             "server": "shhkt.cdn-sgp.xyz",
             "server_port": 40046,
@@ -711,7 +745,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 3",
+            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 5",
             "type": "vmess",
             "server": "cfcdn1.sanfencdn9.com",
             "server_port": 2052,
@@ -735,7 +769,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 4",
+            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 6",
             "type": "vmess",
             "server": "cfcdn2.sanfencdn9.com",
             "server_port": 2052,
@@ -759,7 +793,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 7",
             "type": "vmess",
             "server": "172.67.138.140",
             "server_port": 443,
@@ -793,7 +827,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 6",
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 8",
             "type": "vmess",
             "server": "172.67.71.160",
             "server_port": 443,
@@ -993,30 +1027,6 @@
                 "path": "\/linkws",
                 "headers": {
                     "Host": "afrhms07.xfixedfloat.cfd"
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @proxystore11 | 2",
-            "type": "vmess",
-            "server": "104.26.15.148",
-            "server_port": 80,
-            "uuid": "2f188c61-6622-4056-810e-a1a5f1c9b023",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/V2LINE-TELEGRAM-CHANNEL-VMESS-WS",
-                "headers": {
-                    "Host": ""
                 }
             }
         },
