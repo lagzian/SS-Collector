@@ -146,6 +146,7 @@
                 "🚩CF | 🟢 | vmess | @v2Line | 3",
                 "🚩CF | 🟢 | vmess | @v2Line | 4",
                 "🚩CF | 🟢 | vmess | @v2Line | 5",
+                "🚩CF | 🟢 | vmess | @v2Line | 6",
                 "🇪🇸ES | 🟢 | vmess | @kingofilter | 7"
             ]
         },
@@ -193,6 +194,7 @@
                 "🚩CF | 🟢 | vmess | @v2Line | 3",
                 "🚩CF | 🟢 | vmess | @v2Line | 4",
                 "🚩CF | 🟢 | vmess | @v2Line | 5",
+                "🚩CF | 🟢 | vmess | @v2Line | 6",
                 "🇪🇸ES | 🟢 | vmess | @kingofilter | 7"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -1158,6 +1160,30 @@
         {
             "tag": "🚩CF | 🟢 | vmess | @v2Line | 0",
             "type": "vmess",
+            "server": "172.67.221.19",
+            "server_port": 80,
+            "uuid": "2f188c61-6622-4056-810e-a1a5f1c9b023",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/V2LINE-TELEGRAM-CHANNEL-VMESS-WS",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @v2Line | 1",
+            "type": "vmess",
             "server": "172.64.155.209",
             "server_port": 80,
             "uuid": "947cb385-54b4-4453-ac92-63c95ef32a6a",
@@ -1180,7 +1206,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @v2Line | 1",
+            "tag": "🚩CF | 🟢 | vmess | @v2Line | 2",
             "type": "vmess",
             "server": "104.17.148.22",
             "server_port": 80,
@@ -1204,7 +1230,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @v2Line | 2",
+            "tag": "🚩CF | 🟢 | vmess | @v2Line | 3",
             "type": "vmess",
             "server": "104.26.15.148",
             "server_port": 80,
@@ -1228,7 +1254,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @v2Line | 3",
+            "tag": "🚩CF | 🟢 | vmess | @v2Line | 4",
             "type": "vmess",
             "server": "104.26.15.148",
             "server_port": 80,
@@ -1252,7 +1278,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @v2Line | 4",
+            "tag": "🚩CF | 🟢 | vmess | @v2Line | 5",
             "type": "vmess",
             "server": "104.26.15.148",
             "server_port": 80,
@@ -1276,7 +1302,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @v2Line | 5",
+            "tag": "🚩CF | 🟢 | vmess | @v2Line | 6",
             "type": "vmess",
             "server": "104.26.15.148",
             "server_port": 80,
