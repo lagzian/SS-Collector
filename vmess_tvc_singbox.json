@@ -123,8 +123,6 @@
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 4",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
-                "🇸🇪SE | 🟢 | vmess | @oneclickvpnkeys | 8",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 9",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 1",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 2",
@@ -180,8 +178,6 @@
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 4",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
-                "🇸🇪SE | 🟢 | vmess | @oneclickvpnkeys | 8",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 9",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 1",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 2",
@@ -655,64 +651,6 @@
                 "path": "\/V2LINE-TELEGRAM-CHANNEL-VMESS-WS",
                 "headers": {
                     "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇸🇪SE | 🟢 | vmess | @oneclickvpnkeys | 8",
-            "type": "vmess",
-            "server": "185.146.173.167",
-            "server_port": 80,
-            "uuid": "b1fecac5-0eb0-440c-ba9b-a937b34881d6",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/navigate?ed=1048",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 9",
-            "type": "vmess",
-            "server": "104.26.13.72",
-            "server_port": 443,
-            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "cake.capellare.com",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkvws",
-                "headers": {
-                    "Host": "cake.capellare.com"
                 }
             }
         },
