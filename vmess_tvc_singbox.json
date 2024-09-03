@@ -116,7 +116,8 @@
                 "🇺🇸US | 🟢 | vmess | @mftizi | 11",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 12",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 14",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 8",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 5",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
                 "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 2",
@@ -171,7 +172,8 @@
                 "🇺🇸US | 🟢 | vmess | @mftizi | 11",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 12",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 14",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 8",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 5",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
                 "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 2",
@@ -447,11 +449,11 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 8",
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 5",
             "type": "vmess",
-            "server": "173.245.58.11",
+            "server": "linde06.indiavideo.sbs",
             "server_port": 443,
-            "uuid": "93ea486a-bada-42a4-ac38-d088b320fa1e",
+            "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -464,7 +466,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "worker-late28ygwuhw.motonob768.workers.dev",
+                "server_name": "linde06.indiavideo.sbs",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -474,9 +476,43 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/xmivideo.cfd\/linkws",
+                "path": "\/linkws",
                 "headers": {
-                    "Host": "worker-late28ygwuhw.motonob768.workers.dev"
+                    "Host": "linde06.indiavideo.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 13",
+            "type": "vmess",
+            "server": "to.tilebani.com",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "to.tilebani.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "to.tilebani.com"
                 }
             }
         },
