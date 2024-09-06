@@ -134,9 +134,10 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "❔XX | 🟢 | vmess | @Hope_Net | 0",
-                "🇪🇸ES | 🟢 | vmess | @Hope_Net | 1",
-                "❔XX | 🟢 | vmess | @Hope_Net | 2",
+                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 0",
+                "❔XX | 🟢 | vmess | @Hope_Net | 1",
+                "🇪🇸ES | 🟢 | vmess | @Hope_Net | 2",
+                "❔XX | 🟢 | vmess | @Hope_Net | 3",
                 "🚩CF | 🟢 | vmess | @v2Line | 0",
                 "🚩CF | 🟢 | vmess | @v2Line | 1",
                 "🚩CF | 🟢 | vmess | @v2Line | 2",
@@ -180,9 +181,10 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "❔XX | 🟢 | vmess | @Hope_Net | 0",
-                "🇪🇸ES | 🟢 | vmess | @Hope_Net | 1",
-                "❔XX | 🟢 | vmess | @Hope_Net | 2",
+                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 0",
+                "❔XX | 🟢 | vmess | @Hope_Net | 1",
+                "🇪🇸ES | 🟢 | vmess | @Hope_Net | 2",
+                "❔XX | 🟢 | vmess | @Hope_Net | 3",
                 "🚩CF | 🟢 | vmess | @v2Line | 0",
                 "🚩CF | 🟢 | vmess | @v2Line | 1",
                 "🚩CF | 🟢 | vmess | @v2Line | 2",
@@ -923,7 +925,41 @@
             }
         },
         {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 0",
+            "tag": "🇷🇺RU | 🟢 | vmess | @Hope_Net | 0",
+            "type": "vmess",
+            "server": "45.67.32.147",
+            "server_port": 40413,
+            "uuid": "6a24c8a8-ac38-4dcc-bfe7-006beefc1dbe",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "free.hardtofind.42web.io",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/makeacall",
+                "headers": {
+                    "Host": "free.hardtofind.42web.io"
+                }
+            }
+        },
+        {
+            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 1",
             "type": "vmess",
             "server": "127.0.0.1",
             "server_port": 8080,
@@ -940,7 +976,7 @@
             }
         },
         {
-            "tag": "🇪🇸ES | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🇪🇸ES | 🟢 | vmess | @Hope_Net | 2",
             "type": "vmess",
             "server": "172.233.116.33",
             "server_port": 8081,
@@ -957,7 +993,7 @@
             }
         },
         {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 2",
+            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 3",
             "type": "vmess",
             "server": "127.0.0.1",
             "server_port": 1080,
