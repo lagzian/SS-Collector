@@ -773,7 +773,7 @@
         {
             "tag": "رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣1️⃣",
             "type": "vmess",
-            "server": "speedtest.net",
+            "server": "151.101.66.219",
             "server_port": 443,
             "uuid": "cbd5521b-11df-4a4d-9365-fb854d49903a",
             "security": "auto",
@@ -809,6 +809,42 @@
         {
             "tag": "رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣2️⃣",
             "type": "vmess",
+            "server": "speedtest.net",
+            "server_port": 443,
+            "uuid": "cbd5521b-11df-4a4d-9365-fb854d49903a",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "speedtest.net",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/ws\/",
+                "headers": {
+                    "Host": "Dbdjhiw72ebsu272hs519j.com"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣3️⃣",
+            "type": "vmess",
             "server": "172.64.110.240",
             "server_port": 2052,
             "uuid": "1dbf5c96-31cb-4fd7-8f63-ba8d2bdace34",
@@ -827,42 +863,6 @@
                 "path": "\/video\/u4eCZTxW",
                 "headers": {
                     "Host": "jpafzyhfsg3.yofnhkfc.xyz"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣3️⃣",
-            "type": "vmess",
-            "server": "104.17.147.22",
-            "server_port": 443,
-            "uuid": "0006f689-f829-4724-fe1e-2b4e5d8103a2",
-            "security": "auto",
-            "alter_id": 100,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "rhtu78ii8hgr.yougram.co",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/0006f689-f829-4724-fe1e-2b4e5d8103a2",
-                "headers": {
-                    "Host": "rtghrthgr.yougram.co"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
