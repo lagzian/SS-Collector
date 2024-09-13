@@ -6,6 +6,11 @@ log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
 proxies:
+  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"[2606:4700:3037::ac43:91f3]","port":2053,"udp":false,"uuid":"d86425b5-d66b-4969-8ee5-efc4cbc7ab3c","tls":true,"servername":"di-mast-nistam-maryan.roodast.online","network":"ws","ws-opts":{"path":"/?ed=2560","headers":{"host":"di-mast-nistam-maryan.roodast.online"}},"client-fingerprint":"chrome"}
+  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"[2a01:4f8:c010:6989::1]","port":2240,"udp":false,"uuid":"a4553e55-6f6d-4203-99e9-465e2a4df214","tls":false,"servername":"colorlib.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"yMsqpq2PNfSyWrjAQ3rFxlKoIm0vlW1YEDyej6oBKU4","short-id":"f314422f","client-fingerprint":"firefox"},"client-fingerprint":"firefox"}
+  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"[2a01:4f8:c010:1a1a::1]","port":2096,"udp":false,"uuid":"cbfd482a-70bd-4a75-a5a3-17c5000b1dad","tls":false,"servername":"colorlib.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"FS2VQbttrP6Brjl97lUkZsVr9-dyuvQJi-FyikcbDiY","client-fingerprint":"firefox"},"client-fingerprint":"firefox"}
+  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"[2a01:4f8:1c1b:297e::1]","port":2053,"udp":false,"uuid":"e2881220-7070-46a0-ae76-82af4c44f33e","tls":false,"servername":"canva.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"fMSQ8zoVyl47h6DvrLtQU7MHQWP-_Us9zGyTVeuUmC4","short-id":"cdf24300e4","client-fingerprint":"firefox"},"client-fingerprint":"firefox"}
+  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"[2a0d:5940:103:9::]","port":2096,"udp":false,"uuid":"2f5b14ea-2765-4494-9eea-e22dc7f32e18","tls":false,"servername":"zdnet.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"cbRCuIX4kwEZCHs7lh_LQxrJQRrUR1NWpbUSwASs-iE","short-id":"4177d9c9","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
   - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.26.15.148","port":80,"cipher":"auto","uuid":"2f188c61-6622-4056-810e-a1a5f1c9b023","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
   - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"190.93.247.56","port":8080,"udp":false,"uuid":"7eaca362-b98a-4d9f-846d-1453587cfe36","tls":false,"network":"ws","ws-opts":{"path":"/telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers?ed=2560","headers":{"host":"legendaryking.ir.www.speedtest.net.www.zula.ir.cloudflare.com.tr.mozdozari.bUzz."}},"client-fingerprint":"chrome"}
   - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"www.speedtest.net","port":2095,"udp":false,"uuid":"aad2832a-0912-5629-a4dd-de930f06945c","tls":false,"network":"ws","ws-opts":{"path":"join-@mosiv2-@mosiv2-?ed=2048","headers":{"host":"www.digikala.com.joinTelegram.mosiv2.nl2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
@@ -220,6 +225,11 @@ proxy-groups:
       - URL-TEST
       - FALLBACK
       - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '☬ SHΞЯVIN™'
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
       - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
       - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
       - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
@@ -432,6 +442,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '☬ SHΞЯVIN™'
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
       - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
       - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
       - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
@@ -642,6 +657,11 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
+      - '☬ SHΞЯVIN™'
       - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
       - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
       - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
