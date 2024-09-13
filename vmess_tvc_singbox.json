@@ -121,10 +121,10 @@
                 "🇺🇸US | 🟢 | vmess | @mftizi | 18",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 19",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 8",
-                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 0",
-                "🇸🇪SE | 🟢 | vmess | @oneclickvpnkeys | 1",
-                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 2",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
+                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 1",
+                "🇸🇪SE | 🟢 | vmess | @oneclickvpnkeys | 2",
+                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 3",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 4",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
                 "🚩CF | 🟢 | vmess | @customv2ray | 6",
@@ -160,8 +160,6 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 5",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 6",
                 "❔XX | 🟢 | vmess | @Hope_Net | 8",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 9",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 10",
                 "🚩CF | 🟢 | vmess | @v2Line | 0",
                 "🚩CF | 🟢 | vmess | @v2Line | 1",
                 "🚩CF | 🟢 | vmess | @v2Line | 2",
@@ -192,10 +190,10 @@
                 "🇺🇸US | 🟢 | vmess | @mftizi | 18",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 19",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 8",
-                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 0",
-                "🇸🇪SE | 🟢 | vmess | @oneclickvpnkeys | 1",
-                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 2",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
+                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 1",
+                "🇸🇪SE | 🟢 | vmess | @oneclickvpnkeys | 2",
+                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 3",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 4",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
                 "🚩CF | 🟢 | vmess | @customv2ray | 6",
@@ -231,8 +229,6 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 5",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 6",
                 "❔XX | 🟢 | vmess | @Hope_Net | 8",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 9",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 10",
                 "🚩CF | 🟢 | vmess | @v2Line | 0",
                 "🚩CF | 🟢 | vmess | @v2Line | 1",
                 "🚩CF | 🟢 | vmess | @v2Line | 2",
@@ -585,7 +581,41 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 0",
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
+            "type": "vmess",
+            "server": "104.21.95.165",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "sareikela.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "sareikela.com"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 1",
             "type": "vmess",
             "server": "www.visa.com.sg",
             "server_port": 8880,
@@ -609,7 +639,7 @@
             }
         },
         {
-            "tag": "🇸🇪SE | 🟢 | vmess | @oneclickvpnkeys | 1",
+            "tag": "🇸🇪SE | 🟢 | vmess | @oneclickvpnkeys | 2",
             "type": "vmess",
             "server": "185.146.173.59",
             "server_port": 443,
@@ -643,7 +673,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 2",
+            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 3",
             "type": "vmess",
             "server": "cfcdn1.sanfencdn9.com",
             "server_port": 2052,
@@ -667,7 +697,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 4",
             "type": "vmess",
             "server": "104.26.0.56",
             "server_port": 2086,
@@ -691,35 +721,11 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 4",
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
             "type": "vmess",
             "server": "104.26.15.148",
             "server_port": 80,
             "uuid": "2c4d6f66-2966-49c1-93aa-a7192ba8f8fc",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/V2LINE-TELEGRAM-CHANNEL-VMESS-WS",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
-            "type": "vmess",
-            "server": "104.21.28.70",
-            "server_port": 80,
-            "uuid": "5f9a10b3-54a7-45aa-b492-a5c04765f46c",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -1649,74 +1655,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 9",
-            "type": "vmess",
-            "server": "104.21.83.208",
-            "server_port": 443,
-            "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "afrhms16v.bestxray.buzz",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkws",
-                "headers": {
-                    "Host": "afrhms16v.bestxray.buzz"
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 10",
-            "type": "vmess",
-            "server": "162.159.8.120",
-            "server_port": 443,
-            "uuid": "62aa5f80-0328-4004-a375-7f5a59df4022",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "hms19.best-tizi.top",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/LINKWS",
-                "headers": {
-                    "Host": "hms19.best-tizi.top"
-                }
             }
         },
         {
