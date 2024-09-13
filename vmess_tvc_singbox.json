@@ -124,11 +124,12 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 12",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
-                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 1",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 2",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
-                "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 4",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
+                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 3",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 4",
+                "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 5",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 6",
                 "🚩CF | 🟢 | vmess | @customv2ray | 6",
                 "🚩CF | 🟢 | vmess | @customv2ray | 7",
                 "🚩CF | 🟢 | vmess | @customv2ray | 15",
@@ -159,7 +160,6 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 3",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 4",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 5",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 6",
                 "🚩CF | 🟢 | vmess | @v2Line | 0",
                 "🚩CF | 🟢 | vmess | @v2Line | 1",
                 "🚩CF | 🟢 | vmess | @v2Line | 2",
@@ -193,11 +193,12 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 12",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
-                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 1",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
                 "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 2",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
-                "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 4",
-                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
+                "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 3",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 4",
+                "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 5",
+                "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 6",
                 "🚩CF | 🟢 | vmess | @customv2ray | 6",
                 "🚩CF | 🟢 | vmess | @customv2ray | 7",
                 "🚩CF | 🟢 | vmess | @customv2ray | 15",
@@ -228,7 +229,6 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 3",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 4",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 5",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 6",
                 "🚩CF | 🟢 | vmess | @v2Line | 0",
                 "🚩CF | 🟢 | vmess | @v2Line | 1",
                 "🚩CF | 🟢 | vmess | @v2Line | 2",
@@ -658,6 +658,30 @@
         {
             "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 0",
             "type": "vmess",
+            "server": "104.26.15.148",
+            "server_port": 80,
+            "uuid": "2c4d6f66-2966-49c1-93aa-a7192ba8f8fc",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/V2LINE-TELEGRAM-CHANNEL-VMESS-WS",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 1",
+            "type": "vmess",
             "server": "104.21.28.70",
             "server_port": 80,
             "uuid": "5f9a10b3-54a7-45aa-b492-a5c04765f46c",
@@ -680,7 +704,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 1",
+            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 2",
             "type": "vmess",
             "server": "www.visa.com.tw",
             "server_port": 443,
@@ -714,7 +738,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 2",
+            "tag": "🇺🇸US | 🟢 | vmess | @oneclickvpnkeys | 3",
             "type": "vmess",
             "server": "air-de.nsde.date",
             "server_port": 2096,
@@ -748,7 +772,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 3",
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 4",
             "type": "vmess",
             "server": "104.21.74.239",
             "server_port": 443,
@@ -782,7 +806,7 @@
             }
         },
         {
-            "tag": "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 4",
+            "tag": "🇫🇷FR | 🟢 | vmess | @oneclickvpnkeys | 5",
             "type": "vmess",
             "server": "irvideo.cfd",
             "server_port": 443,
@@ -816,7 +840,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 5",
+            "tag": "🚩CF | 🟢 | vmess | @oneclickvpnkeys | 6",
             "type": "vmess",
             "server": "172.67.220.83",
             "server_port": 443,
@@ -1708,40 +1732,6 @@
                 "path": "\/",
                 "headers": {
                     "Host": "ps-siluofake-1.nsde.date"
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 6",
-            "type": "vmess",
-            "server": "104.21.5.170",
-            "server_port": 443,
-            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "a.baradiha.com",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkvws",
-                "headers": {
-                    "Host": "a.baradiha.com"
                 }
             }
         },
