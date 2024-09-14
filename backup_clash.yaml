@@ -1,873 +1,105 @@
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: Rule
-log-level: info
-ipv6: true
-external-controller: 0.0.0.0:9090
-proxies:
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"[2606:4700:3037::ac43:91f3]","port":2053,"udp":false,"uuid":"d86425b5-d66b-4969-8ee5-efc4cbc7ab3c","tls":true,"servername":"di-mast-nistam-maryan.roodast.online","network":"ws","ws-opts":{"path":"/?ed=2560","headers":{"host":"di-mast-nistam-maryan.roodast.online"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"[2a01:4f8:c010:6989::1]","port":2240,"udp":false,"uuid":"a4553e55-6f6d-4203-99e9-465e2a4df214","tls":false,"servername":"colorlib.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"yMsqpq2PNfSyWrjAQ3rFxlKoIm0vlW1YEDyej6oBKU4","short-id":"f314422f","client-fingerprint":"firefox"},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"[2a01:4f8:c010:1a1a::1]","port":2096,"udp":false,"uuid":"cbfd482a-70bd-4a75-a5a3-17c5000b1dad","tls":false,"servername":"colorlib.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"FS2VQbttrP6Brjl97lUkZsVr9-dyuvQJi-FyikcbDiY","client-fingerprint":"firefox"},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"[2a01:4f8:1c1b:297e::1]","port":2053,"udp":false,"uuid":"e2881220-7070-46a0-ae76-82af4c44f33e","tls":false,"servername":"canva.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"fMSQ8zoVyl47h6DvrLtQU7MHQWP-_Us9zGyTVeuUmC4","short-id":"cdf24300e4","client-fingerprint":"firefox"},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"[2a0d:5940:103:9::]","port":2096,"udp":false,"uuid":"2f5b14ea-2765-4494-9eea-e22dc7f32e18","tls":false,"servername":"zdnet.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"cbRCuIX4kwEZCHs7lh_LQxrJQRrUR1NWpbUSwASs-iE","short-id":"4177d9c9","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.26.15.148","port":80,"cipher":"auto","uuid":"2f188c61-6622-4056-810e-a1a5f1c9b023","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"190.93.247.56","port":8080,"udp":false,"uuid":"7eaca362-b98a-4d9f-846d-1453587cfe36","tls":false,"network":"ws","ws-opts":{"path":"/telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers?ed=2560","headers":{"host":"legendaryking.ir.www.speedtest.net.www.zula.ir.cloudflare.com.tr.mozdozari.bUzz."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"www.speedtest.net","port":2095,"udp":false,"uuid":"aad2832a-0912-5629-a4dd-de930f06945c","tls":false,"network":"ws","ws-opts":{"path":"join-@mosiv2-@mosiv2-?ed=2048","headers":{"host":"www.digikala.com.joinTelegram.mosiv2.nl2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.37.131","port":8880,"udp":false,"uuid":"9aaedc51-2367-4239-a88b-0756dfc9689e","tls":false,"network":"ws","ws-opts":{"path":"/gPPi3HNBe90lwSgS?ed=2540","headers":{"host":"dFB.De.sOccERsTAr.cOM--Mx-1hs-38xk.miTsOnIc.cOm"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"173.245.58.41","port":80,"cipher":"auto","uuid":"a4af6fa2-264f-4ddd-8718-246dc999386b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"39238319310964543920519489701900.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"151.101.194.219","port":443,"udp":false,"uuid":"c00d5cef-08ed-437f-b8af-839dc0e7eb27","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/Telegram:@UnlimitedDev-Telegram:@UnlimitedDev-Telegram:@UnlimitedDev?ed=8880","headers":{"host":"http.www.speedtest.net.fast.com.unlimiteddev.ir."}},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"speedtest.net","port":443,"udp":false,"uuid":"a5c0689d-944d-444d-8773-3dc66b28623e","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/telegram-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM?ed=2048","headers":{"host":"barkat1.ir"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"172.67.193.36","port":2052,"udp":false,"uuid":"78c5381d-3283-533c-ba54-805a5cc3b4a4","tls":false,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"Rubika.ir.Join--ELiV2ry.com.tr1.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.21.94.64","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linja05.hwcar.sbs"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.26.15.148","port":80,"cipher":"auto","uuid":"2f188c61-6622-4056-810e-a1a5f1c9b023","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"190.93.247.56","port":8080,"udp":false,"uuid":"7eaca362-b98a-4d9f-846d-1453587cfe36","tls":false,"network":"ws","ws-opts":{"path":"/telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers?ed=2560","headers":{"host":"legendaryking.ir.www.speedtest.net.www.zula.ir.cloudflare.com.tr.mozdozari.bUzz."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"www.speedtest.net","port":2095,"udp":false,"uuid":"aad2832a-0912-5629-a4dd-de930f06945c","tls":false,"network":"ws","ws-opts":{"path":"join-@mosiv2-@mosiv2-?ed=2048","headers":{"host":"www.digikala.com.joinTelegram.mosiv2.nl2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.37.131","port":8880,"udp":false,"uuid":"9aaedc51-2367-4239-a88b-0756dfc9689e","tls":false,"network":"ws","ws-opts":{"path":"/gPPi3HNBe90lwSgS?ed=2540","headers":{"host":"dFB.De.sOccERsTAr.cOM--Mx-1hs-38xk.miTsOnIc.cOm"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"173.245.58.41","port":80,"cipher":"auto","uuid":"a4af6fa2-264f-4ddd-8718-246dc999386b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"39238319310964543920519489701900.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"151.101.194.219","port":443,"udp":false,"uuid":"c00d5cef-08ed-437f-b8af-839dc0e7eb27","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/Telegram:@UnlimitedDev-Telegram:@UnlimitedDev-Telegram:@UnlimitedDev?ed=8880","headers":{"host":"http.www.speedtest.net.fast.com.unlimiteddev.ir."}},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"speedtest.net","port":443,"udp":false,"uuid":"a5c0689d-944d-444d-8773-3dc66b28623e","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/telegram-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM?ed=2048","headers":{"host":"barkat1.ir"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"172.67.193.36","port":2052,"udp":false,"uuid":"78c5381d-3283-533c-ba54-805a5cc3b4a4","tls":false,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"Rubika.ir.Join--ELiV2ry.com.tr1.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.21.94.64","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linja05.hwcar.sbs"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.26.15.148","port":80,"cipher":"auto","uuid":"2f188c61-6622-4056-810e-a1a5f1c9b023","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"190.93.247.56","port":8080,"udp":false,"uuid":"7eaca362-b98a-4d9f-846d-1453587cfe36","tls":false,"network":"ws","ws-opts":{"path":"/telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers?ed=2560","headers":{"host":"legendaryking.ir.www.speedtest.net.www.zula.ir.cloudflare.com.tr.mozdozari.bUzz."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"www.speedtest.net","port":2095,"udp":false,"uuid":"aad2832a-0912-5629-a4dd-de930f06945c","tls":false,"network":"ws","ws-opts":{"path":"join-@mosiv2-@mosiv2-?ed=2048","headers":{"host":"www.digikala.com.joinTelegram.mosiv2.nl2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.37.131","port":8880,"udp":false,"uuid":"9aaedc51-2367-4239-a88b-0756dfc9689e","tls":false,"network":"ws","ws-opts":{"path":"/gPPi3HNBe90lwSgS?ed=2540","headers":{"host":"dFB.De.sOccERsTAr.cOM--Mx-1hs-38xk.miTsOnIc.cOm"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"173.245.58.41","port":80,"cipher":"auto","uuid":"a4af6fa2-264f-4ddd-8718-246dc999386b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"39238319310964543920519489701900.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"151.101.194.219","port":443,"udp":false,"uuid":"c00d5cef-08ed-437f-b8af-839dc0e7eb27","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/Telegram:@UnlimitedDev-Telegram:@UnlimitedDev-Telegram:@UnlimitedDev?ed=8880","headers":{"host":"http.www.speedtest.net.fast.com.unlimiteddev.ir."}},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"speedtest.net","port":443,"udp":false,"uuid":"a5c0689d-944d-444d-8773-3dc66b28623e","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/telegram-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM?ed=2048","headers":{"host":"barkat1.ir"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"172.67.193.36","port":2052,"udp":false,"uuid":"78c5381d-3283-533c-ba54-805a5cc3b4a4","tls":false,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"Rubika.ir.Join--ELiV2ry.com.tr1.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.21.94.64","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linja05.hwcar.sbs"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.26.15.148","port":80,"cipher":"auto","uuid":"2f188c61-6622-4056-810e-a1a5f1c9b023","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"190.93.247.56","port":8080,"udp":false,"uuid":"7eaca362-b98a-4d9f-846d-1453587cfe36","tls":false,"network":"ws","ws-opts":{"path":"/telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers?ed=2560","headers":{"host":"legendaryking.ir.www.speedtest.net.www.zula.ir.cloudflare.com.tr.mozdozari.bUzz."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"www.speedtest.net","port":2095,"udp":false,"uuid":"aad2832a-0912-5629-a4dd-de930f06945c","tls":false,"network":"ws","ws-opts":{"path":"join-@mosiv2-@mosiv2-?ed=2048","headers":{"host":"www.digikala.com.joinTelegram.mosiv2.nl2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.37.131","port":8880,"udp":false,"uuid":"9aaedc51-2367-4239-a88b-0756dfc9689e","tls":false,"network":"ws","ws-opts":{"path":"/gPPi3HNBe90lwSgS?ed=2540","headers":{"host":"dFB.De.sOccERsTAr.cOM--Mx-1hs-38xk.miTsOnIc.cOm"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"173.245.58.41","port":80,"cipher":"auto","uuid":"a4af6fa2-264f-4ddd-8718-246dc999386b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"39238319310964543920519489701900.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"151.101.194.219","port":443,"udp":false,"uuid":"c00d5cef-08ed-437f-b8af-839dc0e7eb27","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/Telegram:@UnlimitedDev-Telegram:@UnlimitedDev-Telegram:@UnlimitedDev?ed=8880","headers":{"host":"http.www.speedtest.net.fast.com.unlimiteddev.ir."}},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"speedtest.net","port":443,"udp":false,"uuid":"a5c0689d-944d-444d-8773-3dc66b28623e","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/telegram-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM?ed=2048","headers":{"host":"barkat1.ir"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"172.67.193.36","port":2052,"udp":false,"uuid":"78c5381d-3283-533c-ba54-805a5cc3b4a4","tls":false,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"Rubika.ir.Join--ELiV2ry.com.tr1.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.21.94.64","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linja05.hwcar.sbs"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.26.15.148","port":80,"cipher":"auto","uuid":"2f188c61-6622-4056-810e-a1a5f1c9b023","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"190.93.247.56","port":8080,"udp":false,"uuid":"7eaca362-b98a-4d9f-846d-1453587cfe36","tls":false,"network":"ws","ws-opts":{"path":"/telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers?ed=2560","headers":{"host":"legendaryking.ir.www.speedtest.net.www.zula.ir.cloudflare.com.tr.mozdozari.bUzz."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"www.speedtest.net","port":2095,"udp":false,"uuid":"aad2832a-0912-5629-a4dd-de930f06945c","tls":false,"network":"ws","ws-opts":{"path":"join-@mosiv2-@mosiv2-?ed=2048","headers":{"host":"www.digikala.com.joinTelegram.mosiv2.nl2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.37.131","port":8880,"udp":false,"uuid":"9aaedc51-2367-4239-a88b-0756dfc9689e","tls":false,"network":"ws","ws-opts":{"path":"/gPPi3HNBe90lwSgS?ed=2540","headers":{"host":"dFB.De.sOccERsTAr.cOM--Mx-1hs-38xk.miTsOnIc.cOm"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"173.245.58.41","port":80,"cipher":"auto","uuid":"a4af6fa2-264f-4ddd-8718-246dc999386b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"39238319310964543920519489701900.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"151.101.194.219","port":443,"udp":false,"uuid":"c00d5cef-08ed-437f-b8af-839dc0e7eb27","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/Telegram:@UnlimitedDev-Telegram:@UnlimitedDev-Telegram:@UnlimitedDev?ed=8880","headers":{"host":"http.www.speedtest.net.fast.com.unlimiteddev.ir."}},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"speedtest.net","port":443,"udp":false,"uuid":"a5c0689d-944d-444d-8773-3dc66b28623e","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/telegram-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM?ed=2048","headers":{"host":"barkat1.ir"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"172.67.193.36","port":2052,"udp":false,"uuid":"78c5381d-3283-533c-ba54-805a5cc3b4a4","tls":false,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"Rubika.ir.Join--ELiV2ry.com.tr1.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.21.94.64","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linja05.hwcar.sbs"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.26.15.148","port":80,"cipher":"auto","uuid":"2f188c61-6622-4056-810e-a1a5f1c9b023","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"190.93.247.56","port":8080,"udp":false,"uuid":"7eaca362-b98a-4d9f-846d-1453587cfe36","tls":false,"network":"ws","ws-opts":{"path":"/telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers?ed=2560","headers":{"host":"legendaryking.ir.www.speedtest.net.www.zula.ir.cloudflare.com.tr.mozdozari.bUzz."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"www.speedtest.net","port":2095,"udp":false,"uuid":"aad2832a-0912-5629-a4dd-de930f06945c","tls":false,"network":"ws","ws-opts":{"path":"join-@mosiv2-@mosiv2-?ed=2048","headers":{"host":"www.digikala.com.joinTelegram.mosiv2.nl2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.37.131","port":8880,"udp":false,"uuid":"9aaedc51-2367-4239-a88b-0756dfc9689e","tls":false,"network":"ws","ws-opts":{"path":"/gPPi3HNBe90lwSgS?ed=2540","headers":{"host":"dFB.De.sOccERsTAr.cOM--Mx-1hs-38xk.miTsOnIc.cOm"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"173.245.58.41","port":80,"cipher":"auto","uuid":"a4af6fa2-264f-4ddd-8718-246dc999386b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"39238319310964543920519489701900.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"151.101.194.219","port":443,"udp":false,"uuid":"c00d5cef-08ed-437f-b8af-839dc0e7eb27","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/Telegram:@UnlimitedDev-Telegram:@UnlimitedDev-Telegram:@UnlimitedDev?ed=8880","headers":{"host":"http.www.speedtest.net.fast.com.unlimiteddev.ir."}},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"speedtest.net","port":443,"udp":false,"uuid":"a5c0689d-944d-444d-8773-3dc66b28623e","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/telegram-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM?ed=2048","headers":{"host":"barkat1.ir"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"172.67.193.36","port":2052,"udp":false,"uuid":"78c5381d-3283-533c-ba54-805a5cc3b4a4","tls":false,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"Rubika.ir.Join--ELiV2ry.com.tr1.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.21.94.64","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linja05.hwcar.sbs"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.26.15.148","port":80,"cipher":"auto","uuid":"2f188c61-6622-4056-810e-a1a5f1c9b023","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"190.93.247.56","port":8080,"udp":false,"uuid":"7eaca362-b98a-4d9f-846d-1453587cfe36","tls":false,"network":"ws","ws-opts":{"path":"/telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers?ed=2560","headers":{"host":"legendaryking.ir.www.speedtest.net.www.zula.ir.cloudflare.com.tr.mozdozari.bUzz."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"www.speedtest.net","port":2095,"udp":false,"uuid":"aad2832a-0912-5629-a4dd-de930f06945c","tls":false,"network":"ws","ws-opts":{"path":"join-@mosiv2-@mosiv2-?ed=2048","headers":{"host":"www.digikala.com.joinTelegram.mosiv2.nl2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.37.131","port":8880,"udp":false,"uuid":"9aaedc51-2367-4239-a88b-0756dfc9689e","tls":false,"network":"ws","ws-opts":{"path":"/gPPi3HNBe90lwSgS?ed=2540","headers":{"host":"dFB.De.sOccERsTAr.cOM--Mx-1hs-38xk.miTsOnIc.cOm"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"173.245.58.41","port":80,"cipher":"auto","uuid":"a4af6fa2-264f-4ddd-8718-246dc999386b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"39238319310964543920519489701900.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"151.101.194.219","port":443,"udp":false,"uuid":"c00d5cef-08ed-437f-b8af-839dc0e7eb27","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/Telegram:@UnlimitedDev-Telegram:@UnlimitedDev-Telegram:@UnlimitedDev?ed=8880","headers":{"host":"http.www.speedtest.net.fast.com.unlimiteddev.ir."}},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"speedtest.net","port":443,"udp":false,"uuid":"a5c0689d-944d-444d-8773-3dc66b28623e","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/telegram-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM?ed=2048","headers":{"host":"barkat1.ir"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"172.67.193.36","port":2052,"udp":false,"uuid":"78c5381d-3283-533c-ba54-805a5cc3b4a4","tls":false,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"Rubika.ir.Join--ELiV2ry.com.tr1.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.21.94.64","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linja05.hwcar.sbs"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.26.15.148","port":80,"cipher":"auto","uuid":"2f188c61-6622-4056-810e-a1a5f1c9b023","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"190.93.247.56","port":8080,"udp":false,"uuid":"7eaca362-b98a-4d9f-846d-1453587cfe36","tls":false,"network":"ws","ws-opts":{"path":"/telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers?ed=2560","headers":{"host":"legendaryking.ir.www.speedtest.net.www.zula.ir.cloudflare.com.tr.mozdozari.bUzz."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"www.speedtest.net","port":2095,"udp":false,"uuid":"aad2832a-0912-5629-a4dd-de930f06945c","tls":false,"network":"ws","ws-opts":{"path":"join-@mosiv2-@mosiv2-?ed=2048","headers":{"host":"www.digikala.com.joinTelegram.mosiv2.nl2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.37.131","port":8880,"udp":false,"uuid":"9aaedc51-2367-4239-a88b-0756dfc9689e","tls":false,"network":"ws","ws-opts":{"path":"/gPPi3HNBe90lwSgS?ed=2540","headers":{"host":"dFB.De.sOccERsTAr.cOM--Mx-1hs-38xk.miTsOnIc.cOm"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"173.245.58.41","port":80,"cipher":"auto","uuid":"a4af6fa2-264f-4ddd-8718-246dc999386b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"39238319310964543920519489701900.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"151.101.194.219","port":443,"udp":false,"uuid":"c00d5cef-08ed-437f-b8af-839dc0e7eb27","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/Telegram:@UnlimitedDev-Telegram:@UnlimitedDev-Telegram:@UnlimitedDev?ed=8880","headers":{"host":"http.www.speedtest.net.fast.com.unlimiteddev.ir."}},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"speedtest.net","port":443,"udp":false,"uuid":"a5c0689d-944d-444d-8773-3dc66b28623e","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/telegram-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM?ed=2048","headers":{"host":"barkat1.ir"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"172.67.193.36","port":2052,"udp":false,"uuid":"78c5381d-3283-533c-ba54-805a5cc3b4a4","tls":false,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"Rubika.ir.Join--ELiV2ry.com.tr1.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.21.94.64","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linja05.hwcar.sbs"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.26.15.148","port":80,"cipher":"auto","uuid":"2f188c61-6622-4056-810e-a1a5f1c9b023","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"190.93.247.56","port":8080,"udp":false,"uuid":"7eaca362-b98a-4d9f-846d-1453587cfe36","tls":false,"network":"ws","ws-opts":{"path":"/telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers?ed=2560","headers":{"host":"legendaryking.ir.www.speedtest.net.www.zula.ir.cloudflare.com.tr.mozdozari.bUzz."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"www.speedtest.net","port":2095,"udp":false,"uuid":"aad2832a-0912-5629-a4dd-de930f06945c","tls":false,"network":"ws","ws-opts":{"path":"join-@mosiv2-@mosiv2-?ed=2048","headers":{"host":"www.digikala.com.joinTelegram.mosiv2.nl2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.37.131","port":8880,"udp":false,"uuid":"9aaedc51-2367-4239-a88b-0756dfc9689e","tls":false,"network":"ws","ws-opts":{"path":"/gPPi3HNBe90lwSgS?ed=2540","headers":{"host":"dFB.De.sOccERsTAr.cOM--Mx-1hs-38xk.miTsOnIc.cOm"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"173.245.58.41","port":80,"cipher":"auto","uuid":"a4af6fa2-264f-4ddd-8718-246dc999386b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"39238319310964543920519489701900.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"151.101.194.219","port":443,"udp":false,"uuid":"c00d5cef-08ed-437f-b8af-839dc0e7eb27","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/Telegram:@UnlimitedDev-Telegram:@UnlimitedDev-Telegram:@UnlimitedDev?ed=8880","headers":{"host":"http.www.speedtest.net.fast.com.unlimiteddev.ir."}},"client-fingerprint":"firefox"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"speedtest.net","port":443,"udp":false,"uuid":"a5c0689d-944d-444d-8773-3dc66b28623e","tls":true,"servername":"speedtest.net","network":"ws","ws-opts":{"path":"/telegram-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM-Proxy_MTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-ProxyMTM-Proxy_MTM?ed=2048","headers":{"host":"barkat1.ir"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"172.67.193.36","port":2052,"udp":false,"uuid":"78c5381d-3283-533c-ba54-805a5cc3b4a4","tls":false,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"Rubika.ir.Join--ELiV2ry.com.tr1.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™","type":"vmess","server":"104.21.94.64","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linja05.hwcar.sbs"}},"client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.","type":"vless","server":"[2a01:4f8:1c17:dc26::1]","port":18921,"udp":false,"uuid":"236a00f5-bc85-4ea2-a7a0-16190358893d","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.","type":"vless","server":"[2a01:4f8:1c17:fffc::1]","port":16194,"udp":false,"uuid":"e5a6497e-f860-4eab-a81d-4ae506ea7036","tls":false,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"☬ SHΞЯVIN™.","type":"vmess","server":"82.115.18.219","port":8081,"cipher":"auto","uuid":"721f48a3-353c-4aa1-a216-60d776ffad76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2","type":"vless","server":"104.17.147.22","port":2052,"udp":false,"uuid":"ce2b6a4a-06b9-51ff-a95d-1917aa06cb9c","tls":false,"network":"ws","ws-opts":{"path":"/ELeNa-@ELiV2ry-@ELiV2ry?ed=2048","headers":{"host":"www.varzesh3.com.joinbede--eliv2ry.org.be2.vless.Sitespeedtest.net."}},"client-fingerprint":"chrome"}
-proxy-groups:
-  - name: MANUAL
-    type: select
-    proxies:
-      - URL-TEST
-      - FALLBACK
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-  - name: URL-TEST
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    proxies:
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-  - name: FALLBACK
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 60
-    proxies:
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2%20.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '☬ SHΞЯVIN™.'
-      - '%E2%98%AC%20SH%CE%9E%D0%AFVIN%E2%84%A2'
-rules:
- - GEOIP,IR,DIRECT
- - MATCH,MANUAL
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="http://static.ct8.pl/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="Request rejected" />
+    <title>Serv00.com - Free Website Hosting - 502 Request rejected</title>
+
+    <meta name="robots" content="all" />
+    <style type="text/css">
+
+    body {
+        background-image: linear-gradient(141deg, #3f282a 0%, #333 71%, #222 100%) !important;
+        background-attachment: fixed;
+        font-size: 12px;
+        color: #333;
+        font-family: Arial, verdana, tahoma;
+        padding: 0;
+        margin: 0;
+    }
+
+
+#main {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 0 40px #00275A;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+    margin-top: 65px;
+}
+
+
+#mainwrapper {
+    display: table;
+    margin: 0 auto;
+    width: 950px;
+}
+
+    h1 {
+        color: #FF55FF;
+        text-shadow: 1px 1px 3px #999;
+        font-weight: normal;
+        font-size: 35px;
+    }
+
+    p.small {
+        color: #888;
+    }
+
+    a {
+        text-decoration: none;
+        color: #FF55FF;
+    }
+
+h2 {
+    color: #EE6628;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #EE6628;
+    font-size: 44px;
+    text-shadow: 1px 1px 2px #A7A7A7;
+}
+
+
+h3 {
+    color: #CD00CD;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px #D4D4D4;
+    margin-top: 0px;
+}
+
+div.ads img {
+    margin: 10px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dotted #BFBFBF;
+}
+
+span.grey {
+    color: #D9D9D9;
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="mainwrapper">
+            <h2>Error 502</h2>
+            <h3>Request rejected</h3>
+            <p>The server cannot fulfill your request, please try again in 10 seconds.</p>
+
+            <p class="small">If you have any questions <a href="https://www.serv00.com/contact" title="Serv00.com - contact">contact us</a>.</p>
+            <br />
+            <hr />
+<!--            <div class="ads">
+            <a title="MyDevil.net - Doskonały hosting dla biznesu" href="https://www.mydevil.net"><img src="https://www.mydevil.net/static/assets/logo.png" alt="MyDevil.net - Doskonały hosting dla biznesu" /></a>
+            </div> -->
+            <span class="grey">server: anp0s0</span>
+        </div>
+    </div>
+</body>
+</html>
