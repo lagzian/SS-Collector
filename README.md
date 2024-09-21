@@ -14,7 +14,7 @@ This repository contains various Shadowsocks, VMESS, VLESS and Reality configura
 | VMESS_VLESS_VIP | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_vless.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_vless_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_vless_clash.yaml) |[JSON](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_vless_singbox.json) |
 | Backup_VIP | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/backup.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/backup_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/backup_clash.yaml) |[N/A] |
 | Hamrahaval_MCI (obsolete, don't use) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mci.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mci_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mci_clash.yaml) |[N/A] |
-| Irancell_MTN | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mtn.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mtn_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mtn_clash.yaml) |[N/A] |
+| Irancell_MTN (obsolete, don't use) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mtn.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mtn_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/mtn_clash.yaml) |[N/A] |
 
 
 ## Trinity Shadowsocks/VMESS Links (150/200 Speed Tested Configs )
