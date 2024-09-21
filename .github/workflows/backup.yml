@@ -9,7 +9,7 @@ env:
   OUTPUT_FILE: "backup.txt"
   BASE64_FILE: "backup_B64.txt"
   CLASH_YAML_FILE: "backup_clash.yaml"
-  
+
 jobs:
   extract_configs:
     runs-on: ubuntu-latest
@@ -33,7 +33,24 @@ jobs:
 
       - name: Replace Tag in V2Ray URLs
         run: |
+          # For vless:// URLs, replace tag after #
           sed -i 's/#.*/#Provided%20by%20%E2%9D%8CSS-Collector%E2%9D%8C/' "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
+
+          # For vmess:// URLs, decode, replace "ps" field, and re-encode
+          while IFS= read -r line; do
+            if [[ "$line" =~ ^vmess:// ]]; then
+              # Extract Base64 part from vmess://
+              base64_part=$(echo "$line" | sed 's/vmess:\/\///')
+              
+              # Decode, modify the "ps" field, and re-encode
+              decoded=$(echo "$base64_part" | base64 -d)
+              modified=$(echo "$decoded" | jq '.ps = "Provided by ❌SS-Collector❌"')
+              new_base64=$(echo "$modified" | base64 -w 0)
+
+              # Replace the original line with the new vmess:// URL
+              sed -i "s|$line|vmess://$new_base64|" "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
+            fi
+          done < "${GITHUB_WORKSPACE}/${OUTPUT_FILE}"
 
       - name: Convert Lines to Base64 and Save
         run: |
