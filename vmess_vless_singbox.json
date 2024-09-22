@@ -107,10 +107,10 @@
                 "🇩🇪 🇺🇸 🇫🇷  | 3",
                 "🇺🇸 🌎 🇺🇲  | 4",
                 "🇬🇧 🇵🇱 🇺🇸 🇳🇱  | 5",
-                "🇰🇿 🇰🇿  | 6",
-                "🇩🇪🕊🇩🇪💫🇩🇪 | 7",
-                " 🇩🇪 🇩🇪 🇩🇪 kafka | 8",
-                "🇳🇱 🇧🇶 🇳🇱  | 9",
+                "🇩🇪🕊🇩🇪💫🇩🇪 | 6",
+                "🇰🇿 🇰🇿  | 7",
+                "🇳🇱 🇧🇶 🇳🇱  | 8",
+                " 🇩🇪 🇩🇪 🇩🇪 kafka | 9",
                 "🇫🇷 🇩🇪 🇺🇸  | 10",
                 "🕊🇩🇪 | 11",
                 "🇫🇷 🇩🇪  🇫🇷 | 12",
@@ -144,10 +144,10 @@
                 "🇩🇪 🇺🇸 🇫🇷  | 3",
                 "🇺🇸 🌎 🇺🇲  | 4",
                 "🇬🇧 🇵🇱 🇺🇸 🇳🇱  | 5",
-                "🇰🇿 🇰🇿  | 6",
-                "🇩🇪🕊🇩🇪💫🇩🇪 | 7",
-                " 🇩🇪 🇩🇪 🇩🇪 kafka | 8",
-                "🇳🇱 🇧🇶 🇳🇱  | 9",
+                "🇩🇪🕊🇩🇪💫🇩🇪 | 6",
+                "🇰🇿 🇰🇿  | 7",
+                "🇳🇱 🇧🇶 🇳🇱  | 8",
+                " 🇩🇪 🇩🇪 🇩🇪 kafka | 9",
                 "🇫🇷 🇩🇪 🇺🇸  | 10",
                 "🕊🇩🇪 | 11",
                 "🇫🇷 🇩🇪  🇫🇷 | 12",
@@ -271,7 +271,7 @@
             "type": "vless",
             "server": "download.osgrid.org",
             "server_port": 443,
-            "uuid": "3821ee68-0f44-428c-bb6c-0bb3d210ac78",
+            "uuid": "db96ddce-9e96-435f-ac3b-f2f9232e3e3b",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -335,7 +335,39 @@
             }
         },
         {
-            "tag": "🇰🇿 🇰🇿  | 6",
+            "tag": "🇩🇪🕊🇩🇪💫🇩🇪 | 6",
+            "type": "vless",
+            "server": "www.sadairaqchat.org",
+            "server_port": 443,
+            "uuid": "8c7f1916-75a4-42e3-873c-0413f33c9e4a",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "erenandmikasa.eula.cloudns.org_",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/",
+                "headers": {
+                    "Host": "erenandmikasa.eula.cloudns.org_"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "🇰🇿 🇰🇿  | 7",
             "type": "vless",
             "server": "likemyinfo.com",
             "server_port": 443,
@@ -367,71 +399,7 @@
             }
         },
         {
-            "tag": "🇩🇪🕊🇩🇪💫🇩🇪 | 7",
-            "type": "vless",
-            "server": "www.sadairaqchat.org",
-            "server_port": 443,
-            "uuid": "8c7f1916-75a4-42e3-873c-0413f33c9e4a",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "erenandmikasa.eula.cloudns.org_",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/\/?ed=2560",
-                "headers": {
-                    "Host": "erenandmikasa.eula.cloudns.org_"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": " 🇩🇪 🇩🇪 🇩🇪 kafka | 8",
-            "type": "vless",
-            "server": "www.rxhomeo.in",
-            "server_port": 443,
-            "uuid": "0792bb58-36ac-451e-a629-e363e53da93b",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "kafka.eula.cloudns.org",
-                "insecure": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/\/?ed=2048",
-                "headers": {
-                    "Host": "kafka.eula.cloudns.org"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "🇳🇱 🇧🇶 🇳🇱  | 9",
+            "tag": "🇳🇱 🇧🇶 🇳🇱  | 8",
             "type": "vless",
             "server": "www.vzug.com",
             "server_port": 443,
@@ -457,6 +425,38 @@
                 "path": "\/\/VLESS\/nl-full.privateip.net",
                 "headers": {
                     "Host": "yelan.eula.cloudns.org"
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": " 🇩🇪 🇩🇪 🇩🇪 kafka | 9",
+            "type": "vless",
+            "server": "www.rxhomeo.in",
+            "server_port": 443,
+            "uuid": "0792bb58-36ac-451e-a629-e363e53da93b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "kafka.eula.cloudns.org",
+                "insecure": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/\/?ed=2048",
+                "headers": {
+                    "Host": "kafka.eula.cloudns.org"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
@@ -811,7 +811,7 @@
             "type": "vless",
             "server": "headbrookeincharge.com",
             "server_port": 443,
-            "uuid": "b3c0284f-8a10-4118-a298-e98f4e265449",
+            "uuid": "d85c2d09-94a7-47f4-95e2-992080eb4f07",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
@@ -1011,7 +1011,7 @@
             "type": "vless",
             "server": "download.osgrid.org",
             "server_port": 443,
-            "uuid": "f68a738e-f70b-4f48-b243-e7e73d464ead",
+            "uuid": "0e93058d-dadb-46ed-a38d-109248a88732",
             "flow": "",
             "packet_encoding": "xudp",
             "multiplex": {
