@@ -132,7 +132,6 @@
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 19",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 20",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 21",
-                "🚩CF | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🚩CF | 🟢 | vmess | @vmess_vless_v2rayng | 4",
                 "❔XX | 🟢 | vmess | @proxystore11 | 0",
                 "🇹🇷TR | 🟢 | vmess | @proxystore11 | 4",
@@ -177,7 +176,6 @@
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 19",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 20",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 21",
-                "🚩CF | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🚩CF | 🟢 | vmess | @vmess_vless_v2rayng | 4",
                 "❔XX | 🟢 | vmess | @proxystore11 | 0",
                 "🇹🇷TR | 🟢 | vmess | @proxystore11 | 4",
@@ -799,40 +797,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @V2rayng_Fast | 0",
-            "type": "vmess",
-            "server": "172.67.244.191",
-            "server_port": 443,
-            "uuid": "bc864078-dcf3-4bf4-8dbf-ca9f200b56be",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "gwdef.sbs",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkws",
-                "headers": {
-                    "Host": "gwdef.sbs"
-                }
             }
         },
         {
