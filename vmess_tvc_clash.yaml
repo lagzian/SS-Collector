@@ -44,7 +44,6 @@ proxies:
   - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 5","type":"vmess","server":"104.19.45.34","port":2095,"cipher":"auto","uuid":"7a737f41-b792-4260-94ff-3d864da67b80","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"onea.flha.ru"}},"client-fingerprint":"chrome"}
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 6","type":"vmess","server":"ip.sb","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}},"client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 7","type":"vmess","server":"104.16.148.244","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 8","type":"vmess","server":"172.67.75.194","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -88,7 +87,6 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @Hope_Net | 5'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 6'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 7'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 8'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -132,7 +130,6 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @Hope_Net | 5'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 6'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 7'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 8'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -175,7 +172,6 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @Hope_Net | 5'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 6'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 7'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 8'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
