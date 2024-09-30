@@ -70,7 +70,6 @@ proxies:
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 8","type":"vmess","server":"cdn.cngfw.online","port":443,"cipher":"auto","uuid":"cab438c4-9c5a-43fd-a623-ce81cb93085c","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ikun","headers":{"host":"eu3.kunkunbuku.me"}},"client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 9","type":"vmess","server":"104.19.45.32","port":2095,"cipher":"auto","uuid":"7a737f41-b792-4260-94ff-3d864da67b80","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"onea.flha.ru"}},"client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 10","type":"vmess","server":"104.19.45.4","port":2095,"cipher":"auto","uuid":"7a737f41-b792-4260-94ff-3d864da67b80","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"onea.flha.ru"}},"client-fingerprint":"chrome"}
-  - {"name":"🇯🇵JP | 🟢 | vmess | @Hope_Net | 11","type":"vmess","server":"152.69.195.171","port":55555,"cipher":"auto","uuid":"b86d95da-b843-4804-8443-d849d3207076","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -140,7 +139,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 8'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 9'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 10'
-      - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 11'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -210,7 +208,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 8'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 9'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 10'
-      - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 11'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -279,7 +276,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 8'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 9'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 10'
-      - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 11'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
