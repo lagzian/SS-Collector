@@ -158,7 +158,8 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 11",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 12",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 13",
-                "🚩CF | 🟢 | vmess | @nofiltering2 | 13"
+                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 1",
+                "🚩CF | 🟢 | vmess | @nofiltering2 | 15"
             ]
         },
         {
@@ -217,7 +218,8 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 11",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 12",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 13",
-                "🚩CF | 🟢 | vmess | @nofiltering2 | 13"
+                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 1",
+                "🚩CF | 🟢 | vmess | @nofiltering2 | 15"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -1668,7 +1670,41 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @nofiltering2 | 13",
+            "tag": "🇺🇸US | 🟢 | vmess | @nofiltering2 | 1",
+            "type": "vmess",
+            "server": "www.Kayak.com",
+            "server_port": 443,
+            "uuid": "b40aefd2-4431-41a0-8623-4d552a730070",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.Kayak.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/racevpn?telegram-@ISVvpn-telegram-@ISVvpn-telegram-@ISVvpn",
+                "headers": {
+                    "Host": "www.Kayak.com"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @nofiltering2 | 15",
             "type": "vmess",
             "server": "172.67.171.200",
             "server_port": 2096,
