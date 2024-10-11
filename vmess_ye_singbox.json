@@ -106,8 +106,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST | رایگان",
-                "US🇺🇸",
-                "RU🇷🇺"
+                "US🇺🇸"
             ]
         },
         {
@@ -129,7 +128,7 @@
                 "رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣6️⃣",
                 "رایگان | VMESS | @nofiltering2 | US🇺🇸 | 0️⃣1️⃣",
                 "رایگان | VMESS | @nofiltering2 | US🇺🇸 | 0️⃣2️⃣",
-                "رایگان | VMESS | @customv2ray | RU🇷🇺 | 0️⃣1️⃣"
+                "رایگان | VMESS | @ISVvpn | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -153,17 +152,8 @@
                 "رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣4️⃣",
                 "رایگان | VMESS | @Hope_Net | US🇺🇸 | 0️⃣6️⃣",
                 "رایگان | VMESS | @nofiltering2 | US🇺🇸 | 0️⃣1️⃣",
-                "رایگان | VMESS | @nofiltering2 | US🇺🇸 | 0️⃣2️⃣"
-            ],
-            "url": "https:\/\/www.gstatic.com\/generate_204",
-            "interval": "5m",
-            "tolerance": 50
-        },
-        {
-            "tag": "RU🇷🇺",
-            "type": "urltest",
-            "outbounds": [
-                "رایگان | VMESS | @customv2ray | RU🇷🇺 | 0️⃣1️⃣"
+                "رایگان | VMESS | @nofiltering2 | US🇺🇸 | 0️⃣2️⃣",
+                "رایگان | VMESS | @ISVvpn | US🇺🇸 | 0️⃣1️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -572,11 +562,11 @@
             }
         },
         {
-            "tag": "رایگان | VMESS | @customv2ray | RU🇷🇺 | 0️⃣1️⃣",
+            "tag": "رایگان | VMESS | @ISVvpn | US🇺🇸 | 0️⃣1️⃣",
             "type": "vmess",
-            "server": "meme859.secretvps.cam",
-            "server_port": 80,
-            "uuid": "0b20454f-cec7-48fe-af19-2ec9d76b5f6e",
+            "server": "www.Kayak.com",
+            "server_port": 443,
+            "uuid": "0c32c3dc-e7f3-482c-b3b1-b68fd8cda65a",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -586,6 +576,25 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "www.Kayak.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/RACEVPN?telegram-@ISVvpn-telegram-@ISVvpn-telegram-@ISVvpn",
+                "headers": {
+                    "Host": "bRItISh.ovH.ISVvpn.uk."
+                },
+                "max_early_data": 0,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         },
         {
