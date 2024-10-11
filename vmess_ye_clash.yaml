@@ -6,6 +6,7 @@ log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
 proxies:
+  - {"name":"رایگان | VMESS | @mftizi | US🇺🇸 | 0️⃣1️⃣","type":"vmess","server":"104.26.0.56","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip14.freegradely.xyz"}},"client-fingerprint":"chrome"}
   - {"name":"رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣1️⃣","type":"vmess","server":"2a12:5940:b856::2","port":80,"cipher":"auto","uuid":"ec844506-3b53-4a0c-86b6-f76d3347c0fd","alterId":0,"tls":false,"skip-cert-verify":true,"network":"splithttp","client-fingerprint":"chrome"}
   - {"name":"رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣2️⃣","type":"vmess","server":"2a01:4f8:1c1b:222a::1","port":80,"cipher":"auto","uuid":"5e74a2f8-5516-40be-b9d7-b39a80e5726b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"رایگان | VMESS | @yaney_01 | US🇺🇸 | 0️⃣1️⃣","type":"vmess","server":"207c13fb-83b6-2021-766b-6c95e56a4a33.bugtik.ltd","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
@@ -25,6 +26,7 @@ proxy-groups:
     proxies:
       - URL-TEST
       - FALLBACK
+      - 'رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣2️⃣'
       - 'رایگان | VMESS | @yaney_01 | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @yaney_01 | US🇺🇸 | 0️⃣2️⃣'
@@ -43,6 +45,7 @@ proxy-groups:
     interval: 60
     tolerance: 50
     proxies:
+      - 'رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣2️⃣'
       - 'رایگان | VMESS | @yaney_01 | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @yaney_01 | US🇺🇸 | 0️⃣2️⃣'
@@ -60,6 +63,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
+      - 'رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @proxystore11 | US🇺🇸 | 0️⃣2️⃣'
       - 'رایگان | VMESS | @yaney_01 | US🇺🇸 | 0️⃣1️⃣'
       - 'رایگان | VMESS | @yaney_01 | US🇺🇸 | 0️⃣2️⃣'
