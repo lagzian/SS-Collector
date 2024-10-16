@@ -132,8 +132,13 @@
                 "🇺🇸US | 🟢 | vmess | @customv2ray | 3",
                 "🇺🇸US | 🟢 | vmess | @customv2ray | 6",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 0",
-                "🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 1",
-                "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 10",
+                "🇬🇧GB | 🟢 | vmess | @ShadowProxy66 | 1",
+                "🚩CF | 🟢 | vmess | @ShadowProxy66 | 2",
+                "🚩CF | 🟢 | vmess | @ShadowProxy66 | 3",
+                "🚩CF | 🟢 | vmess | @ShadowProxy66 | 4",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 9",
+                "🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 10",
+                "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 19",
                 "🚩CF | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 3",
                 "❔XX | 🟢 | vmess | @proxystore11 | 0",
@@ -187,8 +192,13 @@
                 "🇺🇸US | 🟢 | vmess | @customv2ray | 3",
                 "🇺🇸US | 🟢 | vmess | @customv2ray | 6",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 0",
-                "🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 1",
-                "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 10",
+                "🇬🇧GB | 🟢 | vmess | @ShadowProxy66 | 1",
+                "🚩CF | 🟢 | vmess | @ShadowProxy66 | 2",
+                "🚩CF | 🟢 | vmess | @ShadowProxy66 | 3",
+                "🚩CF | 🟢 | vmess | @ShadowProxy66 | 4",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 9",
+                "🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 10",
+                "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 19",
                 "🚩CF | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 3",
                 "❔XX | 🟢 | vmess | @proxystore11 | 0",
@@ -834,6 +844,176 @@
         {
             "tag": "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 0",
             "type": "vmess",
+            "server": "v.valkinin.org",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 1,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "v.valkinin.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "v.valkinin.org"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB | 🟢 | vmess | @ShadowProxy66 | 1",
+            "type": "vmess",
+            "server": "57.128.184.119",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 1,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "57.128.184.119",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "57.128.184.119"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @ShadowProxy66 | 2",
+            "type": "vmess",
+            "server": "172.67.71.160",
+            "server_port": 443,
+            "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "obdii.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "obdii.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @ShadowProxy66 | 3",
+            "type": "vmess",
+            "server": "172.67.220.83",
+            "server_port": 443,
+            "uuid": "39cec18f-a439-427c-9a4e-aeb6fcdf6f53",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "linja05.hwcar.sbs",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "linja05.hwcar.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @ShadowProxy66 | 4",
+            "type": "vmess",
+            "server": "104.21.74.239",
+            "server_port": 443,
+            "uuid": "a1655f51-1e20-4a92-8a11-b7ca30a7a353",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "afrhms07.xfixedfloat.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "afrhms07.xfixedfloat.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 9",
+            "type": "vmess",
             "server": "hms24.ivideos.sbs",
             "server_port": 443,
             "uuid": "441da342-ce90-441e-bff9-d2ceb55e68ca",
@@ -866,7 +1046,7 @@
             }
         },
         {
-            "tag": "🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 1",
+            "tag": "🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 10",
             "type": "vmess",
             "server": "47.236.112.187",
             "server_port": 22853,
@@ -883,7 +1063,7 @@
             }
         },
         {
-            "tag": "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 10",
+            "tag": "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 19",
             "type": "vmess",
             "server": "103.215.218.222",
             "server_port": 443,
