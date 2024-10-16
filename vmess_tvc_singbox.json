@@ -131,7 +131,9 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🇺🇸US | 🟢 | vmess | @customv2ray | 3",
                 "🇺🇸US | 🟢 | vmess | @customv2ray | 6",
-                "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 5",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 0",
+                "🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 1",
+                "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 10",
                 "🚩CF | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 3",
                 "❔XX | 🟢 | vmess | @proxystore11 | 0",
@@ -182,7 +184,9 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🇺🇸US | 🟢 | vmess | @customv2ray | 3",
                 "🇺🇸US | 🟢 | vmess | @customv2ray | 6",
-                "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 5",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 0",
+                "🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 1",
+                "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 10",
                 "🚩CF | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 3",
                 "❔XX | 🟢 | vmess | @proxystore11 | 0",
@@ -824,7 +828,58 @@
             }
         },
         {
-            "tag": "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 5",
+            "tag": "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 0",
+            "type": "vmess",
+            "server": "hms24.ivideos.sbs",
+            "server_port": 443,
+            "uuid": "441da342-ce90-441e-bff9-d2ceb55e68ca",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ivideos.sbs",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "ivideos.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 1",
+            "type": "vmess",
+            "server": "47.236.112.187",
+            "server_port": 22853,
+            "uuid": "18e7d3f4-c350-41f7-dbce-89ff768a0d30",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 10",
             "type": "vmess",
             "server": "103.215.218.222",
             "server_port": 443,
