@@ -107,8 +107,8 @@
             "outbounds": [
                 "URL-TEST | رایگان",
                 "US🇺🇸",
-                "TR🇹🇷",
-                "DE🇩🇪"
+                "SG🇸🇬",
+                "TR🇹🇷"
             ]
         },
         {
@@ -143,8 +143,8 @@
                 "رایگان | VMESS | @ISVvpn | US🇺🇸 | 0️⃣2️⃣",
                 "رایگان | VMESS | @ISVvpn | US🇺🇸 | 0️⃣3️⃣",
                 "رایگان | VMESS | @ISVvpn | US🇺🇸 | 0️⃣4️⃣",
-                "رایگان | VMESS | @ShadowProxy66 | TR🇹🇷 | 0️⃣6️⃣",
-                "رایگان | VMESS | @Hope_Net | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | VMESS | @ShadowProxy66 | SG🇸🇬 | 0️⃣5️⃣",
+                "رایگان | VMESS | @ShadowProxy66 | TR🇹🇷 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -188,20 +188,20 @@
             "tolerance": 50
         },
         {
-            "tag": "TR🇹🇷",
+            "tag": "SG🇸🇬",
             "type": "urltest",
             "outbounds": [
-                "رایگان | VMESS | @ShadowProxy66 | TR🇹🇷 | 0️⃣6️⃣"
+                "رایگان | VMESS | @ShadowProxy66 | SG🇸🇬 | 0️⃣5️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
             "tolerance": 50
         },
         {
-            "tag": "DE🇩🇪",
+            "tag": "TR🇹🇷",
             "type": "urltest",
             "outbounds": [
-                "رایگان | VMESS | @Hope_Net | DE🇩🇪 | 0️⃣2️⃣"
+                "رایگان | VMESS | @ShadowProxy66 | TR🇹🇷 | 0️⃣7️⃣"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "5m",
@@ -1127,7 +1127,24 @@
             }
         },
         {
-            "tag": "رایگان | VMESS | @ShadowProxy66 | TR🇹🇷 | 0️⃣6️⃣",
+            "tag": "رایگان | VMESS | @ShadowProxy66 | SG🇸🇬 | 0️⃣5️⃣",
+            "type": "vmess",
+            "server": "47.236.112.187",
+            "server_port": 22853,
+            "uuid": "18e7d3f4-c350-41f7-dbce-89ff768a0d30",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "رایگان | VMESS | @ShadowProxy66 | TR🇹🇷 | 0️⃣7️⃣",
             "type": "vmess",
             "server": "103.215.218.222",
             "server_port": 443,
@@ -1157,42 +1174,6 @@
                 "path": "\/linkvws",
                 "headers": {
                     "Host": "103.215.218.222"
-                },
-                "max_early_data": 0,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
-            }
-        },
-        {
-            "tag": "رایگان | VMESS | @Hope_Net | DE🇩🇪 | 0️⃣2️⃣",
-            "type": "vmess",
-            "server": "185.251.82.27",
-            "server_port": 8443,
-            "uuid": "b59a98f2-c089-4762-ace1-c6cb1ac94dd8",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "varzesh3.yallda.com",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "varzesh3.yallda.com"
                 },
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
