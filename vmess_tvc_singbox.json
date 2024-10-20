@@ -123,7 +123,11 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 16",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 17",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 16",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 5",
+                "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 12",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 13",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 15",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 14",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 16",
                 "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 19",
@@ -165,7 +169,11 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 16",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 17",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 16",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 5",
+                "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 12",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 13",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 15",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 14",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 16",
                 "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 19",
@@ -537,11 +545,35 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 16",
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
             "type": "vmess",
-            "server": "188.114.96.3",
-            "server_port": 443,
+            "server": "104.16.61.8",
+            "server_port": 2052,
             "uuid": "950db6aa-4926-4616-816e-ec0312dcb87b",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/jahfkjha.cfd\/linkws",
+                "headers": {
+                    "Host": "104.16.61.8"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 5",
+            "type": "vmess",
+            "server": "104.21.74.239",
+            "server_port": 443,
+            "uuid": "a1655f51-1e20-4a92-8a11-b7ca30a7a353",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -554,7 +586,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "jahfkjha.cfd",
+                "server_name": "afrhms07.xfixedfloat.cfd",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -566,8 +598,93 @@
                 "type": "ws",
                 "path": "\/linkws",
                 "headers": {
-                    "Host": "jahfkjha.cfd"
+                    "Host": "afrhms07.xfixedfloat.cfd"
                 }
+            }
+        },
+        {
+            "tag": "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 12",
+            "type": "vmess",
+            "server": "147.78.140.30",
+            "server_port": 443,
+            "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "4868-poetry-4868.napora7003.workers.dev",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/afrhms16v.bestxray.buzz\/linkws",
+                "headers": {
+                    "Host": "4868-poetry-4868.napora7003.workers.dev"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 13",
+            "type": "vmess",
+            "server": "gcore-bwg.1929585.xyz",
+            "server_port": 443,
+            "uuid": "4ffb2fa9-d321-4a73-8d5f-1d6c37b4a683",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "gcore-bwg.1929585.xyz",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/ab",
+                "headers": {
+                    "Host": "gcore-bwg.1929585.xyz"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 15",
+            "type": "vmess",
+            "server": "38.75.137.27",
+            "server_port": 22324,
+            "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
             }
         },
         {
