@@ -127,6 +127,7 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 9",
                 "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 16",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 17",
+                "🇺🇸US | 🟢 | vmess | @customv2ray | 5",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 14",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 16",
                 "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 19",
@@ -175,6 +176,7 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 9",
                 "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 16",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 17",
+                "🇺🇸US | 🟢 | vmess | @customv2ray | 5",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 14",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 16",
                 "🇹🇷TR | 🟢 | vmess | @ShadowProxy66 | 19",
@@ -671,6 +673,40 @@
                 "path": "\/ab",
                 "headers": {
                     "Host": "gcore-bwg.1929585.xyz"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @customv2ray | 5",
+            "type": "vmess",
+            "server": "ddd.zcr07.DNS-DYNAMic.neT",
+            "server_port": 443,
+            "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ddd.zcr07.DNS-DYNAMic.neT",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/afrhms16v.bestxray.buzz:443\/linkws",
+                "headers": {
+                    "Host": "ddd.zcr07.DNS-DYNAMic.neT"
                 }
             }
         },
