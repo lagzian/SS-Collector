@@ -134,8 +134,9 @@
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 0",
-                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 7",
-                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 15"
+                "🚩CF | 🟢 | vmess | @Hope_Net | 1",
+                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 9",
+                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 17"
             ]
         },
         {
@@ -170,8 +171,9 @@
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 0",
-                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 7",
-                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 15"
+                "🚩CF | 🟢 | vmess | @Hope_Net | 1",
+                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 9",
+                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 17"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -796,6 +798,30 @@
         {
             "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 0",
             "type": "vmess",
+            "server": "104.19.58.175",
+            "server_port": 2082,
+            "uuid": "5f3f09ad-89cb-4e94-a7ad-aa8239913555",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "104.19.58.175"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 1",
+            "type": "vmess",
             "server": "172.67.204.19",
             "server_port": 443,
             "uuid": "5f726fe3-d82e-4da5-a711-8af0cbb2b682",
@@ -828,7 +854,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @nofiltering2 | 7",
+            "tag": "🇺🇸US | 🟢 | vmess | @nofiltering2 | 9",
             "type": "vmess",
             "server": "plex.com",
             "server_port": 80,
@@ -852,7 +878,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @nofiltering2 | 15",
+            "tag": "🇺🇸US | 🟢 | vmess | @nofiltering2 | 17",
             "type": "vmess",
             "server": "www.Kayak.com",
             "server_port": 443,
