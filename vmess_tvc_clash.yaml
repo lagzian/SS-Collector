@@ -40,7 +40,6 @@ proxies:
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 7","type":"vmess","server":"skk.moe","port":2082,"cipher":"auto","uuid":"5f3f09ad-89cb-4e94-a7ad-aa8239913555","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip3.6929198.xyz"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 8","type":"vmess","server":"z3.fragranceninja.com","port":12960,"cipher":"auto","uuid":"a32313ad-5e39-4f9a-9cad-512041790050","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇵🇱PL | 🟢 | vmess | @Hope_Net | 9","type":"vmess","server":"128.204.223.42","port":29532,"cipher":"auto","uuid":"70073f5e-9182-4f17-8758-5f7b16b241b4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"@AstroVPN_Official","grpc-mode":"gun"},"client-fingerprint":"chrome"}
-  - {"name":"🇵🇱PL | 🟢 | vmess | @Hope_Net | 11","type":"vmess","server":"128.204.223.42","port":41663,"cipher":"auto","uuid":"11ccf64c-445b-4d8a-9830-9147e391f663","alterId":0,"tls":false,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"","grpc-mode":""},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -80,7 +79,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 7'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 8'
       - '🇵🇱PL | 🟢 | vmess | @Hope_Net | 9'
-      - '🇵🇱PL | 🟢 | vmess | @Hope_Net | 11'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -120,7 +118,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 7'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 8'
       - '🇵🇱PL | 🟢 | vmess | @Hope_Net | 9'
-      - '🇵🇱PL | 🟢 | vmess | @Hope_Net | 11'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -159,7 +156,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 7'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 8'
       - '🇵🇱PL | 🟢 | vmess | @Hope_Net | 9'
-      - '🇵🇱PL | 🟢 | vmess | @Hope_Net | 11'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
