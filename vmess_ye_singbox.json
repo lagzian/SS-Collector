@@ -123,7 +123,8 @@
                 "🇰🇷KR | 🟢 | vmess | @mftizi | 16",
                 "🇭🇰HK | 🟢 | vmess | @mftizi | 17",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 18",
-                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 11",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 15",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 16",
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 1",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
@@ -138,8 +139,7 @@
                 "🇰🇷KR | 🟢 | vmess | @Hope_Net | 4",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 5",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 7",
-                "❔XX | 🟢 | vmess | @Hope_Net | 9",
-                "❔XX | 🟢 | vmess | @Hope_Net | 10"
+                "❔XX | 🟢 | vmess | @Hope_Net | 9"
             ]
         },
         {
@@ -163,7 +163,8 @@
                 "🇰🇷KR | 🟢 | vmess | @mftizi | 16",
                 "🇭🇰HK | 🟢 | vmess | @mftizi | 17",
                 "🇺🇸US | 🟢 | vmess | @mftizi | 18",
-                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 11",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 15",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 16",
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 1",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
@@ -178,8 +179,7 @@
                 "🇰🇷KR | 🟢 | vmess | @Hope_Net | 4",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 5",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 7",
-                "❔XX | 🟢 | vmess | @Hope_Net | 9",
-                "❔XX | 🟢 | vmess | @Hope_Net | 10"
+                "❔XX | 🟢 | vmess | @Hope_Net | 9"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -522,9 +522,9 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 11",
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 15",
             "type": "vmess",
-            "server": "obdii.cfd",
+            "server": "104.26.0.95",
             "server_port": 443,
             "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
             "security": "auto",
@@ -552,6 +552,40 @@
                 "path": "\/linkws",
                 "headers": {
                     "Host": "obdii.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 16",
+            "type": "vmess",
+            "server": "104.21.4.6",
+            "server_port": 443,
+            "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "glweidf.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "glweidf.cfd"
                 }
             }
         },
@@ -929,23 +963,6 @@
             "server": "127.0.0.1",
             "server_port": 1080,
             "uuid": "acaabbc-aabc-aabc-bcda-bcbacacbabac",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 10",
-            "type": "vmess",
-            "server": "127.0.0.1",
-            "server_port": 1080,
-            "uuid": "abccaba-aacb-baca-bcad-cbacbaabbcca",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
