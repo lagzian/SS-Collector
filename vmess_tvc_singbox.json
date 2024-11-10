@@ -149,8 +149,10 @@
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 0",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 2"
+                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 1",
+                "🚩CF | 🟢 | vmess | @Hope_Net | 2",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
+                "🚩CF | 🟢 | vmess | @Hope_Net | 4"
             ]
         },
         {
@@ -200,8 +202,10 @@
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 0",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 2"
+                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 1",
+                "🚩CF | 🟢 | vmess | @Hope_Net | 2",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
+                "🚩CF | 🟢 | vmess | @Hope_Net | 4"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -1410,6 +1414,57 @@
         {
             "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 0",
             "type": "vmess",
+            "server": "188.114.99.187",
+            "server_port": 8880,
+            "uuid": "011ee0e1-77bd-443a-9a51-a302b592a3ae",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇷🇺RU | 🟢 | vmess | @Hope_Net | 1",
+            "type": "vmess",
+            "server": "185.148.104.118",
+            "server_port": 443,
+            "uuid": "6c168fcc-2231-4f3b-8c1e-f6391692df4a",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ab-test-frosty-flower-e7fb.tariroc864.workers.dev",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/hms02.fxiaomi.sbs\/link",
+                "headers": {
+                    "Host": "ab-test-frosty-flower-e7fb.tariroc864.workers.dev"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 2",
+            "type": "vmess",
             "server": "172.67.64.120",
             "server_port": 80,
             "uuid": "b4495b97-bc8a-4b3b-a1e8-aae1d503e8ca",
@@ -1432,7 +1487,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
             "type": "vmess",
             "server": "icook.tw",
             "server_port": 2095,
@@ -1456,7 +1511,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 2",
+            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 4",
             "type": "vmess",
             "server": "172.64.175.213",
             "server_port": 2082,
