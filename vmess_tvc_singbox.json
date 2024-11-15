@@ -131,10 +131,10 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇰🇿KZ | 🟢 | vmess | @Hope_Net | 0",
-                "🇮🇹IT | 🟢 | vmess | @Hope_Net | 1",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
-                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 3"
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
+                "🇰🇿KZ | 🟢 | vmess | @Hope_Net | 1",
+                "🇮🇹IT | 🟢 | vmess | @Hope_Net | 2",
+                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 5"
             ]
         },
         {
@@ -166,10 +166,10 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇰🇿KZ | 🟢 | vmess | @Hope_Net | 0",
-                "🇮🇹IT | 🟢 | vmess | @Hope_Net | 1",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
-                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 3"
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
+                "🇰🇿KZ | 🟢 | vmess | @Hope_Net | 1",
+                "🇮🇹IT | 🟢 | vmess | @Hope_Net | 2",
+                "🇺🇸US | 🟢 | vmess | @nofiltering2 | 5"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -801,7 +801,41 @@
             }
         },
         {
-            "tag": "🇰🇿KZ | 🟢 | vmess | @Hope_Net | 0",
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
+            "type": "vmess",
+            "server": "216.24.57.171",
+            "server_port": 443,
+            "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "216.24.57.171",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/obdii.cfd:443\/linkws",
+                "headers": {
+                    "Host": "216.24.57.171"
+                }
+            }
+        },
+        {
+            "tag": "🇰🇿KZ | 🟢 | vmess | @Hope_Net | 1",
             "type": "vmess",
             "server": "194.76.18.113",
             "server_port": 443,
@@ -835,7 +869,7 @@
             }
         },
         {
-            "tag": "🇮🇹IT | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🇮🇹IT | 🟢 | vmess | @Hope_Net | 2",
             "type": "vmess",
             "server": "147.45.51.16",
             "server_port": 2098,
@@ -852,41 +886,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
-            "type": "vmess",
-            "server": "38.75.137.121",
-            "server_port": 443,
-            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-            "security": "auto",
-            "alter_id": 1,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "38.75.137.121",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkvws",
-                "headers": {
-                    "Host": "38.75.137.121"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @nofiltering2 | 3",
+            "tag": "🇺🇸US | 🟢 | vmess | @nofiltering2 | 5",
             "type": "vmess",
             "server": "www.speedtest.net",
             "server_port": 80,
