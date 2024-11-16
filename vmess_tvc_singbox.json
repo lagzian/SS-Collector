@@ -118,9 +118,13 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "🇭🇰HK | 🟢 | vmess | @mftizi | 18",
                 "🇺🇸US | 🟢 | vmess | @customv2ray | 2",
-                "🇭🇰HK | 🟢 | vmess | @ShadowProxy66 | 9",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 3",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 5",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 0",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 1",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 2",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 3",
+                "🚩CF | 🟢 | vmess | @ShadowProxy66 | 4",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 13",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 15",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -137,7 +141,6 @@
                 "🇰🇷KR | 🟢 | vmess | @Hope_Net | 8",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 9",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 10",
-                "🇩🇪DE | 🟢 | vmess | @Hope_Net | 11",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 7"
             ]
         },
@@ -157,9 +160,13 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "🇭🇰HK | 🟢 | vmess | @mftizi | 18",
                 "🇺🇸US | 🟢 | vmess | @customv2ray | 2",
-                "🇭🇰HK | 🟢 | vmess | @ShadowProxy66 | 9",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 3",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 5",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 0",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 1",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 2",
+                "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 3",
+                "🚩CF | 🟢 | vmess | @ShadowProxy66 | 4",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 13",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 15",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -176,7 +183,6 @@
                 "🇰🇷KR | 🟢 | vmess | @Hope_Net | 8",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 9",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 10",
-                "🇩🇪DE | 🟢 | vmess | @Hope_Net | 11",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 7"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -438,11 +444,11 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @ShadowProxy66 | 9",
+            "tag": "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 0",
             "type": "vmess",
-            "server": "143.92.42.65",
-            "server_port": 2902,
-            "uuid": "640c1077-d10b-4225-a9fb-d3e9c3ce7a00",
+            "server": "an.anaviriti.info",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -452,10 +458,163 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "an.anaviriti.info",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "an.anaviriti.info"
+                }
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 3",
+            "tag": "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 1",
+            "type": "vmess",
+            "server": "denc36.xtooltech.cfd",
+            "server_port": 443,
+            "uuid": "b321fd5d-e6ec-4293-a644-164e3885f52e",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "adenc36v.xtooltech.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "adenc36v.xtooltech.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 2",
+            "type": "vmess",
+            "server": "lin0502.hwcar.sbs",
+            "server_port": 443,
+            "uuid": "39cec18f-a439-427c-9a4e-aeb6fcdf6f53",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "linja05.hwcar.sbs",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "linja05.hwcar.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 3",
+            "type": "vmess",
+            "server": "cs.yichueng.org",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cs.yichueng.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "cs.yichueng.org"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @ShadowProxy66 | 4",
+            "type": "vmess",
+            "server": "172.67.164.164",
+            "server_port": 443,
+            "uuid": "a1655f51-1e20-4a92-8a11-b7ca30a7a353",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "afrhms07.xfixedfloat.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "afrhms07.xfixedfloat.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 13",
             "type": "vmess",
             "server": "www.speedtest.net",
             "server_port": 8880,
@@ -472,7 +631,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 5",
+            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 15",
             "type": "vmess",
             "server": "WWW.SPEEDTEST.NET",
             "server_port": 8080,
@@ -972,40 +1131,6 @@
                 "path": "\/linkvws",
                 "headers": {
                     "Host": "104.21.72.230"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪DE | 🟢 | vmess | @Hope_Net | 11",
-            "type": "vmess",
-            "server": "80.158.63.104",
-            "server_port": 443,
-            "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "80.158.63.104",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/obdii.cfd:443\/linkws",
-                "headers": {
-                    "Host": "80.158.63.104"
                 }
             }
         },
