@@ -120,8 +120,7 @@
                 "❔XX | 🟢 | vmess | @customv2ray | 8",
                 "🇸🇪SE | 🟢 | vmess | @customv2ray | 9",
                 "🇺🇸US | 🟢 | vmess | @V2rayng_Fast | 0",
-                "🇳🇱NL | 🟢 | vmess | @v2ray1_ng | 4",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 0",
+                "🇳🇱NL | 🟢 | vmess | @v2ray1_ng | 7",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -135,7 +134,6 @@
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 5",
                 "❔XX | 🟢 | vmess | @Hope_Net | 6",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 7",
-                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 8",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 1",
                 "🇸🇪SE | 🟢 | vmess | @nofiltering2 | 3"
             ]
@@ -158,8 +156,7 @@
                 "❔XX | 🟢 | vmess | @customv2ray | 8",
                 "🇸🇪SE | 🟢 | vmess | @customv2ray | 9",
                 "🇺🇸US | 🟢 | vmess | @V2rayng_Fast | 0",
-                "🇳🇱NL | 🟢 | vmess | @v2ray1_ng | 4",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 0",
+                "🇳🇱NL | 🟢 | vmess | @v2ray1_ng | 7",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -173,7 +170,6 @@
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 5",
                 "❔XX | 🟢 | vmess | @Hope_Net | 6",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 7",
-                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 8",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 1",
                 "🇸🇪SE | 🟢 | vmess | @nofiltering2 | 3"
             ],
@@ -494,30 +490,13 @@
             }
         },
         {
-            "tag": "🇳🇱NL | 🟢 | vmess | @v2ray1_ng | 4",
+            "tag": "🇳🇱NL | 🟢 | vmess | @v2ray1_ng | 7",
             "type": "vmess",
             "server": "89.23.103.249",
             "server_port": 8081,
             "uuid": "60b85ec5-4cc9-4dd5-a5d2-edc876501b69",
             "security": "auto",
             "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 0",
-            "type": "vmess",
-            "server": "198.2.218.108",
-            "server_port": 41400,
-            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
-            "security": "auto",
-            "alter_id": 64,
             "global_padding": false,
             "authenticated_length": true,
             "packet_encoding": "",
@@ -919,40 +898,6 @@
                 "path": "\/",
                 "headers": {
                     "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇷🇺RU | 🟢 | vmess | @Hope_Net | 8",
-            "type": "vmess",
-            "server": "45.67.32.147",
-            "server_port": 20664,
-            "uuid": "a5483118-8d40-48da-bde1-b20445d8c380",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "somethings.iseasy.tw",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/socks5tobefree",
-                "headers": {
-                    "Host": "somethings.iseasy.tw"
                 }
             }
         },
