@@ -122,9 +122,8 @@
                 "❔XX | 🟢 | vmess | @customv2ray | 15",
                 "🇸🇪SE | 🟢 | vmess | @customv2ray | 16",
                 "🇺🇸US | 🟢 | vmess | @vless_vmess | 4",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 1",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 7",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 8",
+                "🚩CF | 🟢 | vmess | @ConfigsHUB | 4",
+                "🇮🇷IR | 🟢 | vmess | @ConfigsHUB | 9",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -138,8 +137,6 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 5",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 6",
                 "🇩🇪DE | 🟢 | vmess | @Hope_Net | 7",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 8",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 9",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 5",
                 "🇸🇪SE | 🟢 | vmess | @nofiltering2 | 7"
             ]
@@ -164,9 +161,8 @@
                 "❔XX | 🟢 | vmess | @customv2ray | 15",
                 "🇸🇪SE | 🟢 | vmess | @customv2ray | 16",
                 "🇺🇸US | 🟢 | vmess | @vless_vmess | 4",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 1",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 7",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 8",
+                "🚩CF | 🟢 | vmess | @ConfigsHUB | 4",
+                "🇮🇷IR | 🟢 | vmess | @ConfigsHUB | 9",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -180,8 +176,6 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 5",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 6",
                 "🇩🇪DE | 🟢 | vmess | @Hope_Net | 7",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 8",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 9",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 5",
                 "🇸🇪SE | 🟢 | vmess | @nofiltering2 | 7"
             ],
@@ -546,28 +540,11 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 1",
+            "tag": "🚩CF | 🟢 | vmess | @ConfigsHUB | 4",
             "type": "vmess",
-            "server": "198.2.218.108",
-            "server_port": 41400,
-            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
-            "security": "auto",
-            "alter_id": 64,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 7",
-            "type": "vmess",
-            "server": "zula.ir",
-            "server_port": 8080,
-            "uuid": "TELEGRAM-ID-VPN-WHAL-18",
+            "server": "172.67.131.108",
+            "server_port": 443,
+            "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -577,14 +554,31 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "glweidf.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "glweidf.cfd"
+                }
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 8",
+            "tag": "🇮🇷IR | 🟢 | vmess | @ConfigsHUB | 9",
             "type": "vmess",
-            "server": "WWW.SPEEDTEST.NET",
-            "server_port": 8080,
-            "uuid": "TELEGRAM-ID-VPN-WHAL-18",
+            "server": "46.38.137.16",
+            "server_port": 8443,
+            "uuid": "77402a7f-24e2-42d0-a66a-3747886b8f38",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -944,54 +938,6 @@
                 "path": "\/dangerzone",
                 "headers": {
                     "Host": "socks5tobefree.ydns.eu"
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 8",
-            "type": "vmess",
-            "server": "172.64.167.19",
-            "server_port": 2095,
-            "uuid": "18d96190-c10f-448f-a82a-2d36df5c3cde",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/github.com\/Alvin9999",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 9",
-            "type": "vmess",
-            "server": "104.19.21.71",
-            "server_port": 2095,
-            "uuid": "18d96190-c10f-448f-a82a-2d36df5c3cde",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/github.com\/Alvin9999",
-                "headers": {
-                    "Host": ""
                 }
             }
         },
