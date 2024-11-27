@@ -66,15 +66,15 @@ Select your country from the list below to get the corresponding V2ray subscript
 | JO | Jordan | [Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/jo/mixed) |
 | KZ | Kazakhstan | [Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/kz/mixed) |
 | KE | Kenya | [Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/ke/mixed) |
-| KR 	| Korea, Republic of  (South Korea)| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/kr/mixed) 	|
-| LV 	| Latvia 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/lv/mixed) 	|
-| LT 	| Lithuania 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/lt/mixed) 	|
-| LU 	| Luxembourg 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/lu/mixed) 	|
-| MT 	| Malta 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/mt/mixed) 	|
-| MX 	| Mexico 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/mx/mixed) 	|
-| MD 	| Moldova, Republic of 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/md/mixed) 	|
-| NL 	| Netherlands 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/nl/mixed)  	|
-| MK 	| North Macedonia  	|  	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/mk/mixe)  	|
+| KR 	| Korea, Republic of  (South Korea)| [Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/kr/mixed) 	|
+| LV 	| Latvia 	| 	[Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/lv/mixed) 	|
+| LT 	| Lithuania 	| 	[Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/lt/mixed) 	|
+| LU 	| Luxembourg 	| 	[Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/lu/mixed) 	|
+| MT 	| Malta 	| 	[Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/mt/mixed) 	|
+| MX 	| Mexico 	| 	[Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/mx/mixed) 	|
+| MD 	| Moldova, Republic of 	| 	[Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/md/mixed) 	|
+| NL 	| Netherlands 	| 	[Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/nl/mixed)  	|
+| MK 	| North Macedonia  	|  	[Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/mk/mixe)  	|
 
 
 ## How to Use
