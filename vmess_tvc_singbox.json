@@ -117,7 +117,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 17",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
+                "🇫🇷FR | 🟢 | vmess | @customv2ray | 4",
                 "❔XX | 🟢 | vmess | @vless_vmess | 14",
+                "🇵🇱PL | 🟢 | vmess | @ConfigsHUB | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -154,7 +156,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 17",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
+                "🇫🇷FR | 🟢 | vmess | @customv2ray | 4",
                 "❔XX | 🟢 | vmess | @vless_vmess | 14",
+                "🇵🇱PL | 🟢 | vmess | @ConfigsHUB | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -400,6 +404,40 @@
             }
         },
         {
+            "tag": "🇫🇷FR | 🟢 | vmess | @customv2ray | 4",
+            "type": "vmess",
+            "server": "denc36.xtooltech.cfd",
+            "server_port": 443,
+            "uuid": "b321fd5d-e6ec-4293-a644-164e3885f52e",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "adenc36v.xtooltech.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "adenc36v.xtooltech.cfd"
+                }
+            }
+        },
+        {
             "tag": "❔XX | 🟢 | vmess | @vless_vmess | 14",
             "type": "vmess",
             "server": "cs.putihb.org",
@@ -431,6 +469,23 @@
                 "headers": {
                     "Host": "cs.putihb.org"
                 }
+            }
+        },
+        {
+            "tag": "🇵🇱PL | 🟢 | vmess | @ConfigsHUB | 0",
+            "type": "vmess",
+            "server": "128.204.223.42",
+            "server_port": 26177,
+            "uuid": "05a2a1f7-6c84-4091-9215-18f1513a300d",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
             }
         },
         {
