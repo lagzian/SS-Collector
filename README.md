@@ -1,6 +1,14 @@
-# Shadowsocks/VMESS/VLESS/Reality Configurations in Normal, Clash, and SING-BOX Formats
+Shadowsocks/VMESS/VLESS/Reality Configurations in Normal, Clash, and SING-BOX Formats
+This repository contains various Shadowsocks, VMESS, VLESS, and Reality configurations in multiple formats including Normal, Clash/Meta, and SING-BOX (ready for use). All configurations are updated automatically: Shadowsocks and VMESS lists are refreshed every 12 hours, while other lists are updated every hour. The Trinity links, which contain more than 150 speed-tested SS/VMESS configurations, will be updated every 5 hours.
+Country Subscription Links
+To enhance usability and accessibility, this repository includes country-specific subscription links for services that may impose account bans if the location is altered (e.g., social media platforms and certain AI services). Each country’s subscription link is tailored to ensure optimal performance and compliance with local regulations.
+How to Use the Country Subscription Links:
 
-This repository contains various Shadowsocks, VMESS, VLESS and Reality configuration in various formats including Normal, Clash/Meta, and SING-BOX (ready for use). All of them get updated automatically. Shadowsocks,  and VMESS lists are updated every 12 hours, while other lists are updated every 1 hour. The Trinity links that contain more than 150 speed tested SS/VMESS configs will be updated every 5 hours. 
+    Select Your Country: Browse through the list of countries provided below.
+    Access the Link: Click on the corresponding "Subscription Link" for your country. This will direct you to a configuration file specifically optimized for users in that region.
+    Configuration Use: Follow the instructions specific to your chosen service (Shadowsocks, VMESS, etc.) to integrate the configuration into your application.
+    Regular Updates: Keep in mind that these subscription links are regularly updated to ensure you have access to the latest configurations.
+
 ## Subscription Links
 
 | Configuration | Normal | Base64 Encoded | Meta/Clash | SING-BOX |
