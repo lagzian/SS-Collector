@@ -23,8 +23,6 @@ This repository contains various Shadowsocks, VMESS, VLESS and Reality configura
 |-|-|-|-|-|  
 | Trinity (SS) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/Trinity.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/Trinity) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_clash.yaml) | [JSON](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_singbox.json) |
 | Trinity (VMESS) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_Trinity.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_Trinity) | [N/A](N/A) | [N/A](N/A) |
-
-
 # V2ray Subscription Links
 
 Select your country from the list below to get the corresponding V2ray subscription link.
@@ -68,11 +66,15 @@ Select your country from the list below to get the corresponding V2ray subscript
 | JO | Jordan | [Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/jo/mixed) |
 | KZ | Kazakhstan | [Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/kz/mixed) |
 | KE | Kenya | [Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/ke/mixed) |
-| KR | Korea, Republic of  (South Korea)| [Subscription Link](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/kr/mixed) |
-| LV 	| Latvia 	| 	[Link](	 https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/lv/mixed ) 	|
-| LT 	| Lithuania 	| 	[Link]( https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/lt/mixed ) 	|
-...
-
+| KR 	| Korea, Republic of  (South Korea)| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/kr/mixed) 	|
+| LV 	| Latvia 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/lv/mixed) 	|
+| LT 	| Lithuania 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/lt/mixed) 	|
+| LU 	| Luxembourg 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/lu/mixed) 	|
+| MT 	| Malta 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/mt/mixed) 	|
+| MX 	| Mexico 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/mx/mixed) 	|
+| MD 	| Moldova, Republic of 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/md/mixed) 	|
+| NL 	| Netherlands 	| 	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/nl/mixed)  	|
+| MK 	| North Macedonia  	|  	[Subscription Link] (https://raw.githubusercontent.com/lagzian/new-configs-collector/main/countries/mk/mixe)  	|
 
 
 ## How to Use
