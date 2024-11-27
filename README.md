@@ -2,15 +2,16 @@
 
 This repository contains various Shadowsocks, VMESS, VLESS, and Reality configurations in multiple formats including Normal, Clash/Meta, and SING-BOX (ready for use). All configurations are updated automatically: Shadowsocks and VMESS lists are refreshed every 12 hours, while other lists are updated every hour. The Trinity links, which contain more than 150 speed-tested SS/VMESS configurations, will be updated every 5 hours.
 
-## Country Subscription Links
+## Mixed Config Country Subscription Links
 
 To enhance usability and accessibility, this repository includes country-specific subscription links for services that may impose account bans if the location is altered (e.g., social media platforms and certain AI services). Each country’s subscription link is tailored to ensure optimal performance and compliance with local regulations.
-How to Use the Country Subscription Links:
 
-    Select Your Country: Browse through the list of countries provided below.
-    Access the Link: Click on the corresponding "Subscription Link" for your country. This will direct you to a configuration file specifically optimized for users in that region.
-    Configuration Use: Follow the instructions specific to your chosen service (Shadowsocks, VMESS, etc.) to integrate the configuration into your application.
-    Regular Updates: Keep in mind that these subscription links are regularly updated to ensure you have access to the latest configurations.
+## How to Use the Country Subscription Links:
+
+1- Select Your Country: Browse through the list of countries provided below.
+2- Access the Link: Click on the corresponding "Subscription Link" for your country. This will direct you to a configuration file specifically optimized for users in that region.
+3- Configuration Use: Follow the instructions specific to your chosen service (Shadowsocks, VMESS, etc.) to integrate the configuration into your application.
+4- Regular Updates: Keep in mind that these subscription links are regularly updated to ensure you have access to the latest configurations.
 
 ## Subscription Links
 
@@ -33,9 +34,11 @@ How to Use the Country Subscription Links:
 |-|-|-|-|-|  
 | Trinity (SS) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/Trinity.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/Trinity) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_clash.yaml) | [JSON](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_singbox.json) |
 | Trinity (VMESS) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_Trinity.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_Trinity) | [N/A](N/A) | [N/A](N/A) |
+
+
 # Country-Based V2ray Subscription Links
 
-Select your country from the list below to get the corresponding V2ray subscription link.
+Select your country from the list below to get the corresponding V2ray subscription link (mixed config type).
 
 ## Country Subscription Links
 
