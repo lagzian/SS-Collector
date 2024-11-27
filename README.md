@@ -23,7 +23,7 @@ This repository contains various Shadowsocks, VMESS, VLESS and Reality configura
 |-|-|-|-|-|  
 | Trinity (SS) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/Trinity.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/Trinity) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_clash.yaml) | [JSON](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_singbox.json) |
 | Trinity (VMESS) | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_Trinity.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_Trinity) | [N/A](N/A) | [N/A](N/A) |
-# V2ray Subscription Links
+# Country-Based V2ray Subscription Links
 
 Select your country from the list below to get the corresponding V2ray subscription link.
 
