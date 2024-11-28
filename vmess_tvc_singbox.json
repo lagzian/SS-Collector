@@ -117,8 +117,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 17",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇩🇪DE | 🟢 | vmess | @customv2ray | 4",
+                "🇫🇷FR | 🟢 | vmess | @customv2ray | 4",
                 "❔XX | 🟢 | vmess | @vless_vmess | 14",
+                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 8",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -154,8 +155,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 17",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇩🇪DE | 🟢 | vmess | @customv2ray | 4",
+                "🇫🇷FR | 🟢 | vmess | @customv2ray | 4",
                 "❔XX | 🟢 | vmess | @vless_vmess | 14",
+                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 8",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -400,7 +402,7 @@
             }
         },
         {
-            "tag": "🇩🇪DE | 🟢 | vmess | @customv2ray | 4",
+            "tag": "🇫🇷FR | 🟢 | vmess | @customv2ray | 4",
             "type": "vmess",
             "server": "denc36.xtooltech.cfd",
             "server_port": 443,
@@ -464,6 +466,40 @@
                 "path": "\/linkvws",
                 "headers": {
                     "Host": "cs.putihb.org"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 8",
+            "type": "vmess",
+            "server": "beyonddsz.cfd",
+            "server_port": 443,
+            "uuid": "9b456c2a-f2c1-45e1-87a9-b7628b04bb24",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "beyonddsz.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "beyonddsz.cfd"
                 }
             }
         },
