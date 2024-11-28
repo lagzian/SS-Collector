@@ -1,0 +1,35 @@
+name: Delete Temporary Files
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"  # Runs every 15 minutes
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Delete temporary files if they exist
+        run: |
+          files_to_delete=("temp11.txt" "temp25.txt" "temp38.txt")
+          for file in "${files_to_delete[@]}"; do
+            if [ -f "$file" ]; then
+              echo "Deleting $file"
+              rm "$file"
+            else
+              echo "$file does not exist"
+            fi
+          done
+
+      - name: Commit changes
+        run: |
+          if [ "$(git status --porcelain)" ]; then
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add .
+            git commit -m "Remove temporary files"
+            git push
+          else
+            echo "No changes to commit"
