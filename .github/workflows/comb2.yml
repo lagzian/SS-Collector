@@ -118,7 +118,7 @@ jobs:
             done
             return 0
           }
-          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FTelegramV2rayCollector%2Fmain%2Fsub%2Fbase64%2Fvmess&type=clash&process=full"
+          retry curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/TelegramV2rayCollector/main/sub/base64/vmess&type=clash&process=full"
           retry curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_SINGBOX_JSON_FILE}" -L "${VMESS_V2RAY_SINGBOX_URL}"
 
       # Vmess_Vless
