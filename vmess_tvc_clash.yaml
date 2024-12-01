@@ -28,7 +28,6 @@ proxies:
   - {"name":"🇯🇵JP | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"35.74.61.85","port":21586,"cipher":"auto","uuid":"e9537990-d286-3eaf-8596-d74249d3f347","alterId":1,"tls":true,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇯🇵JP | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"43.207.224.79","port":28783,"cipher":"auto","uuid":"46d2d389-2469-30ad-9e7a-21f1daa63935","alterId":1,"tls":true,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 5","type":"vmess","server":"162.159.45.195","port":2086,"cipher":"auto","uuid":"bc65fac2-7dc7-426f-acdd-0779a5035bde","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"p1.613055.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 7","type":"vmess","server":"183.236.51.23","port":46602,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vmess | @nofiltering2 | 8","type":"vmess","server":"94.130.190.88","port":7610,"cipher":"auto","uuid":"5480b44f-5823-4246-bb8e-8a371da6dc4c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
@@ -57,7 +56,6 @@ proxy-groups:
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 3'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 4'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 5'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 7'
       - '🇩🇪DE | 🟢 | vmess | @nofiltering2 | 8'
   - name: URL-TEST
     type: url-test
@@ -86,7 +84,6 @@ proxy-groups:
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 3'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 4'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 5'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 7'
       - '🇩🇪DE | 🟢 | vmess | @nofiltering2 | 8'
   - name: FALLBACK
     type: fallback
@@ -114,7 +111,6 @@ proxy-groups:
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 3'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 4'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 5'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 7'
       - '🇩🇪DE | 🟢 | vmess | @nofiltering2 | 8'
 rules:
  - GEOIP,IR,DIRECT
