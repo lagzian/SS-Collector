@@ -25,7 +25,7 @@ To enhance usability and accessibility, this repository includes country-specifi
 | VMESS_v2rayCollector | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_ye.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_B64_ye.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_ye_clash.yaml) |[JSON](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_ye_singbox.json) |
 | VMESS_VLESS_VIP | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_vless.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_vless_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_vless_clash.yaml) |[JSON](https://raw.githubusercontent.com/lagzian/SS-Collector/main/vmess_vless_singbox.json) |
 | Backup_VIP | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/backup.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/backup_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/backup_clash.yaml) |[N/A] |
-| Backup_VIP | [Normal](https://raw.githubusercontent.com/lagzian/SS-Collector/main/backup.txt) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/SS-Collector/main/backup_B64.txt) | [Clash YAML](https://raw.githubusercontent.com/lagzian/SS-Collector/main/backup_clash.yaml) |[N/A] |
+| Hysteria_VIP | [Normal](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/protocols/hysteria) | [Base64 Encoded](https://raw.githubusercontent.com/lagzian/new-configs-collector/main/protocols/hysteria) | [N/A] |[N/A] |
 
 
 
