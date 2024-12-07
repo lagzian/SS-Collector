@@ -133,9 +133,7 @@
                 "🇬🇧GB | 🟢 | vmess | @Hope_Net | 2",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
                 "❔XX | 🟢 | vmess | @Hope_Net | 4",
-                "🇨🇦CA | 🟢 | vmess | @Hope_Net | 5",
-                "🇰🇷KR | 🟢 | vmess | @Hope_Net | 6",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 7"
+                "🇨🇦CA | 🟢 | vmess | @Hope_Net | 5"
             ]
         },
         {
@@ -169,9 +167,7 @@
                 "🇬🇧GB | 🟢 | vmess | @Hope_Net | 2",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
                 "❔XX | 🟢 | vmess | @Hope_Net | 4",
-                "🇨🇦CA | 🟢 | vmess | @Hope_Net | 5",
-                "🇰🇷KR | 🟢 | vmess | @Hope_Net | 6",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 7"
+                "🇨🇦CA | 🟢 | vmess | @Hope_Net | 5"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -822,64 +818,6 @@
             "transport": {
                 "type": "ws",
                 "path": "\/linkvws",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇰🇷KR | 🟢 | vmess | @Hope_Net | 6",
-            "type": "vmess",
-            "server": "132.226.22.202",
-            "server_port": 23451,
-            "uuid": "e105c051-1b1f-4487-83ca-accf81c02055",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 7",
-            "type": "vmess",
-            "server": "denc36.xtooltech.cfd",
-            "server_port": 443,
-            "uuid": "b321fd5d-e6ec-4293-a644-164e3885f52e",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkws",
                 "headers": {
                     "Host": ""
                 }
