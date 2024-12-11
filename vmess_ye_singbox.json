@@ -119,19 +119,19 @@
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 1",
                 "🇷🇺RU | 🟢 | vmess | @v2ray1_ng | 1",
                 "🇲🇽MX | 🟢 | vmess | @v2ray1_ng | 2",
-                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 7",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "❔XX | 🟢 | vmess | @Hope_Net | 0",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
-                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 2",
-                "❔XX | 🟢 | vmess | @Hope_Net | 3",
+                "🚩CF | 🟢 | vmess | @Hope_Net | 0",
+                "❔XX | 🟢 | vmess | @Hope_Net | 1",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
+                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 3",
                 "❔XX | 🟢 | vmess | @Hope_Net | 4",
                 "❔XX | 🟢 | vmess | @Hope_Net | 5",
-                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 6"
+                "❔XX | 🟢 | vmess | @Hope_Net | 6",
+                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 7"
             ]
         },
         {
@@ -151,19 +151,19 @@
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 1",
                 "🇷🇺RU | 🟢 | vmess | @v2ray1_ng | 1",
                 "🇲🇽MX | 🟢 | vmess | @v2ray1_ng | 2",
-                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 7",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "❔XX | 🟢 | vmess | @Hope_Net | 0",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
-                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 2",
-                "❔XX | 🟢 | vmess | @Hope_Net | 3",
+                "🚩CF | 🟢 | vmess | @Hope_Net | 0",
+                "❔XX | 🟢 | vmess | @Hope_Net | 1",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
+                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 3",
                 "❔XX | 🟢 | vmess | @Hope_Net | 4",
                 "❔XX | 🟢 | vmess | @Hope_Net | 5",
-                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 6"
+                "❔XX | 🟢 | vmess | @Hope_Net | 6",
+                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 7"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -431,30 +431,6 @@
             }
         },
         {
-            "tag": "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 7",
-            "type": "vmess",
-            "server": "45.8.158.32",
-            "server_port": 13530,
-            "uuid": "398ce84e-4849-4e5f-9b1a-a56fbe233b81",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
             "tag": "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
             "type": "vmess",
             "server": "45.199.138.217",
@@ -605,7 +581,31 @@
             }
         },
         {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 0",
+            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 0",
+            "type": "vmess",
+            "server": "104.16.60.8",
+            "server_port": 2082,
+            "uuid": "f584de15-2034-4170-a723-f48c2bae5e0f",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/afrhms16v.bestxray.buzz\/linkws",
+                "headers": {
+                    "Host": "104.16.60.8"
+                }
+            }
+        },
+        {
+            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 1",
             "type": "vmess",
             "server": "127.0.0.1",
             "server_port": 1080,
@@ -622,7 +622,7 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
             "type": "vmess",
             "server": "hk1.tiljkc.top",
             "server_port": 39041,
@@ -639,7 +639,7 @@
             }
         },
         {
-            "tag": "🇷🇺RU | 🟢 | vmess | @Hope_Net | 2",
+            "tag": "🇷🇺RU | 🟢 | vmess | @Hope_Net | 3",
             "type": "vmess",
             "server": "176.32.39.160",
             "server_port": 9187,
@@ -663,7 +663,7 @@
             }
         },
         {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 3",
+            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 4",
             "type": "vmess",
             "server": "127.0.0.1",
             "server_port": 1080,
@@ -680,7 +680,7 @@
             }
         },
         {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 4",
+            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 5",
             "type": "vmess",
             "server": "127.0.0.1",
             "server_port": 1080,
@@ -697,7 +697,7 @@
             }
         },
         {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 5",
+            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 6",
             "type": "vmess",
             "server": "127.0.0.1",
             "server_port": 1080,
@@ -714,7 +714,7 @@
             }
         },
         {
-            "tag": "🇷🇺RU | 🟢 | vmess | @Hope_Net | 6",
+            "tag": "🇷🇺RU | 🟢 | vmess | @Hope_Net | 7",
             "type": "vmess",
             "server": "176.32.39.160",
             "server_port": 9187,
