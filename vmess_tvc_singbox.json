@@ -116,7 +116,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 17",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 2",
+                "🇨🇾CY | 🟢 | vmess | @DeamNet_Proxy | 6",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🇷🇺RU | 🟢 | vmess | @v2ray1_ng | 2",
                 "🇲🇽MX | 🟢 | vmess | @v2ray1_ng | 3",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
@@ -150,7 +151,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 17",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 2",
+                "🇨🇾CY | 🟢 | vmess | @DeamNet_Proxy | 6",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🇷🇺RU | 🟢 | vmess | @v2ray1_ng | 2",
                 "🇲🇽MX | 🟢 | vmess | @v2ray1_ng | 3",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
@@ -377,7 +379,41 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 2",
+            "tag": "🇨🇾CY | 🟢 | vmess | @DeamNet_Proxy | 6",
+            "type": "vmess",
+            "server": "195.85.59.50",
+            "server_port": 443,
+            "uuid": "441da342-ce90-441e-bff9-d2ceb55e68ca",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "8wccc4a94-term-4a94.ketowil344.workers.dev",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/ivideos.sbs\/linkws",
+                "headers": {
+                    "Host": "8wccc4a94-term-4a94.ketowil344.workers.dev"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 10",
             "type": "vmess",
             "server": "50.114.243.61",
             "server_port": 43834,
