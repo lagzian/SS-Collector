@@ -119,7 +119,10 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 18",
                 "🇷🇺RU | 🟢 | vmess | @v2ray1_ng | 8",
                 "🇲🇽MX | 🟢 | vmess | @v2ray1_ng | 9",
-                "🇵🇱PL | 🟢 | vmess | @ConfigsHUB | 16",
+                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 1",
+                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 2",
+                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 3",
+                "🇨🇳CN | 🟢 | vmess | @ConfigsHUB | 13",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -147,7 +150,10 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 18",
                 "🇷🇺RU | 🟢 | vmess | @v2ray1_ng | 8",
                 "🇲🇽MX | 🟢 | vmess | @v2ray1_ng | 9",
-                "🇵🇱PL | 🟢 | vmess | @ConfigsHUB | 16",
+                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 1",
+                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 2",
+                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 3",
+                "🇨🇳CN | 🟢 | vmess | @ConfigsHUB | 13",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -440,11 +446,83 @@
             }
         },
         {
-            "tag": "🇵🇱PL | 🟢 | vmess | @ConfigsHUB | 16",
+            "tag": "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 1",
             "type": "vmess",
-            "server": "128.204.223.115",
-            "server_port": 44085,
-            "uuid": "1db458f2-5df2-4fa5-8754-497c7ef0681b",
+            "server": "194.87.68.196",
+            "server_port": 19634,
+            "uuid": "6b1e32b6-b97a-46d8-84fe-206f3a03dde0",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 2",
+            "type": "vmess",
+            "server": "46.29.161.109",
+            "server_port": 63190,
+            "uuid": "3de377ec-5031-4199-8d14-491702ff3665",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 3",
+            "type": "vmess",
+            "server": "46.29.161.224",
+            "server_port": 63190,
+            "uuid": "99eaacdd-fdfb-4635-a2b0-def0f924b52d",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇨🇳CN | 🟢 | vmess | @ConfigsHUB | 13",
+            "type": "vmess",
+            "server": "103.184.44.65",
+            "server_port": 80,
+            "uuid": "9beea9cb-b258-f1a6-f9ee-8a5d663f4f4d",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
