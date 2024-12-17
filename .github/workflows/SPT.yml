@@ -260,7 +260,7 @@ jobs:
               log_message("Starting speed test...")
               
               try:
-                  with open("./ss/vless_vip.txt", "r") as f:
+                  with open("./VLESS/vless_vip.txt", "r") as f:
                       configs = f.read().splitlines()
                   log_message(f"Loaded {len(configs)} configs")
               except Exception as e:
