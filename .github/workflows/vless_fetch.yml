@@ -14,7 +14,7 @@ jobs:
         
       - name: Set up environment
         run: |
-          mkdir -p ./ss
+          mkdir -p ./VLESS
           
       - name: Download and Process VLESS Configs
         run: |
@@ -44,7 +44,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git add ./ss/vless_vip.txt
+          git add ./VLESS/vless_vip.txt
           git commit -m "Update VLESS configs"
           git push
         env:
@@ -52,13 +52,13 @@ jobs:
 
       - name: Error Check
         run: |
-          if [ ! -f ./ss/vless_vip.txt ]; then
+          if [ ! -f ./VLESS/vless_vip.txt ]; then
             echo "Error: Config file was not created!"
             exit 1
           fi
-          if [ ! -s ./ss/vless_vip.txt ]; then
+          if [ ! -s ./VLESS/vless_vip.txt ]; then
             echo "Warning: Config file is empty!"
           fi
           
           # Display number of configs
-          echo "Number of configs after processing: $(wc -l < ./ss/vless_vip.txt)"
+          echo "Number of configs after processing: $(wc -l < ./VLESS/vless_vip.txt)"
