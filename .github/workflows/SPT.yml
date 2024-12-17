@@ -1,7 +1,7 @@
 name: VLESS Speed Test
 on:
   schedule:
-    - cron: "0 */2 * * *"
+    - cron: "0 */2 * * *"  # Runs every 2 hours
   workflow_dispatch:
 
 jobs:
@@ -10,7 +10,33 @@ jobs:
     timeout-minutes: 30
     
     steps:
-      # Previous steps remain the same until the Python script
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl wget jq
+          
+          echo "Installing v2ray..."
+          curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh -o install-v2ray.sh
+          chmod +x install-v2ray.sh
+          sudo ./install-v2ray.sh
+          
+          echo "Verifying v2ray installation..."
+          v2ray version
+          
+          echo "Setting permissions..."
+          sudo chmod 755 /usr/local/bin/v2ray
+          sudo chmod 755 /usr/local/share/v2ray -R
+          
+          echo "Installing Python packages..."
+          pip install requests
 
       - name: Create Speed Test Script
         run: |
@@ -167,7 +193,7 @@ jobs:
               log_message("Starting speed test...")
               
               # Load configs
-              with open("./VLESS/vless_vip.txt", "r") as f:
+              with open("./ss/vless_vip.txt", "r") as f:
                   configs = f.read().splitlines()
               
               # Quick filter viable configs
@@ -209,4 +235,35 @@ jobs:
               main()
           EOF
 
-      # Rest of the workflow remains the same
+      - name: Set up sudo access
+        run: |
+          echo "runner ALL=(ALL) NOPASSWD: /usr/local/bin/v2ray, /usr/bin/kill" | sudo tee /etc/sudoers.d/v2ray-runner
+
+      - name: Run Speed Test
+        timeout-minutes: 25
+        run: |
+          echo "Starting speed test script..."
+          python -u test_configs.py
+        
+      - name: Check Results
+        id: check_results
+        run: |
+          if [ -f speed_test_results.md ]; then
+            echo "results=true" >> $GITHUB_OUTPUT
+            echo "Number of configs tested:"
+            grep "Total Configs Tested:" speed_test_results.md
+          else
+            echo "results=false" >> $GITHUB_OUTPUT
+            echo "No results file found"
+          fi
+
+      - name: Commit and Push Results
+        if: steps.check_results.outputs.results == 'true'
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add speed_test_results.md
+          git commit -m "Update speed test results"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
