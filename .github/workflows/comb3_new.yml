@@ -89,7 +89,7 @@ jobs:
           cat "${GITHUB_WORKSPACE}/${SHADOWSOCKS_OUTPUT_FILE}" | base64 -w 0 > "${GITHUB_WORKSPACE}/${SHADOWSOCKS_BASE64_FILE}"
           
           # Generate YAML and JSON
-          curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/V2RayAggregator/master/Eternity.txt&type=ss&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/SS-Collector/main/shadowsockes.txt&type=clash&process=full"
           curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_SINGBOX_JSON_FILE}" -L "${SHADOWSOCKS_SINGBOX_URL}"
 
       # Commit Changes
