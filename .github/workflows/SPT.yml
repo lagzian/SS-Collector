@@ -62,58 +62,6 @@ jobs:
                   print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}")
                   sys.stdout.flush()
 
-          def quick_ping(host):
-              try:
-                  result = subprocess.run(
-                      ['ping', '-c', '1', '-W', '2', host],
-                      capture_output=True,
-                      text=True,
-                      timeout=3
-                  )
-                  return result.returncode == 0
-              except:
-                  return False
-
-          def detailed_ping(host):
-              try:
-                  ping_output = subprocess.run(
-                      ['ping', '-c', '2', '-W', '3', host],
-                      capture_output=True,
-                      text=True,
-                      timeout=5
-                  ).stdout
-                  
-                  if match := re.search(r'min/avg/max/mdev = \d+\.\d+/(\d+\.\d+)/\d+\.\d+/\d+\.\d+', ping_output):
-                      return float(match.group(1))
-                  return None
-              except:
-                  return None
-
-          def batch_quick_ping(configs, max_workers=50):
-              viable_configs = []
-              servers_tested = set()
-              
-              def process_config(config):
-                  try:
-                      server = config.split("://")[1].split("@")[1].split(":")[0]
-                      if server in servers_tested:
-                          return config, True
-                      servers_tested.add(server)
-                      return config, quick_ping(server)
-                  except:
-                      return config, False
-
-              log_message(f"Quick testing {len(configs)} configs...")
-              with ThreadPoolExecutor(max_workers=max_workers) as executor:
-                  futures = [executor.submit(process_config, config) for config in configs]
-                  for future in as_completed(futures):
-                      config, is_viable = future.result()
-                      if is_viable:
-                          viable_configs.append(config)
-
-              log_message(f"Found {len(viable_configs)} viable configs")
-              return viable_configs
-
           def parse_vless_url(url):
               try:
                   # Split URL into parts
@@ -144,6 +92,28 @@ jobs:
                   log_message(f"Error parsing URL: {str(e)}")
                   return None
 
+          def test_connection_speed(session, proxy_url, test_urls):
+              results = []
+              for url in test_urls:
+                  try:
+                      start_time = time.time()
+                      response = session.get(
+                          url,
+                          proxies={
+                              "http": proxy_url,
+                              "https": proxy_url
+                          },
+                          timeout=10,
+                          verify=False
+                      )
+                      if response.status_code == 204:  # Success for generate_204 endpoints
+                          delay = (time.time() - start_time) * 1000  # Convert to ms
+                          results.append(delay)
+                  except Exception as e:
+                      continue
+              
+              return min(results) if results else None
+
           def test_config(config):
               try:
                   parsed = parse_vless_url(config)
@@ -152,12 +122,6 @@ jobs:
                       
                   server = parsed["address"]
                   log_message(f"Testing server: {server}")
-                  
-                  # Get detailed ping
-                  ping_time = detailed_ping(server)
-                  if ping_time is None:
-                      log_message(f"Ping failed for {server}")
-                      return None
                   
                   # Create config file
                   config_path = f"config_{server}.json"
@@ -201,57 +165,70 @@ jobs:
                       }]
                   }
                   
-                  log_message(f"Created config for {server}")
+                  log_message(f"Testing connection for {server}")
                   with open(config_path, "w") as f:
                       json.dump(v2ray_config, f, indent=2)
                   
                   # Test connection
                   v2ray_process = subprocess.Popen(
                       ["sudo", "v2ray", "run", "-config", config_path],
-                      stdout=subprocess.PIPE,
-                      stderr=subprocess.PIPE
+                      stdout=subprocess.DEVNULL,
+                      stderr=subprocess.DEVNULL
                   )
                   
-                  time.sleep(2)  # Give more time to establish connection
+                  time.sleep(2)  # Wait for v2ray to start
                   
                   try:
-                      start_time = time.time()
                       session = requests.Session()
                       session.trust_env = False
                       
-                      # Try HTTP first
-                      response = session.get(
-                          "http://www.google.com",
-                          proxies={
-                              "http": "http://127.0.0.1:10809",
-                              "https": "http://127.0.0.1:10809"
-                          },
-                          timeout=10,
-                          verify=False
-                      )
-                      response_time = (time.time() - start_time) * 1000
-                      log_message(f"Success: {server} responded in {response_time:.1f}ms")
+                      # Test URLs - multiple reliable endpoints
+                      test_urls = [
+                          "http://www.gstatic.com/generate_204",
+                          "http://www.qualcomm.cn/generate_204",
+                          "http://cp.cloudflare.com/generate_204",
+                          "http://captive.apple.com/generate_204",
+                          "http://connect.rom.miui.com/generate_204"
+                      ]
+                      
+                      proxy_url = "http://127.0.0.1:10809"
+                      
+                      # Test initial connectivity
+                      initial_delay = test_connection_speed(session, proxy_url, test_urls)
+                      if initial_delay is None:
+                          log_message(f"Initial connection failed for {server}")
+                          return None
+                      
+                      # Do multiple tests to get average
+                      delays = []
+                      for _ in range(3):  # Test 3 times
+                          delay = test_connection_speed(session, proxy_url, test_urls)
+                          if delay is not None:
+                              delays.append(delay)
+                          time.sleep(0.5)  # Small delay between tests
+                      
+                      if not delays:
+                          return None
+                      
+                      avg_delay = sum(delays) / len(delays)
+                      log_message(f"Success: {server} average delay: {avg_delay:.1f}ms")
+                      
+                      return {
+                          "config": config,
+                          "delay": avg_delay,
+                          "best_response": min(delays),
+                          "server": server
+                      }
+                      
                   except Exception as e:
                       log_message(f"Connection failed for {server}: {str(e)}")
-                      response_time = None
+                      return None
                   finally:
-                      stdout, stderr = v2ray_process.communicate(timeout=1)
-                      if stderr:
-                          log_message(f"V2Ray errors for {server}: {stderr.decode()}")
                       subprocess.run(["sudo", "kill", str(v2ray_process.pid)], 
                                   check=False, stdout=subprocess.DEVNULL, 
                                   stderr=subprocess.DEVNULL)
                       os.remove(config_path)
-                  
-                  if response_time is None:
-                      return None
                       
-                  return {
-                      "config": config,
-                      "ping": ping_time,
-                      "response_time": response_time,
-                      "server": server
-                  }
               except Exception as e:
                   log_message(f"Error testing {server if 'server' in locals() else 'unknown'}: {str(e)}")
                   return None
@@ -267,38 +244,35 @@ jobs:
                   log_message(f"Error loading configs: {str(e)}")
                   return
               
-              # Quick filter viable configs
-              viable_configs = batch_quick_ping(configs)
-              
-              # Test viable configs in detail
+              # Test configs
               results = []
               with ThreadPoolExecutor(max_workers=10) as executor:
                   future_to_config = {executor.submit(test_config, config): config 
-                                    for config in viable_configs}
+                                    for config in configs}
                   
                   completed = 0
                   for future in as_completed(future_to_config):
                       completed += 1
                       if completed % 10 == 0:
-                          log_message(f"Processed {completed}/{len(viable_configs)} configs")
+                          log_message(f"Processed {completed}/{len(configs)} configs")
                       
                       result = future.result()
                       if result:
                           results.append(result)
               
               # Sort and save results
-              results.sort(key=lambda x: x["ping"])
+              results.sort(key=lambda x: x["delay"])
               
               with open("speed_test_results.md", "w") as f:
                   f.write("# VLESS Config Speed Test Results\n\n")
                   f.write(f"Updated: {time.strftime('%Y-%m-%d %H:%M:%S UTC')}\n\n")
                   f.write(f"Total Configs Tested: {len(results)} out of {len(configs)}\n\n")
-                  f.write("| Server | Ping (ms) | Response Time (ms) | Config |\n")
-                  f.write("|--------|-----------|-------------------|--------|\n")
+                  f.write("| Server | Avg Delay (ms) | Best Response (ms) | Config |\n")
+                  f.write("|--------|---------------|-------------------|--------|\n")
                   
                   for result in results:
-                      f.write(f"| {result['server']} | {result['ping']:.1f} | "
-                             f"{result['response_time']:.1f} | `{result['config']}` |\n")
+                      f.write(f"| {result['server']} | {result['delay']:.1f} | "
+                             f"{result['best_response']:.1f} | `{result['config']}` |\n")
               
               log_message(f"Speed test completed. Found {len(results)} working configs.")
 
