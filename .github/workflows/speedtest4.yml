@@ -35,9 +35,7 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git pull origin main
-          git add ./SS/VL_Base
           git add ./SS/VL_64
-          git add ./SS/VL_32.txt
           git add LogInfo.txt
           git checkout main
           git commit -m "✔️ $(date '+%Y-%m-%d %H:%M:%S') Speed Test"
