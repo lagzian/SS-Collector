@@ -14,7 +14,7 @@ jobs:
         
       - name: Set up environment
         run: |
-          mkdir -p ./VLESS
+          mkdir -p ./ss
           
       - name: Download and Process VLESS Configs
         run: |
@@ -25,75 +25,10 @@ jobs:
           cat temp_b64.txt | base64 -d > temp_decoded.txt
           
           # Remove first and last lines and save to final file
-          sed '1d;$d' temp_decoded.txt > ./VLESS/vless_vip.txt
-          
-          # Select 100 random configs from different countries
-          # First, create a temporary file with line numbers
-          nl -w1 -s'|' ./VLESS/vless_vip.txt > temp_numbered.txt
-          
-          # Create arrays to store configs by country
-          declare -A country_configs
-          
-          # Read each line and categorize by country
-          while IFS='|' read -r num config; do
-            # Extract country from config (assuming it's in the name or address)
-            country=$(echo "$config" | grep -o -E 'name=[^,]*' | cut -d'=' -f2 | cut -d'-' -f1)
-            if [ -z "$country" ]; then
-              country="unknown"
-            fi
-            country_configs["$country"]="${country_configs["$country"]}$num "
-          done < temp_numbered.txt
-          
-          # Select configs randomly from each country
-          > ./VLESS/VL100.txt  # Clear/create the output file
-          total_selected=0
-          
-          # Calculate how many configs to select from each country
-          num_countries=${#country_configs[@]}
-          if [ $num_countries -eq 0 ]; then
-            num_countries=1
-          fi
-          per_country=$((100 / num_countries))
-          if [ $per_country -eq 0 ]; then
-            per_country=1
-          fi
-          
-          # Select configs from each country
-          for country in "${!country_configs[@]}"; do
-            configs=(${country_configs[$country]})
-            num_available=${#configs[@]}
-            num_to_select=$per_country
-            if [ $num_available -lt $num_to_select ]; then
-              num_to_select=$num_available
-            fi
-            
-            # Randomly select configs from this country
-            for i in $(shuf -i 0-$((num_available-1)) -n $num_to_select); do
-              line_num=${configs[$i]}
-              sed -n "${line_num}p" ./VLESS/vless_vip.txt >> ./VLESS/VL100.txt
-              ((total_selected++))
-              if [ $total_selected -ge 100 ]; then
-                break 2
-              fi
-            done
-          done
-          
-          # If we still need more configs to reach 100, add random ones
-          if [ $total_selected -lt 100 ]; then
-            remaining=$((100 - total_selected))
-            shuf -n $remaining ./VLESS/vless_vip.txt >> ./VLESS/VL100.txt
-          fi
-          
-          # Create B64 version
-          cat ./VLESS/VL100.txt | base64 -w 0 > ./VLESS/VL100B64.txt
+          sed '1d;$d' temp_decoded.txt > ./ss/vless_vip.txt
           
           # Clean up temporary files
-          rm temp_b64.txt temp_decoded.txt temp_numbered.txt
-          
-          # Display stats
-          echo "Total configs in main file: $(wc -l < ./VLESS/vless_vip.txt)"
-          echo "Total configs in VL100: $(wc -l < ./VLESS/VL100.txt)"
-          echo "Size of B64 file: $(wc -c < ./VLESS/VL100B64.txt) bytes"
+          rm temp_b64.txt temp_decoded.txt
           
       - name: Check for Changes
         id: check_changes
@@ -109,18 +44,21 @@ jobs:
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git add ./VLESS/vless_vip.txt ./VLESS/VL100.txt ./VLESS/VL100B64.txt
-          git commit -m "Update VLESS configs and random selection"
+          git add ./ss/vless_vip.txt
+          git commit -m "Update VLESS configs"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Error Check
         run: |
-          if [ ! -f ./VLESS/vless_vip.txt ] || [ ! -f ./VLESS/VL100.txt ] || [ ! -f ./VLESS/VL100B64.txt ]; then
-            echo "Error: One or more output files are missing!"
+          if [ ! -f ./ss/vless_vip.txt ]; then
+            echo "Error: Config file was not created!"
             exit 1
           fi
-          if [ ! -s ./VLESS/VL100.txt ]; then
-            echo "Warning: VL100 file is empty!"
+          if [ ! -s ./ss/vless_vip.txt ]; then
+            echo "Warning: Config file is empty!"
           fi
+          
+          # Display number of configs
+          echo "Number of configs after processing: $(wc -l < ./ss/vless_vip.txt)"
