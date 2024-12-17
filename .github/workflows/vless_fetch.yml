@@ -14,7 +14,7 @@ jobs:
         
       - name: Set up environment
         run: |
-          mkdir -p ./ss
+          mkdir -p ./VLESS
           
       - name: Download and Process VLESS Configs
         run: |
@@ -25,7 +25,29 @@ jobs:
           cat temp_b64.txt | base64 -d > temp_decoded.txt
           
           # Remove first and last lines and save to final file
-          sed '1d;$d' temp_decoded.txt > ./ss/vless_vip.txt
+          sed '1d;$d' temp_decoded.txt > ./VLESS/vless_vip.txt
+          
+          # Select 100 random configs from different centuries and save to VL100.txt
+          awk '
+          BEGIN { srand() }
+          {
+            century = substr($0, length($0)-4, 2)  # Extract country code
+            if (!(century in seen) || rand() < count[century]/seen[century]) {
+              if (count[century] < 10) {  # Limit to ~10 configs per country
+                selected[NR] = $0
+                count[century]++
+              }
+            }
+            seen[century]++
+          }
+          END {
+            # Print random selection, limit to 100
+            n = asort(selected)
+            limit = (n < 100) ? n : 100
+            for (i = 1; i <= limit; i++) {
+              print selected[i]
+            }
+          }' ./VLESS/vless_vip.txt | shuf -n 100 > ./VLESS/VL100.txt
           
           # Clean up temporary files
           rm temp_b64.txt temp_decoded.txt
@@ -44,7 +66,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git add ./ss/vless_vip.txt
+          git add ./VLESS/vless_vip.txt ./VLESS/VL100.txt
           git commit -m "Update VLESS configs"
           git push
         env:
@@ -52,13 +74,14 @@ jobs:
 
       - name: Error Check
         run: |
-          if [ ! -f ./ss/vless_vip.txt ]; then
-            echo "Error: Config file was not created!"
+          if [ ! -f ./VLESS/vless_vip.txt ] || [ ! -f ./VLESS/VL100.txt ]; then
+            echo "Error: One or more config files were not created!"
             exit 1
           fi
-          if [ ! -s ./ss/vless_vip.txt ]; then
-            echo "Warning: Config file is empty!"
+          if [ ! -s ./VLESS/vless_vip.txt ] || [ ! -s ./VLESS/VL100.txt ]; then
+            echo "Warning: One or more config files are empty!"
           fi
           
           # Display number of configs
-          echo "Number of configs after processing: $(wc -l < ./ss/vless_vip.txt)"
+          echo "Number of configs in vless_vip.txt: $(wc -l < ./VLESS/vless_vip.txt)"
+          echo "Number of configs in VL100.txt: $(wc -l < ./VLESS/VL100.txt)"
