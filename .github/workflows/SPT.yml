@@ -193,7 +193,7 @@ jobs:
               log_message("Starting speed test...")
               
               # Load configs
-              with open("./ss/vless_vip.txt", "r") as f:
+              with open("./VLESS/vless_vip.txt", "r") as f:
                   configs = f.read().splitlines()
               
               # Quick filter viable configs
