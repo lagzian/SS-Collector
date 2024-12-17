@@ -21,11 +21,13 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y curl wget jq
-          # Install v2ray core
-          wget https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
-          unzip v2ray-linux-64.zip
-          sudo mv v2ray /usr/local/bin/
-          sudo mv v2ctl /usr/local/bin/
+
+          # Install v2ray using official script
+          bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
+          
+          # Verify v2ray installation
+          v2ray version
+          
           # Install Python packages
           pip install requests python-ping
 
@@ -38,12 +40,70 @@ jobs:
           import requests
           from concurrent.futures import ThreadPoolExecutor
           import sys
+          import os
+          
+          def create_v2ray_config(vless_url):
+              try:
+                  # Parse VLESS URL
+                  parts = vless_url.split("://")[1].split("@")
+                  user_info = parts[0]
+                  server_info = parts[1].split("?")[0]
+                  server_address = server_info.split(":")[0]
+                  server_port = int(server_info.split(":")[1])
+                  
+                  # Create basic config
+                  config = {
+                      "inbounds": [{
+                          "port": 1080,
+                          "protocol": "socks",
+                          "settings": {
+                              "auth": "noauth",
+                              "udp": True
+                          }
+                      }],
+                      "outbounds": [{
+                          "protocol": "vless",
+                          "settings": {
+                              "vnext": [{
+                                  "address": server_address,
+                                  "port": server_port,
+                                  "users": [{
+                                      "id": user_info,
+                                      "encryption": "none"
+                                  }]
+                              }]
+                          },
+                          "streamSettings": {
+                              "network": "tcp"
+                          }
+                      }]
+                  }
+                  
+                  # Save config
+                  with open("config.json", "w") as f:
+                      json.dump(config, f)
+                  
+                  return True
+              except:
+                  return False
           
           def test_config(config):
               try:
-                  # Extract necessary info from VLESS config
-                  parts = config.split("://")[1].split("@")
-                  server = parts[1].split("?")[0].split(":")[0]
+                  # Create v2ray config
+                  if not create_v2ray_config(config):
+                      return None
+                  
+                  # Start v2ray
+                  v2ray_process = subprocess.Popen(
+                      ["v2ray", "run", "-config", "config.json"],
+                      stdout=subprocess.DEVNULL,
+                      stderr=subprocess.DEVNULL
+                  )
+                  
+                  time.sleep(2)  # Wait for v2ray to start
+                  
+                  # Extract server info
+                  server = config.split("://")[1].split("@")[1].split(":")[0]
                   
                   # Test ping
                   ping_result = subprocess.run(
@@ -54,6 +114,7 @@ jobs:
                   )
                   
                   if ping_result.returncode != 0:
+                      v2ray_process.terminate()
                       return None
                       
                   # Extract average ping time
@@ -63,6 +124,7 @@ jobs:
                           avg_ping = float(line.split("/")[4])
                           break
                   else:
+                      v2ray_process.terminate()
                       return None
                   
                   # Test connection speed using Google
@@ -71,14 +133,18 @@ jobs:
                       response = requests.get(
                           "https://www.google.com",
                           proxies={
-                              "http": f"socks5://127.0.0.1:1080",
-                              "https": f"socks5://127.0.0.1:1080"
+                              "http": "socks5://127.0.0.1:1080",
+                              "https": "socks5://127.0.0.1:1080"
                           },
                           timeout=10
                       )
                       response_time = (time.time() - start_time) * 1000  # Convert to ms
                   except:
+                      v2ray_process.terminate()
                       return None
+                  
+                  # Clean up
+                  v2ray_process.terminate()
                   
                   return {
                       "config": config,
@@ -87,15 +153,17 @@ jobs:
                       "server": server
                   }
               except:
+                  if 'v2ray_process' in locals():
+                      v2ray_process.terminate()
                   return None
           
           def main():
               # Read configs
-              with open("./VLESS/vless_vip.txt", "r") as f:
+              with open("./VLESS.vless_vip.txt", "r") as f:
                   configs = f.read().splitlines()
               
               results = []
-              with ThreadPoolExecutor(max_workers=5) as executor:
+              with ThreadPoolExecutor(max_workers=3) as executor:
                   futures = [executor.submit(test_config, config) for config in configs]
                   for future in futures:
                       result = future.result()
