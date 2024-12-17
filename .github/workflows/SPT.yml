@@ -36,7 +36,7 @@ jobs:
           sudo chmod 755 /usr/local/share/v2ray -R
           
           echo "Installing Python packages..."
-          pip install requests
+          pip install requests urllib3
 
       - name: Create Speed Test Script
         run: |
@@ -45,12 +45,16 @@ jobs:
           import subprocess
           import time
           import requests
+          import urllib3
           from concurrent.futures import ThreadPoolExecutor, as_completed
           import sys
           import os
           import re
           from queue import Queue
           from threading import Lock
+
+          # Disable SSL warnings
+          urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
           print_lock = Lock()
           def log_message(msg):
@@ -60,7 +64,6 @@ jobs:
 
           def quick_ping(host):
               try:
-                  # Use only 1 ping with 2 second timeout
                   result = subprocess.run(
                       ['ping', '-c', '1', '-W', '2', host],
                       capture_output=True,
@@ -73,7 +76,6 @@ jobs:
 
           def detailed_ping(host):
               try:
-                  # Use 2 pings for actual measurement
                   ping_output = subprocess.run(
                       ['ping', '-c', '2', '-W', '3', host],
                       capture_output=True,
@@ -112,131 +114,158 @@ jobs:
               log_message(f"Found {len(viable_configs)} viable configs")
               return viable_configs
 
-          def test_config(config):
-    try:
-        server = config.split("://")[1].split("@")[1].split(":")[0]
-        log_message(f"Testing server: {server}")
-        
-        # Get detailed ping
-        ping_time = detailed_ping(server)
-        if ping_time is None:
-            log_message(f"Ping failed for {server}")
-            return None
-        
-        # Create config file
-        config_path = f"config_{server}.json"
-        parts = config.split("://")[1].split("@")
-        user_info = parts[0]
-        server_info = parts[1].split("?")[0]
-        server_port = int(server_info.split(":")[1])
-        
-        # Extract additional parameters if they exist
-        params = {}
-        if "?" in config:
-            param_string = config.split("?")[1]
-            for param in param_string.split("&"):
-                if "=" in param:
-                    key, value = param.split("=")
-                    params[key] = value
+          def parse_vless_url(url):
+              try:
+                  # Split URL into parts
+                  main_part = url.split("?")[0]
+                  params_part = url.split("?")[1] if "?" in url else ""
+                  
+                  # Parse main parts
+                  protocol, rest = main_part.split("://")
+                  user_info, server_info = rest.split("@")
+                  server_address, server_port = server_info.split(":")
+                  
+                  # Parse parameters
+                  params = {}
+                  if params_part:
+                      for param in params_part.split("&"):
+                          if "=" in param:
+                              key, value = param.split("=")
+                              params[key] = value
+                  
+                  return {
+                      "protocol": protocol,
+                      "user_id": user_info,
+                      "address": server_address,
+                      "port": int(server_port),
+                      "params": params
+                  }
+              except Exception as e:
+                  log_message(f"Error parsing URL: {str(e)}")
+                  return None
 
-        # Create v2ray config with all necessary parameters
-        v2ray_config = {
-            "inbounds": [{
-                "port": 10809,
-                "protocol": "http",
-                "settings": {
-                    "timeout": 5
-                }
-            }],
-            "outbounds": [{
-                "protocol": "vless",
-                "settings": {
-                    "vnext": [{
-                        "address": server,
-                        "port": server_port,
-                        "users": [{
-                            "id": user_info,
-                            "encryption": "none",
-                            "flow": params.get("flow", "")
-                        }]
-                    }]
-                },
-                "streamSettings": {
-                    "network": params.get("type", "tcp"),
-                    "security": params.get("security", "none"),
-                    "tlsSettings": {
-                        "serverName": params.get("sni", server),
-                        "allowInsecure": True
-                    } if params.get("security") == "tls" else None,
-                    "wsSettings": {
-                        "path": params.get("path", "/"),
-                        "headers": {
-                            "Host": params.get("host", server)
-                        }
-                    } if params.get("type") == "ws" else None
-                }
-            }]
-        }
-        
-        log_message(f"Created config for {server}")
-        with open(config_path, "w") as f:
-            json.dump(v2ray_config, f, indent=2)
-        
-        # Test connection
-        v2ray_process = subprocess.Popen(
-            ["sudo", "v2ray", "run", "-config", config_path],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
-        )
-        
-        time.sleep(2)  # Give more time to establish connection
-        
-        try:
-            start_time = time.time()
-            session = requests.Session()
-            session.trust_env = False
-            response = session.get(
-                "http://www.google.com",  # Try HTTP first
-                proxies={
-                    "http": "http://127.0.0.1:10809",
-                    "https": "http://127.0.0.1:10809"
-                },
-                timeout=10,
-                verify=False
-            )
-            response_time = (time.time() - start_time) * 1000
-            log_message(f"Success: {server} responded in {response_time:.1f}ms")
-        except Exception as e:
-            log_message(f"Connection failed for {server}: {str(e)}")
-            response_time = None
-        finally:
-            stdout, stderr = v2ray_process.communicate(timeout=1)
-            if stderr:
-                log_message(f"V2Ray errors for {server}: {stderr.decode()}")
-            subprocess.run(["sudo", "kill", str(v2ray_process.pid)], 
-                        check=False, stdout=subprocess.DEVNULL, 
-                        stderr=subprocess.DEVNULL)
-            os.remove(config_path)
-        
-        if response_time is None:
-            return None
-            
-        return {
-            "config": config,
-            "ping": ping_time,
-            "response_time": response_time,
-            "server": server
-        }
-    except Exception as e:
-        log_message(f"Error testing {server}: {str(e)}")
-        return None
+          def test_config(config):
+              try:
+                  parsed = parse_vless_url(config)
+                  if not parsed:
+                      return None
+                      
+                  server = parsed["address"]
+                  log_message(f"Testing server: {server}")
+                  
+                  # Get detailed ping
+                  ping_time = detailed_ping(server)
+                  if ping_time is None:
+                      log_message(f"Ping failed for {server}")
+                      return None
+                  
+                  # Create config file
+                  config_path = f"config_{server}.json"
+                  
+                  # Create v2ray config
+                  v2ray_config = {
+                      "inbounds": [{
+                          "port": 10809,
+                          "protocol": "http",
+                          "settings": {
+                              "timeout": 5
+                          }
+                      }],
+                      "outbounds": [{
+                          "protocol": "vless",
+                          "settings": {
+                              "vnext": [{
+                                  "address": server,
+                                  "port": parsed["port"],
+                                  "users": [{
+                                      "id": parsed["user_id"],
+                                      "encryption": "none",
+                                      "flow": parsed["params"].get("flow", "")
+                                  }]
+                              }]
+                          },
+                          "streamSettings": {
+                              "network": parsed["params"].get("type", "tcp"),
+                              "security": parsed["params"].get("security", "none"),
+                              "tlsSettings": {
+                                  "serverName": parsed["params"].get("sni", server),
+                                  "allowInsecure": True
+                              } if parsed["params"].get("security") == "tls" else None,
+                              "wsSettings": {
+                                  "path": parsed["params"].get("path", "/"),
+                                  "headers": {
+                                      "Host": parsed["params"].get("host", server)
+                                  }
+                              } if parsed["params"].get("type") == "ws" else None
+                          }
+                      }]
+                  }
+                  
+                  log_message(f"Created config for {server}")
+                  with open(config_path, "w") as f:
+                      json.dump(v2ray_config, f, indent=2)
+                  
+                  # Test connection
+                  v2ray_process = subprocess.Popen(
+                      ["sudo", "v2ray", "run", "-config", config_path],
+                      stdout=subprocess.PIPE,
+                      stderr=subprocess.PIPE
+                  )
+                  
+                  time.sleep(2)  # Give more time to establish connection
+                  
+                  try:
+                      start_time = time.time()
+                      session = requests.Session()
+                      session.trust_env = False
+                      
+                      # Try HTTP first
+                      response = session.get(
+                          "http://www.google.com",
+                          proxies={
+                              "http": "http://127.0.0.1:10809",
+                              "https": "http://127.0.0.1:10809"
+                          },
+                          timeout=10,
+                          verify=False
+                      )
+                      response_time = (time.time() - start_time) * 1000
+                      log_message(f"Success: {server} responded in {response_time:.1f}ms")
+                  except Exception as e:
+                      log_message(f"Connection failed for {server}: {str(e)}")
+                      response_time = None
+                  finally:
+                      stdout, stderr = v2ray_process.communicate(timeout=1)
+                      if stderr:
+                          log_message(f"V2Ray errors for {server}: {stderr.decode()}")
+                      subprocess.run(["sudo", "kill", str(v2ray_process.pid)], 
+                                  check=False, stdout=subprocess.DEVNULL, 
+                                  stderr=subprocess.DEVNULL)
+                      os.remove(config_path)
+                  
+                  if response_time is None:
+                      return None
+                      
+                  return {
+                      "config": config,
+                      "ping": ping_time,
+                      "response_time": response_time,
+                      "server": server
+                  }
+              except Exception as e:
+                  log_message(f"Error testing {server if 'server' in locals() else 'unknown'}: {str(e)}")
+                  return None
 
           def main():
               log_message("Starting speed test...")
               
-              # Load configs
-              with open("./VLESS/vless_vip.txt", "r") as f:
-                  configs = f.read().splitlines()
+              try:
+                  with open("./ss/vless_vip.txt", "r") as f:
+                      configs = f.read().splitlines()
+                  log_message(f"Loaded {len(configs)} configs")
+              except Exception as e:
+                  log_message(f"Error loading configs: {str(e)}")
+                  return
               
               # Quick filter viable configs
               viable_configs = batch_quick_ping(configs)
