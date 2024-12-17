@@ -35,7 +35,7 @@ jobs:
           sudo chmod 755 /usr/local/share/v2ray -R
           
           # Install Python packages
-          pip install requests python-ping
+          pip install requests
 
       - name: Create Speed Test Script
         run: |
@@ -47,6 +47,22 @@ jobs:
           from concurrent.futures import ThreadPoolExecutor
           import sys
           import os
+          import re
+          
+          def get_ping(host):
+              try:
+                  ping_output = subprocess.run(
+                      ['ping', '-c', '3', host],
+                      capture_output=True,
+                      text=True,
+                      timeout=10
+                  ).stdout
+                  
+                  if match := re.search(r'min/avg/max/mdev = \d+\.\d+/(\d+\.\d+)/\d+\.\d+/\d+\.\d+', ping_output):
+                      return float(match.group(1))
+                  return None
+              except:
+                  return None
           
           def create_v2ray_config(vless_url):
               try:
@@ -102,6 +118,14 @@ jobs:
                   if not config_path:
                       return None
                   
+                  # Extract server info
+                  server = config.split("://")[1].split("@")[1].split(":")[0]
+                  
+                  # Test ping first
+                  ping_time = get_ping(server)
+                  if ping_time is None:
+                      return None
+                  
                   # Start v2ray with sudo
                   v2ray_process = subprocess.Popen(
                       ["sudo", "v2ray", "run", "-config", config_path],
@@ -110,31 +134,6 @@ jobs:
                   )
                   
                   time.sleep(2)  # Wait for v2ray to start
-                  
-                  # Extract server info
-                  server = config.split("://")[1].split("@")[1].split(":")[0]
-                  
-                  # Test ping
-                  ping_result = subprocess.run(
-                      ["ping", "-c", "3", server],
-                      capture_output=True,
-                      text=True,
-                      timeout=10
-                  )
-                  
-                  if ping_result.returncode != 0:
-                      subprocess.run(["sudo", "kill", str(v2ray_process.pid)], check=False)
-                      return None
-                      
-                  # Extract average ping time
-                  ping_lines = ping_result.stdout.split("\n")
-                  for line in ping_lines:
-                      if "avg" in line:
-                          avg_ping = float(line.split("/")[4])
-                          break
-                  else:
-                      subprocess.run(["sudo", "kill", str(v2ray_process.pid)], check=False)
-                      return None
                   
                   # Test connection speed using Google
                   start_time = time.time()
@@ -157,7 +156,7 @@ jobs:
                   
                   return {
                       "config": config,
-                      "ping": avg_ping,
+                      "ping": ping_time,
                       "response_time": response_time,
                       "server": server
                   }
