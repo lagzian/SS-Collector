@@ -1,0 +1,48 @@
+name: Speed_Test4
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+jobs:
+  main:
+    name: SpeedTest4
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.7"
+
+      - name: Install cython
+        run: pip install cython
+
+      - name: Install Requirements
+        run: |
+          pip install -r ./utils/requirements.txt
+
+      - name: Run Lite Speedtest
+        run: |
+          sleep 5
+          sudo sh ./utils/speedtest/speedtest4.sh
+          python ./utils/speedtest/output3.py
+
+      - name: Commit Changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git pull origin main
+          git add ./SS/VL_Base
+          git add ./SS/VL_64
+          git add ./SS/VL_32.txt
+          git add LogInfo.txt
+          git checkout main
+          git commit -m "✔️ $(date '+%Y-%m-%d %H:%M:%S') Speed Test"
+
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
