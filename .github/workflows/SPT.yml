@@ -1,0 +1,144 @@
+name: VLESS Speed Test
+on:
+  schedule:
+    - cron: "0 */2 * * *"  # Runs every 2 hours
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  speed-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl wget jq
+          # Install v2ray core
+          wget https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+          unzip v2ray-linux-64.zip
+          sudo mv v2ray /usr/local/bin/
+          sudo mv v2ctl /usr/local/bin/
+          # Install Python packages
+          pip install requests python-ping
+
+      - name: Create Speed Test Script
+        run: |
+          cat > test_configs.py << 'EOF'
+          import json
+          import subprocess
+          import time
+          import requests
+          from concurrent.futures import ThreadPoolExecutor
+          import sys
+          
+          def test_config(config):
+              try:
+                  # Extract necessary info from VLESS config
+                  parts = config.split("://")[1].split("@")
+                  server = parts[1].split("?")[0].split(":")[0]
+                  
+                  # Test ping
+                  ping_result = subprocess.run(
+                      ["ping", "-c", "3", server],
+                      capture_output=True,
+                      text=True,
+                      timeout=10
+                  )
+                  
+                  if ping_result.returncode != 0:
+                      return None
+                      
+                  # Extract average ping time
+                  ping_lines = ping_result.stdout.split("\n")
+                  for line in ping_lines:
+                      if "avg" in line:
+                          avg_ping = float(line.split("/")[4])
+                          break
+                  else:
+                      return None
+                  
+                  # Test connection speed using Google
+                  start_time = time.time()
+                  try:
+                      response = requests.get(
+                          "https://www.google.com",
+                          proxies={
+                              "http": f"socks5://127.0.0.1:1080",
+                              "https": f"socks5://127.0.0.1:1080"
+                          },
+                          timeout=10
+                      )
+                      response_time = (time.time() - start_time) * 1000  # Convert to ms
+                  except:
+                      return None
+                  
+                  return {
+                      "config": config,
+                      "ping": avg_ping,
+                      "response_time": response_time,
+                      "server": server
+                  }
+              except:
+                  return None
+          
+          def main():
+              # Read configs
+              with open("./VLESS/vless_vip.txt", "r") as f:
+                  configs = f.read().splitlines()
+              
+              results = []
+              with ThreadPoolExecutor(max_workers=5) as executor:
+                  futures = [executor.submit(test_config, config) for config in configs]
+                  for future in futures:
+                      result = future.result()
+                      if result:
+                          results.append(result)
+              
+              # Sort by ping time
+              results.sort(key=lambda x: x["ping"])
+              
+              # Write results
+              with open("speed_test_results.md", "w") as f:
+                  f.write("# VLESS Config Speed Test Results\n\n")
+                  f.write("Updated: " + time.strftime("%Y-%m-%d %H:%M:%S UTC\n\n"))
+                  f.write("| Server | Ping (ms) | Response Time (ms) | Config |\n")
+                  f.write("|--------|-----------|-------------------|--------|\n")
+                  
+                  for result in results:
+                      f.write(f"| {result['server']} | {result['ping']:.1f} | {result['response_time']:.1f} | `{result['config']}` |\n")
+          
+          if __name__ == "__main__":
+              main()
+          EOF
+
+      - name: Run Speed Test
+        run: |
+          python test_configs.py
+          
+      - name: Check Results
+        id: check_results
+        run: |
+          if [ -f speed_test_results.md ]; then
+            echo "results=true" >> $GITHUB_OUTPUT
+          else
+            echo "results=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and Push Results
+        if: steps.check_results.outputs.results == 'true'
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add speed_test_results.md
+          git commit -m "Update speed test results"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
