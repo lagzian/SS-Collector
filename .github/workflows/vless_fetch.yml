@@ -21,11 +21,14 @@ jobs:
           # Download B64 configs
           curl -sSL "https://raw.githubusercontent.com/lagzian/new-configs-collector/main/protocols/vless" -o temp_b64.txt
           
-          # Decode B64 and save to file
-          cat temp_b64.txt | base64 -d > ./ss/vless_vip.txt
+          # Decode B64 to temporary file
+          cat temp_b64.txt | base64 -d > temp_decoded.txt
           
-          # Clean up
-          rm temp_b64.txt
+          # Remove first and last lines and save to final file
+          sed '1d;$d' temp_decoded.txt > ./VLESS/vless_vip.txt
+          
+          # Clean up temporary files
+          rm temp_b64.txt temp_decoded.txt
           
       - name: Check for Changes
         id: check_changes
@@ -56,3 +59,6 @@ jobs:
           if [ ! -s ./ss/vless_vip.txt ]; then
             echo "Warning: Config file is empty!"
           fi
+          
+          # Display number of configs
+          echo "Number of configs after processing: $(wc -l < ./ss/vless_vip.txt)"
