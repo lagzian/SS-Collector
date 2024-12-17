@@ -7,36 +7,10 @@ on:
 jobs:
   speed-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 15  # Add overall timeout
+    timeout-minutes: 30
     
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-        
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-          
-      - name: Install Dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y curl wget jq
-          
-          echo "Installing v2ray..."
-          curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh -o install-v2ray.sh
-          chmod +x install-v2ray.sh
-          sudo ./install-v2ray.sh
-          
-          echo "Verifying v2ray installation..."
-          v2ray version
-          
-          echo "Setting permissions..."
-          sudo chmod 755 /usr/local/bin/v2ray
-          sudo chmod 755 /usr/local/share/v2ray -R
-          
-          echo "Installing Python packages..."
-          pip install requests
+      # Previous steps remain the same until the Python script
 
       - name: Create Speed Test Script
         run: |
@@ -45,124 +19,140 @@ jobs:
           import subprocess
           import time
           import requests
-          from concurrent.futures import ThreadPoolExecutor
+          from concurrent.futures import ThreadPoolExecutor, as_completed
           import sys
           import os
           import re
+          from queue import Queue
+          from threading import Lock
 
+          print_lock = Lock()
           def log_message(msg):
-              print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}")
-              sys.stdout.flush()
+              with print_lock:
+                  print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {msg}")
+                  sys.stdout.flush()
 
-          def get_ping(host):
+          def quick_ping(host):
               try:
-                  log_message(f"Pinging {host}...")
-                  ping_output = subprocess.run(
-                      ['ping', '-c', '3', '-W', '5', host],  # Add 5 second timeout
+                  # Use only 1 ping with 2 second timeout
+                  result = subprocess.run(
+                      ['ping', '-c', '1', '-W', '2', host],
                       capture_output=True,
                       text=True,
-                      timeout=10
+                      timeout=3
+                  )
+                  return result.returncode == 0
+              except:
+                  return False
+
+          def detailed_ping(host):
+              try:
+                  # Use 2 pings for actual measurement
+                  ping_output = subprocess.run(
+                      ['ping', '-c', '2', '-W', '3', host],
+                      capture_output=True,
+                      text=True,
+                      timeout=5
                   ).stdout
                   
                   if match := re.search(r'min/avg/max/mdev = \d+\.\d+/(\d+\.\d+)/\d+\.\d+/\d+\.\d+', ping_output):
-                      ping_time = float(match.group(1))
-                      log_message(f"Ping result for {host}: {ping_time}ms")
-                      return ping_time
-                  log_message(f"Could not parse ping result for {host}")
+                      return float(match.group(1))
                   return None
-              except Exception as e:
-                  log_message(f"Ping error for {host}: {str(e)}")
+              except:
                   return None
 
-          def create_v2ray_config(vless_url):
+          def batch_quick_ping(configs, max_workers=50):
+              viable_configs = []
+              servers_tested = set()
+              
+              def process_config(config):
+                  try:
+                      server = config.split("://")[1].split("@")[1].split(":")[0]
+                      if server in servers_tested:
+                          return config, True
+                      servers_tested.add(server)
+                      return config, quick_ping(server)
+                  except:
+                      return config, False
+
+              log_message(f"Quick testing {len(configs)} configs...")
+              with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                  futures = [executor.submit(process_config, config) for config in configs]
+                  for future in as_completed(futures):
+                      config, is_viable = future.result()
+                      if is_viable:
+                          viable_configs.append(config)
+
+              log_message(f"Found {len(viable_configs)} viable configs")
+              return viable_configs
+
+          def test_config(config):
               try:
-                  log_message(f"Creating config for {vless_url[:30]}...")
-                  parts = vless_url.split("://")[1].split("@")
+                  server = config.split("://")[1].split("@")[1].split(":")[0]
+                  
+                  # Get detailed ping
+                  ping_time = detailed_ping(server)
+                  if ping_time is None:
+                      return None
+                  
+                  # Create config file
+                  config_path = f"config_{server}.json"
+                  parts = config.split("://")[1].split("@")
                   user_info = parts[0]
                   server_info = parts[1].split("?")[0]
-                  server_address = server_info.split(":")[0]
                   server_port = int(server_info.split(":")[1])
                   
-                  config = {
+                  v2ray_config = {
                       "inbounds": [{
                           "port": 1080,
                           "protocol": "socks",
-                          "settings": {
-                              "auth": "noauth",
-                              "udp": True
-                          }
+                          "settings": {"auth": "noauth", "udp": True}
                       }],
                       "outbounds": [{
                           "protocol": "vless",
                           "settings": {
                               "vnext": [{
-                                  "address": server_address,
+                                  "address": server,
                                   "port": server_port,
-                                  "users": [{
-                                      "id": user_info,
-                                      "encryption": "none"
-                                  }]
+                                  "users": [{"id": user_info, "encryption": "none"}]
                               }]
                           },
-                          "streamSettings": {
-                              "network": "tcp"
-                          }
+                          "streamSettings": {"network": "tcp"}
                       }]
                   }
                   
-                  config_path = os.path.join(os.getcwd(), f"config_{server_address}.json")
                   with open(config_path, "w") as f:
-                      json.dump(config, f)
+                      json.dump(v2ray_config, f)
                   
-                  return config_path
-              except Exception as e:
-                  log_message(f"Config creation error: {str(e)}")
-                  return None
-
-          def test_config(config):
-              try:
-                  log_message(f"Testing config: {config[:30]}...")
-                  
-                  config_path = create_v2ray_config(config)
-                  if not config_path:
-                      return None
-                  
-                  server = config.split("://")[1].split("@")[1].split(":")[0]
-                  
-                  ping_time = get_ping(server)
-                  if ping_time is None:
-                      return None
-                  
-                  log_message(f"Starting v2ray for {server}...")
+                  # Test connection
                   v2ray_process = subprocess.Popen(
                       ["sudo", "v2ray", "run", "-config", config_path],
-                      stdout=subprocess.PIPE,
-                      stderr=subprocess.PIPE
+                      stdout=subprocess.DEVNULL,
+                      stderr=subprocess.DEVNULL
                   )
                   
-                  time.sleep(2)
+                  time.sleep(1)
                   
-                  log_message(f"Testing connection for {server}...")
-                  start_time = time.time()
                   try:
+                      start_time = time.time()
                       response = requests.get(
                           "https://www.google.com",
-                          proxies={
-                              "http": "socks5://127.0.0.1:1080",
-                              "https": "socks5://127.0.0.1:1080"
-                          },
-                          timeout=10
+                          proxies={"http": "socks5://127.0.0.1:1080",
+                                 "https": "socks5://127.0.0.1:1080"},
+                          timeout=5
                       )
                       response_time = (time.time() - start_time) * 1000
-                      log_message(f"Connection test successful for {server}")
-                  except Exception as e:
-                      log_message(f"Connection test failed for {server}: {str(e)}")
-                      subprocess.run(["sudo", "kill", str(v2ray_process.pid)], check=False)
+                  except:
+                      response_time = None
+                  finally:
+                      subprocess.run(["sudo", "kill", str(v2ray_process.pid)], 
+                                  check=False, stdout=subprocess.DEVNULL, 
+                                  stderr=subprocess.DEVNULL)
+                      os.remove(config_path)
+                  
+                  if response_time is None:
                       return None
-                  
-                  subprocess.run(["sudo", "kill", str(v2ray_process.pid)], check=False)
-                  os.remove(config_path)
-                  
+                      
                   return {
                       "config": config,
                       "ping": ping_time,
@@ -170,34 +160,36 @@ jobs:
                       "server": server
                   }
               except Exception as e:
-                  log_message(f"Test failed: {str(e)}")
+                  log_message(f"Error testing {server}: {str(e)}")
                   return None
 
           def main():
               log_message("Starting speed test...")
               
-              try:
-                  with open("./VLESS/vless_vip.txt", "r") as f:
-                      configs = f.read().splitlines()
-                  log_message(f"Loaded {len(configs)} configs")
-              except Exception as e:
-                  log_message(f"Error loading configs: {str(e)}")
-                  return
+              # Load configs
+              with open("./VLESS/vless_vip.txt", "r") as f:
+                  configs = f.read().splitlines()
               
+              # Quick filter viable configs
+              viable_configs = batch_quick_ping(configs)
+              
+              # Test viable configs in detail
               results = []
-              with ThreadPoolExecutor(max_workers=2) as executor:
-                  futures = [executor.submit(test_config, config) for config in configs]
-                  for i, future in enumerate(futures):
-                      try:
-                          result = future.result(timeout=60)  # 60 second timeout per config
-                          if result:
-                              results.append(result)
-                          log_message(f"Processed config {i+1}/{len(configs)}")
-                      except Exception as e:
-                          log_message(f"Error processing config {i+1}: {str(e)}")
+              with ThreadPoolExecutor(max_workers=10) as executor:
+                  future_to_config = {executor.submit(test_config, config): config 
+                                    for config in viable_configs}
+                  
+                  completed = 0
+                  for future in as_completed(future_to_config):
+                      completed += 1
+                      if completed % 10 == 0:
+                          log_message(f"Processed {completed}/{len(viable_configs)} configs")
+                      
+                      result = future.result()
+                      if result:
+                          results.append(result)
               
-              log_message(f"Successfully tested {len(results)} configs")
-              
+              # Sort and save results
               results.sort(key=lambda x: x["ping"])
               
               with open("speed_test_results.md", "w") as f:
@@ -208,43 +200,13 @@ jobs:
                   f.write("|--------|-----------|-------------------|--------|\n")
                   
                   for result in results:
-                      f.write(f"| {result['server']} | {result['ping']:.1f} | {result['response_time']:.1f} | `{result['config']}` |\n")
+                      f.write(f"| {result['server']} | {result['ping']:.1f} | "
+                             f"{result['response_time']:.1f} | `{result['config']}` |\n")
               
-              log_message("Speed test completed")
+              log_message(f"Speed test completed. Found {len(results)} working configs.")
 
           if __name__ == "__main__":
               main()
           EOF
 
-      - name: Set up sudo access
-        run: |
-          echo "runner ALL=(ALL) NOPASSWD: /usr/local/bin/v2ray, /usr/bin/kill" | sudo tee /etc/sudoers.d/v2ray-runner
-
-      - name: Run Speed Test
-        timeout-minutes: 10  # Add timeout for the test
-        run: |
-          echo "Starting speed test script..."
-          python -u test_configs.py  # Use unbuffered output
-        
-      - name: Check Results
-        id: check_results
-        run: |
-          if [ -f speed_test_results.md ]; then
-            echo "results=true" >> $GITHUB_OUTPUT
-            echo "Number of configs tested:"
-            grep "Total Configs Tested:" speed_test_results.md
-          else
-            echo "results=false" >> $GITHUB_OUTPUT
-            echo "No results file found"
-          fi
-
-      - name: Commit and Push Results
-        if: steps.check_results.outputs.results == 'true'
-        run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git add speed_test_results.md
-          git commit -m "Update speed test results"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Rest of the workflow remains the same
