@@ -1,0 +1,107 @@
+name: Combine3 Configs
+on:
+  schedule:
+    - cron: "5 */1 * * *" # Run every hour at minute 5
+  workflow_dispatch:
+
+env:
+  # Vmess_V2rayCollector
+  VMESS_V2RAY_FILE_URL: "https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/xray/normal/vmess"
+  VMESS_V2RAY_OUTPUT_FILE: "vmess_ye.txt"
+  VMESS_V2RAY_BASE64_FILE: "vmess_B64_ye.txt"
+  VMESS_V2RAY_CLASH_YAML_FILE: "vmess_ye_clash.yaml"
+  VMESS_V2RAY_SINGBOX_URL: "https://raw.githubusercontent.com/lagzian/TVC/main/subscriptions/singbox/vmess.json"
+  VMESS_V2RAY_SINGBOX_JSON_FILE: "vmess_ye_singbox.json"
+
+  # Vmess_Vless
+  VMESS_VLESS_FILE_URL: "https://raw.githubusercontent.com/xc0000e9/deatnote/main/Hiddify-next.fragment"
+  VMESS_VLESS_OUTPUT_FILE: "vmess_vless.txt"
+  VMESS_VLESS_BASE64_FILE: "vmess_vless_B64.txt"
+  VMESS_VLESS_CLASH_YAML_FILE: "vmess_vless_clash.yaml"
+  VMESS_VLESS_SINGBOX_URL: "https://yebekhe.serv00.net/api/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Fxc0000e9%2Fdeatnote%2Fmain%2FHiddify-next.fragment&limit=0&tun=true"
+  VMESS_VLESS_SINGBOX_JSON_FILE: "vmess_vless_singbox.json"
+
+  # Shadowsocks
+  SHADOWSOCKS_FILE_URL: "https://raw.githubusercontent.com/lagzian/V2RayAggregator/master/Eternity.txt"
+  SHADOWSOCKS_OUTPUT_FILE: "shadowsockes.txt"
+  SHADOWSOCKS_BASE64_FILE: "SS_B64.txt"
+  SHADOWSOCKS_CLASH_YAML_FILE: "ss_clash.yaml"
+  SHADOWSOCKS_SINGBOX_URL: "https://yebekhe.serv00.net/api/singbox/?url=https%3A%2F%2Fraw.githubusercontent.com%2Flagzian%2FSS-Collector%2Fmain%2Fshadowsockes.txt&limit=0&tun=true"
+  SHADOWSOCKS_SINGBOX_JSON_FILE: "ss_singbox.json"
+
+jobs:
+  extract_configs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Git Config
+        run: |
+          git config --global user.name "${{ secrets.GIT_USERNAME }}"
+          git config --global user.email "${{ secrets.GIT_EMAIL }}"
+
+      # Vmess_V2rayCollector Section
+      - name: Process Vmess_V2rayCollector
+        id: vmess-v2ray
+        timeout-minutes: 1
+        continue-on-error: true
+        run: |
+          # Download and process file
+          curl -o temp11.txt -L "${VMESS_V2RAY_FILE_URL}"
+          grep '^vmess://' temp11.txt > "${GITHUB_WORKSPACE}/${VMESS_V2RAY_OUTPUT_FILE}" || echo "No vmess:// lines found"
+          
+          # Convert to base64
+          cat "${GITHUB_WORKSPACE}/${VMESS_V2RAY_OUTPUT_FILE}" | base64 -w 0 > "${GITHUB_WORKSPACE}/${VMESS_V2RAY_BASE64_FILE}"
+          
+          # Generate YAML and JSON
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/TelegramV2rayCollector/main/sub/base64/vmess&type=clash&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_V2RAY_SINGBOX_JSON_FILE}" -L "${VMESS_V2RAY_SINGBOX_URL}"
+
+      # Vmess_Vless Section
+      - name: Process Vmess_Vless
+        id: vmess-vless
+        timeout-minutes: 1
+        continue-on-error: true
+        run: |
+          # Download and process file
+          curl -o temp25.txt -L "${VMESS_VLESS_FILE_URL}"
+          grep -E '^vless://|^vmess://' temp25.txt > "${GITHUB_WORKSPACE}/${VMESS_VLESS_OUTPUT_FILE}" || echo "No vless:// or vmess:// lines found"
+          
+          # Convert to base64
+          cat "${GITHUB_WORKSPACE}/${VMESS_VLESS_OUTPUT_FILE}" | base64 -w 0 > "${GITHUB_WORKSPACE}/${VMESS_VLESS_BASE64_FILE}"
+          
+          # Generate YAML and JSON
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/xc0000e9/deatnote/main/Hiddify-next.fragment&type=meta&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${VMESS_VLESS_SINGBOX_JSON_FILE}" -L "${VMESS_VLESS_SINGBOX_URL}"
+
+      # Shadowsocks Section
+      - name: Process Shadowsocks
+        id: shadowsocks
+        timeout-minutes: 1
+        continue-on-error: true
+        run: |
+          # Download and process file
+          curl -o temp38.txt -L "${SHADOWSOCKS_FILE_URL}"
+          grep '^ss://' temp38.txt > "${GITHUB_WORKSPACE}/${SHADOWSOCKS_OUTPUT_FILE}" || echo "No ss:// lines found"
+          
+          # Convert to base64
+          cat "${GITHUB_WORKSPACE}/${SHADOWSOCKS_OUTPUT_FILE}" | base64 -w 0 > "${GITHUB_WORKSPACE}/${SHADOWSOCKS_BASE64_FILE}"
+          
+          # Generate YAML and JSON
+          curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_CLASH_YAML_FILE}" -L "https://yebekhe.serv00.net/api/clash/?url=https://raw.githubusercontent.com/lagzian/V2RayAggregator/master/Eternity.txt&type=ss&process=full"
+          curl -o "${GITHUB_WORKSPACE}/${SHADOWSOCKS_SINGBOX_JSON_FILE}" -L "${SHADOWSOCKS_SINGBOX_URL}"
+
+      # Commit Changes
+      - name: Commit and Push Changes
+        if: always()  # This will run even if previous steps failed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Updated config files"
+            git push origin HEAD:${GITHUB_REF}
+          else
+            echo "No changes to commit."
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN1 }}
