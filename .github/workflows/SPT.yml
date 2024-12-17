@@ -130,9 +130,11 @@ jobs:
                   
                   v2ray_config = {
                       "inbounds": [{
-                          "port": 1080,
-                          "protocol": "socks",
-                          "settings": {"auth": "noauth", "udp": True}
+                          "port": 10809,
+                          "protocol": "http",
+                          "settings": {
+                              "timeout": 5
+                          }
                       }],
                       "outbounds": [{
                           "protocol": "vless",
@@ -163,9 +165,12 @@ jobs:
                       start_time = time.time()
                       response = requests.get(
                           "https://www.google.com",
-                          proxies={"http": "socks5://127.0.0.1:1080",
-                                 "https": "socks5://127.0.0.1:1080"},
-                          timeout=5
+                          proxies={
+                              "http": "http://127.0.0.1:10809",
+                              "https": "http://127.0.0.1:10809"
+                          },
+                          timeout=5,
+                          verify=False
                       )
                       response_time = (time.time() - start_time) * 1000
                   except:
