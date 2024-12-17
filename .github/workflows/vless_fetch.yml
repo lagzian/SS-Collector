@@ -1,0 +1,58 @@
+name: Import VLESS Configs
+on:
+  schedule:
+    - cron: "*/50 * * * *"  # Runs every 50 minutes
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  import-configs:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Set up environment
+        run: |
+          mkdir -p ./ss
+          
+      - name: Download and Process VLESS Configs
+        run: |
+          # Download B64 configs
+          curl -sSL "https://raw.githubusercontent.com/lagzian/new-configs-collector/main/protocols/vless" -o temp_b64.txt
+          
+          # Decode B64 and save to file
+          cat temp_b64.txt | base64 -d > ./ss/vless_vip.txt
+          
+          # Clean up
+          rm temp_b64.txt
+          
+      - name: Check for Changes
+        id: check_changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Commit and Push Changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add ./ss/vless_vip.txt
+          git commit -m "Update VLESS configs"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Error Check
+        run: |
+          if [ ! -f ./ss/vless_vip.txt ]; then
+            echo "Error: Config file was not created!"
+            exit 1
+          fi
+          if [ ! -s ./ss/vless_vip.txt ]; then
+            echo "Warning: Config file is empty!"
+          fi
