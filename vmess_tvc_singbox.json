@@ -115,8 +115,11 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 9",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 6",
+                "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 3",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 7",
+                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 8",
+                "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 16",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 17",
                 "🇺🇸US | 🟢 | vmess | @prrofile_purple | 102",
                 "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 125",
                 "🇲🇽MX | 🟢 | vmess | @prrofile_purple | 127",
@@ -152,8 +155,11 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 9",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 6",
+                "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 3",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 7",
+                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 8",
+                "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 16",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 17",
                 "🇺🇸US | 🟢 | vmess | @prrofile_purple | 102",
                 "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 125",
                 "🇲🇽MX | 🟢 | vmess | @prrofile_purple | 127",
@@ -349,7 +355,109 @@
             }
         },
         {
-            "tag": "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 6",
+            "tag": "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 3",
+            "type": "vmess",
+            "server": "147.78.140.26",
+            "server_port": 443,
+            "uuid": "441da342-ce90-441e-bff9-d2ceb55e68ca",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "8bsibsh8wbbwihfhjskbbng-shape-3.mewivot154.workers.dev",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/ivideos.sbs\/linkws",
+                "headers": {
+                    "Host": "8bsibsh8wbbwihfhjskbbng-shape-3.mewivot154.workers.dev"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 7",
+            "type": "vmess",
+            "server": "104.21.83.115",
+            "server_port": 443,
+            "uuid": "6c168fcc-2231-4f3b-8c1e-f6391692df4a",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "hms02.fxiaomi.sbs",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/link",
+                "headers": {
+                    "Host": "hms02.fxiaomi.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 8",
+            "type": "vmess",
+            "server": "hms24.ivideos.sbs",
+            "server_port": 443,
+            "uuid": "441da342-ce90-441e-bff9-d2ceb55e68ca",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ivideos.sbs",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "ivideos.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🇧🇬BG | 🟢 | vmess | @DeamNet_Proxy | 16",
             "type": "vmess",
             "server": "147.78.140.197",
             "server_port": 443,
@@ -383,7 +491,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 7",
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 17",
             "type": "vmess",
             "server": "162.159.192.175",
             "server_port": 443,
