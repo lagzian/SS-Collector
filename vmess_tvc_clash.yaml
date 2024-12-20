@@ -6,6 +6,7 @@ log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
 proxies:
+  - {"name":"🇩🇪DE | 🟢 | vmess | @CUSTOMVPNSERVER | 15","type":"vmess","server":"88.198.93.175","port":8880,"cipher":"auto","uuid":"58531009-b664-445b-b896-7bb9026b744d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @mftizi | 0","type":"vmess","server":"183.236.51.23","port":46602,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @mftizi | 1","type":"vmess","server":"hk1.tiljkc.top","port":39041,"cipher":"auto","uuid":"0d849bb5-8663-3958-ae0a-9918d4a95b5e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @mftizi | 4","type":"vmess","server":"120.232.153.63","port":40972,"cipher":"auto","uuid":"770ee730-2450-4e3c-a6c6-3932bd32afbd","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
@@ -24,7 +25,7 @@ proxies:
   - {"name":"🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 1","type":"vmess","server":"166.108.231.71","port":31886,"cipher":"auto","uuid":"bb60ee15-6c6e-49d3-b0d2-b7bece94b2cc","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 2","type":"vmess","server":"57.155.31.98","port":80,"cipher":"auto","uuid":"b831381d-6324-4d53-ad4f-8cda48b30812","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 3","type":"vmess","server":"57.155.30.204","port":80,"cipher":"auto","uuid":"b831381d-6324-4d53-ad4f-8cda48b30812","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US | 🟢 | vmess | @v2ray1_ng | 4","type":"vmess","server":"151.101.194.133","port":443,"cipher":"auto","uuid":"9e67869b-ee62-4253-a92a-b6d9097d6800","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/telegram-@Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,Mmdv2rayng-V2rayngmmd-telegram-haji-v2ray?ed=2056","headers":{"host":"banknabi-mahdi313.ir"}},"client-fingerprint":"chrome"}
+  - {"name":"🇺🇸US | 🟢 | vmess | @v2ray1_ng | 5","type":"vmess","server":"151.101.194.133","port":443,"cipher":"auto","uuid":"9e67869b-ee62-4253-a92a-b6d9097d6800","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/telegram-@Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,telegram-Lookiwhal,Mmdv2rayng-V2rayngmmd-telegram-haji-v2ray?ed=2056","headers":{"host":"banknabi-mahdi313.ir"}},"client-fingerprint":"chrome"}
   - {"name":"🇺🇸US | 🟢 | vmess | @proxystore11 | 1","type":"vmess","server":"de01.tiktokcloud.us.kg","port":443,"cipher":"auto","uuid":"a76c1300-65a2-4e3d-a6cd-89cb902419e5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/de01","headers":{"host":"de01.tiktokcloud.us.kg"}},"client-fingerprint":"chrome"}
   - {"name":"🇳🇱NL | 🟢 | vmess | @yaney_01 | 1","type":"vmess","server":"45.199.138.217","port":41000,"cipher":"auto","uuid":"f9fa3a9c-f7d5-414f-88e6-6970585d9949","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/282018252526","headers":{"host":""}},"client-fingerprint":"chrome"}
   - {"name":"🇺🇸US | 🟢 | vmess | @yaney_01 | 2","type":"vmess","server":"107.149.119.43","port":37000,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/040318142507","headers":{"host":""}},"client-fingerprint":"chrome"}
@@ -45,6 +46,7 @@ proxy-groups:
     proxies:
       - URL-TEST
       - FALLBACK
+      - '🇨🇳CN | 🟢 | vmess | @mftizi | 0'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 1'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 4'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 5'
@@ -62,7 +64,7 @@ proxy-groups:
       - '🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 1'
       - '🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 2'
       - '🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 3'
-      - '🇺🇸US | 🟢 | vmess | @v2ray1_ng | 4'
+      - '🇺🇸US | 🟢 | vmess | @v2ray1_ng | 5'
       - '🇺🇸US | 🟢 | vmess | @proxystore11 | 1'
       - '🇳🇱NL | 🟢 | vmess | @yaney_01 | 1'
       - '🇺🇸US | 🟢 | vmess | @yaney_01 | 2'
@@ -83,6 +85,7 @@ proxy-groups:
     interval: 60
     tolerance: 50
     proxies:
+      - '🇨🇳CN | 🟢 | vmess | @mftizi | 0'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 1'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 4'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 5'
@@ -100,7 +103,7 @@ proxy-groups:
       - '🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 1'
       - '🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 2'
       - '🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 3'
-      - '🇺🇸US | 🟢 | vmess | @v2ray1_ng | 4'
+      - '🇺🇸US | 🟢 | vmess | @v2ray1_ng | 5'
       - '🇺🇸US | 🟢 | vmess | @proxystore11 | 1'
       - '🇳🇱NL | 🟢 | vmess | @yaney_01 | 1'
       - '🇺🇸US | 🟢 | vmess | @yaney_01 | 2'
@@ -120,6 +123,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
+      - '🇨🇳CN | 🟢 | vmess | @mftizi | 0'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 1'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 4'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 5'
@@ -137,7 +141,7 @@ proxy-groups:
       - '🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 1'
       - '🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 2'
       - '🇸🇬SG | 🟢 | vmess | @ShadowProxy66 | 3'
-      - '🇺🇸US | 🟢 | vmess | @v2ray1_ng | 4'
+      - '🇺🇸US | 🟢 | vmess | @v2ray1_ng | 5'
       - '🇺🇸US | 🟢 | vmess | @proxystore11 | 1'
       - '🇳🇱NL | 🟢 | vmess | @yaney_01 | 1'
       - '🇺🇸US | 🟢 | vmess | @yaney_01 | 2'
