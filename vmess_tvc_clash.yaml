@@ -46,7 +46,6 @@ proxies:
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 11","type":"vmess","server":"199.180.101.29","port":38004,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/1734770577466","headers":{"host":""}},"client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vmess | @Hope_Net | 12","type":"vmess","server":"138.201.44.49","port":4035,"cipher":"auto","uuid":"9398b3da-690f-4648-abb7-9c4118449159","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 13","type":"vmess","server":"104.19.48.236","port":2052,"cipher":"auto","uuid":"71006566-1e38-465d-b748-4aad77346ef6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"2112122485.online.video.downloader.0123456789sg.niubi.site"}},"client-fingerprint":"chrome"}
-  - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 15","type":"vmess","server":"104.21.13.222","port":8443,"cipher":"auto","uuid":"e88b85c6-93b4-47f6-b3fb-2c55dcb1289f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dyajvws","headers":{"host":"lax2.ibgfw.top"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -92,7 +91,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 11'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 12'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 13'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 15'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -138,7 +136,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 11'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 12'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 13'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 15'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -183,7 +180,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 11'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 12'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 13'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 15'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
