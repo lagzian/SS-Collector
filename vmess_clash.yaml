@@ -6,68 +6,104 @@ log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
 proxies:
-  - {"name":"🇨🇦CA-172.105.13.246-8814","type":"vmess","server":"denc36.xtooltech.cfd","port":443,"cipher":"auto","uuid":"b321fd5d-e6ec-4293-a644-164e3885f52e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"adenc36v.xtooltech.cfd"}},"client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US-38.14.107.226-6027","type":"vmess","server":"38.14.107.226","port":38003,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/340434130032","headers":{"host":""}},"client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US-38.14.107.233-8813","type":"vmess","server":"38.14.107.233","port":38003,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/340434130032","headers":{"host":"www.23179753.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US-38.14.107.228-8872","type":"vmess","server":"38.14.107.228","port":38003,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/181721272114","headers":{"host":"www.23179753.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US-38.14.107.225-8871","type":"vmess","server":"38.14.107.225","port":38003,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/181721272114","headers":{"host":"www.23179753.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"🇩🇪DE-172.104.142.89-6032","type":"vmess","server":"hms26.xpengmotors.sbs","port":443,"cipher":"auto","uuid":"fb0a2de6-bf06-4ff0-97ce-c21abcdc2d55","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms26.xpengmotors.sbs"}},"client-fingerprint":"chrome"}
-  - {"name":"🇩🇪DE-172.104.247.121-8878","type":"vmess","server":"172.104.247.121","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"ivideos.sbs"}},"client-fingerprint":"chrome"}
-  - {"name":"🇫🇷FR-146.19.168.161-8842","type":"vmess","server":"146.19.168.161","port":443,"cipher":"auto","uuid":"3f638f34-8dba-4186-bc43-2716a7ddd4be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"az05.beyondy.cfd"}},"client-fingerprint":"chrome"}
-  - {"name":"🇫🇷FR-146.19.168.161-5809","type":"vmess","server":"az05.beyondy.cfd","port":443,"cipher":"auto","uuid":"3f638f34-8dba-4186-bc43-2716a7ddd4be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"az05.beyondy.cfd"}},"client-fingerprint":"chrome"}
-  - {"name":"🏁RELAY-104.21.1.28-0805","type":"vmess","server":"us-ccs.yuji2022.eu.org","port":8880,"cipher":"auto","uuid":"4b5e4565-322f-4223-a891-78a84f189726","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/XSjeg73o6ZdsheahCb5JG","headers":{"host":"us-ccs.yuji2022.eu.org"}},"client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US-199.180.103.21-6019","type":"vmess","server":"199.180.103.21","port":37007,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/1734770577466","headers":{"host":""}},"client-fingerprint":"chrome"}
-  - {"name":"🏁RELAY-198.41.209.70-6339","type":"vmess","server":"198.41.209.70","port":2082,"cipher":"auto","uuid":"1c713b69-0abe-3a1e-bf70-b0579ea2f772","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in172.64.25.37","headers":{"host":"100-207-132-205.s2.db-link02.top"}},"client-fingerprint":"chrome"}
+  - {"name":"🇨🇦CA-172.105.13.246-8789","type":"vmess","server":"denc36.xtooltech.cfd","port":443,"cipher":"auto","uuid":"b321fd5d-e6ec-4293-a644-164e3885f52e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"adenc36v.xtooltech.cfd"}},"client-fingerprint":"chrome"}
+  - {"name":"🏁RELAY-172.67.186.118-5946","type":"vmess","server":"3.clarity168.com","port":443,"cipher":"auto","uuid":"48f837fa-12d0-498d-b5f6-94f9979736a4","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tk","headers":{"host":"3.clarity168.com"}},"client-fingerprint":"chrome"}
+  - {"name":"🇺🇸US-38.14.107.226-5947","type":"vmess","server":"38.14.107.226","port":38003,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/340434130032","headers":{"host":""}},"client-fingerprint":"chrome"}
+  - {"name":"🇺🇸US-38.14.107.225-8783","type":"vmess","server":"38.14.107.225","port":38003,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/181721272114","headers":{"host":"www.23179753.xyz"}},"client-fingerprint":"chrome"}
+  - {"name":"🇺🇸US-38.14.107.233-8781","type":"vmess","server":"38.14.107.233","port":38003,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/340434130032","headers":{"host":"www.23179753.xyz"}},"client-fingerprint":"chrome"}
+  - {"name":"🏁RELAY-104.16.60.8-1336","type":"vmess","server":"104.16.60.8","port":8880,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linde06.indiavideo.sbs/linkws","headers":{"host":"square-snowflake-486a.beshir-beisel.workers.dev"}},"client-fingerprint":"chrome"}
+  - {"name":"🇺🇸US-38.14.107.228-8793","type":"vmess","server":"38.14.107.228","port":38003,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/181721272114","headers":{"host":"www.23179753.xyz"}},"client-fingerprint":"chrome"}
+  - {"name":"🏁RELAY-195.85.59.22-8902","type":"vmess","server":"195.85.59.22","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/afrhms16v.bestxray.buzz/linkws","headers":{"host":"8shhebsj78wjisnbhsjvess-pond-6cc6.cerog91216.workers.dev"}},"client-fingerprint":"chrome"}
+  - {"name":"🏁RELAY-104.16.60.8-1448","type":"vmess","server":"104.16.60.8","port":8880,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ivideos.sbs/linkws","headers":{"host":"nd-truth-210a8hwjhs.bonar11011.workers.dev"}},"client-fingerprint":"chrome"}
+  - {"name":"🇩🇪DE-172.104.247.121-8774","type":"vmess","server":"172.104.247.121","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"ivideos.sbs"}},"client-fingerprint":"chrome"}
+  - {"name":"🏁RELAY-104.16.61.8-1446","type":"vmess","server":"104.16.61.8","port":8880,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/afrhms16v.bestxray.buzz/linkws","headers":{"host":"8shhebsj78wjisnbhsjvess-pond-6cc6.cerog91216.workers.dev"}},"client-fingerprint":"chrome"}
+  - {"name":"🏁RELAY-104.16.67.38-1445","type":"vmess","server":"104.16.67.38","port":8080,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/hms02.fxiaomi.sbs/link","headers":{"host":"8bsibsh8wbbwihfhjskbbng-shape-3.mewivot154.workers.dev"}},"client-fingerprint":"chrome"}
+  - {"name":"🇩🇪DE-130.61.156.132-5708","type":"vmess","server":"frankfurt03.zgjok.com","port":443,"cipher":"auto","uuid":"4f7c2243-a38a-4672-983b-f1378aee0a7f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"frankfurt03.zgjok.com"}},"client-fingerprint":"chrome"}
+  - {"name":"🇫🇷FR-146.19.168.161-8770","type":"vmess","server":"146.19.168.161","port":443,"cipher":"auto","uuid":"3f638f34-8dba-4186-bc43-2716a7ddd4be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"az05.beyondy.cfd"}},"client-fingerprint":"chrome"}
+  - {"name":"🇫🇷FR-146.19.168.161-5729","type":"vmess","server":"az05.beyondy.cfd","port":443,"cipher":"auto","uuid":"3f638f34-8dba-4186-bc43-2716a7ddd4be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"az05.beyondy.cfd"}},"client-fingerprint":"chrome"}
+  - {"name":"🇺🇸US-199.180.103.21-5939","type":"vmess","server":"199.180.103.21","port":37007,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/1734770577466","headers":{"host":""}},"client-fingerprint":"chrome"}
+  - {"name":"🇫🇷FR-45.145.167.103-5727","type":"vmess","server":"indiavideo.sbs","port":443,"cipher":"auto","uuid":"425c5e6e-30a0-4984-8a13-ee6f72053162","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"indiavideo.sbs"}},"client-fingerprint":"chrome"}
+  - {"name":"🏁RELAY-104.21.1.28-0802","type":"vmess","server":"us-ccs.yuji2022.eu.org","port":8880,"cipher":"auto","uuid":"4b5e4565-322f-4223-a891-78a84f189726","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/XSjeg73o6ZdsheahCb5JG","headers":{"host":"us-ccs.yuji2022.eu.org"}},"client-fingerprint":"chrome"}
+  - {"name":"🏁RELAY-195.85.59.95-1351","type":"vmess","server":"www.csgo.com","port":443,"cipher":"auto","uuid":"33f6d8b0-81f8-4fce-b3df-79dc8fd6d8c5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/rongseven?ed=2048","headers":{"host":"kr.cfyyds.filegear-sg.me"}},"client-fingerprint":"chrome"}
+  - {"name":"🇹🇭TH-43.229.135.65-6568","type":"vmess","server":"gg.saunghninsi.my.id","port":443,"cipher":"auto","uuid":"47602aaa-ee17-458a-b149-23d534213904","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess","headers":{"host":"gg.saunghninsi.my.id"}},"client-fingerprint":"chrome"}
+  - {"name":"🏁RELAY-172.67.164.232-1330","type":"vmess","server":"172.67.164.232","port":443,"cipher":"auto","uuid":"33f6d8b0-81f8-4fce-b3df-79dc8fd6d8c5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/rongseven?ed=2048","headers":{"host":"33.bycf.us.kg"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
     proxies:
       - URL-TEST
       - FALLBACK
-      - '🇺🇸US-38.14.107.226-6027'
-      - '🇺🇸US-38.14.107.233-8813'
-      - '🇺🇸US-38.14.107.228-8872'
-      - '🇺🇸US-38.14.107.225-8871'
-      - '🇩🇪DE-172.104.142.89-6032'
-      - '🇩🇪DE-172.104.247.121-8878'
-      - '🇫🇷FR-146.19.168.161-8842'
-      - '🇫🇷FR-146.19.168.161-5809'
-      - '🏁RELAY-104.21.1.28-0805'
-      - '🇺🇸US-199.180.103.21-6019'
-      - '🏁RELAY-198.41.209.70-6339'
+      - '🏁RELAY-172.67.186.118-5946'
+      - '🇺🇸US-38.14.107.226-5947'
+      - '🇺🇸US-38.14.107.225-8783'
+      - '🇺🇸US-38.14.107.233-8781'
+      - '🏁RELAY-104.16.60.8-1336'
+      - '🇺🇸US-38.14.107.228-8793'
+      - '🏁RELAY-195.85.59.22-8902'
+      - '🏁RELAY-104.16.60.8-1448'
+      - '🇩🇪DE-172.104.247.121-8774'
+      - '🏁RELAY-104.16.61.8-1446'
+      - '🏁RELAY-104.16.67.38-1445'
+      - '🇩🇪DE-130.61.156.132-5708'
+      - '🇫🇷FR-146.19.168.161-8770'
+      - '🇫🇷FR-146.19.168.161-5729'
+      - '🇺🇸US-199.180.103.21-5939'
+      - '🇫🇷FR-45.145.167.103-5727'
+      - '🏁RELAY-104.21.1.28-0802'
+      - '🏁RELAY-195.85.59.95-1351'
+      - '🇹🇭TH-43.229.135.65-6568'
+      - '🏁RELAY-172.67.164.232-1330'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 60
     tolerance: 50
     proxies:
-      - '🇺🇸US-38.14.107.226-6027'
-      - '🇺🇸US-38.14.107.233-8813'
-      - '🇺🇸US-38.14.107.228-8872'
-      - '🇺🇸US-38.14.107.225-8871'
-      - '🇩🇪DE-172.104.142.89-6032'
-      - '🇩🇪DE-172.104.247.121-8878'
-      - '🇫🇷FR-146.19.168.161-8842'
-      - '🇫🇷FR-146.19.168.161-5809'
-      - '🏁RELAY-104.21.1.28-0805'
-      - '🇺🇸US-199.180.103.21-6019'
-      - '🏁RELAY-198.41.209.70-6339'
+      - '🏁RELAY-172.67.186.118-5946'
+      - '🇺🇸US-38.14.107.226-5947'
+      - '🇺🇸US-38.14.107.225-8783'
+      - '🇺🇸US-38.14.107.233-8781'
+      - '🏁RELAY-104.16.60.8-1336'
+      - '🇺🇸US-38.14.107.228-8793'
+      - '🏁RELAY-195.85.59.22-8902'
+      - '🏁RELAY-104.16.60.8-1448'
+      - '🇩🇪DE-172.104.247.121-8774'
+      - '🏁RELAY-104.16.61.8-1446'
+      - '🏁RELAY-104.16.67.38-1445'
+      - '🇩🇪DE-130.61.156.132-5708'
+      - '🇫🇷FR-146.19.168.161-8770'
+      - '🇫🇷FR-146.19.168.161-5729'
+      - '🇺🇸US-199.180.103.21-5939'
+      - '🇫🇷FR-45.145.167.103-5727'
+      - '🏁RELAY-104.21.1.28-0802'
+      - '🏁RELAY-195.85.59.95-1351'
+      - '🇹🇭TH-43.229.135.65-6568'
+      - '🏁RELAY-172.67.164.232-1330'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 60
     proxies:
-      - '🇺🇸US-38.14.107.226-6027'
-      - '🇺🇸US-38.14.107.233-8813'
-      - '🇺🇸US-38.14.107.228-8872'
-      - '🇺🇸US-38.14.107.225-8871'
-      - '🇩🇪DE-172.104.142.89-6032'
-      - '🇩🇪DE-172.104.247.121-8878'
-      - '🇫🇷FR-146.19.168.161-8842'
-      - '🇫🇷FR-146.19.168.161-5809'
-      - '🏁RELAY-104.21.1.28-0805'
-      - '🇺🇸US-199.180.103.21-6019'
-      - '🏁RELAY-198.41.209.70-6339'
+      - '🏁RELAY-172.67.186.118-5946'
+      - '🇺🇸US-38.14.107.226-5947'
+      - '🇺🇸US-38.14.107.225-8783'
+      - '🇺🇸US-38.14.107.233-8781'
+      - '🏁RELAY-104.16.60.8-1336'
+      - '🇺🇸US-38.14.107.228-8793'
+      - '🏁RELAY-195.85.59.22-8902'
+      - '🏁RELAY-104.16.60.8-1448'
+      - '🇩🇪DE-172.104.247.121-8774'
+      - '🏁RELAY-104.16.61.8-1446'
+      - '🏁RELAY-104.16.67.38-1445'
+      - '🇩🇪DE-130.61.156.132-5708'
+      - '🇫🇷FR-146.19.168.161-8770'
+      - '🇫🇷FR-146.19.168.161-5729'
+      - '🇺🇸US-199.180.103.21-5939'
+      - '🇫🇷FR-45.145.167.103-5727'
+      - '🏁RELAY-104.21.1.28-0802'
+      - '🏁RELAY-195.85.59.95-1351'
+      - '🇹🇭TH-43.229.135.65-6568'
+      - '🏁RELAY-172.67.164.232-1330'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
