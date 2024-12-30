@@ -126,7 +126,6 @@
                 "🇯🇵JP | 🟢 | vmess | @ShadowProxy66 | 40",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 9",
                 "🇮🇷IR | 🟢 | vmess | @v2ray1_ng | 11",
-                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 3",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -137,8 +136,7 @@
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 3",
-                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 4"
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 3"
             ]
         },
         {
@@ -165,7 +163,6 @@
                 "🇯🇵JP | 🟢 | vmess | @ShadowProxy66 | 40",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 9",
                 "🇮🇷IR | 🟢 | vmess | @v2ray1_ng | 11",
-                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 3",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -176,8 +173,7 @@
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 3",
-                "🇷🇺RU | 🟢 | vmess | @Hope_Net | 4"
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 3"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -588,40 +584,6 @@
             }
         },
         {
-            "tag": "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 3",
-            "type": "vmess",
-            "server": "indiavideo.sbs",
-            "server_port": 443,
-            "uuid": "425c5e6e-30a0-4984-8a13-ee6f72053162",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "indiavideo.sbs",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkws",
-                "headers": {
-                    "Host": "indiavideo.sbs"
-                }
-            }
-        },
-        {
             "tag": "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
             "type": "vmess",
             "server": "45.199.138.217",
@@ -912,30 +874,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇷🇺RU | 🟢 | vmess | @Hope_Net | 4",
-            "type": "vmess",
-            "server": "176.32.32.68",
-            "server_port": 29025,
-            "uuid": "9c883f99-7105-4e39-876d-167c1a90fbe0",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "176.32.32.68"
-                }
             }
         }
     ],
