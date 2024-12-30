@@ -135,8 +135,7 @@
                 "🇷🇺RU | 🟢 | vmess | @Hope_Net | 0",
                 "🇩🇪DE | 🟢 | vmess | @Hope_Net | 1",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 3",
-                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 4"
+                "🚩CF | 🟢 | vmess | @Hope_Net | 3"
             ]
         },
         {
@@ -172,8 +171,7 @@
                 "🇷🇺RU | 🟢 | vmess | @Hope_Net | 0",
                 "🇩🇪DE | 🟢 | vmess | @Hope_Net | 1",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 3",
-                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 4"
+                "🚩CF | 🟢 | vmess | @Hope_Net | 3"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -863,40 +861,6 @@
                 "path": "\/linkws",
                 "headers": {
                     "Host": "172.67.138.140"
-                }
-            }
-        },
-        {
-            "tag": "🇸🇬SG | 🟢 | vmess | @Hope_Net | 4",
-            "type": "vmess",
-            "server": "sg25.jnstore.biz.id",
-            "server_port": 443,
-            "uuid": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "sg25.jnstore.biz.id",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/vmess",
-                "headers": {
-                    "Host": "sg25.jnstore.biz.id"
                 }
             }
         }
