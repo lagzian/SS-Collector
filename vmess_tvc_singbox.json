@@ -136,7 +136,8 @@
                 "🇺🇸US | 🟢 | vmess | @free1_vpn | 3",
                 "🇮🇳IN | 🟢 | vmess | @free1_vpn | 4",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1"
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2"
             ]
         },
         {
@@ -173,7 +174,8 @@
                 "🇺🇸US | 🟢 | vmess | @free1_vpn | 3",
                 "🇮🇳IN | 🟢 | vmess | @free1_vpn | 4",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1"
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -835,6 +837,30 @@
         {
             "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
             "type": "vmess",
+            "server": "151.101.130.168",
+            "server_port": 80,
+            "uuid": "beb7d098-48ba-4be8-a47a-758bf3c470b8",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "151.101.130.168"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
+            "type": "vmess",
             "server": "199.180.101.29",
             "server_port": 38004,
             "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
@@ -867,7 +893,7 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
             "type": "vmess",
             "server": "103.149.183.178",
             "server_port": 54675,
