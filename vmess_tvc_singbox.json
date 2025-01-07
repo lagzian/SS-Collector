@@ -123,6 +123,8 @@
                 "🇲🇽MX | 🟢 | vmess | @ShadowProxy66 | 3",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 4",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 1",
+                "🇰🇷KR | 🟢 | vmess | @ConfigsHUB | 13",
+                "🇰🇷KR | 🟢 | vmess | @ConfigsHUB | 14",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -157,6 +159,8 @@
                 "🇲🇽MX | 🟢 | vmess | @ShadowProxy66 | 3",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 4",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 1",
+                "🇰🇷KR | 🟢 | vmess | @ConfigsHUB | 13",
+                "🇰🇷KR | 🟢 | vmess | @ConfigsHUB | 14",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -482,6 +486,74 @@
                 "path": "\/racevpn?ed=80",
                 "headers": {
                     "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇰🇷KR | 🟢 | vmess | @ConfigsHUB | 13",
+            "type": "vmess",
+            "server": "si.1808.site",
+            "server_port": 30002,
+            "uuid": "d3d8b781-f30d-4902-8eb0-58b1ca936bec",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cc2.1808.site",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/hgqqvws",
+                "headers": {
+                    "Host": "cc2.1808.site"
+                }
+            }
+        },
+        {
+            "tag": "🇰🇷KR | 🟢 | vmess | @ConfigsHUB | 14",
+            "type": "vmess",
+            "server": "si.1808.site",
+            "server_port": 30002,
+            "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "obdii.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "obdii.cfd"
                 }
             }
         },
