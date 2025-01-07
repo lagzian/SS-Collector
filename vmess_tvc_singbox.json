@@ -122,8 +122,7 @@
                 "🇲🇽MX | 🟢 | vmess | @ShadowProxy66 | 3",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 4",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 1",
-                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 7",
-                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 14",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 11",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -156,8 +155,7 @@
                 "🇲🇽MX | 🟢 | vmess | @ShadowProxy66 | 3",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 4",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 1",
-                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 7",
-                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 14",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 11",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -469,11 +467,11 @@
             }
         },
         {
-            "tag": "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 7",
+            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 11",
             "type": "vmess",
-            "server": "194.87.69.52",
-            "server_port": 10881,
-            "uuid": "1cc59a3a-9625-40f7-b0e6-e233286ae82d",
+            "server": "151.101.194.133",
+            "server_port": 443,
+            "uuid": "c69f3029-ae1e-45ca-aa08-70970f14dfd2",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -484,35 +482,21 @@
                 "protocol": "smux",
                 "max_streams": 32
             },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": ""
+            "tls": {
+                "enabled": true,
+                "server_name": "mio.splashthat.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
                 }
-            }
-        },
-        {
-            "tag": "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 14",
-            "type": "vmess",
-            "server": "195.58.49.50",
-            "server_port": 10881,
-            "uuid": "1cc59a3a-9625-40f7-b0e6-e233286ae82d",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
             },
             "transport": {
                 "type": "ws",
-                "path": "\/",
+                "path": "\/racevpn",
                 "headers": {
-                    "Host": ""
+                    "Host": "mio.splashthat.com"
                 }
             }
         },
