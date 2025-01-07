@@ -122,6 +122,8 @@
                 "🇲🇽MX | 🟢 | vmess | @ShadowProxy66 | 3",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 4",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 1",
+                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 7",
+                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 14",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -131,7 +133,6 @@
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 0",
                 "🇬🇧GB | 🟢 | vmess | @Hope_Net | 1",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 2",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
                 "🇩🇪DE | 🟢 | vmess | @nofiltering2 | 18"
             ]
         },
@@ -155,6 +156,8 @@
                 "🇲🇽MX | 🟢 | vmess | @ShadowProxy66 | 3",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 4",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 1",
+                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 7",
+                "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 14",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -164,7 +167,6 @@
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 0",
                 "🇬🇧GB | 🟢 | vmess | @Hope_Net | 1",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 2",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
                 "🇩🇪DE | 🟢 | vmess | @nofiltering2 | 18"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -467,6 +469,54 @@
             }
         },
         {
+            "tag": "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 7",
+            "type": "vmess",
+            "server": "194.87.69.52",
+            "server_port": 10881,
+            "uuid": "1cc59a3a-9625-40f7-b0e6-e233286ae82d",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇷🇺RU | 🟢 | vmess | @ConfigsHUB | 14",
+            "type": "vmess",
+            "server": "195.58.49.50",
+            "server_port": 10881,
+            "uuid": "1cc59a3a-9625-40f7-b0e6-e233286ae82d",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
             "tag": "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
             "type": "vmess",
             "server": "45.199.138.217",
@@ -719,40 +769,6 @@
                 "path": "\/vmessws",
                 "headers": {
                     "Host": "104.18.21.219"
-                }
-            }
-        },
-        {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
-            "type": "vmess",
-            "server": "csct.xxxxxx.one",
-            "server_port": 21001,
-            "uuid": "437c6b4b-d508-4662-a508-cf3337b836b3",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "csct.xxxxxx.one",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/21a64xdea04c",
-                "headers": {
-                    "Host": "csct.xxxxxx.one"
                 }
             }
         },
