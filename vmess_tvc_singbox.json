@@ -124,7 +124,6 @@
                 "🇭🇰HK | 🟢 | vmess | @ShadowProxy66 | 10",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 4",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 6",
-                "🇮🇷IR | 🟢 | vmess | @ConfigsHUB | 8",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -143,8 +142,6 @@
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 8",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 9",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 10",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 11",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 12",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 12"
             ]
         },
@@ -170,7 +167,6 @@
                 "🇭🇰HK | 🟢 | vmess | @ShadowProxy66 | 10",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 4",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 6",
-                "🇮🇷IR | 🟢 | vmess | @ConfigsHUB | 8",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -189,8 +185,6 @@
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 8",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 9",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 10",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 11",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 12",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 12"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -582,23 +576,6 @@
                 "headers": {
                     "Host": ""
                 }
-            }
-        },
-        {
-            "tag": "🇮🇷IR | 🟢 | vmess | @ConfigsHUB | 8",
-            "type": "vmess",
-            "server": "92.242.220.22",
-            "server_port": 37885,
-            "uuid": "8dee19ab-50ce-4d06-be42-5e53c8989ccc",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
             }
         },
         {
@@ -1100,64 +1077,6 @@
                 "path": "\/path\/1736415675034",
                 "headers": {
                     "Host": "192.74.244.188"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 11",
-            "type": "vmess",
-            "server": "s2.db-link01.top",
-            "server_port": 8080,
-            "uuid": "4b36625c-b9d9-3ea6-aed5-86d62c70e16d",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/dabai.in104.24.214.91",
-                "headers": {
-                    "Host": "s2.db-link01.top"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 12",
-            "type": "vmess",
-            "server": "142.171.134.126",
-            "server_port": 37007,
-            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
-            "security": "auto",
-            "alter_id": 64,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "142.171.134.126",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/path\/1736418849512",
-                "headers": {
-                    "Host": "142.171.134.126"
                 }
             }
         },
