@@ -124,7 +124,8 @@
                 "🇭🇰HK | 🟢 | vmess | @ShadowProxy66 | 10",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 4",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 6",
-                "🇳🇱NL | 🟢 | vmess | @ConfigsHUB | 11",
+                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 5",
+                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 7",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -140,8 +141,6 @@
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 5",
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 6",
                 "🇰🇷KR | 🟢 | vmess | @Hope_Net | 7",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 8",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 9",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 12"
             ]
         },
@@ -167,7 +166,8 @@
                 "🇭🇰HK | 🟢 | vmess | @ShadowProxy66 | 10",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 4",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 6",
-                "🇳🇱NL | 🟢 | vmess | @ConfigsHUB | 11",
+                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 5",
+                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 7",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -183,8 +183,6 @@
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 5",
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 6",
                 "🇰🇷KR | 🟢 | vmess | @Hope_Net | 7",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 8",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 9",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 12"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -579,11 +577,11 @@
             }
         },
         {
-            "tag": "🇳🇱NL | 🟢 | vmess | @ConfigsHUB | 11",
+            "tag": "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 5",
             "type": "vmess",
-            "server": "vfl.alisaz-88.ir",
-            "server_port": 26138,
-            "uuid": "9b64b832-a438-48e3-807b-5ef83d8fdaae",
+            "server": "193.160.130.245",
+            "server_port": 443,
+            "uuid": "9b456c2a-f2c1-45e1-87a9-b7628b04bb24",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -593,6 +591,57 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "beyonddsz.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "beyonddsz.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 7",
+            "type": "vmess",
+            "server": "beyonddsz.cfd",
+            "server_port": 443,
+            "uuid": "9b456c2a-f2c1-45e1-87a9-b7628b04bb24",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "beyonddsz.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "beyonddsz.cfd"
+                }
             }
         },
         {
@@ -1012,54 +1061,6 @@
                 "path": "\/",
                 "headers": {
                     "Host": "152.70.249.152"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 8",
-            "type": "vmess",
-            "server": "s3.db-link01.top",
-            "server_port": 2052,
-            "uuid": "4b36625c-b9d9-3ea6-aed5-86d62c70e16d",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/dabai.in172.64.15.161",
-                "headers": {
-                    "Host": "s3.db-link01.top"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 9",
-            "type": "vmess",
-            "server": "s1.db-link01.top",
-            "server_port": 80,
-            "uuid": "4b36625c-b9d9-3ea6-aed5-86d62c70e16d",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/dabai.in104.24.32.204",
-                "headers": {
-                    "Host": "s1.db-link01.top"
                 }
             }
         },
