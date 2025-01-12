@@ -125,13 +125,13 @@
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 1",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 12",
-                "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 14",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 1",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 3",
                 "🇺🇸US | 🟢 | vmess | @free1_vpn | 10",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
@@ -167,13 +167,13 @@
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 1",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 12",
-                "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 14",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 1",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 3",
                 "🇺🇸US | 🟢 | vmess | @free1_vpn | 10",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
@@ -635,30 +635,6 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 14",
-            "type": "vmess",
-            "server": "151.101.2.216",
-            "server_port": 80,
-            "uuid": "c69f3029-ae1e-45ca-aa08-70970f14dfd2",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/racevpn?ed=80",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
             "tag": "🇺🇸US | 🟢 | vmess | @proxystore11 | 1",
             "type": "vmess",
             "server": "cinnamon.parsifast78.ir",
@@ -839,6 +815,30 @@
                 "path": "\/66",
                 "headers": {
                     "Host": "104.26.8.210"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @free1_vpn | 3",
+            "type": "vmess",
+            "server": "151.101.2.216",
+            "server_port": 80,
+            "uuid": "c69f3029-ae1e-45ca-aa08-70970f14dfd2",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/racevpn?ed=80",
+                "headers": {
+                    "Host": ""
                 }
             }
         },
