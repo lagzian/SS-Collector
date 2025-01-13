@@ -121,6 +121,7 @@
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 6",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 1",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 12",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 2",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 1",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -134,8 +135,7 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 2",
                 "🇷🇺RU | 🟢 | vmess | @Hope_Net | 3",
                 "🇩🇪DE | 🟢 | vmess | @Hope_Net | 4",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 5",
-                "🇯🇵JP | 🟢 | vmess | @Hope_Net | 6"
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 5"
             ]
         },
         {
@@ -157,6 +157,7 @@
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 6",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 1",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 12",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 2",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 1",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -170,8 +171,7 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 2",
                 "🇷🇺RU | 🟢 | vmess | @Hope_Net | 3",
                 "🇩🇪DE | 🟢 | vmess | @Hope_Net | 4",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 5",
-                "🇯🇵JP | 🟢 | vmess | @Hope_Net | 6"
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 5"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -515,6 +515,30 @@
             "transport": {
                 "type": "ws",
                 "path": "\/da?ed=2560",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 2",
+            "type": "vmess",
+            "server": "bia-vpn-whal.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "1gp---id-vpn-whal",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/?ed=80\/#id-telegram:--->@vpn_whal<---",
                 "headers": {
                     "Host": ""
                 }
@@ -904,23 +928,6 @@
                 "headers": {
                     "Host": "212.192.12.70"
                 }
-            }
-        },
-        {
-            "tag": "🇯🇵JP | 🟢 | vmess | @Hope_Net | 6",
-            "type": "vmess",
-            "server": "45.159.50.143",
-            "server_port": 40866,
-            "uuid": "68227ff4-28f8-4564-9eef-8d3d3dacaf57",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
             }
         }
     ],
