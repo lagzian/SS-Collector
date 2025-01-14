@@ -116,7 +116,6 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 11",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 13",
                 "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 9",
-                "🇺🇸US | 🟢 | vmess | @prrofile_purple | 124",
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 3",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 5",
@@ -131,7 +130,8 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇺🇸US | 🟢 | vmess | @free1_vpn | 3"
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 3",
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 10"
             ]
         },
         {
@@ -148,7 +148,6 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 11",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 13",
                 "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 9",
-                "🇺🇸US | 🟢 | vmess | @prrofile_purple | 124",
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 3",
                 "🚩CF | 🟢 | vmess | @ShadowProxy66 | 5",
@@ -163,7 +162,8 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇺🇸US | 🟢 | vmess | @free1_vpn | 3"
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 3",
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 10"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -369,40 +369,6 @@
                 "path": "\/linkws",
                 "headers": {
                     "Host": "beyonddbc.sbs"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @prrofile_purple | 124",
-            "type": "vmess",
-            "server": "151.101.194.133",
-            "server_port": 443,
-            "uuid": "c69f3029-ae1e-45ca-aa08-70970f14dfd2",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "mio.splashthat.com",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/racevpn",
-                "headers": {
-                    "Host": "mio.splashthat.com"
                 }
             }
         },
@@ -861,6 +827,30 @@
             "transport": {
                 "type": "ws",
                 "path": "\/racevpn?ed=80",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @free1_vpn | 10",
+            "type": "vmess",
+            "server": "151.101.2.168",
+            "server_port": 80,
+            "uuid": "beb7d098-48ba-4be8-a47a-758bf3c470b8",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
                 "headers": {
                     "Host": ""
                 }
