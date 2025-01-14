@@ -129,7 +129,8 @@
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇺🇸US | 🟢 | vmess | @free1_vpn | 3",
-                "🇺🇸US | 🟢 | vmess | @free1_vpn | 10"
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 10",
+                "🇨🇾CY | 🟢 | vmess | @Hope_Net | 0"
             ]
         },
         {
@@ -159,7 +160,8 @@
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇺🇸US | 🟢 | vmess | @free1_vpn | 3",
-                "🇺🇸US | 🟢 | vmess | @free1_vpn | 10"
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 10",
+                "🇨🇾CY | 🟢 | vmess | @Hope_Net | 0"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -761,6 +763,30 @@
                 "path": "\/",
                 "headers": {
                     "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇨🇾CY | 🟢 | vmess | @Hope_Net | 0",
+            "type": "vmess",
+            "server": "yx1.changyouVPN.top",
+            "server_port": 8880,
+            "uuid": "85c7eba1-dfba-4f3e-9f7a-833fa729dc19",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "yx1.changyouVPN.top"
                 }
             }
         }
