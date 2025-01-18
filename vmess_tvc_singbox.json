@@ -118,6 +118,7 @@
                 "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 9",
                 "🇳🇱NL | 🟢 | vmess | @prrofile_purple | 127",
                 "❔XX | 🟢 | vmess | @prrofile_purple | 136",
+                "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 156",
                 "🇫🇮FI | 🟢 | vmess | @ShadowProxy66 | 5",
                 "🇦🇺AU | 🟢 | vmess | @ShadowProxy66 | 22",
                 "🇺🇸US | 🟢 | vmess | @V2rayng_Fast | 0",
@@ -129,7 +130,8 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇺🇸US | 🟢 | vmess | @free1_vpn | 15"
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 15",
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 18"
             ]
         },
         {
@@ -148,6 +150,7 @@
                 "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 9",
                 "🇳🇱NL | 🟢 | vmess | @prrofile_purple | 127",
                 "❔XX | 🟢 | vmess | @prrofile_purple | 136",
+                "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 156",
                 "🇫🇮FI | 🟢 | vmess | @ShadowProxy66 | 5",
                 "🇦🇺AU | 🟢 | vmess | @ShadowProxy66 | 22",
                 "🇺🇸US | 🟢 | vmess | @V2rayng_Fast | 0",
@@ -159,7 +162,8 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇺🇸US | 🟢 | vmess | @free1_vpn | 15"
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 15",
+                "🇺🇸US | 🟢 | vmess | @free1_vpn | 18"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -391,6 +395,23 @@
             "server": "0000:0000:0000:0000:0000:ffff:8b3b:0977",
             "server_port": 2082,
             "uuid": "acbc987e-6c4c-4619-8fa3-f17795678b3b",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 156",
+            "type": "vmess",
+            "server": "falkn.jewelll.ir",
+            "server_port": 2211,
+            "uuid": "d898ce79-9048-4349-a539-d51d6c5a30c2",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -723,6 +744,30 @@
                 "path": "\/racevpn?telegram@ISVvpn-telegram@ISVvpn-telegram@ISVvpn",
                 "headers": {
                     "Host": "mio.splashthat.com"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @free1_vpn | 18",
+            "type": "vmess",
+            "server": "151.101.2.216",
+            "server_port": 80,
+            "uuid": "c69f3029-ae1e-45ca-aa08-70970f14dfd2",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/racevpn?ed=80",
+                "headers": {
+                    "Host": ""
                 }
             }
         }
