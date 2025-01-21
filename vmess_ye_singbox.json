@@ -130,10 +130,9 @@
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇺🇸US | 🟢 | vmess | @free1_vpn | 19",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
+                "🇩🇪DE | 🟢 | vmess | @Hope_Net | 0",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 3",
                 "🇭🇰HK | 🟢 | vmess | @fnet00 | 0"
             ]
         },
@@ -165,10 +164,9 @@
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇺🇸US | 🟢 | vmess | @free1_vpn | 19",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
+                "🇩🇪DE | 🟢 | vmess | @Hope_Net | 0",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 3",
                 "🇭🇰HK | 🟢 | vmess | @fnet00 | 0"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -747,7 +745,31 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
+            "tag": "🇩🇪DE | 🟢 | vmess | @Hope_Net | 0",
+            "type": "vmess",
+            "server": "64.225.109.206",
+            "server_port": 2082,
+            "uuid": "48264b45-64b8-4e9f-8a88-cef41f20c736",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "http",
+                "host": [
+                    "64.225.109.206"
+                ],
+                "path": "\/"
+            }
+        },
+        {
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
             "type": "vmess",
             "server": "212.192.12.70",
             "server_port": 17926,
@@ -771,59 +793,11 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
-            "type": "vmess",
-            "server": "212.192.12.70",
-            "server_port": 17926,
-            "uuid": "6278df73-fe4a-47e2-ade2-9ca9ada121a1",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "212.192.12.70"
-                }
-            }
-        },
-        {
             "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
             "type": "vmess",
             "server": "212.192.12.70",
             "server_port": 17926,
-            "uuid": "651f3f18-471f-4be0-a02a-c3c43fb1ce31",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "212.192.12.70"
-                }
-            }
-        },
-        {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 3",
-            "type": "vmess",
-            "server": "212.192.12.70",
-            "server_port": 17926,
-            "uuid": "4bf2b319-cd71-44bc-a0b7-63aea75cfec2",
+            "uuid": "6278df73-fe4a-47e2-ade2-9ca9ada121a1",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
