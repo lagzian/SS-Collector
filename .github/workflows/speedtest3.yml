@@ -13,23 +13,37 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/setup-python@v2
-        with:
-          python-version: "3.7"
+      # Install Python 3.7 using deadsnakes PPA
+      - name: Install Python 3.7
+        run: |
+          sudo apt-get update
+          sudo apt-get install software-properties-common -y
+          sudo add-apt-repository ppa:deadsnakes/ppa -y
+          sudo apt-get update
+          sudo apt-get install python3.7 python3.7-dev -y
 
+      # Setup Python environment
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.7
+
+      # Install pip dependencies
       - name: Install cython
-        run: pip install cython
+        run: python3.7 -m pip install cython
 
       - name: Install Requirements
         run: |
-          pip install -r ./utils/requirements.txt
+          python3.7 -m pip install -r ./utils/requirements.txt
 
+      # Main execution steps
       - name: Run Lite Speedtest
         run: |
           sleep 5
           sudo sh ./utils/speedtest/speedtest3.sh
-          python ./utils/speedtest/output2.py
+          python3.7 ./utils/speedtest/output2.py
 
+      # Commit and push changes
       - name: Commit Changes
         run: |
           git config --local user.email "actions@github.com"
@@ -46,3 +60,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           branch: main
+          force: true
