@@ -117,7 +117,7 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 12",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 12",
-                "🇫🇷FR | 🟢 | vmess | @customv2ray | 9",
+                "🇺🇸US | 🟢 | vmess | @customv2ray | 8",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 14",
                 "🇲🇽MX | 🟢 | vmess | @ShadowProxy66 | 15",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 16",
@@ -133,7 +133,6 @@
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
-                "❔XX | 🟢 | vmess | @Hope_Net | 3",
                 "🇩🇪DE | 🟢 | vmess | @fnet00 | 7",
                 "🇭🇰HK | 🟢 | vmess | @fnet00 | 10",
                 "🇩🇪DE | 🟢 | vmess | @nofiltering2 | 2"
@@ -154,7 +153,7 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 12",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 12",
-                "🇫🇷FR | 🟢 | vmess | @customv2ray | 9",
+                "🇺🇸US | 🟢 | vmess | @customv2ray | 8",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 14",
                 "🇲🇽MX | 🟢 | vmess | @ShadowProxy66 | 15",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 16",
@@ -170,7 +169,6 @@
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
-                "❔XX | 🟢 | vmess | @Hope_Net | 3",
                 "🇩🇪DE | 🟢 | vmess | @fnet00 | 7",
                 "🇭🇰HK | 🟢 | vmess | @fnet00 | 10",
                 "🇩🇪DE | 🟢 | vmess | @nofiltering2 | 2"
@@ -400,11 +398,11 @@
             }
         },
         {
-            "tag": "🇫🇷FR | 🟢 | vmess | @customv2ray | 9",
+            "tag": "🇺🇸US | 🟢 | vmess | @customv2ray | 8",
             "type": "vmess",
-            "server": "lin0502.hwcar.sbs",
+            "server": "s1.datasheetserver.com",
             "server_port": 443,
-            "uuid": "39cec18f-a439-427c-9a4e-aeb6fcdf6f53",
+            "uuid": "051e3f0c-c139-4c7c-9559-41222b72ca20",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -417,7 +415,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "linja05.hwcar.sbs",
+                "server_name": "",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -427,9 +425,9 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/linkws",
+                "path": "\/datasheet",
                 "headers": {
-                    "Host": "linja05.hwcar.sbs"
+                    "Host": ""
                 }
             }
         },
@@ -795,23 +793,6 @@
             "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
             "security": "auto",
             "alter_id": 64,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 3",
-            "type": "vmess",
-            "server": "127.0.0.1",
-            "server_port": 8080,
-            "uuid": "abccaba-baac-baca-cbda-bcaabbabaccc",
-            "security": "auto",
-            "alter_id": 0,
             "global_padding": false,
             "authenticated_length": true,
             "packet_encoding": "",
