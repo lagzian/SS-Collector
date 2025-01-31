@@ -23,7 +23,7 @@ proxies:
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 3","type":"vmess","server":"admin.arzonhost.ir","port":2086,"cipher":"auto","uuid":"7d93e992-48cf-42d4-84f8-75768e815a4c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"admin.arzonhost.ir"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vmess | @fnet00 | 7","type":"vmess","server":"5.75.201.39","port":59521,"cipher":"auto","uuid":"53e6dd39-27d4-4063-817a-9c00b077a2b7","alterId":,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇫🇮FI | 🟢 | vmess | @nofiltering2 | 1","type":"vmess","server":"all97-vip.f-sub.com","port":9416,"cipher":"auto","uuid":"3a256ff3-5a7f-4972-968b-568040356df5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
+  - {"name":"🇩🇪DE | 🟢 | vmess | @nofiltering2 | 1","type":"vmess","server":"all97-vip.f-sub.com","port":9416,"cipher":"auto","uuid":"3a256ff3-5a7f-4972-968b-568040356df5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -46,7 +46,7 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 3'
       - '🇨🇳CN | 🟢 | vmess | @yaney_01 | 4'
       - '🇩🇪DE | 🟢 | vmess | @fnet00 | 7'
-      - '🇫🇮FI | 🟢 | vmess | @nofiltering2 | 1'
+      - '🇩🇪DE | 🟢 | vmess | @nofiltering2 | 1'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -69,7 +69,7 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 3'
       - '🇨🇳CN | 🟢 | vmess | @yaney_01 | 4'
       - '🇩🇪DE | 🟢 | vmess | @fnet00 | 7'
-      - '🇫🇮FI | 🟢 | vmess | @nofiltering2 | 1'
+      - '🇩🇪DE | 🟢 | vmess | @nofiltering2 | 1'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -91,7 +91,7 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 3'
       - '🇨🇳CN | 🟢 | vmess | @yaney_01 | 4'
       - '🇩🇪DE | 🟢 | vmess | @fnet00 | 7'
-      - '🇫🇮FI | 🟢 | vmess | @nofiltering2 | 1'
+      - '🇩🇪DE | 🟢 | vmess | @nofiltering2 | 1'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
