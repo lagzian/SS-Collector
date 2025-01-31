@@ -128,9 +128,10 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
+                "❔XX | 🟢 | vmess | @Hope_Net | 0",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
                 "🇩🇪DE | 🟢 | vmess | @fnet00 | 7",
-                "🇫🇮FI | 🟢 | vmess | @nofiltering2 | 4"
+                "🇩🇪DE | 🟢 | vmess | @nofiltering2 | 4"
             ]
         },
         {
@@ -159,9 +160,10 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
+                "❔XX | 🟢 | vmess | @Hope_Net | 0",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
                 "🇩🇪DE | 🟢 | vmess | @fnet00 | 7",
-                "🇫🇮FI | 🟢 | vmess | @nofiltering2 | 4"
+                "🇩🇪DE | 🟢 | vmess | @nofiltering2 | 4"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -630,7 +632,24 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
+            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 0",
+            "type": "vmess",
+            "server": "127.0.0.1",
+            "server_port": 1080,
+            "uuid": "cbabaca-baac-aabc-dbac-bbacccabacab",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
             "type": "vmess",
             "server": "144.202.19.230",
             "server_port": 8881,
@@ -664,7 +683,7 @@
             }
         },
         {
-            "tag": "🇫🇮FI | 🟢 | vmess | @nofiltering2 | 4",
+            "tag": "🇩🇪DE | 🟢 | vmess | @nofiltering2 | 4",
             "type": "vmess",
             "server": "all97-vip.f-sub.com",
             "server_port": 9416,
