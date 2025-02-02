@@ -28,7 +28,7 @@ proxies:
   - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"172.67.146.154","port":8880,"cipher":"auto","uuid":"1c1cb7fe-a929-4e47-b292-4073b63d2d4b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"lamusa.daozhang.site"}},"client-fingerprint":"chrome"}
   - {"name":"🇧🇿BZ | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"45.131.7.255","port":8080,"cipher":"auto","uuid":"2a4fa40f-97f4-4ea9-b959-b148c4197d15","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/2a4fa40f","headers":{"host":"luodi.davesuen.store"}},"client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vmess | @fnet00 | 7","type":"vmess","server":"5.75.201.39","port":59521,"cipher":"auto","uuid":"53e6dd39-27d4-4063-817a-9c00b077a2b7","alterId":,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇩🇪DE | 🟢 | vmess | @nofiltering2 | 6","type":"vmess","server":"all97-vip.f-sub.com","port":9416,"cipher":"auto","uuid":"3a256ff3-5a7f-4972-968b-568040356df5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
+  - {"name":"🇫🇮FI | 🟢 | vmess | @nofiltering2 | 6","type":"vmess","server":"all97-vip.f-sub.com","port":9416,"cipher":"auto","uuid":"3a256ff3-5a7f-4972-968b-568040356df5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -56,7 +56,7 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @Hope_Net | 2'
       - '🇧🇿BZ | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @fnet00 | 7'
-      - '🇩🇪DE | 🟢 | vmess | @nofiltering2 | 6'
+      - '🇫🇮FI | 🟢 | vmess | @nofiltering2 | 6'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -84,7 +84,7 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @Hope_Net | 2'
       - '🇧🇿BZ | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @fnet00 | 7'
-      - '🇩🇪DE | 🟢 | vmess | @nofiltering2 | 6'
+      - '🇫🇮FI | 🟢 | vmess | @nofiltering2 | 6'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -111,7 +111,7 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @Hope_Net | 2'
       - '🇧🇿BZ | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @fnet00 | 7'
-      - '🇩🇪DE | 🟢 | vmess | @nofiltering2 | 6'
+      - '🇫🇮FI | 🟢 | vmess | @nofiltering2 | 6'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
