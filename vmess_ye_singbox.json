@@ -120,16 +120,16 @@
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 10",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 4",
                 "🇮🇷IR | 🟢 | vmess | @v2ray1_ng | 7",
-                "🇨🇦CA | 🟢 | vmess | @DailyV2RY | 281",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
-                "❔XX | 🟢 | vmess | @Hope_Net | 3",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
                 "❔XX | 🟢 | vmess | @Hope_Net | 4",
+                "❔XX | 🟢 | vmess | @Hope_Net | 5",
                 "🇩🇪DE | 🟢 | vmess | @fnet00 | 7"
             ]
         },
@@ -151,16 +151,16 @@
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 10",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 4",
                 "🇮🇷IR | 🟢 | vmess | @v2ray1_ng | 7",
-                "🇨🇦CA | 🟢 | vmess | @DailyV2RY | 281",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "🇨🇳CN | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
-                "❔XX | 🟢 | vmess | @Hope_Net | 3",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
                 "❔XX | 🟢 | vmess | @Hope_Net | 4",
+                "❔XX | 🟢 | vmess | @Hope_Net | 5",
                 "🇩🇪DE | 🟢 | vmess | @fnet00 | 7"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -422,23 +422,6 @@
             }
         },
         {
-            "tag": "🇨🇦CA | 🟢 | vmess | @DailyV2RY | 281",
-            "type": "vmess",
-            "server": "155.138.129.167",
-            "server_port": 8881,
-            "uuid": "db5afae4-ac23-41a6-8378-f307a9a47436",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
             "tag": "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
             "type": "vmess",
             "server": "45.199.138.217",
@@ -589,7 +572,31 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
+            "type": "vmess",
+            "server": "13.mamamajd.site",
+            "server_port": 23613,
+            "uuid": "05339454-308d-36f3-9d75-95fa117a8de4",
+            "security": "auto",
+            "alter_id": 2,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "13.mamamajd.site"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
             "type": "vmess",
             "server": "142.4.108.141",
             "server_port": 38007,
@@ -623,7 +630,7 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
             "type": "vmess",
             "server": "17.mamamajd.site",
             "server_port": 23617,
@@ -647,7 +654,7 @@
             }
         },
         {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 3",
+            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 4",
             "type": "vmess",
             "server": "127.0.0.1",
             "server_port": 8080,
@@ -664,7 +671,7 @@
             }
         },
         {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 4",
+            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 5",
             "type": "vmess",
             "server": "127.0.0.1",
             "server_port": 1080,
