@@ -24,8 +24,6 @@ proxies:
   - {"name":"🇨🇳CN | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"13.mamamajd.site","port":23613,"cipher":"auto","uuid":"05339454-308d-36f3-9d75-95fa117a8de4","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"13.mamamajd.site"}},"client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"91.107.138.53","port":4040,"cipher":"auto","uuid":"36bfd56d-8cc1-47b1-a6fe-0336f0b1f906","alterId":0,"tls":false,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"","grpc-mode":"gun"},"client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"142.4.108.141","port":38007,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/1723457615032","headers":{"host":""}},"client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 5","type":"vmess","server":"17.mamamajd.site","port":23617,"cipher":"auto","uuid":"09c25516-64e0-3b3e-b15c-361def5edf28","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"17.mamamajd.site"}},"client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vmess | @fnet00 | 7","type":"vmess","server":"5.75.201.39","port":59521,"cipher":"auto","uuid":"53e6dd39-27d4-4063-817a-9c00b077a2b7","alterId":,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
@@ -50,8 +48,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 3'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🇩🇪DE | 🟢 | vmess | @fnet00 | 7'
   - name: URL-TEST
     type: url-test
@@ -76,8 +72,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 3'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🇩🇪DE | 🟢 | vmess | @fnet00 | 7'
   - name: FALLBACK
     type: fallback
@@ -101,8 +95,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 3'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🇩🇪DE | 🟢 | vmess | @fnet00 | 7'
 rules:
  - GEOIP,IR,DIRECT
