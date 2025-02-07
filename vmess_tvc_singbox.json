@@ -124,7 +124,6 @@
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 4",
                 "🇦🇺AU | 🟢 | vmess | @ShadowProxy66 | 5",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 6",
-                "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 11",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -133,8 +132,6 @@
                 "❔XX | 🟢 | vmess | @Hope_Net | 0",
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 1",
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 2",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 4",
-                "❔XX | 🟢 | vmess | @Hope_Net | 5",
                 "🇩🇪DE | 🟢 | vmess | @fnet00 | 7"
             ]
         },
@@ -160,7 +157,6 @@
                 "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 4",
                 "🇦🇺AU | 🟢 | vmess | @ShadowProxy66 | 5",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 6",
-                "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 11",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -169,8 +165,6 @@
                 "❔XX | 🟢 | vmess | @Hope_Net | 0",
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 1",
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 2",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 4",
-                "❔XX | 🟢 | vmess | @Hope_Net | 5",
                 "🇩🇪DE | 🟢 | vmess | @fnet00 | 7"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -565,23 +559,6 @@
             }
         },
         {
-            "tag": "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 11",
-            "type": "vmess",
-            "server": "prom.learn-new.ir",
-            "server_port": 80,
-            "uuid": "76c65130-1bbb-4009-9751-527eac272614",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
             "tag": "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
             "type": "vmess",
             "server": "45.199.138.217",
@@ -794,57 +771,6 @@
                 "headers": {
                     "Host": "140.245.43.84"
                 }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 4",
-            "type": "vmess",
-            "server": "northflank.107421.xyz",
-            "server_port": 443,
-            "uuid": "de04add9-5c68-8bab-950c-08cd5320df18",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/vmess",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 5",
-            "type": "vmess",
-            "server": "127.0.0.1",
-            "server_port": 2080,
-            "uuid": "cacabba-caab-caba-adbc-baacabcacbcb",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
             }
         },
         {
