@@ -63,6 +63,7 @@ proxies:
   - {"name":"❔XX | 🔴 | vless | @vpn_go67 | 21","type":"vless","server":"public.alpanel.top","port":1403,"udp":false,"uuid":"4c6451ba-6594-4d67-a8ae-4df79815a4e3","tls":false,"servername":"tuyacn.com","network":"grpc","grpc-opts":{"grpc-service-name":"@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam"},"reality-opts":{"public-key":"rCdor1DLbQcXbNBD9aiLIoCYHwqTMh8ao9MIPMXo0yA","short-id":"99","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🔴 | vless | @kingofilter | 6","type":"vless","server":"c2.vact.ir","port":2083,"udp":false,"uuid":"0b874fb1-8916-45b6-bfbe-49140d31c22e","tls":false,"servername":"www.cdn77.com","network":"grpc","grpc-opts":{"grpc-service-name":"Telegram-ipV2Ray-Telegram-ipV2Ray-Telegram-ipV2Ray-Telegram-ipV2Ray-Telegram-ipV2Ray"},"reality-opts":{"public-key":"SAeP7A2HlP9QndrqUydIxf8LQc0dqnXxTDORbINMKh0","short-id":"0c2cffaec6","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
   - {"name":"🇨🇦CA | 🟢 | vless | @kingofilter | 11","type":"vless","server":"148.113.137.30","port":2053,"udp":false,"uuid":"08f7c98e-506c-4aca-a3ab-6fc99d015555","tls":false,"servername":"sourceforge.net","network":"grpc","grpc-opts":{"grpc-service-name":"2053vless"},"reality-opts":{"public-key":"nr4qs7JSJShNXIpWKNGReZXaFw910k1X93NDevapa0E","short-id":"5640288dca4f8519","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
+  - {"name":"🇳🇱NL | 🟢 | vless | @kingofilter | 14","type":"vless","server":"194.54.158.180","port":88,"udp":false,"uuid":"5b26f55a-abae-4369-ad39-5a9fe9aa2850","tls":false,"servername":"stackoverflow.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"kNa3coKJyfYtOaZ2w-U4wGmLiCOqEvURGRiEBufn23M","short-id":"5b0c3b354bfc","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -125,6 +126,7 @@ proxy-groups:
       - '❔XX | 🔴 | vless | @vpn_go67 | 21'
       - '🇩🇪DE | 🔴 | vless | @kingofilter | 6'
       - '🇨🇦CA | 🟢 | vless | @kingofilter | 11'
+      - '🇳🇱NL | 🟢 | vless | @kingofilter | 14'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -187,6 +189,7 @@ proxy-groups:
       - '❔XX | 🔴 | vless | @vpn_go67 | 21'
       - '🇩🇪DE | 🔴 | vless | @kingofilter | 6'
       - '🇨🇦CA | 🟢 | vless | @kingofilter | 11'
+      - '🇳🇱NL | 🟢 | vless | @kingofilter | 14'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -248,6 +251,7 @@ proxy-groups:
       - '❔XX | 🔴 | vless | @vpn_go67 | 21'
       - '🇩🇪DE | 🔴 | vless | @kingofilter | 6'
       - '🇨🇦CA | 🟢 | vless | @kingofilter | 11'
+      - '🇳🇱NL | 🟢 | vless | @kingofilter | 14'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
