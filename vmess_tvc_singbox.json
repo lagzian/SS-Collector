@@ -125,6 +125,7 @@
                 "🇺🇸US | 🟢 | vmess | @prrofile_purple | 121",
                 "🚩CF | 🟢 | vmess | @prrofile_purple | 139",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 141",
+                "🇺🇸US | 🟢 | vmess | @customv2ray | 6",
                 "🇷🇺RU | 🟢 | vmess | @ShadowProxy66 | 10",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 19",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 6",
@@ -169,6 +170,7 @@
                 "🇺🇸US | 🟢 | vmess | @prrofile_purple | 121",
                 "🚩CF | 🟢 | vmess | @prrofile_purple | 139",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 141",
+                "🇺🇸US | 🟢 | vmess | @customv2ray | 6",
                 "🇷🇺RU | 🟢 | vmess | @ShadowProxy66 | 10",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 19",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 6",
@@ -578,6 +580,30 @@
             "transport": {
                 "type": "ws",
                 "path": "\/vmess-argo",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @customv2ray | 6",
+            "type": "vmess",
+            "server": "biiia-vpn-whal.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "id14---vpn-whal",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/?ed=2056\/#id-telegram:--->@vpn_whal<---",
                 "headers": {
                     "Host": ""
                 }
