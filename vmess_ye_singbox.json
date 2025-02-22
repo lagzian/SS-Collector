@@ -129,8 +129,7 @@
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 8",
                 "🇷🇺RU | 🟢 | vmess | @ShadowProxy66 | 9",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 1",
-                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 331",
-                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 343",
+                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 350",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -139,8 +138,7 @@
                 "❔XX | 🟢 | vmess | @Hope_Net | 0",
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 1",
                 "🇩🇪DE | 🟢 | vmess | @Hope_Net | 2",
-                "❔XX | 🟢 | vmess | @Hope_Net | 3",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 4"
+                "❔XX | 🟢 | vmess | @Hope_Net | 3"
             ]
         },
         {
@@ -170,8 +168,7 @@
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 8",
                 "🇷🇺RU | 🟢 | vmess | @ShadowProxy66 | 9",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 1",
-                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 331",
-                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 343",
+                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 350",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -180,8 +177,7 @@
                 "❔XX | 🟢 | vmess | @Hope_Net | 0",
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 1",
                 "🇩🇪DE | 🟢 | vmess | @Hope_Net | 2",
-                "❔XX | 🟢 | vmess | @Hope_Net | 3",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 4"
+                "❔XX | 🟢 | vmess | @Hope_Net | 3"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -626,26 +622,9 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @DailyV2RY | 331",
+            "tag": "🇺🇸US | 🟢 | vmess | @DailyV2RY | 350",
             "type": "vmess",
             "server": "64.23.128.223",
-            "server_port": 8881,
-            "uuid": "db5afae4-ac23-41a6-8378-f307a9a47436",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @DailyV2RY | 343",
-            "type": "vmess",
-            "server": "45.76.62.122",
             "server_port": 8881,
             "uuid": "db5afae4-ac23-41a6-8378-f307a9a47436",
             "security": "auto",
@@ -889,40 +868,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 4",
-            "type": "vmess",
-            "server": "tls.04.node-for-bigairport.win",
-            "server_port": 23443,
-            "uuid": "3519dfc0-fa27-41cc-8c19-981818f9f6d5",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "tls.04.node-for-bigairport.win",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "tls.04.node-for-bigairport.win"
-                }
             }
         }
     ],
