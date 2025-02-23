@@ -121,6 +121,7 @@
                 "🇰🇿KZ | 🟢 | vmess | @DeamNet_Proxy | 5",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 12",
+                "🇺🇸US | 🟢 | vmess | @prrofile_purple | 113",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 1",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 4",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
@@ -153,6 +154,7 @@
                 "🇰🇿KZ | 🟢 | vmess | @DeamNet_Proxy | 5",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 12",
+                "🇺🇸US | 🟢 | vmess | @prrofile_purple | 113",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 1",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 4",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
@@ -445,6 +447,40 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @prrofile_purple | 113",
+            "type": "vmess",
+            "server": "WwW.sPEeDtEsT.NeT",
+            "server_port": 2083,
+            "uuid": "07a8b41c-939f-4c7a-8221-ac440551e1a7",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "api3.waltonweb.ir",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/paneld?ed=2560",
+                "headers": {
+                    "Host": "api3.waltonweb.ir"
+                }
             }
         },
         {
