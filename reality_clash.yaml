@@ -58,7 +58,8 @@ proxies:
   - {"name":"❔XX | 🔴 | vless | @vpn_go67 | 19","type":"vless","server":"public.alpanel.top","port":1403,"udp":false,"uuid":"671b9a72-7c75-46b9-be82-db2734bae2fc","tls":false,"servername":"tuyacn.com","network":"grpc","grpc-opts":{"grpc-service-name":"@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam"},"reality-opts":{"public-key":"rCdor1DLbQcXbNBD9aiLIoCYHwqTMh8ao9MIPMXo0yA","short-id":"99","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
   - {"name":"❔XX | 🔴 | vless | @vpn_go67 | 21","type":"vless","server":"public.alpanel.top","port":1403,"udp":false,"uuid":"4c6451ba-6594-4d67-a8ae-4df79815a4e3","tls":false,"servername":"tuyacn.com","network":"grpc","grpc-opts":{"grpc-service-name":"@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam"},"reality-opts":{"public-key":"rCdor1DLbQcXbNBD9aiLIoCYHwqTMh8ao9MIPMXo0yA","short-id":"99","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vless | @kingofilter | 2","type":"vless","server":"85.208.139.222","port":1633,"udp":false,"uuid":"1b8ce90d-5133-4959-aee2-6770ac897e8a","tls":false,"servername":"stackoverflow.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"ANlgAsYC8HmKfJnc5SFvru822urkxG1PzW1Zw4Vbm0Q","short-id":"9bc0a55a5379c0ed","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
-  - {"name":"🇩🇪DE | 🟢 | vless | @SvnTeam | 0","type":"vless","server":"SVNTEAM.MiSVN.iR","port":443,"udp":false,"uuid":"88da5abf-08f2-44fe-951e-358e96bc86ba","tls":false,"servername":"tgju.org","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"tw6uAbjXzRSIKChb6pDbHVNjnU9Don4hbv6dHRkmJx8","short-id":"e54b5ad736ae4c38","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
+  - {"name":"🇩🇪DE | 🟢 | vless | @SvnTeam | 0","type":"vless","server":"SVNTEAM.MiSVN.iR","port":443,"udp":false,"uuid":"6c76ee27-5281-4d1f-9e28-9a33e0bb0820","tls":false,"servername":"tgju.org","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"tw6uAbjXzRSIKChb6pDbHVNjnU9Don4hbv6dHRkmJx8","short-id":"e54b5ad736ae4c38","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
+  - {"name":"🇩🇪DE | 🟢 | vless | @SvnTeam | 1","type":"vless","server":"SVNTEAM.MiSVN.iR","port":443,"udp":false,"uuid":"88da5abf-08f2-44fe-951e-358e96bc86ba","tls":false,"servername":"tgju.org","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"tw6uAbjXzRSIKChb6pDbHVNjnU9Don4hbv6dHRkmJx8","short-id":"e54b5ad736ae4c38","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -117,6 +118,7 @@ proxy-groups:
       - '❔XX | 🔴 | vless | @vpn_go67 | 21'
       - '🇩🇪DE | 🟢 | vless | @kingofilter | 2'
       - '🇩🇪DE | 🟢 | vless | @SvnTeam | 0'
+      - '🇩🇪DE | 🟢 | vless | @SvnTeam | 1'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -175,6 +177,7 @@ proxy-groups:
       - '❔XX | 🔴 | vless | @vpn_go67 | 21'
       - '🇩🇪DE | 🟢 | vless | @kingofilter | 2'
       - '🇩🇪DE | 🟢 | vless | @SvnTeam | 0'
+      - '🇩🇪DE | 🟢 | vless | @SvnTeam | 1'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -232,6 +235,7 @@ proxy-groups:
       - '❔XX | 🔴 | vless | @vpn_go67 | 21'
       - '🇩🇪DE | 🟢 | vless | @kingofilter | 2'
       - '🇩🇪DE | 🟢 | vless | @SvnTeam | 0'
+      - '🇩🇪DE | 🟢 | vless | @SvnTeam | 1'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
