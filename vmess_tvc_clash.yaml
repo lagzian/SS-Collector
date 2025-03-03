@@ -25,7 +25,6 @@ proxies:
   - {"name":"🇨🇳CN | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇯🇵JP | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"3.112.212.197","port":33443,"cipher":"auto","uuid":"3519dfc0-fa27-41cc-8c19-981818f9f6d5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tls.05.node-for-bigairport.win"}},"client-fingerprint":"chrome"}
   - {"name":"🇯🇵JP | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"52.196.131.194","port":23443,"cipher":"auto","uuid":"3519dfc0-fa27-41cc-8c19-981818f9f6d5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tls.04.node-for-bigairport.win"}},"client-fingerprint":"chrome"}
-  - {"name":"🇯🇵JP | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"54.248.176.238","port":11443,"cipher":"auto","uuid":"3519dfc0-fa27-41cc-8c19-981818f9f6d5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tls.01.node-for-bigairport.win"}},"client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @nofiltering2 | 9","type":"vmess","server":"104.19.150.10","port":2095,"cipher":"auto","uuid":"94f332b0-c5d3-4531-a1d6-6e6358cc6c72","alterId":0,"tls":false,"skip-cert-verify":true,"network":"httpupgrade","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
@@ -51,7 +50,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @yaney_01 | 4'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 1'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 2'
-      - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 4'
       - '🚩CF | 🟢 | vmess | @nofiltering2 | 9'
   - name: URL-TEST
     type: url-test
@@ -77,7 +75,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @yaney_01 | 4'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 1'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 2'
-      - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 4'
       - '🚩CF | 🟢 | vmess | @nofiltering2 | 9'
   - name: FALLBACK
     type: fallback
@@ -102,7 +99,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @yaney_01 | 4'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 1'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 2'
-      - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 4'
       - '🚩CF | 🟢 | vmess | @nofiltering2 | 9'
 rules:
  - GEOIP,IR,DIRECT
