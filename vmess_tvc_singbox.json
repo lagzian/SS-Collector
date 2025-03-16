@@ -120,11 +120,12 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 0",
-                "🇺🇸US | 🟢 | vmess | @prrofile_purple | 135",
+                "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 114",
+                "🇺🇸US | 🟢 | vmess | @prrofile_purple | 143",
                 "🇩🇪DE | 🟢 | vmess | @customv2ray | 6",
                 "🇨🇭CH | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇮🇷IR | 🟢 | vmess | @ShadowProxy66 | 1",
-                "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 3",
+                "🇫🇷FR | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -138,9 +139,7 @@
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 5",
                 "❔XX | 🟢 | vmess | @Hope_Net | 6",
                 "❔XX | 🟢 | vmess | @Hope_Net | 7",
-                "❔XX | 🟢 | vmess | @Hope_Net | 8",
-                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 9",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 10"
+                "❔XX | 🟢 | vmess | @Hope_Net | 8"
             ]
         },
         {
@@ -161,11 +160,12 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 0",
-                "🇺🇸US | 🟢 | vmess | @prrofile_purple | 135",
+                "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 114",
+                "🇺🇸US | 🟢 | vmess | @prrofile_purple | 143",
                 "🇩🇪DE | 🟢 | vmess | @customv2ray | 6",
                 "🇨🇭CH | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇮🇷IR | 🟢 | vmess | @ShadowProxy66 | 1",
-                "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 3",
+                "🇫🇷FR | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -179,9 +179,7 @@
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 5",
                 "❔XX | 🟢 | vmess | @Hope_Net | 6",
                 "❔XX | 🟢 | vmess | @Hope_Net | 7",
-                "❔XX | 🟢 | vmess | @Hope_Net | 8",
-                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 9",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 10"
+                "❔XX | 🟢 | vmess | @Hope_Net | 8"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -459,7 +457,41 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @prrofile_purple | 135",
+            "tag": "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 114",
+            "type": "vmess",
+            "server": "irhms03.dongfeng.cfd",
+            "server_port": 443,
+            "uuid": "fa5b55cd-cafc-4de0-a4c8-722e02a9f58e",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "hms03.dongfeng.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "hms03.dongfeng.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @prrofile_purple | 143",
             "type": "vmess",
             "server": "142.4.104.33",
             "server_port": 52143,
@@ -537,7 +569,7 @@
             }
         },
         {
-            "tag": "🇫🇷FR | 🟢 | vmess | @ShadowProxy66 | 3",
+            "tag": "🇫🇷FR | 🟢 | vmess | @V2rayng_Fast | 0",
             "type": "vmess",
             "server": "51.77.20.131",
             "server_port": 22324,
@@ -902,64 +934,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇸🇬SG | 🟢 | vmess | @Hope_Net | 9",
-            "type": "vmess",
-            "server": "13.212.214.20",
-            "server_port": 40000,
-            "uuid": "13364789-a8b2-4bcd-8df7-a794fb6f87e5",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/bby",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 10",
-            "type": "vmess",
-            "server": "104.21.80.1",
-            "server_port": 2096,
-            "uuid": "a295ed11-18f8-4ac4-83b8-ab2a7fafde82",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "tasnim.twn24.ir",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/@M3HDIO1",
-                "headers": {
-                    "Host": "tasnim.twn24.ir"
-                }
             }
         }
     ],
