@@ -36,7 +36,6 @@ proxies:
   - {"name":"🇸🇬SG | 🟢 | vmess | @Hope_Net | 5","type":"vmess","server":"52.77.240.85","port":40000,"cipher":"auto","uuid":"13364789-a8b2-4bcd-8df7-a794fb6f87e5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/bby","headers":{"host":"down.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇯🇵JP | 🟢 | vmess | @Hope_Net | 6","type":"vmess","server":"18.182.53.96","port":22357,"cipher":"auto","uuid":"3519dfc0-fa27-41cc-8c19-981818f9f6d5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"0000000000000000000000000073.cgroup-node-for-bigairport.sbs"}},"client-fingerprint":"chrome"}
   - {"name":"🇫🇮FI | 🟢 | vmess | @Hope_Net | 8","type":"vmess","server":"65.109.179.113","port":2088,"cipher":"auto","uuid":"194c0d2f-9307-4a3f-b227-51639dd13ade","alterId":,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇩🇪DE | 🟢 | vmess | @Hope_Net | 10","type":"vmess","server":"5.39.252.72","port":20016,"cipher":"auto","uuid":"5240bc9d-5706-48a5-8754-0147b887ec12","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":""}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -72,7 +71,6 @@ proxy-groups:
       - '🇸🇬SG | 🟢 | vmess | @Hope_Net | 5'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 6'
       - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 8'
-      - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 10'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -108,7 +106,6 @@ proxy-groups:
       - '🇸🇬SG | 🟢 | vmess | @Hope_Net | 5'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 6'
       - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 8'
-      - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 10'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -143,7 +140,6 @@ proxy-groups:
       - '🇸🇬SG | 🟢 | vmess | @Hope_Net | 5'
       - '🇯🇵JP | 🟢 | vmess | @Hope_Net | 6'
       - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 8'
-      - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 10'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
