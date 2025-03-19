@@ -36,7 +36,6 @@ proxies:
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"52.40.64.174","port":14443,"cipher":"auto","uuid":"3519dfc0-fa27-41cc-8c19-981818f9f6d5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tls.14.node-for-bigairport.win"}},"client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vmess | @Hope_Net | 6","type":"vmess","server":"91.107.241.36","port":10683,"cipher":"auto","uuid":"42a6b3ff-9f36-4b1c-a0ea-82f2fd1472f9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇸🇬SG | 🟢 | vmess | @Hope_Net | 7","type":"vmess","server":"54.254.4.73","port":40000,"cipher":"auto","uuid":"13364789-a8b2-4bcd-8df7-a794fb6f87e5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/bby","headers":{"host":"down.dingtalk.com"}},"client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 9","type":"vmess","server":"bgp1.bgp1.miaomiaowu114514.org","port":11003,"cipher":"auto","uuid":"035374e8-60ff-34b3-9e7a-cca4cce31013","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -72,7 +71,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 6'
       - '🇸🇬SG | 🟢 | vmess | @Hope_Net | 7'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 9'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -108,7 +106,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 6'
       - '🇸🇬SG | 🟢 | vmess | @Hope_Net | 7'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 9'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -143,7 +140,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 6'
       - '🇸🇬SG | 🟢 | vmess | @Hope_Net | 7'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 9'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
