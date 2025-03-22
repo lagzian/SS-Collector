@@ -32,7 +32,6 @@ proxies:
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"207.90.238.136","port":20022,"cipher":"auto","uuid":"be2e5d52-dff5-4adc-be05-d22b0b688898","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":""}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"13.mamamajd.site","port":23613,"cipher":"auto","uuid":"ffa4efea-a32b-398c-8e43-4e11e3dc63dc","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"13.mamamajd.site"}},"client-fingerprint":"chrome"}
-  - {"name":"🇫🇮FI | 🟢 | vmess | @Hope_Net | 6","type":"vmess","server":"65.109.184.112","port":8249,"cipher":"auto","uuid":"b4c1dd62-f0dd-4a6f-8e85-e4293a338187","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -64,7 +63,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
-      - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 6'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -96,7 +94,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
-      - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 6'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -127,7 +124,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
-      - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 6'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
