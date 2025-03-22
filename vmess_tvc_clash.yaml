@@ -33,7 +33,6 @@ proxies:
   - {"name":"🇫🇮FI | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"65.109.184.112","port":8249,"cipher":"auto","uuid":"b4c1dd62-f0dd-4a6f-8e85-e4293a338187","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"91.107.148.11","port":2082,"cipher":"auto","uuid":"d1c8b4f6-9f76-4656-bc94-4856be53aad1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"httpupgrade","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 7","type":"vmess","server":"120.232.153.40","port":51182,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇦🇪AE | 🟢 | vmess | @Hope_Net | 8","type":"vmess","server":"193.123.81.105","port":443,"cipher":"auto","uuid":"9b456c2a-f2c1-45e1-87a9-b7628b04bb24","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"beyonddsz.cfd"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -66,7 +65,6 @@ proxy-groups:
       - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 7'
-      - '🇦🇪AE | 🟢 | vmess | @Hope_Net | 8'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -99,7 +97,6 @@ proxy-groups:
       - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 7'
-      - '🇦🇪AE | 🟢 | vmess | @Hope_Net | 8'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -131,7 +128,6 @@ proxy-groups:
       - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 7'
-      - '🇦🇪AE | 🟢 | vmess | @Hope_Net | 8'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
