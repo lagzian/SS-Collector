@@ -119,12 +119,11 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
-                "🇸🇬SG | 🟢 | vmess | @DeamNet_Proxy | 8",
-                "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 11",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 12",
-                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 14",
-                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 17",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 5",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 8",
+                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 12",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🇨🇭CH | 🟢 | vmess | @v2ray1_ng | 7",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 8",
                 "🇦🇺AU | 🟢 | vmess | @DailyV2RY | 208",
@@ -164,12 +163,11 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
-                "🇸🇬SG | 🟢 | vmess | @DeamNet_Proxy | 8",
-                "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 11",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 12",
-                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 14",
-                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 17",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 5",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 8",
+                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 12",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🇨🇭CH | 🟢 | vmess | @v2ray1_ng | 7",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 8",
                 "🇦🇺AU | 🟢 | vmess | @DailyV2RY | 208",
@@ -433,9 +431,43 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
             "type": "vmess",
-            "server": "188.114.97.3",
+            "server": "104.21.9.236",
+            "server_port": 443,
+            "uuid": "62aa5f80-0328-4004-a375-7f5a59df4022",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "hms19.best-tizi.top",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "hms19.best-tizi.top"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 5",
+            "type": "vmess",
+            "server": "188.114.99.205",
             "server_port": 443,
             "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
             "security": "auto",
@@ -467,52 +499,11 @@
             }
         },
         {
-            "tag": "🇸🇬SG | 🟢 | vmess | @DeamNet_Proxy | 8",
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 8",
             "type": "vmess",
-            "server": "62.146.233.112",
-            "server_port": 36712,
-            "uuid": "9266df42-0830-48c2-8509-4c57b30fe29d",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 11",
-            "type": "vmess",
-            "server": "3h-poland1.09vpn.com",
-            "server_port": 80,
-            "uuid": "9694da60-f759-4db7-9057-6da1d31d33df",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/vmess\/",
-                "headers": {
-                    "Host": "3h-poland1.09vpn.com"
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 12",
-            "type": "vmess",
-            "server": "188.114.99.134",
+            "server": "160.153.1.85",
             "server_port": 443,
-            "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+            "uuid": "62aa5f80-0328-4004-a375-7f5a59df4022",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -525,7 +516,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "linde06.indiavideo.sbs",
+                "server_name": "hms19.best-tizi.top",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -535,18 +526,18 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/linkws",
+                "path": "\/LINKWS",
                 "headers": {
-                    "Host": "linde06.indiavideo.sbs"
+                    "Host": "hms19.best-tizi.top"
                 }
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 14",
+            "tag": "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 12",
             "type": "vmess",
-            "server": "zula.ir",
+            "server": "irvideo.cfd",
             "server_port": 443,
-            "uuid": "950db6aa-4926-4616-816e-ec0312dcb87b",
+            "uuid": "e537f2f5-2a0c-4f59-92c9-832ca6433bf3",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -559,7 +550,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "jahfkjha.cfd",
+                "server_name": "",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -571,18 +562,18 @@
                 "type": "ws",
                 "path": "\/linkws",
                 "headers": {
-                    "Host": "jahfkjha.cfd"
+                    "Host": ""
                 }
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 17",
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 13",
             "type": "vmess",
-            "server": "112.132.215.12",
-            "server_port": 50002,
-            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "server": "160.153.1.81",
+            "server_port": 443,
+            "uuid": "62aa5f80-0328-4004-a375-7f5a59df4022",
             "security": "auto",
-            "alter_id": 64,
+            "alter_id": 0,
             "global_padding": false,
             "authenticated_length": true,
             "packet_encoding": "",
@@ -590,6 +581,23 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "hms19.best-tizi.top",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/LINKWS",
+                "headers": {
+                    "Host": "hms19.best-tizi.top"
+                }
             }
         },
         {
