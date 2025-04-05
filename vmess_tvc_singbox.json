@@ -119,11 +119,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 6",
-                "🇲🇩MD | 🟢 | vmess | @DeamNet_Proxy | 7",
-                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 11",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 12",
-                "🇧🇷BR | 🟢 | vmess | @DeamNet_Proxy | 15",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 16",
                 "🇨🇭CH | 🟢 | vmess | @v2ray1_ng | 6",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 7",
                 "🇩🇪DE | 🟢 | vmess | @DailyV2RY | 198",
@@ -163,11 +160,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 6",
-                "🇲🇩MD | 🟢 | vmess | @DeamNet_Proxy | 7",
-                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 11",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 12",
-                "🇧🇷BR | 🟢 | vmess | @DeamNet_Proxy | 15",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 16",
                 "🇨🇭CH | 🟢 | vmess | @v2ray1_ng | 6",
                 "🚩CF | 🟢 | vmess | @v2ray1_ng | 7",
                 "🇩🇪DE | 🟢 | vmess | @DailyV2RY | 198",
@@ -431,7 +425,41 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 6",
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
+            "type": "vmess",
+            "server": "172.67.175.56",
+            "server_port": 443,
+            "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "obdii.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "obdii.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 16",
             "type": "vmess",
             "server": "47.92.152.169",
             "server_port": 50002,
@@ -445,115 +473,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇲🇩MD | 🟢 | vmess | @DeamNet_Proxy | 7",
-            "type": "vmess",
-            "server": "178.175.135.156",
-            "server_port": 443,
-            "uuid": "7e4219ae-8bf1-4f79-902b-4f259c64533d",
-            "security": "auto",
-            "alter_id": 64,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.90267543.xyz",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/path\/230005213127",
-                "headers": {
-                    "Host": "www.90267543.xyz"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 11",
-            "type": "vmess",
-            "server": "hms26.xpengmotors.sbs",
-            "server_port": 443,
-            "uuid": "fb0a2de6-bf06-4ff0-97ce-c21abcdc2d55",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkws",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 12",
-            "type": "vmess",
-            "server": "104.19.150.10",
-            "server_port": 2095,
-            "uuid": "94f332b0-c5d3-4531-a1d6-6e6358cc6c72",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇧🇷BR | 🟢 | vmess | @DeamNet_Proxy | 15",
-            "type": "vmess",
-            "server": "pq-brazil1.09vpn.com",
-            "server_port": 80,
-            "uuid": "c04c3b34-70fd-4fec-963e-c12d09f36bef",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/vmess\/",
-                "headers": {
-                    "Host": "pq-brazil1.09vpn.com"
-                }
             }
         },
         {
