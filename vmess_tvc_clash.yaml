@@ -34,7 +34,6 @@ proxies:
   - {"name":"🇵🇭PH | 🟢 | vmess | @Hope_Net | 11","type":"vmess","server":"154.83.2.90","port":443,"cipher":"auto","uuid":"950db6aa-4926-4616-816e-ec0312dcb87b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":""}},"client-fingerprint":"chrome"}
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 12","type":"vmess","server":"107.148.207.249","port":48712,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇫🇮FI | 🟢 | vmess | @Hope_Net | 14","type":"vmess","server":"37.27.182.109","port":3378,"cipher":"auto","uuid":"b3a6435b-feae-41f4-a6b8-cf3c09e536e1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇹🇷TR | 🟢 | vmess | @Hope_Net | 15","type":"vmess","server":"193.31.116.198","port":34019,"cipher":"auto","uuid":"cad62fef-382b-4f53-8963-8d545231e9a1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"❔XX | 🟢 | vmess | @FreakConfig | 0","type":"vmess","server":"2a01:4f8:c010:6ca3::1","port":41358,"cipher":"auto","uuid":"68719eee-35cf-4980-adb3-b3986f566bf7","alterId":0,"tls":false,"skip-cert-verify":true,"network":"kcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
@@ -69,7 +68,6 @@ proxy-groups:
       - '🇵🇭PH | 🟢 | vmess | @Hope_Net | 11'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 12'
       - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 14'
-      - '🇹🇷TR | 🟢 | vmess | @Hope_Net | 15'
       - '❔XX | 🟢 | vmess | @FreakConfig | 0'
   - name: URL-TEST
     type: url-test
@@ -104,7 +102,6 @@ proxy-groups:
       - '🇵🇭PH | 🟢 | vmess | @Hope_Net | 11'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 12'
       - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 14'
-      - '🇹🇷TR | 🟢 | vmess | @Hope_Net | 15'
       - '❔XX | 🟢 | vmess | @FreakConfig | 0'
   - name: FALLBACK
     type: fallback
@@ -138,7 +135,6 @@ proxy-groups:
       - '🇵🇭PH | 🟢 | vmess | @Hope_Net | 11'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 12'
       - '🇫🇮FI | 🟢 | vmess | @Hope_Net | 14'
-      - '🇹🇷TR | 🟢 | vmess | @Hope_Net | 15'
       - '❔XX | 🟢 | vmess | @FreakConfig | 0'
 rules:
  - GEOIP,IR,DIRECT
