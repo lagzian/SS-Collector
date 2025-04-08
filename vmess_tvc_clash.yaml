@@ -34,7 +34,6 @@ proxies:
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 5","type":"vmess","server":"5ba5b6bd-suh6o0-svqrrs-4cwg.c.volczijie.com","port":4151,"cipher":"auto","uuid":"03c1d503-4803-11ef-8f3d-f23c9313b177","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 6","type":"vmess","server":"m.cnmjin.net","port":16616,"cipher":"auto","uuid":"6400c720-13f6-45b0-81ea-419b89873cd2","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"66d0c215104536850c337da2227b21cb.mobgslb.tbcache.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 8","type":"vmess","server":"152.67.251.232","port":443,"cipher":"auto","uuid":"e537f2f5-2a0c-4f59-92c9-832ca6433bf3","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"152.67.251.232"}},"client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 9","type":"vmess","server":"de01.sh-cloudflare.sbs","port":2096,"cipher":"auto","uuid":"b3928f8d-ea81-4d75-bcec-4016a072adff","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"de01.sh-cloudflare.sbs"}},"client-fingerprint":"chrome"}
   - {"name":"❔XX | 🟢 | vmess | @FreakConfig | 0","type":"vmess","server":"2a01:4f8:c010:6ca3::1","port":41358,"cipher":"auto","uuid":"68719eee-35cf-4980-adb3-b3986f566bf7","alterId":0,"tls":false,"skip-cert-verify":true,"network":"kcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
@@ -69,7 +68,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 8'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 9'
       - '❔XX | 🟢 | vmess | @FreakConfig | 0'
   - name: URL-TEST
     type: url-test
@@ -104,7 +102,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 8'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 9'
       - '❔XX | 🟢 | vmess | @FreakConfig | 0'
   - name: FALLBACK
     type: fallback
@@ -138,7 +135,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 8'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 9'
       - '❔XX | 🟢 | vmess | @FreakConfig | 0'
 rules:
  - GEOIP,IR,DIRECT
