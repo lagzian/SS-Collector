@@ -119,9 +119,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 6",
-                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 8",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 13",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 8",
+                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 15",
+                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 17",
                 "🇨🇿CZ | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -159,9 +159,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 6",
-                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 8",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 13",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 8",
+                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 15",
+                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 17",
                 "🇨🇿CZ | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -423,7 +423,31 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 6",
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 8",
+            "type": "vmess",
+            "server": "www.speedtest.net",
+            "server_port": 80,
+            "uuid": "3f638f34-8dba-4186-bc43-2716a7ddd4be",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/az05.beyondy.cfd:443\/link",
+                "headers": {
+                    "Host": "www.speedtest.net"
+                }
+            }
+        },
+        {
+            "tag": "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 15",
             "type": "vmess",
             "server": "47.92.152.169",
             "server_port": 50002,
@@ -440,7 +464,7 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 8",
+            "tag": "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 17",
             "type": "vmess",
             "server": "120.210.205.59",
             "server_port": 50002,
@@ -454,40 +478,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 13",
-            "type": "vmess",
-            "server": "188.114.97.2",
-            "server_port": 443,
-            "uuid": "950db6aa-4926-4616-816e-ec0312dcb87b",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "jahfkjha.cfd",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkws",
-                "headers": {
-                    "Host": "jahfkjha.cfd"
-                }
             }
         },
         {
