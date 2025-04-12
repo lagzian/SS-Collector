@@ -122,6 +122,8 @@
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 2",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 15",
                 "🇨🇿CZ | 🟢 | vmess | @ShadowProxy66 | 0",
+                "🇨🇦CA | 🟢 | vmess | @DailyV2RY | 187",
+                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 198",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -133,11 +135,10 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 3",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 4",
                 "❔XX | 🟢 | vmess | @Hope_Net | 5",
-                "🇬🇧GB | 🟢 | vmess | @Hope_Net | 6",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 6",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 7",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 8",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 9",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 10",
                 "❔XX | 🟢 | vmess | @FreakConfig | 0"
             ]
         },
@@ -161,6 +162,8 @@
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 2",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 15",
                 "🇨🇿CZ | 🟢 | vmess | @ShadowProxy66 | 0",
+                "🇨🇦CA | 🟢 | vmess | @DailyV2RY | 187",
+                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 198",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -172,11 +175,10 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 3",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 4",
                 "❔XX | 🟢 | vmess | @Hope_Net | 5",
-                "🇬🇧GB | 🟢 | vmess | @Hope_Net | 6",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 6",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 7",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 8",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 9",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 10",
                 "❔XX | 🟢 | vmess | @FreakConfig | 0"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -496,6 +498,74 @@
             }
         },
         {
+            "tag": "🇨🇦CA | 🟢 | vmess | @DailyV2RY | 187",
+            "type": "vmess",
+            "server": "15.235.44.49",
+            "server_port": 443,
+            "uuid": "1427ea48-29e2-492a-9c33-5ad9eab39c48",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "15.235.44.49",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/wss",
+                "headers": {
+                    "Host": "15.235.44.49"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @DailyV2RY | 198",
+            "type": "vmess",
+            "server": "cloudgetservice.mcloudservice.site",
+            "server_port": 443,
+            "uuid": "1e537ee8-dc44-4c5b-8810-c41b4ae2e460",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cloudgetservice.mcloudservice.site",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws?ed=2560",
+                "headers": {
+                    "Host": "cloudgetservice.mcloudservice.site"
+                }
+            }
+        },
+        {
             "tag": "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
             "type": "vmess",
             "server": "45.199.138.217",
@@ -806,7 +876,7 @@
             }
         },
         {
-            "tag": "🇬🇧GB | 🟢 | vmess | @Hope_Net | 6",
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 6",
             "type": "vmess",
             "server": "1744007541.tencentapp.cn",
             "server_port": 2053,
@@ -901,40 +971,6 @@
                 "path": "\/",
                 "headers": {
                     "Host": "yes.mojcn.com"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 10",
-            "type": "vmess",
-            "server": "ny2-dash.930.pp.ua",
-            "server_port": 2096,
-            "uuid": "f082eeca-e068-45f9-d1bf-46e9de9bdf57",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "ny2-dash.930.pp.ua",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/ny2-sub.930.pp.ua",
-                "headers": {
-                    "Host": "ny2-dash.930.pp.ua"
                 }
             }
         },
