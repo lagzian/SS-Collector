@@ -135,8 +135,9 @@
                 "🇭🇰HK | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
-                "🇬🇧GB | 🟢 | vmess | @Hope_Net | 1",
+                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 1",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
                 "❔XX | 🟢 | vmess | @FreakConfig | 0"
             ]
         },
@@ -173,8 +174,9 @@
                 "🇭🇰HK | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
-                "🇬🇧GB | 🟢 | vmess | @Hope_Net | 1",
+                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 1",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
                 "❔XX | 🟢 | vmess | @FreakConfig | 0"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -877,6 +879,57 @@
         {
             "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
             "type": "vmess",
+            "server": "hn3x.newbee8.me",
+            "server_port": 22253,
+            "uuid": "1824af53-6021-4866-a6f9-1bad166dc2c2",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇸🇬SG | 🟢 | vmess | @Hope_Net | 1",
+            "type": "vmess",
+            "server": "103.106.229.207",
+            "server_port": 53802,
+            "uuid": "803c04ae-2da6-434b-a692-8fd75e5964d7",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
+            "type": "vmess",
+            "server": "9f1822ee-sum4g0-t4nd8s-wujn.cu.plebai.net",
+            "server_port": 5229,
+            "uuid": "51362ab6-b5e6-11ea-ad28-f23c913c8d2b",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
+            "type": "vmess",
             "server": "v7.heduian.link",
             "server_port": 30807,
             "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
@@ -895,64 +948,6 @@
                 "path": "\/oooo",
                 "headers": {
                     "Host": "v7.heduian.link"
-                }
-            }
-        },
-        {
-            "tag": "🇬🇧GB | 🟢 | vmess | @Hope_Net | 1",
-            "type": "vmess",
-            "server": "1743919941.tencentapp.cn",
-            "server_port": 2053,
-            "uuid": "3bb3c730-e107-49c5-a0b2-b576d1b26a5e",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "1743919941.tencentapp.cn",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "1743919941.tencentapp.cn"
-                }
-            }
-        },
-        {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
-            "type": "vmess",
-            "server": "v8.heduian.link",
-            "server_port": 30808,
-            "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
-            "security": "auto",
-            "alter_id": 2,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/oooo",
-                "headers": {
-                    "Host": "v8.heduian.link"
                 }
             }
         },
