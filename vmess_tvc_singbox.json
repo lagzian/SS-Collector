@@ -119,8 +119,10 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 8",
-                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 16",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 6",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 12",
+                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 121",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 1",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 3",
@@ -153,8 +155,10 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 8",
-                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 16",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 6",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 12",
+                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 121",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 1",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 3",
@@ -411,9 +415,77 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 8",
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
             "type": "vmess",
-            "server": "172.67.161.77",
+            "server": "104.21.15.212",
+            "server_port": 443,
+            "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "glweidf.sbs",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "glweidf.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 6",
+            "type": "vmess",
+            "server": "172.67.183.220",
+            "server_port": 443,
+            "uuid": "950db6aa-4926-4616-816e-ec0312dcb87b",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "jahfkjha.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "jahfkjha.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 12",
+            "type": "vmess",
+            "server": "188.114.97.6",
             "server_port": 443,
             "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
             "security": "auto",
@@ -445,11 +517,11 @@
             }
         },
         {
-            "tag": "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 16",
+            "tag": "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 13",
             "type": "vmess",
-            "server": "linde06.indiavideo.sbs",
+            "server": "irvideo.cfd",
             "server_port": 443,
-            "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+            "uuid": "e537f2f5-2a0c-4f59-92c9-832ca6433bf3",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -462,7 +534,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "linde06.indiavideo.sbs",
+                "server_name": "",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -474,7 +546,7 @@
                 "type": "ws",
                 "path": "\/linkws",
                 "headers": {
-                    "Host": "linde06.indiavideo.sbs"
+                    "Host": ""
                 }
             }
         },
