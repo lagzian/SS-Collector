@@ -34,7 +34,7 @@ proxies:
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"183.236.51.38","port":41291,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"fadawtawd.zhangwei.li","port":46005,"cipher":"auto","uuid":"4c5a8a75-7d65-40a9-8c3b-a67abae08534","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/zh-cn","headers":{"host":"fadawtawd.zhangwei.li"}},"client-fingerprint":"chrome"}
   - {"name":"❔XX | 🟢 | vmess | @FreakConfig | 1","type":"vmess","server":"2a01:4f8:c010:6ca3::1","port":41358,"cipher":"auto","uuid":"68719eee-35cf-4980-adb3-b3986f566bf7","alterId":0,"tls":false,"skip-cert-verify":true,"network":"kcp","client-fingerprint":"chrome"}
-  - {"name":"🇨🇦CA | 🟢 | vmess | @OpenSSTPVpn | 0","type":"vmess","server":"zula.ir","port":443,"cipher":"auto","uuid":"e0a71cb0-191d-11f0-b132-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vtby8xqh@shieldheart-@OpenSSTPVpn-@OpenSSTPVpn","headers":{"host":"eu-2.hihu.net"}},"client-fingerprint":"chrome"}
+  - {"name":"🇺🇸US | 🟢 | vmess | @OpenSSTPVpn | 0","type":"vmess","server":"zula.ir","port":443,"cipher":"auto","uuid":"e0a71cb0-191d-11f0-b132-205c6d5f5d78","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vtby8xqh@shieldheart-@OpenSSTPVpn-@OpenSSTPVpn","headers":{"host":"eu-2.hihu.net"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -68,7 +68,7 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
       - '❔XX | 🟢 | vmess | @FreakConfig | 1'
-      - '🇨🇦CA | 🟢 | vmess | @OpenSSTPVpn | 0'
+      - '🇺🇸US | 🟢 | vmess | @OpenSSTPVpn | 0'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -102,7 +102,7 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
       - '❔XX | 🟢 | vmess | @FreakConfig | 1'
-      - '🇨🇦CA | 🟢 | vmess | @OpenSSTPVpn | 0'
+      - '🇺🇸US | 🟢 | vmess | @OpenSSTPVpn | 0'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -135,7 +135,7 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
       - '❔XX | 🟢 | vmess | @FreakConfig | 1'
-      - '🇨🇦CA | 🟢 | vmess | @OpenSSTPVpn | 0'
+      - '🇺🇸US | 🟢 | vmess | @OpenSSTPVpn | 0'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
