@@ -133,8 +133,6 @@
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 4",
                 "🇺🇸US | 🟢 | vmess | @OpenSSTPVpn | 0"
             ]
         },
@@ -169,8 +167,6 @@
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 4",
                 "🇺🇸US | 🟢 | vmess | @OpenSSTPVpn | 0"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -783,47 +779,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
-            "type": "vmess",
-            "server": "36.150.232.128",
-            "server_port": 45285,
-            "uuid": "469e0b31-30c3-4dab-800d-711232634ce1",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 4",
-            "type": "vmess",
-            "server": "c6702e28-sv2sg0-tc61cs-1tja8.hk3.p5pv.com",
-            "server_port": 80,
-            "uuid": "d2f0bee2-02f1-11f0-8eb0-f23c9164ca5d",
-            "security": "auto",
-            "alter_id": 2,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "c6702e28-sv2sg0-tc61cs-1tja8.hk3.p5pv.com"
-                }
             }
         },
         {
