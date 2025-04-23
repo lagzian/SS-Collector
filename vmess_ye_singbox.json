@@ -123,7 +123,7 @@
                 "🇨🇿CZ | 🟢 | vmess | @prrofile_purple | 122",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 9",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 4",
-                "🇨🇦CA | 🟢 | vmess | @proxystore11 | 6",
+                "🇺🇸US | 🟢 | vmess | @proxystore11 | 6",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 7",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -131,7 +131,7 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
-                "🇳🇱NL | 🟢 | vmess | @Hope_Net | 1"
+                "🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0"
             ]
         },
         {
@@ -155,7 +155,7 @@
                 "🇨🇿CZ | 🟢 | vmess | @prrofile_purple | 122",
                 "🇺🇸US | 🟢 | vmess | @v2ray1_ng | 9",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 4",
-                "🇨🇦CA | 🟢 | vmess | @proxystore11 | 6",
+                "🇺🇸US | 🟢 | vmess | @proxystore11 | 6",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 7",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -163,7 +163,7 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
-                "🇳🇱NL | 🟢 | vmess | @Hope_Net | 1"
+                "🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -492,7 +492,7 @@
             }
         },
         {
-            "tag": "🇨🇦CA | 🟢 | vmess | @proxystore11 | 6",
+            "tag": "🇺🇸US | 🟢 | vmess | @proxystore11 | 6",
             "type": "vmess",
             "server": "cname.proxystore11.news",
             "server_port": 443,
@@ -727,11 +727,11 @@
             }
         },
         {
-            "tag": "🇳🇱NL | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0",
             "type": "vmess",
-            "server": "31.58.51.127",
-            "server_port": 54309,
-            "uuid": "065211cb-053f-4ada-98f5-5c1cc006fa12",
+            "server": "104.21.44.106",
+            "server_port": 443,
+            "uuid": "93ea486a-bada-42a4-ac38-d088b320fa1e",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -742,11 +742,21 @@
                 "protocol": "smux",
                 "max_streams": 32
             },
+            "tls": {
+                "enabled": true,
+                "server_name": "xmivideo.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
             "transport": {
                 "type": "ws",
-                "path": "\/",
+                "path": "\/linkws",
                 "headers": {
-                    "Host": "31.58.51.127"
+                    "Host": "xmivideo.cfd"
                 }
             }
         }
