@@ -19,6 +19,7 @@ proxies:
   - {"name":"🇨🇳CN | 🟢 | vmess | @mftizi | 14","type":"vmess","server":"183.236.48.163","port":58831,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @mftizi | 15","type":"vmess","server":"120.232.153.27","port":58831,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @mftizi | 18","type":"vmess","server":"183.236.51.23","port":56601,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
+  - {"name":"❔XX | 🟢 | vmess | @prrofile_purple | 106","type":"vmess","server":"fl.pr0xymare.com","port":3378,"cipher":"auto","uuid":"b7fa8b30-0cb2-4534-bcfc-55791b98746a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"❔XX | 🟢 | vmess | @prrofile_purple | 118","type":"vmess","server":"fl.pr0xymare.com","port":3378,"cipher":"auto","uuid":"b565bb7c-56c0-417d-80ce-c3ca448a70e3","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇿CZ | 🟢 | vmess | @prrofile_purple | 122","type":"vmess","server":"89.18.58.104","port":180,"cipher":"auto","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇺🇸US | 🟢 | vmess | @v2ray1_ng | 9","type":"vmess","server":"15.204.86.120","port":35696,"cipher":"auto","uuid":"cad0504a-a9dc-4d29-8844-b11b69f14a8d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
@@ -33,7 +34,6 @@ proxies:
   - {"name":"🇳🇱NL | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"31.58.51.127","port":54309,"cipher":"auto","uuid":"065211cb-053f-4ada-98f5-5c1cc006fa12","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"nl.ipv4.v2rayflash.top"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"8582ab4a-svc1s0-szegoe-12hj8.cm5.p5pv.com","port":17233,"cipher":"auto","uuid":"5acc7a7c-d7ea-11eb-8673-f23c9164ca5d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"3c8fbafa-sv2sg0-t1a26b-1dn6p.hk.p5pv.com","port":80,"cipher":"auto","uuid":"f30891a2-7d0e-11ed-bb05-f23c913c8d2b","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"3c8fbafa-sv2sg0-t1a26b-1dn6p.hk.p5pv.com"}},"client-fingerprint":"chrome"}
-  - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"76ddc0b1-sv2sg0-szeqpq-sbt2.hk.p5pv.com","port":80,"cipher":"auto","uuid":"b88ebf3a-b6b7-11ea-82ef-f23c9164ca5d","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"76ddc0b1-sv2sg0-szeqpq-sbt2.hk.p5pv.com"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -52,6 +52,7 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 14'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 15'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 18'
+      - '❔XX | 🟢 | vmess | @prrofile_purple | 106'
       - '❔XX | 🟢 | vmess | @prrofile_purple | 118'
       - '🇨🇿CZ | 🟢 | vmess | @prrofile_purple | 122'
       - '🇺🇸US | 🟢 | vmess | @v2ray1_ng | 9'
@@ -66,7 +67,6 @@ proxy-groups:
       - '🇳🇱NL | 🟢 | vmess | @Hope_Net | 1'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 3'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -85,6 +85,7 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 14'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 15'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 18'
+      - '❔XX | 🟢 | vmess | @prrofile_purple | 106'
       - '❔XX | 🟢 | vmess | @prrofile_purple | 118'
       - '🇨🇿CZ | 🟢 | vmess | @prrofile_purple | 122'
       - '🇺🇸US | 🟢 | vmess | @v2ray1_ng | 9'
@@ -99,7 +100,6 @@ proxy-groups:
       - '🇳🇱NL | 🟢 | vmess | @Hope_Net | 1'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 3'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -117,6 +117,7 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 14'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 15'
       - '🇨🇳CN | 🟢 | vmess | @mftizi | 18'
+      - '❔XX | 🟢 | vmess | @prrofile_purple | 106'
       - '❔XX | 🟢 | vmess | @prrofile_purple | 118'
       - '🇨🇿CZ | 🟢 | vmess | @prrofile_purple | 122'
       - '🇺🇸US | 🟢 | vmess | @v2ray1_ng | 9'
@@ -131,7 +132,6 @@ proxy-groups:
       - '🇳🇱NL | 🟢 | vmess | @Hope_Net | 1'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 3'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
