@@ -31,7 +31,6 @@ proxies:
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"8582ab4a-svc1s0-szegoe-12hj8.cm5.p5pv.com","port":17233,"cipher":"auto","uuid":"5acc7a7c-d7ea-11eb-8673-f23c9164ca5d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"bf0c2e8d-sv4n40-szeqpq-sbt2.hk3.p5pv.com","port":80,"cipher":"auto","uuid":"b88ebf3a-b6b7-11ea-82ef-f23c9164ca5d","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"bf0c2e8d-sv4n40-szeqpq-sbt2.hk3.p5pv.com"}},"client-fingerprint":"chrome"}
-  - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"8.218.228.45","port":52059,"cipher":"auto","uuid":"888ce5e9-6e3a-4b5c-bcb7-ce1125c02d79","alterId":0,"tls":false,"skip-cert-verify":true,"network":"kcp","client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0","type":"vmess","server":"104.21.44.106","port":443,"cipher":"auto","uuid":"93ea486a-bada-42a4-ac38-d088b320fa1e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"xmivideo.cfd"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
@@ -63,7 +62,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 1'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 2'
       - '🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0'
   - name: URL-TEST
     type: url-test
@@ -95,7 +93,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 1'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 2'
       - '🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0'
   - name: FALLBACK
     type: fallback
@@ -126,7 +123,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 1'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 2'
       - '🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0'
 rules:
  - GEOIP,IR,DIRECT
