@@ -34,7 +34,6 @@ proxies:
   - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"d12dcb0e-sv2sg0-t917sa-12ach.hk3.p5pv.com","port":80,"cipher":"auto","uuid":"fc5ba91a-acd7-11ef-97e0-f23c9164ca5d","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"d12dcb0e-sv2sg0-t917sa-12ach.hk3.p5pv.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"2e617951-sv2sg0-taj9mo-1tco3.hk3.p5pv.com","port":80,"cipher":"auto","uuid":"e29de954-ea01-11ef-a271-f23c91cfbbc9","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"2e617951-sv2sg0-taj9mo-1tco3.hk3.p5pv.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"5f0f42e9-sv4n40-t7udc0-1pqhp.hk3.p5pv.com","port":80,"cipher":"auto","uuid":"b02327ac-a49a-11ef-a673-f23c913c8d2b","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"5f0f42e9-sv4n40-t7udc0-1pqhp.hk3.p5pv.com"}},"client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 5","type":"vmess","server":"8582ab4a-svc1s0-szegoe-12hj8.cm5.p5pv.com","port":17233,"cipher":"auto","uuid":"5acc7a7c-d7ea-11eb-8673-f23c9164ca5d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0","type":"vmess","server":"104.21.44.106","port":443,"cipher":"auto","uuid":"93ea486a-bada-42a4-ac38-d088b320fa1e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"xmivideo.cfd"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
@@ -69,7 +68,6 @@ proxy-groups:
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 2'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 3'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0'
   - name: URL-TEST
     type: url-test
@@ -104,7 +102,6 @@ proxy-groups:
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 2'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 3'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0'
   - name: FALLBACK
     type: fallback
@@ -138,7 +135,6 @@ proxy-groups:
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 2'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 3'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0'
 rules:
  - GEOIP,IR,DIRECT
