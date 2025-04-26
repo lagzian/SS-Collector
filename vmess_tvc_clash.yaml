@@ -31,8 +31,6 @@ proxies:
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 3","type":"vmess","server":"admin.arzonhost.ir","port":2086,"cipher":"auto","uuid":"7d93e992-48cf-42d4-84f8-75768e815a4c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"admin.arzonhost.ir"}},"client-fingerprint":"chrome"}
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇺🇸US | 🟢 | vmess | @free1_vpn | 8","type":"vmess","server":"15.204.86.120","port":35696,"cipher":"auto","uuid":"cad0504a-a9dc-4d29-8844-b11b69f14a8d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"c9061f82-svc1s0-sy94f1-1nc6m.cm5.p5pv.com","port":17231,"cipher":"auto","uuid":"85d450b2-1c2b-11f0-8a7b-f23c913c8d2b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇨🇼CW | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"5.10.246.95","port":443,"cipher":"auto","uuid":"7badd3e6-ef7e-4f28-99af-9a03fd3ca807","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/lzjjj","headers":{"host":"hy11.lzj520hxw.dpdns.org"}},"client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0","type":"vmess","server":"104.21.44.106","port":443,"cipher":"auto","uuid":"93ea486a-bada-42a4-ac38-d088b320fa1e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"xmivideo.cfd"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
@@ -64,8 +62,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 3'
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇺🇸US | 🟢 | vmess | @free1_vpn | 8'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
-      - '🇨🇼CW | 🟢 | vmess | @Hope_Net | 2'
       - '🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0'
   - name: URL-TEST
     type: url-test
@@ -97,8 +93,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 3'
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇺🇸US | 🟢 | vmess | @free1_vpn | 8'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
-      - '🇨🇼CW | 🟢 | vmess | @Hope_Net | 2'
       - '🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0'
   - name: FALLBACK
     type: fallback
@@ -129,8 +123,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 3'
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇺🇸US | 🟢 | vmess | @free1_vpn | 8'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
-      - '🇨🇼CW | 🟢 | vmess | @Hope_Net | 2'
       - '🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0'
 rules:
  - GEOIP,IR,DIRECT

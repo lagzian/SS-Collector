@@ -135,8 +135,6 @@
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇺🇸US | 🟢 | vmess | @free1_vpn | 8",
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 0",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
-                "🇨🇼CW | 🟢 | vmess | @Hope_Net | 2",
                 "🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0"
             ]
         },
@@ -173,8 +171,6 @@
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇺🇸US | 🟢 | vmess | @free1_vpn | 8",
                 "🇸🇬SG | 🟢 | vmess | @Hope_Net | 0",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
-                "🇨🇼CW | 🟢 | vmess | @Hope_Net | 2",
                 "🚩CF | 🟢 | vmess | @OpenSSTPVpn | 0"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -828,57 +824,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
-            "type": "vmess",
-            "server": "c9061f82-svc1s0-sy94f1-1nc6m.cm5.p5pv.com",
-            "server_port": 17231,
-            "uuid": "85d450b2-1c2b-11f0-8a7b-f23c913c8d2b",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇨🇼CW | 🟢 | vmess | @Hope_Net | 2",
-            "type": "vmess",
-            "server": "5.10.246.95",
-            "server_port": 443,
-            "uuid": "7badd3e6-ef7e-4f28-99af-9a03fd3ca807",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "5.10.246.95",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/lzjjj",
-                "headers": {
-                    "Host": "5.10.246.95"
-                }
             }
         },
         {
