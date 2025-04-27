@@ -125,6 +125,7 @@
                 "❔XX | 🟢 | vmess | @prrofile_purple | 129",
                 "❔XX | 🟢 | vmess | @prrofile_purple | 141",
                 "🇨🇿CZ | 🟢 | vmess | @prrofile_purple | 145",
+                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 346",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 12",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -162,6 +163,7 @@
                 "❔XX | 🟢 | vmess | @prrofile_purple | 129",
                 "❔XX | 🟢 | vmess | @prrofile_purple | 141",
                 "🇨🇿CZ | 🟢 | vmess | @prrofile_purple | 145",
+                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 346",
                 "🇺🇸US | 🟢 | vmess | @proxystore11 | 12",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -557,6 +559,40 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @DailyV2RY | 346",
+            "type": "vmess",
+            "server": "cloudgetservice.mcloudservice.site",
+            "server_port": 443,
+            "uuid": "5428dcc2-9950-4404-b8a5-9dac82acb210",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cloudgetservice.mcloudservice.site",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws?ed=2560",
+                "headers": {
+                    "Host": "cloudgetservice.mcloudservice.site"
+                }
             }
         },
         {
