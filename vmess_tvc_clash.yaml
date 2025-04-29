@@ -30,7 +30,6 @@ proxies:
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"jp4.vip2.g2.moonbase.life","port":35244,"cipher":"auto","uuid":"46a539d2-d3ba-4a6e-aedb-b727d2fc60f8","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/home","headers":{"host":"jp4.vip2.g2.moonbase.life"}},"client-fingerprint":"chrome"}
   - {"name":"🇰🇷KR | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"cg1c16.waimaoglobaldirect.cc","port":443,"cipher":"auto","uuid":"3493e94c-1769-43d8-8308-f87b460adc65","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/api/v1/graphql","headers":{"host":"cg1c16.waimaoglobaldirect.cc"}},"client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"59.42.247.189","port":8004,"cipher":"auto","uuid":"676f113d-f2ab-4fa5-9b2b-43428a489e56","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/nmkj","headers":{"host":"www.bing.com"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -60,7 +59,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇰🇷KR | 🟢 | vmess | @Hope_Net | 1'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -90,7 +88,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇰🇷KR | 🟢 | vmess | @Hope_Net | 1'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -119,7 +116,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇰🇷KR | 🟢 | vmess | @Hope_Net | 1'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
