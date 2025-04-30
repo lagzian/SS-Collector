@@ -133,9 +133,7 @@
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
                 "🇷🇺RU | 🟢 | vmess | @Hope_Net | 3",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 5",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 7",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 8"
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 5"
             ]
         },
         {
@@ -169,9 +167,7 @@
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
                 "🇷🇺RU | 🟢 | vmess | @Hope_Net | 3",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 5",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 7",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 8"
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 5"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -770,57 +766,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 7",
-            "type": "vmess",
-            "server": "1449f183-svhls0-t28b6o-ef48.cu.plebai.net",
-            "server_port": 5228,
-            "uuid": "cb15123a-084c-11f0-8eab-f23c91cfbbc9",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 8",
-            "type": "vmess",
-            "server": "v34.emoyes.top",
-            "server_port": 8443,
-            "uuid": "08b24d8d-10ab-4c5a-990e-4e0e194870af",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "v34.emoyes.top",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "v34.emoyes.top"
-                }
             }
         }
     ],
