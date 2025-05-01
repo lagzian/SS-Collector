@@ -122,7 +122,7 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 18",
-                "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 142",
+                "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 100",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -151,7 +151,7 @@
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 4",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 18",
-                "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 142",
+                "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 100",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -483,11 +483,11 @@
             }
         },
         {
-            "tag": "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 142",
+            "tag": "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 100",
             "type": "vmess",
-            "server": "5.180.30.85",
-            "server_port": 18598,
-            "uuid": "bf26f2fb-9d2a-49b6-8527-82e8aba3a9a9",
+            "server": "kapelleng.com",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -497,6 +497,23 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "kapelleng.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "kapelleng.com"
+                }
             }
         },
         {
