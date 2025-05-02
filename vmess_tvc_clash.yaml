@@ -38,8 +38,6 @@ proxies:
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 6","type":"vmess","server":"dddd.zj-zz-bgp.qunimade.lol","port":39212,"cipher":"auto","uuid":"ec31bf35-41a0-4178-9c6a-77623b159076","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 7","type":"vmess","server":"v25.heduian.link","port":30825,"cipher":"auto","uuid":"cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/oooo","headers":{"host":"v25.heduian.link"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 8","type":"vmess","server":"aafb2de9-suh6o0-svqrrs-4cwg.a.fosant.com","port":3693,"cipher":"auto","uuid":"03c1d503-4803-11ef-8f3d-f23c9313b177","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 9","type":"vmess","server":"2b6fa9f9-sum4g0-sv6oiy-1p1b.cm5.p5pv.com","port":17232,"cipher":"auto","uuid":"279b8588-616b-11ed-a8bf-f23c91cfbbc9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 10","type":"vmess","server":"104a1dcf-sutj40-svgpxu-y2gs.cu.plebai.net","port":5228,"cipher":"auto","uuid":"b806b388-5f97-11ee-8014-f23c913c8d2b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -77,8 +75,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 7'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 8'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 9'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 10'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -116,8 +112,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 7'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 8'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 9'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 10'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -154,8 +148,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 7'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 8'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 9'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 10'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
