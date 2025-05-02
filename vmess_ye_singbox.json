@@ -119,13 +119,10 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
-                "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 4",
-                "🇧🇷BR | 🟢 | vmess | @DeamNet_Proxy | 5",
-                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 11",
-                "🇮🇷IR | 🟢 | vmess | @DeamNet_Proxy | 13",
-                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 14",
-                "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 152",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 0",
+                "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 9",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 17",
+                "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 110",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -154,13 +151,10 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
-                "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 4",
-                "🇧🇷BR | 🟢 | vmess | @DeamNet_Proxy | 5",
-                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 11",
-                "🇮🇷IR | 🟢 | vmess | @DeamNet_Proxy | 13",
-                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 14",
-                "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 152",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 0",
+                "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 9",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 17",
+                "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 110",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -413,7 +407,58 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 0",
+            "type": "vmess",
+            "server": "15.204.249.0",
+            "server_port": 48160,
+            "uuid": "5b113c12-4dd4-4bb5-9c01-cff092b559e3",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 9",
+            "type": "vmess",
+            "server": "57.129.41.216",
+            "server_port": 2083,
+            "uuid": "3967c059-865d-40af-ba3c-8abc9ba5c7f8",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ov-germany1.09vpn.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/vmess\/",
+                "headers": {
+                    "Host": "ov-germany1.09vpn.com"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 17",
             "type": "vmess",
             "server": "172.67.207.26",
             "server_port": 443,
@@ -447,9 +492,9 @@
             }
         },
         {
-            "tag": "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 4",
+            "tag": "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 110",
             "type": "vmess",
-            "server": "146.59.55.50",
+            "server": "kapelleng.com",
             "server_port": 443,
             "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
@@ -464,7 +509,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "o.metuji.com",
+                "server_name": "kapelleng.com",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -476,141 +521,8 @@
                 "type": "ws",
                 "path": "\/linkvws",
                 "headers": {
-                    "Host": "o.metuji.com"
+                    "Host": "kapelleng.com"
                 }
-            }
-        },
-        {
-            "tag": "🇧🇷BR | 🟢 | vmess | @DeamNet_Proxy | 5",
-            "type": "vmess",
-            "server": "pq-brazil1.09vpn.com",
-            "server_port": 80,
-            "uuid": "c04c3b34-70fd-4fec-963e-c12d09f36bef",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/vmess\/",
-                "headers": {
-                    "Host": "pq-brazil1.09vpn.com"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 11",
-            "type": "vmess",
-            "server": "uswuxian.pai50288.uk",
-            "server_port": 8443,
-            "uuid": "c313606f-98c2-4d7b-ba74-48b94f61b11d",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇮🇷IR | 🟢 | vmess | @DeamNet_Proxy | 13",
-            "type": "vmess",
-            "server": "193.39.9.238",
-            "server_port": 10015,
-            "uuid": "bf1f47bd-b02f-4fd1-8ccd-756ca0cdfe2a",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "193.39.9.238"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 14",
-            "type": "vmess",
-            "server": "zula.ir",
-            "server_port": 443,
-            "uuid": "950db6aa-4926-4616-816e-ec0312dcb87b",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "jahfkjha.cfd",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkws",
-                "headers": {
-                    "Host": "jahfkjha.cfd"
-                }
-            }
-        },
-        {
-            "tag": "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 152",
-            "type": "vmess",
-            "server": "5.180.30.85",
-            "server_port": 18598,
-            "uuid": "bf26f2fb-9d2a-49b6-8527-82e8aba3a9a9",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
             }
         },
         {
