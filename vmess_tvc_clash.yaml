@@ -31,7 +31,6 @@ proxies:
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"jp6.g2.moonbase.life","port":35216,"cipher":"auto","uuid":"c3136814-a07e-41f6-ad94-8e20458c0d21","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/home","headers":{"host":"web.xcjs.info"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"3bb8aaa7-suk9s0-swtza9-1q91p.cu.plebai.net","port":5229,"cipher":"auto","uuid":"c11ff50c-f582-11ee-94df-f23c9164ca5d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"120.198.71.214","port":32980,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 5","type":"vmess","server":"04c77dd5-sux8g0-sv9of9-lys7.cm5.p5pv.com","port":17235,"cipher":"auto","uuid":"18c0664c-74f1-11ee-b51e-f23c9164ca5d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -62,7 +61,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 4'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -93,7 +91,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 4'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -123,7 +120,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 4'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
