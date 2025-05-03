@@ -26,7 +26,6 @@ proxies:
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 3","type":"vmess","server":"admin.arzonhost.ir","port":2086,"cipher":"auto","uuid":"7d93e992-48cf-42d4-84f8-75768e815a4c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"admin.arzonhost.ir"}},"client-fingerprint":"chrome"}
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"6faf81e8-svdwg0-t1bnjq-1krtb.cu.plebai.net","port":5229,"cipher":"auto","uuid":"60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"jp6.vip2.g2.moonbase.life","port":35246,"cipher":"auto","uuid":"c3136814-a07e-41f6-ad94-8e20458c0d21","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/home","headers":{"host":"web.xcjs.info"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -52,7 +51,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 3'
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -78,7 +76,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 3'
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -103,7 +100,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 3'
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
