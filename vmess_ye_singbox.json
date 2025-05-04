@@ -121,18 +121,20 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 6",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 14",
-                "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 117",
+                "🇺🇸US | 🟢 | vmess | @prrofile_purple | 117",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 1",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇩🇪DE | 🟢 | vmess | @Hope_Net | 0",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 4",
+                "🇨🇼CW | 🟢 | vmess | @Hope_Net | 0",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
+                "🇩🇪DE | 🟢 | vmess | @Hope_Net | 2",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 5",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 6",
                 "🇵🇱PL | 🟢 | vmess | @OpenSSTPVpn | 0"
             ]
         },
@@ -155,18 +157,20 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
                 "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 6",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 14",
-                "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 117",
+                "🇺🇸US | 🟢 | vmess | @prrofile_purple | 117",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 1",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇩🇪DE | 🟢 | vmess | @Hope_Net | 0",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 4",
+                "🇨🇼CW | 🟢 | vmess | @Hope_Net | 0",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
+                "🇩🇪DE | 🟢 | vmess | @Hope_Net | 2",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 5",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 6",
                 "🇵🇱PL | 🟢 | vmess | @OpenSSTPVpn | 0"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -479,7 +483,7 @@
             }
         },
         {
-            "tag": "🇬🇧GB | 🟢 | vmess | @prrofile_purple | 117",
+            "tag": "🇺🇸US | 🟢 | vmess | @prrofile_purple | 117",
             "type": "vmess",
             "server": "kapelleng.com",
             "server_port": 443,
@@ -680,7 +684,58 @@
             }
         },
         {
-            "tag": "🇩🇪DE | 🟢 | vmess | @Hope_Net | 0",
+            "tag": "🇨🇼CW | 🟢 | vmess | @Hope_Net | 0",
+            "type": "vmess",
+            "server": "5.10.246.58",
+            "server_port": 443,
+            "uuid": "247be9aa-0741-48a1-a69e-61fdaf5290c3",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "5.10.246.58",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "5.10.246.58"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
+            "type": "vmess",
+            "server": "us2a-20250420.88888009.xyz",
+            "server_port": 80,
+            "uuid": "c97cf46e-1554-36cb-8b36-c3556b883dc4",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇩🇪DE | 🟢 | vmess | @Hope_Net | 2",
             "type": "vmess",
             "server": "91.107.247.104",
             "server_port": 30919,
@@ -697,7 +752,7 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
             "type": "vmess",
             "server": "ee53ff51-sux8g0-sxxbmq-1szgv.cm5.p5pv.com",
             "server_port": 17235,
@@ -714,7 +769,7 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
             "type": "vmess",
             "server": "b3e1a577-svjgg0-t1bnjq-1krtb.cu.plebai.net",
             "server_port": 5229,
@@ -731,7 +786,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 5",
             "type": "vmess",
             "server": "ru2a-20250420.88888009.xyz",
             "server_port": 80,
@@ -748,7 +803,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 4",
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 6",
             "type": "vmess",
             "server": "cdnjs.com",
             "server_port": 443,
