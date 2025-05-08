@@ -122,8 +122,9 @@
                 "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 2",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 7",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 15",
-                "❔XX | 🟢 | vmess | @prrofile_purple | 129",
-                "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 133",
+                "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 108",
+                "❔XX | 🟢 | vmess | @prrofile_purple | 136",
+                "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 140",
                 "🇸🇬SG | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -133,8 +134,7 @@
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
                 "🇯🇵JP | 🟢 | vmess | @Hope_Net | 1",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 4"
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3"
             ]
         },
         {
@@ -157,8 +157,9 @@
                 "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 2",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 7",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 15",
-                "❔XX | 🟢 | vmess | @prrofile_purple | 129",
-                "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 133",
+                "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 108",
+                "❔XX | 🟢 | vmess | @prrofile_purple | 136",
+                "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 140",
                 "🇸🇬SG | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -168,8 +169,7 @@
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
                 "🇯🇵JP | 🟢 | vmess | @Hope_Net | 1",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 4"
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -515,7 +515,24 @@
             }
         },
         {
-            "tag": "❔XX | 🟢 | vmess | @prrofile_purple | 129",
+            "tag": "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 108",
+            "type": "vmess",
+            "server": "91.194.11.178",
+            "server_port": 28984,
+            "uuid": "9b2335af-f24c-4810-9c34-95568ebd579d",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "❔XX | 🟢 | vmess | @prrofile_purple | 136",
             "type": "vmess",
             "server": "blog.tele-shop-too.studio",
             "server_port": 33157,
@@ -532,7 +549,7 @@
             }
         },
         {
-            "tag": "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 133",
+            "tag": "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 140",
             "type": "vmess",
             "server": "kapelleng.com",
             "server_port": 443,
@@ -838,33 +855,6 @@
                 "path": "\/",
                 "headers": {
                     "Host": "bookmyshow.com"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 4",
-            "type": "vmess",
-            "server": "ourfast.asia",
-            "server_port": 443,
-            "uuid": "3a57f77e-9193-4373-b86a-69d1ca8d3bfa",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "ourfast.asia",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
                 }
             }
         }
