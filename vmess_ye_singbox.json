@@ -122,8 +122,8 @@
                 "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 2",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 7",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 15",
-                "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 108",
-                "❔XX | 🟢 | vmess | @prrofile_purple | 136",
+                "❔XX | 🟢 | vmess | @prrofile_purple | 129",
+                "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 133",
                 "🇸🇬SG | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -131,8 +131,7 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
-                "🇯🇵JP | 🟢 | vmess | @Hope_Net | 1",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 2"
+                "🇯🇵JP | 🟢 | vmess | @Hope_Net | 1"
             ]
         },
         {
@@ -155,8 +154,8 @@
                 "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 2",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 7",
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 15",
-                "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 108",
-                "❔XX | 🟢 | vmess | @prrofile_purple | 136",
+                "❔XX | 🟢 | vmess | @prrofile_purple | 129",
+                "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 133",
                 "🇸🇬SG | 🟢 | vmess | @V2rayng_Fast | 0",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -164,8 +163,7 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
-                "🇯🇵JP | 🟢 | vmess | @Hope_Net | 1",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 2"
+                "🇯🇵JP | 🟢 | vmess | @Hope_Net | 1"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
             "interval": "3m",
@@ -511,24 +509,7 @@
             }
         },
         {
-            "tag": "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 108",
-            "type": "vmess",
-            "server": "91.194.11.178",
-            "server_port": 28984,
-            "uuid": "9b2335af-f24c-4810-9c34-95568ebd579d",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "❔XX | 🟢 | vmess | @prrofile_purple | 136",
+            "tag": "❔XX | 🟢 | vmess | @prrofile_purple | 129",
             "type": "vmess",
             "server": "blog.tele-shop-too.studio",
             "server_port": 33157,
@@ -542,6 +523,40 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 133",
+            "type": "vmess",
+            "server": "kapelleng.com",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "kapelleng.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "kapelleng.com"
+                }
             }
         },
         {
@@ -750,40 +765,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
-            "type": "vmess",
-            "server": "gs03-1.guoshi1520.com",
-            "server_port": 443,
-            "uuid": "82ff6d30-2920-4ebd-b95c-b016ede1a841",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "gs03-1.guoshi1520.com",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/82ff6d30",
-                "headers": {
-                    "Host": "gs03-1.guoshi1520.com"
-                }
             }
         }
     ],
