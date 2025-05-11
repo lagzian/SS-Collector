@@ -137,7 +137,8 @@
                 "🇸🇬SG | 🟢 | vmess | @free1_vpn | 6",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 1"
             ]
         },
@@ -176,7 +177,8 @@
                 "🇸🇬SG | 🟢 | vmess | @free1_vpn | 6",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 1"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -879,6 +881,30 @@
         {
             "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
             "type": "vmess",
+            "server": "d514a957-sv2sg0-swfla6-1rdqg.hk.p5pv.com",
+            "server_port": 80,
+            "uuid": "2b57ec48-0da4-11ef-8f35-f23c913c8d2b",
+            "security": "auto",
+            "alter_id": 2,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "d514a957-sv2sg0-swfla6-1rdqg.hk.p5pv.com"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
+            "type": "vmess",
             "server": "2f692aa9-sv2sg0-svs488-n09f.hk.p5pv.com",
             "server_port": 80,
             "uuid": "89b0ea8c-806b-11ed-94ba-f23c913c8d2b",
@@ -901,7 +927,7 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
             "type": "vmess",
             "server": "4087dc1a-sv2sg0-swqixu-1luqs.hk.p5pv.com",
             "server_port": 80,
@@ -925,7 +951,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
             "type": "vmess",
             "server": "cloudgetservice.mcloudservice.site",
             "server_port": 443,
