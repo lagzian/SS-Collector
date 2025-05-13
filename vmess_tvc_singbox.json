@@ -120,9 +120,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 149",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 1",
-                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 313",
-                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 327",
+                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 335",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -150,9 +150,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 149",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 1",
-                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 313",
-                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 327",
+                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 335",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -437,6 +437,23 @@
             }
         },
         {
+            "tag": "🇨🇦CA | 🟢 | vmess | @prrofile_purple | 149",
+            "type": "vmess",
+            "server": "91.194.11.178",
+            "server_port": 28984,
+            "uuid": "9b2335af-f24c-4810-9c34-95568ebd579d",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
             "tag": "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 1",
             "type": "vmess",
             "server": "37.221.125.159",
@@ -454,7 +471,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @DailyV2RY | 313",
+            "tag": "🇺🇸US | 🟢 | vmess | @DailyV2RY | 335",
             "type": "vmess",
             "server": "cloudgetservice.mcloudservice.site",
             "server_port": 443,
@@ -482,40 +499,6 @@
             "transport": {
                 "type": "ws",
                 "path": "\/linkvkvws",
-                "headers": {
-                    "Host": "cloudgetservice.mcloudservice.site"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @DailyV2RY | 327",
-            "type": "vmess",
-            "server": "cloudgetservice.mcloudservice.site",
-            "server_port": 443,
-            "uuid": "96e44a22-4f5c-48f9-99d9-f2c1985dd5b9",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "cloudgetservice.mcloudservice.site",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkvkws",
                 "headers": {
                     "Host": "cloudgetservice.mcloudservice.site"
                 }
