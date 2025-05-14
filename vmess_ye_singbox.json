@@ -122,8 +122,8 @@
                 "🇨🇾CY | 🟢 | vmess | @DeamNet_Proxy | 0",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 7",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 3",
-                "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 295",
-                "🇩🇪DE | 🟢 | vmess | @DailyV2RY | 311",
+                "🚩CF | 🟢 | vmess | @DailyV2RY | 296",
+                "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 311",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -153,8 +153,8 @@
                 "🇨🇾CY | 🟢 | vmess | @DeamNet_Proxy | 0",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 7",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 3",
-                "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 295",
-                "🇩🇪DE | 🟢 | vmess | @DailyV2RY | 311",
+                "🚩CF | 🟢 | vmess | @DailyV2RY | 296",
+                "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 311",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -490,7 +490,41 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 295",
+            "tag": "🚩CF | 🟢 | vmess | @DailyV2RY | 296",
+            "type": "vmess",
+            "server": "172.66.168.209",
+            "server_port": 443,
+            "uuid": "5428dcc2-9950-4404-b8a5-9dac82acb210",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "maXNEtVIP-usA-VP3.nETKH3.SiTE",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "maXNEtVIP-usA-VP3.nETKH3.SiTE"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 311",
             "type": "vmess",
             "server": "84a663fa-sunz40-swhx5y-1q3dm.hk.p5pv.com",
             "server_port": 80,
@@ -508,40 +542,6 @@
             "transport": {
                 "type": "ws",
                 "path": "\/",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪DE | 🟢 | vmess | @DailyV2RY | 311",
-            "type": "vmess",
-            "server": "57.129.24.125",
-            "server_port": 443,
-            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkvws",
                 "headers": {
                     "Host": ""
                 }
