@@ -123,14 +123,14 @@
                 "🇨🇾CY | 🟢 | vmess | @DeamNet_Proxy | 5",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 12",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 6",
-                "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 274",
-                "🚩CF | 🟢 | vmess | @DailyV2RY | 290",
+                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 276",
+                "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 293",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇸🇬SG | 🟢 | vmess | @free1_vpn | 12",
+                "🇸🇬SG | 🟢 | vmess | @free1_vpn | 13",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 1"
             ]
         },
@@ -155,14 +155,14 @@
                 "🇨🇾CY | 🟢 | vmess | @DeamNet_Proxy | 5",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 12",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 6",
-                "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 274",
-                "🚩CF | 🟢 | vmess | @DailyV2RY | 290",
+                "🇺🇸US | 🟢 | vmess | @DailyV2RY | 276",
+                "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 293",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇸🇬SG | 🟢 | vmess | @free1_vpn | 12",
+                "🇸🇬SG | 🟢 | vmess | @free1_vpn | 13",
                 "🇺🇸US | 🟢 | vmess | @nofiltering2 | 1"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -509,7 +509,41 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 274",
+            "tag": "🇺🇸US | 🟢 | vmess | @DailyV2RY | 276",
+            "type": "vmess",
+            "server": "cloudgetservice.mcloudservice.site",
+            "server_port": 443,
+            "uuid": "8f922e2e-18f3-4bd9-a097-09c2d7c139be",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cloudgetservice.mcloudservice.site",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws?ed=2560",
+                "headers": {
+                    "Host": "cloudgetservice.mcloudservice.site"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰HK | 🟢 | vmess | @DailyV2RY | 293",
             "type": "vmess",
             "server": "581be42d-sv2sg0-swotpn-1nn0k.hk.p5pv.com",
             "server_port": 80,
@@ -529,40 +563,6 @@
                 "path": "\/",
                 "headers": {
                     "Host": "581be42d-sv2sg0-swotpn-1nn0k.hk.p5pv.com"
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @DailyV2RY | 290",
-            "type": "vmess",
-            "server": "172.67.200.13",
-            "server_port": 443,
-            "uuid": "5f726fe3-d82e-4da5-a711-8af0cbb2b682",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/azumase.ren",
-                "headers": {
-                    "Host": "1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top"
                 }
             }
         },
@@ -717,7 +717,7 @@
             }
         },
         {
-            "tag": "🇸🇬SG | 🟢 | vmess | @free1_vpn | 12",
+            "tag": "🇸🇬SG | 🟢 | vmess | @free1_vpn | 13",
             "type": "vmess",
             "server": "84.247.146.189",
             "server_port": 33754,
