@@ -29,7 +29,6 @@ proxies:
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"183.237.84.53","port":55002,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"fffgtyy.7282728.xyz","port":80,"cipher":"auto","uuid":"3d4ad187-b554-4300-bf71-d26c71962504","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"fffgtyy.7282728.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"🇰🇷KR | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"lv4.789900.xyz","port":2087,"cipher":"auto","uuid":"7dd16ab1-2a36-4b32-86fd-eb49fb039752","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"lv4.789900.xyz"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -58,7 +57,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 1'
-      - '🇰🇷KR | 🟢 | vmess | @Hope_Net | 2'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -87,7 +85,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 1'
-      - '🇰🇷KR | 🟢 | vmess | @Hope_Net | 2'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -115,7 +112,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 1'
-      - '🇰🇷KR | 🟢 | vmess | @Hope_Net | 2'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
