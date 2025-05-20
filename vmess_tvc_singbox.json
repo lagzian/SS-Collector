@@ -119,9 +119,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 1",
-                "🇨🇦CA | 🟢 | vmess | @DeamNet_Proxy | 10",
-                "🇧🇷BR | 🟢 | vmess | @DeamNet_Proxy | 16",
+                "🇨🇦CA | 🟢 | vmess | @DeamNet_Proxy | 9",
+                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -147,9 +146,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 1",
-                "🇨🇦CA | 🟢 | vmess | @DeamNet_Proxy | 10",
-                "🇧🇷BR | 🟢 | vmess | @DeamNet_Proxy | 16",
+                "🇨🇦CA | 🟢 | vmess | @DeamNet_Proxy | 9",
+                "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 10",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -399,13 +397,13 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 1",
+            "tag": "🇨🇦CA | 🟢 | vmess | @DeamNet_Proxy | 9",
             "type": "vmess",
-            "server": "112.132.215.12",
-            "server_port": 50002,
-            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "server": "51.79.102.253",
+            "server_port": 80,
+            "uuid": "58fe1542-5290-40ad-815a-77707a81afe5",
             "security": "auto",
-            "alter_id": 64,
+            "alter_id": 0,
             "global_padding": false,
             "authenticated_length": true,
             "packet_encoding": "",
@@ -413,14 +411,21 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/IOebhLMhl1CTbFHbL95myfRX2",
+                "headers": {
+                    "Host": "51.79.102.253"
+                }
             }
         },
         {
-            "tag": "🇨🇦CA | 🟢 | vmess | @DeamNet_Proxy | 10",
+            "tag": "🇫🇷FR | 🟢 | vmess | @DeamNet_Proxy | 10",
             "type": "vmess",
-            "server": "15.235.83.227",
+            "server": "irvideo.cfd",
             "server_port": 443,
-            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "uuid": "e537f2f5-2a0c-4f59-92c9-832ca6433bf3",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -433,7 +438,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
+                "server_name": "",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -443,33 +448,9 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/linkvws",
+                "path": "\/linkws",
                 "headers": {
-                    "Host": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc"
-                }
-            }
-        },
-        {
-            "tag": "🇧🇷BR | 🟢 | vmess | @DeamNet_Proxy | 16",
-            "type": "vmess",
-            "server": "pq-brazil1.09vpn.com",
-            "server_port": 80,
-            "uuid": "24b6bbfb-9b27-4f17-bd32-67523bf487d9",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/vmess\/",
-                "headers": {
-                    "Host": "pq-brazil1.09vpn.com"
+                    "Host": ""
                 }
             }
         },
