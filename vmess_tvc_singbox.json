@@ -119,8 +119,11 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇨🇦CA | 🟢 | vmess | @DeamNet_Proxy | 5",
-                "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 114",
+                "🇵🇭PH | 🟢 | vmess | @DeamNet_Proxy | 5",
+                "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 8",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 10",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 15",
+                "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 122",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -149,8 +152,11 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇨🇦CA | 🟢 | vmess | @DeamNet_Proxy | 5",
-                "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 114",
+                "🇵🇭PH | 🟢 | vmess | @DeamNet_Proxy | 5",
+                "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 8",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 10",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 15",
+                "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 122",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -403,11 +409,59 @@
             }
         },
         {
-            "tag": "🇨🇦CA | 🟢 | vmess | @DeamNet_Proxy | 5",
+            "tag": "🇵🇭PH | 🟢 | vmess | @DeamNet_Proxy | 5",
             "type": "vmess",
-            "server": "15.235.50.172",
+            "server": "3h-Philippines1.09vpn.com",
+            "server_port": 80,
+            "uuid": "3fd35fa2-a0c6-4f0c-8310-c3c03a268155",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/vmess\/",
+                "headers": {
+                    "Host": "3h-Philippines1.09vpn.com"
+                }
+            }
+        },
+        {
+            "tag": "🇵🇱PL | 🟢 | vmess | @DeamNet_Proxy | 8",
+            "type": "vmess",
+            "server": "3h-poland1.09vpn.com",
+            "server_port": 80,
+            "uuid": "10e2ff65-0e20-462d-a282-164e48b955a9",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/vmess\/",
+                "headers": {
+                    "Host": "3h-poland1.09vpn.com"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 10",
+            "type": "vmess",
+            "server": "172.67.154.84",
             "server_port": 443,
-            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "uuid": "e537f2f5-2a0c-4f59-92c9-832ca6433bf3",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -420,7 +474,7 @@
             },
             "tls": {
                 "enabled": true,
-                "server_name": "baradiha.com",
+                "server_name": "irvideo.cfd",
                 "insecure": true,
                 "disable_sni": false,
                 "utls": {
@@ -430,14 +484,48 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "\/linkvws",
+                "path": "\/linkws",
                 "headers": {
-                    "Host": "baradiha.com"
+                    "Host": "irvideo.cfd"
                 }
             }
         },
         {
-            "tag": "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 114",
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 15",
+            "type": "vmess",
+            "server": "104.21.48.160",
+            "server_port": 443,
+            "uuid": "e537f2f5-2a0c-4f59-92c9-832ca6433bf3",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "irvideo.cfd",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkws",
+                "headers": {
+                    "Host": "irvideo.cfd"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 122",
             "type": "vmess",
             "server": "speedtest.net.google.com.bmi.ir.altinstart.ir",
             "server_port": 8874,
