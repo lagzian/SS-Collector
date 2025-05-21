@@ -119,7 +119,10 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 122",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 0",
+                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🇸🇬SG | 🟢 | vmess | @DeamNet_Proxy | 7",
+                "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 114",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -149,7 +152,10 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 122",
+                "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 0",
+                "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🇸🇬SG | 🟢 | vmess | @DeamNet_Proxy | 7",
+                "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 114",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -403,7 +409,75 @@
             }
         },
         {
-            "tag": "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 122",
+            "tag": "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 0",
+            "type": "vmess",
+            "server": "38.99.82.193",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "tilebani.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "tilebani.com"
+                }
+            }
+        },
+        {
+            "tag": "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 4",
+            "type": "vmess",
+            "server": "47.104.186.133",
+            "server_port": 50002,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇸🇬SG | 🟢 | vmess | @DeamNet_Proxy | 7",
+            "type": "vmess",
+            "server": "194.233.72.228",
+            "server_port": 27575,
+            "uuid": "16509262-dbe2-43ba-99ce-07913d2a18b4",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇫🇷FR | 🟢 | vmess | @prrofile_purple | 114",
             "type": "vmess",
             "server": "speedtest.net.google.com.bmi.ir.altinstart.ir",
             "server_port": 8874,
