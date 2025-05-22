@@ -640,6 +640,30 @@
         {
             "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 0",
             "type": "vmess",
+            "server": "cdn1.bpcdn.cc",
+            "server_port": 2086,
+            "uuid": "c21b972a-bc92-4f8c-8e6a-6868001f7f88",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "cdn1.bpcdn.cc"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
+            "type": "vmess",
             "server": "cs.flha.ru",
             "server_port": 2082,
             "uuid": "2f821152-c3e9-4074-9185-2790e7425f42",
@@ -658,30 +682,6 @@
                 "path": "\/",
                 "headers": {
                     "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 1",
-            "type": "vmess",
-            "server": "cdn3.bpcdn.cc",
-            "server_port": 2086,
-            "uuid": "c21b972a-bc92-4f8c-8e6a-6868001f7f88",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "cdn3.bpcdn.cc"
                 }
             }
         }
