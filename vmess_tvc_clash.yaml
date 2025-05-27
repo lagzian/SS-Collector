@@ -31,8 +31,6 @@ proxies:
   - {"name":"🇸🇬SG | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"84.247.149.77","port":47211,"cipher":"auto","uuid":"fb674260-1c21-4f99-8bd0-3d1d341c6771","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"198.251.83.208","port":45271,"cipher":"auto","uuid":"469e0b31-30c3-4dab-800d-711232634ce1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 6","type":"vmess","server":"183.236.51.38","port":49291,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 7","type":"vmess","server":"198.251.83.208","port":45235,"cipher":"auto","uuid":"469e0b31-30c3-4dab-800d-711232634ce1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 8","type":"vmess","server":"104.21.64.1","port":2053,"cipher":"auto","uuid":"996016f7-da89-45f1-b3b4-555bc799ed86","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"rak2d1.777269.xyz"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -63,8 +61,6 @@ proxy-groups:
       - '🇸🇬SG | 🟢 | vmess | @Hope_Net | 3'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 7'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 8'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -95,8 +91,6 @@ proxy-groups:
       - '🇸🇬SG | 🟢 | vmess | @Hope_Net | 3'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 7'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 8'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -126,8 +120,6 @@ proxy-groups:
       - '🇸🇬SG | 🟢 | vmess | @Hope_Net | 3'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 7'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 8'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
