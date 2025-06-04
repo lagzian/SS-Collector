@@ -119,8 +119,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 0",
-                "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 0",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
+                "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 5",
                 "🇨🇭CH | 🟢 | vmess | @v2ray1_ng | 0",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 9",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
@@ -152,8 +153,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 18",
-                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 0",
-                "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 4",
+                "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 0",
+                "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
+                "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 5",
                 "🇨🇭CH | 🟢 | vmess | @v2ray1_ng | 0",
                 "🇩🇪DE | 🟢 | vmess | @v2ray1_ng | 9",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
@@ -409,7 +411,41 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 0",
+            "tag": "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 0",
+            "type": "vmess",
+            "server": "57.129.41.216",
+            "server_port": 8443,
+            "uuid": "3967c059-865d-40af-ba3c-8abc9ba5c7f8",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "ov-germany1.09vpn.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/vmess\/",
+                "headers": {
+                    "Host": "ov-germany1.09vpn.com"
+                }
+            }
+        },
+        {
+            "tag": "🚩CF | 🟢 | vmess | @DeamNet_Proxy | 1",
             "type": "vmess",
             "server": "172.67.170.13",
             "server_port": 443,
@@ -443,7 +479,7 @@
             }
         },
         {
-            "tag": "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 4",
+            "tag": "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 5",
             "type": "vmess",
             "server": "57.129.24.124",
             "server_port": 443,
