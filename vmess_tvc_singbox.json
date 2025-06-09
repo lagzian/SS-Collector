@@ -133,6 +133,7 @@
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
                 "❔XX | 🟢 | vmess | @OpenSSTPVpn | 0"
             ]
         },
@@ -167,6 +168,7 @@
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
                 "❔XX | 🟢 | vmess | @OpenSSTPVpn | 0"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -689,6 +691,40 @@
         {
             "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
             "type": "vmess",
+            "server": "tk.hzlt.tkddns.xyz",
+            "server_port": 22643,
+            "uuid": "98e96c9f-4bb3-39d4-9a2c-fac04257f7c7",
+            "security": "auto",
+            "alter_id": 2,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "tk.hzlt.tkddns.xyz",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "tk.hzlt.tkddns.xyz"
+                }
+            }
+        },
+        {
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
+            "type": "vmess",
             "server": "2bbb71ac-svdwg0-sw0nbj-1anhm.cm5.p5pv.com",
             "server_port": 17233,
             "uuid": "3f58d3fe-f4ea-11eb-8673-f23c9164ca5d",
@@ -704,7 +740,7 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
             "type": "vmess",
             "server": "v29.heduian.link",
             "server_port": 30829,
@@ -728,7 +764,7 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 2",
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
             "type": "vmess",
             "server": "183.236.51.38",
             "server_port": 49291,
@@ -745,7 +781,7 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
             "type": "vmess",
             "server": "tk.hzlt.tkddns.xyz",
             "server_port": 22641,
