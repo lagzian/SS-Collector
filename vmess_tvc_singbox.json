@@ -127,8 +127,8 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇸🇪SE | 🟢 | vmess | @free1_vpn | 10",
-                "🇨🇭CH | 🟢 | vmess | @free1_vpn | 11",
+                "🇸🇪SE | 🟢 | vmess | @free1_vpn | 11",
+                "🇨🇭CH | 🟢 | vmess | @free1_vpn | 12",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
@@ -139,8 +139,6 @@
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 7",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 8",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 9",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 10",
-                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 11",
                 "❔XX | 🟢 | vmess | @OpenSSTPVpn | 0"
             ]
         },
@@ -169,8 +167,8 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇸🇪SE | 🟢 | vmess | @free1_vpn | 10",
-                "🇨🇭CH | 🟢 | vmess | @free1_vpn | 11",
+                "🇸🇪SE | 🟢 | vmess | @free1_vpn | 11",
+                "🇨🇭CH | 🟢 | vmess | @free1_vpn | 12",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
@@ -181,8 +179,6 @@
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 7",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 8",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 9",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 10",
-                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 11",
                 "❔XX | 🟢 | vmess | @OpenSSTPVpn | 0"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -652,7 +648,7 @@
             }
         },
         {
-            "tag": "🇸🇪SE | 🟢 | vmess | @free1_vpn | 10",
+            "tag": "🇸🇪SE | 🟢 | vmess | @free1_vpn | 11",
             "type": "vmess",
             "server": "185.146.173.25",
             "server_port": 80,
@@ -676,7 +672,7 @@
             }
         },
         {
-            "tag": "🇨🇭CH | 🟢 | vmess | @free1_vpn | 11",
+            "tag": "🇨🇭CH | 🟢 | vmess | @free1_vpn | 12",
             "type": "vmess",
             "server": "188.213.128.211",
             "server_port": 1010,
@@ -959,64 +955,6 @@
                 "path": "\/",
                 "headers": {
                     "Host": "2260072e-sv0xs0-swocza-1d3bw.hk3.p5pv.com"
-                }
-            }
-        },
-        {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 10",
-            "type": "vmess",
-            "server": "1bcf533f-sv0xs0-sy8f4e-ukt4.hk3.p5pv.com",
-            "server_port": 80,
-            "uuid": "6589f6d0-e192-11ec-bd7c-f23c913c8d2b",
-            "security": "auto",
-            "alter_id": 2,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": "1bcf533f-sv0xs0-sy8f4e-ukt4.hk3.p5pv.com"
-                }
-            }
-        },
-        {
-            "tag": "🇸🇬SG | 🟢 | vmess | @Hope_Net | 11",
-            "type": "vmess",
-            "server": "8.219.206.22",
-            "server_port": 443,
-            "uuid": "9b456c2a-f2c1-45e1-87a9-b7628b04bb24",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "8.219.206.22",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkws",
-                "headers": {
-                    "Host": "8.219.206.22"
                 }
             }
         },
