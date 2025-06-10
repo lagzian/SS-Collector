@@ -129,17 +129,18 @@
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇸🇪SE | 🟢 | vmess | @free1_vpn | 10",
                 "🇨🇭CH | 🟢 | vmess | @free1_vpn | 11",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 2",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 4",
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
+                "🚩CF | 🟢 | vmess | @Hope_Net | 3",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 5",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 6",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 7",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 8",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 9",
-                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 10",
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 10",
+                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 11",
                 "❔XX | 🟢 | vmess | @OpenSSTPVpn | 0"
             ]
         },
@@ -170,17 +171,18 @@
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
                 "🇸🇪SE | 🟢 | vmess | @free1_vpn | 10",
                 "🇨🇭CH | 🟢 | vmess | @free1_vpn | 11",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 2",
-                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
-                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 4",
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
+                "🚩CF | 🟢 | vmess | @Hope_Net | 3",
+                "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 5",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 6",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 7",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 8",
                 "🇭🇰HK | 🟢 | vmess | @Hope_Net | 9",
-                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 10",
+                "🇭🇰HK | 🟢 | vmess | @Hope_Net | 10",
+                "🇸🇬SG | 🟢 | vmess | @Hope_Net | 11",
                 "❔XX | 🟢 | vmess | @OpenSSTPVpn | 0"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -691,7 +693,31 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 0",
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 0",
+            "type": "vmess",
+            "server": "b8ffcda3-sv2sg0-sv37gm-81nv.hk3.p5pv.com",
+            "server_port": 80,
+            "uuid": "47e91fb6-25b8-df52-bc18-3cdc8548192f",
+            "security": "auto",
+            "alter_id": 2,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "b8ffcda3-sv2sg0-sv37gm-81nv.hk3.p5pv.com"
+                }
+            }
+        },
+        {
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 1",
             "type": "vmess",
             "server": "52.80.27.229",
             "server_port": 22641,
@@ -725,7 +751,7 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 2",
             "type": "vmess",
             "server": "ea2d3cd3-sv0xs0-t9azkv-17xn0.hk3.p5pv.com",
             "server_port": 80,
@@ -749,7 +775,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 2",
+            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 3",
             "type": "vmess",
             "server": "104.21.16.1",
             "server_port": 2053,
@@ -783,7 +809,7 @@
             }
         },
         {
-            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
+            "tag": "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
             "type": "vmess",
             "server": "52.80.232.93",
             "server_port": 22641,
@@ -817,7 +843,7 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 4",
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 5",
             "type": "vmess",
             "server": "360de725-sv4n40-t2y63q-1jk6u.hk3.p5pv.com",
             "server_port": 80,
@@ -841,7 +867,7 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 5",
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 6",
             "type": "vmess",
             "server": "338b2185-sw1z40-sw51rj-hkb8.hgc1.tcpbbr.net",
             "server_port": 8080,
@@ -865,7 +891,7 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 6",
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 7",
             "type": "vmess",
             "server": "97ec248c-sv2sg0-t1l34b-s6zq.hk3.p5pv.com",
             "server_port": 80,
@@ -889,7 +915,7 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 7",
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 8",
             "type": "vmess",
             "server": "78da5850-sv2sg0-t0t0ee-1tave.hk3.p5pv.com",
             "server_port": 80,
@@ -913,7 +939,7 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 8",
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 9",
             "type": "vmess",
             "server": "2260072e-sv0xs0-swocza-1d3bw.hk3.p5pv.com",
             "server_port": 80,
@@ -937,7 +963,7 @@
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 9",
+            "tag": "🇭🇰HK | 🟢 | vmess | @Hope_Net | 10",
             "type": "vmess",
             "server": "1bcf533f-sv0xs0-sy8f4e-ukt4.hk3.p5pv.com",
             "server_port": 80,
@@ -961,7 +987,7 @@
             }
         },
         {
-            "tag": "🇸🇬SG | 🟢 | vmess | @Hope_Net | 10",
+            "tag": "🇸🇬SG | 🟢 | vmess | @Hope_Net | 11",
             "type": "vmess",
             "server": "8.219.206.22",
             "server_port": 443,
