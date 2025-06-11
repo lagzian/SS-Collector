@@ -34,7 +34,6 @@ proxies:
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"59.42.247.189","port":8004,"cipher":"auto","uuid":"68261662-982a-41b5-94ff-dad406a41c03","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/nmkj","headers":{"host":"www.bing.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 5","type":"vmess","server":"183.236.51.38","port":46121,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 6","type":"vmess","server":"tk.hzlt.tkddns.xyz","port":22643,"cipher":"auto","uuid":"98e96c9f-4bb3-39d4-9a2c-fac04257f7c7","alterId":2,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"zxjp-c.tkong.cc"}},"client-fingerprint":"chrome"}
-  - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 7","type":"vmess","server":"71735d9f-sv2sg0-t71mow-4cl7.hk.p5pv.com","port":80,"cipher":"auto","uuid":"7c129766-8656-11ea-8fc9-f23c913c8d2b","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"71735d9f-sv2sg0-t71mow-4cl7.hk.p5pv.com"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -68,7 +67,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 7'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -102,7 +100,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 7'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -135,7 +132,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 7'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
