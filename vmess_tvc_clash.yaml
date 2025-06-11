@@ -33,7 +33,6 @@ proxies:
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"120.198.71.216","port":46759,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"cloudgetservice.mcloudservice.site","port":2083,"cipher":"auto","uuid":"698d9a5b-59dc-4ea6-b404-cd9e967fc54c","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvkws","headers":{"host":"CanaDa-138.blAzecAnAdA.SITe"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 5","type":"vmess","server":"59.42.247.189","port":8004,"cipher":"auto","uuid":"68261662-982a-41b5-94ff-dad406a41c03","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/nmkj","headers":{"host":"www.bing.com"}},"client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 6","type":"vmess","server":"183.236.51.38","port":46121,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -66,7 +65,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -99,7 +97,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -131,7 +128,6 @@ proxy-groups:
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 5'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
