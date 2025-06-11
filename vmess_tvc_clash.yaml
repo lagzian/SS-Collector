@@ -27,8 +27,9 @@ proxies:
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇸🇪SE | 🟢 | vmess | @free1_vpn | 11","type":"vmess","server":"185.146.173.25","port":80,"cipher":"auto","uuid":"46181c32-8c82-413a-b836-8375e5e513eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560","headers":{"host":"google.whatsapp.snapp.torob.basalam.sarzamiiinahang.ir."}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇭CH | 🟢 | vmess | @free1_vpn | 12","type":"vmess","server":"188.213.128.211","port":1010,"cipher":"auto","uuid":"799775e9-a2df-43dd-9d2d-b362fd60ef07","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"5c36659d-sv2sg0-swudbv-df1b.hk3.p5pv.com","port":80,"cipher":"auto","uuid":"9b94a182-5a1b-11ee-b866-f23c9164ca5d","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"5c36659d-sv2sg0-swudbv-df1b.hk3.p5pv.com"}},"client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"tk.hzlt.tkddns.xyz","port":22641,"cipher":"auto","uuid":"98e96c9f-4bb3-39d4-9a2c-fac04257f7c7","alterId":2,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"zxjp-a.tkong.cc"}},"client-fingerprint":"chrome"}
+  - {"name":"🇷🇺RU | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"45.147.201.231","port":20027,"cipher":"auto","uuid":"9b5d72fd-3e66-4909-a3a5-0f259a9ad68f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":""}},"client-fingerprint":"chrome"}
+  - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"5c36659d-sv2sg0-swudbv-df1b.hk3.p5pv.com","port":80,"cipher":"auto","uuid":"9b94a182-5a1b-11ee-b866-f23c9164ca5d","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"5c36659d-sv2sg0-swudbv-df1b.hk3.p5pv.com"}},"client-fingerprint":"chrome"}
+  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"tk.hzlt.tkddns.xyz","port":22641,"cipher":"auto","uuid":"98e96c9f-4bb3-39d4-9a2c-fac04257f7c7","alterId":2,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"zxjp-a.tkong.cc"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -55,8 +56,9 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇸🇪SE | 🟢 | vmess | @free1_vpn | 11'
       - '🇨🇭CH | 🟢 | vmess | @free1_vpn | 12'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 0'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
+      - '🇷🇺RU | 🟢 | vmess | @Hope_Net | 0'
+      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 1'
+      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -83,8 +85,9 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇸🇪SE | 🟢 | vmess | @free1_vpn | 11'
       - '🇨🇭CH | 🟢 | vmess | @free1_vpn | 12'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 0'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
+      - '🇷🇺RU | 🟢 | vmess | @Hope_Net | 0'
+      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 1'
+      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -110,8 +113,9 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '🇸🇪SE | 🟢 | vmess | @free1_vpn | 11'
       - '🇨🇭CH | 🟢 | vmess | @free1_vpn | 12'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 0'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
+      - '🇷🇺RU | 🟢 | vmess | @Hope_Net | 0'
+      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 1'
+      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 2'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
