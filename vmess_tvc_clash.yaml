@@ -29,8 +29,6 @@ proxies:
   - {"name":"🇨🇭CH | 🟢 | vmess | @free1_vpn | 12","type":"vmess","server":"188.213.128.211","port":1010,"cipher":"auto","uuid":"799775e9-a2df-43dd-9d2d-b362fd60ef07","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"5c36659d-sv2sg0-swudbv-df1b.hk3.p5pv.com","port":80,"cipher":"auto","uuid":"9b94a182-5a1b-11ee-b866-f23c9164ca5d","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"5c36659d-sv2sg0-swudbv-df1b.hk3.p5pv.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"tk.hzlt.tkddns.xyz","port":22641,"cipher":"auto","uuid":"98e96c9f-4bb3-39d4-9a2c-fac04257f7c7","alterId":2,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"zxjp-a.tkong.cc"}},"client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"52.80.27.229","port":22641,"cipher":"auto","uuid":"98e96c9f-4bb3-39d4-9a2c-fac04257f7c7","alterId":2,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"zxjp-a.tkong.cc"}},"client-fingerprint":"chrome"}
-  - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"ea2d3cd3-sv0xs0-t9azkv-17xn0.hk3.p5pv.com","port":80,"cipher":"auto","uuid":"4faf123a-572a-11eb-8684-f23c913c8d2b","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"broadcastlv.chat.bilibili.com"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -59,8 +57,6 @@ proxy-groups:
       - '🇨🇭CH | 🟢 | vmess | @free1_vpn | 12'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -89,8 +85,6 @@ proxy-groups:
       - '🇨🇭CH | 🟢 | vmess | @free1_vpn | 12'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -118,8 +112,6 @@ proxy-groups:
       - '🇨🇭CH | 🟢 | vmess | @free1_vpn | 12'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 3'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
