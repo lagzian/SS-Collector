@@ -34,7 +34,6 @@ proxies:
   - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"cloudgetservice.mcloudservice.site","port":443,"cipher":"auto","uuid":"81380a5e-613c-4863-8b3a-5588f32690c3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"MaXnEtVipAp-ca1.MaxnetserVicEs.ONliNe"}},"client-fingerprint":"chrome"}
   - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"0469094f-sv6hs0-t5qfe2-1khwf.hk.p5pv.com","port":80,"cipher":"auto","uuid":"92bd8c68-6434-11ee-b644-f23c91cfbbc9","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"broadcastlv.chat.bilibili.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 5","type":"vmess","server":"7b7cbb1e-sv2sg0-svvk7h-1tgdw.hk.p5pv.com","port":80,"cipher":"auto","uuid":"a19397b8-f7fa-11ef-836a-f23c913c8d2b","alterId":2,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"broadcastlv.chat.bilibili.com"}},"client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 6","type":"vmess","server":"tk.hzlt.tkddns.xyz","port":22641,"cipher":"auto","uuid":"98e96c9f-4bb3-39d4-9a2c-fac04257f7c7","alterId":2,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tk.hzlt.tkddns.xyz"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -68,7 +67,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 3'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 5'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -102,7 +100,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 3'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 5'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -135,7 +132,6 @@ proxy-groups:
       - '🇺🇸US | 🟢 | vmess | @Hope_Net | 3'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
       - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 5'
-      - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 6'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
