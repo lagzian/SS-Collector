@@ -32,11 +32,10 @@ proxies:
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vmess | @free1_vpn | 4","type":"vmess","server":"5.75.207.190","port":8443,"cipher":"auto","uuid":"a36bc162-c700-49e4-90b8-f1542b3fa9fb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"","grpc-mode":"gun"},"client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vmess | @free1_vpn | 6","type":"vmess","server":"5.75.207.190","port":8880,"cipher":"auto","uuid":"a36bc162-c700-49e4-90b8-f1542b3fa9fb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"","grpc-mode":"gun"},"client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"tk.hzlt.tkddns.xyz","port":22641,"cipher":"auto","uuid":"98e96c9f-4bb3-39d4-9a2c-fac04257f7c7","alterId":2,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"zxjp-a.tkong.cc"}},"client-fingerprint":"chrome"}
-  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"sg6.vip2.g2.moonbase.life","port":35146,"cipher":"auto","uuid":"c3136814-a07e-41f6-ad94-8e20458c0d21","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/home","headers":{"host":"web.xcjs.info"}},"client-fingerprint":"chrome"}
-  - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"104.21.77.79","port":2083,"cipher":"auto","uuid":"9747fbc4-c2c6-4321-bcd9-3d61ee8f1e7b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"rak1m2.986986.shop"}},"client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"bookmyshow.com","port":443,"cipher":"auto","uuid":"75dc6415-3ef7-4ec5-bdb6-5ed4668c5132","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"jpv.xiaoqi555.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"🇭🇰HK | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"hk-02.foxspirit.click","port":1086,"cipher":"auto","uuid":"5aef9bfd-20e3-420a-9b16-433031984bd9","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/zxascas","headers":{"host":"www.ouabaua.com"}},"client-fingerprint":"chrome"}
+  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"sg6.vip2.g2.moonbase.life","port":35146,"cipher":"auto","uuid":"c3136814-a07e-41f6-ad94-8e20458c0d21","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/home","headers":{"host":"web.xcjs.info"}},"client-fingerprint":"chrome"}
+  - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"tk.hzlt.tkddns.xyz","port":22641,"cipher":"auto","uuid":"98e96c9f-4bb3-39d4-9a2c-fac04257f7c7","alterId":2,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"zxjp-a.tkong.cc"}},"client-fingerprint":"chrome"}
+  - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"104.21.77.79","port":2083,"cipher":"auto","uuid":"9747fbc4-c2c6-4321-bcd9-3d61ee8f1e7b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"rak1m2.986986.shop"}},"client-fingerprint":"chrome"}
+  - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"bookmyshow.com","port":443,"cipher":"auto","uuid":"75dc6415-3ef7-4ec5-bdb6-5ed4668c5132","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"jpv.xiaoqi555.xyz"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -70,9 +69,8 @@ proxy-groups:
       - '🇩🇪DE | 🟢 | vmess | @free1_vpn | 6'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 2'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 3'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
+      - '🚩CF | 🟢 | vmess | @Hope_Net | 3'
+      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -106,9 +104,8 @@ proxy-groups:
       - '🇩🇪DE | 🟢 | vmess | @free1_vpn | 6'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 2'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 3'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
+      - '🚩CF | 🟢 | vmess | @Hope_Net | 3'
+      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -141,9 +138,8 @@ proxy-groups:
       - '🇩🇪DE | 🟢 | vmess | @free1_vpn | 6'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 1'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 2'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 3'
-      - '🇭🇰HK | 🟢 | vmess | @Hope_Net | 4'
+      - '🚩CF | 🟢 | vmess | @Hope_Net | 3'
+      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 4'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
