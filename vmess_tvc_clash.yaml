@@ -32,7 +32,6 @@ proxies:
   - {"name":"🇩🇪DE | 🟢 | vmess | @free1_vpn | 4","type":"vmess","server":"5.75.207.190","port":8880,"cipher":"auto","uuid":"a36bc162-c700-49e4-90b8-f1542b3fa9fb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"","grpc-mode":"gun"},"client-fingerprint":"chrome"}
   - {"name":"🇨🇳CN | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"120.198.71.216","port":46759,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"172.67.147.182","port":80,"cipher":"auto","uuid":"3ca48a3c-f2c4-4c6d-a86d-f00b52b64d08","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/s15.html","headers":{"host":"750879059381672025050919021774649.s15.chibaba.filegear-sg.me"}},"client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"new3.huvicloud.com","port":443,"cipher":"auto","uuid":"a10476b9-1c07-4de3-9d84-c51d24be599f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/a10476b9-1c07-4de3-9d84-c51d24be599f","headers":{"host":"new3.huvicloud.com"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -64,7 +63,6 @@ proxy-groups:
       - '🇩🇪DE | 🟢 | vmess | @free1_vpn | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 1'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 2'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -96,7 +94,6 @@ proxy-groups:
       - '🇩🇪DE | 🟢 | vmess | @free1_vpn | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 1'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 2'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -127,7 +124,6 @@ proxy-groups:
       - '🇩🇪DE | 🟢 | vmess | @free1_vpn | 4'
       - '🇨🇳CN | 🟢 | vmess | @Hope_Net | 0'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 1'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 2'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
