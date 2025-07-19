@@ -121,6 +121,7 @@
                 "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🇩🇪DE | 🟢 | vmess | @customv2ray | 3",
                 "🇮🇷IR | 🟢 | vmess | @customv2ray | 16",
+                "🇩🇪DE | 🟢 | vmess | @DailyV2RY | 152",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -132,8 +133,6 @@
                 "🇬🇧GB | 🟢 | vmess | @Hope_Net | 3",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
                 "🇩🇪DE | 🟢 | vmess | @Hope_Net | 5",
-                "🇨🇦CA | 🟢 | vmess | @Hope_Net | 6",
-                "🇬🇧GB | 🟢 | vmess | @Hope_Net | 7",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 8",
                 "🇩🇪DE | 🟢 | vmess | @FreakConfig | 1",
                 "🚩CF | 🟢 | vmess | @iP_CF | 39",
@@ -161,6 +160,7 @@
                 "🇨🇳CN | 🟢 | vmess | @DeamNet_Proxy | 13",
                 "🇩🇪DE | 🟢 | vmess | @customv2ray | 3",
                 "🇮🇷IR | 🟢 | vmess | @customv2ray | 16",
+                "🇩🇪DE | 🟢 | vmess | @DailyV2RY | 152",
                 "🇳🇱NL | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -172,8 +172,6 @@
                 "🇬🇧GB | 🟢 | vmess | @Hope_Net | 3",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 4",
                 "🇩🇪DE | 🟢 | vmess | @Hope_Net | 5",
-                "🇨🇦CA | 🟢 | vmess | @Hope_Net | 6",
-                "🇬🇧GB | 🟢 | vmess | @Hope_Net | 7",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 8",
                 "🇩🇪DE | 🟢 | vmess | @FreakConfig | 1",
                 "🚩CF | 🟢 | vmess | @iP_CF | 39",
@@ -445,6 +443,23 @@
             "server": "sr10.minhost.sbs",
             "server_port": 2052,
             "uuid": "f793ac81-4ab2-459c-833b-e6a6e34873a2",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇩🇪DE | 🟢 | vmess | @DailyV2RY | 152",
+            "type": "vmess",
+            "server": "prom.learn-new.ir",
+            "server_port": 80,
+            "uuid": "70a33284-4cab-4c43-8e84-56f188b0abff",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -790,74 +805,6 @@
                 "path": "\/linkvws",
                 "headers": {
                     "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇨🇦CA | 🟢 | vmess | @Hope_Net | 6",
-            "type": "vmess",
-            "server": "23.162.200.94",
-            "server_port": 443,
-            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkvws",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇬🇧GB | 🟢 | vmess | @Hope_Net | 7",
-            "type": "vmess",
-            "server": "irhms03.dongfeng.cfd",
-            "server_port": 443,
-            "uuid": "fa5b55cd-cafc-4de0-a4c8-722e02a9f58e",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "hms03.dongfeng.cfd",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkws",
-                "headers": {
-                    "Host": "hms03.dongfeng.cfd"
                 }
             }
         },
