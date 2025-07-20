@@ -64,7 +64,6 @@ proxies:
   - {"name":"❔XX | 🔴 | vless | @vpn_go67 | 18","type":"vless","server":"public.alpanel.top","port":1380,"udp":false,"uuid":"58c15a7e-8111-4abb-afd2-47590085c3f4","tls":false,"servername":"www.iranserver.com","network":"grpc","grpc-opts":{"grpc-service-name":"@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam"},"reality-opts":{"public-key":"u2Xf8Og6H4iPcoYIZC8Cm8ziH2LA4ifvpHxEpp8bfUw","short-id":"4c5aaad0","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
   - {"name":"❔XX | 🔴 | vless | @vpn_go67 | 19","type":"vless","server":"public.alpanel.top","port":1403,"udp":false,"uuid":"671b9a72-7c75-46b9-be82-db2734bae2fc","tls":false,"servername":"tuyacn.com","network":"grpc","grpc-opts":{"grpc-service-name":"@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam"},"reality-opts":{"public-key":"rCdor1DLbQcXbNBD9aiLIoCYHwqTMh8ao9MIPMXo0yA","short-id":"99","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
   - {"name":"❔XX | 🔴 | vless | @vpn_go67 | 21","type":"vless","server":"public.alpanel.top","port":1403,"udp":false,"uuid":"4c6451ba-6594-4d67-a8ae-4df79815a4e3","tls":false,"servername":"tuyacn.com","network":"grpc","grpc-opts":{"grpc-service-name":"@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam,@vmesskhodam"},"reality-opts":{"public-key":"rCdor1DLbQcXbNBD9aiLIoCYHwqTMh8ao9MIPMXo0yA","short-id":"99","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
-  - {"name":"🇩🇪DE | 🟢 | vless | @kingofilter | 4","type":"vless","server":"vpn_proxy_channel_vpn_proxy_channel.hohod.ir","port":443,"udp":false,"uuid":"1584806e-f63d-4f9b-a0b3-abe64b35a09c","tls":false,"network":"tcp","reality-opts":{"public-key":"GpgfsA-U8Y8M3LRcTfsaBViDtp2VlN5riSLLZ2kxEiQ","short-id":"974a74bf","client-fingerprint":"chrome"},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -128,7 +127,6 @@ proxy-groups:
       - '❔XX | 🔴 | vless | @vpn_go67 | 18'
       - '❔XX | 🔴 | vless | @vpn_go67 | 19'
       - '❔XX | 🔴 | vless | @vpn_go67 | 21'
-      - '🇩🇪DE | 🟢 | vless | @kingofilter | 4'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -192,7 +190,6 @@ proxy-groups:
       - '❔XX | 🔴 | vless | @vpn_go67 | 18'
       - '❔XX | 🔴 | vless | @vpn_go67 | 19'
       - '❔XX | 🔴 | vless | @vpn_go67 | 21'
-      - '🇩🇪DE | 🟢 | vless | @kingofilter | 4'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -255,7 +252,6 @@ proxy-groups:
       - '❔XX | 🔴 | vless | @vpn_go67 | 18'
       - '❔XX | 🔴 | vless | @vpn_go67 | 19'
       - '❔XX | 🔴 | vless | @vpn_go67 | 21'
-      - '🇩🇪DE | 🟢 | vless | @kingofilter | 4'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
