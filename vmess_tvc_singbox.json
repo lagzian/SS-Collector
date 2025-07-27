@@ -123,7 +123,6 @@
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 5",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 8",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 10",
-                "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 107",
                 "🇷🇺RU | 🟢 | vmess | @customv2ray | 19",
                 "🇩🇪DE | 🟢 | vmess | @customv2ray | 20",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 1",
@@ -132,9 +131,10 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇬🇧GB | 🟢 | vmess | @Hope_Net | 0",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 1",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
+                "❔XX | 🟢 | vmess | @Hope_Net | 0",
+                "🇬🇧GB | 🟢 | vmess | @Hope_Net | 1",
+                "🚩CF | 🟢 | vmess | @Hope_Net | 2",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
                 "🇩🇪DE | 🟢 | vmess | @FreakConfig | 1",
                 "🚩CF | 🟢 | vmess | @FreakConfig | 2",
                 "🚩CF | 🟢 | vmess | @FreakConfig | 8",
@@ -164,7 +164,6 @@
                 "🇩🇪DE | 🟢 | vmess | @DeamNet_Proxy | 5",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 8",
                 "🇺🇸US | 🟢 | vmess | @DeamNet_Proxy | 10",
-                "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 107",
                 "🇷🇺RU | 🟢 | vmess | @customv2ray | 19",
                 "🇩🇪DE | 🟢 | vmess | @customv2ray | 20",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 1",
@@ -173,9 +172,10 @@
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
                 "❔XX | 🟢 | vmess | @yaney_01 | 4",
                 "🚩CF | 🟢 | vmess | @yaney_01 | 5",
-                "🇬🇧GB | 🟢 | vmess | @Hope_Net | 0",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 1",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
+                "❔XX | 🟢 | vmess | @Hope_Net | 0",
+                "🇬🇧GB | 🟢 | vmess | @Hope_Net | 1",
+                "🚩CF | 🟢 | vmess | @Hope_Net | 2",
+                "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
                 "🇩🇪DE | 🟢 | vmess | @FreakConfig | 1",
                 "🚩CF | 🟢 | vmess | @FreakConfig | 2",
                 "🚩CF | 🟢 | vmess | @FreakConfig | 8",
@@ -551,23 +551,6 @@
             }
         },
         {
-            "tag": "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 107",
-            "type": "vmess",
-            "server": "vt6.hubdn.com",
-            "server_port": 8081,
-            "uuid": "1539d93e-fc8e-4464-974a-9233c2ca6629",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
             "tag": "🇷🇺RU | 🟢 | vmess | @customv2ray | 19",
             "type": "vmess",
             "server": "45.67.230.79",
@@ -769,7 +752,41 @@
             }
         },
         {
-            "tag": "🇬🇧GB | 🟢 | vmess | @Hope_Net | 0",
+            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 0",
+            "type": "vmess",
+            "server": "es.pulau.org",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 1,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "es.pulau.org",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/linkvws",
+                "headers": {
+                    "Host": "es.pulau.org"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧GB | 🟢 | vmess | @Hope_Net | 1",
             "type": "vmess",
             "server": "62.112.221.47",
             "server_port": 3939,
@@ -786,7 +803,7 @@
             }
         },
         {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 1",
+            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 2",
             "type": "vmess",
             "server": "104.18.114.205",
             "server_port": 2082,
@@ -810,7 +827,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 2",
+            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 3",
             "type": "vmess",
             "server": "singapore.com",
             "server_port": 2095,
