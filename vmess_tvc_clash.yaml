@@ -26,7 +26,6 @@ proxies:
   - {"name":"❔XX | 🟢 | vmess | @yaney_01 | 4","type":"vmess","server":"ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub","port":80,"cipher":"auto","uuid":"46cfcfe1-e450-459d-a3ab-9406011ab3eb","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tms.dingtalk.com"}},"client-fingerprint":"chrome"}
   - {"name":"❔XX | 🟢 | vmess | @Hope_Net | 0","type":"vmess","server":"127.1.1.127","port":80,"cipher":"auto","uuid":"602736e4-a2e8-4eb3-9fc9-7c7082925365","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 1","type":"vmess","server":"104.21.238.218","port":2086,"cipher":"auto","uuid":"bc65fac2-7dc7-426f-acdd-0779a5035bde","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"p1.613055.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"🇩🇪DE | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"5.39.252.182","port":3323,"cipher":"auto","uuid":"cb1bcce0-5e7a-4b97-923b-3bbd234c8d7c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":""}},"client-fingerprint":"chrome"}
   - {"name":"🇩🇪DE | 🟢 | vmess | @FreakConfig | 16","type":"vmess","server":"panel1.ipyar.org","port":42684,"cipher":"auto","uuid":"c4bd9eba-8aea-4d5e-a2ee-b5de65ac14e1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
@@ -53,7 +52,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '❔XX | 🟢 | vmess | @Hope_Net | 0'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 1'
-      - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @FreakConfig | 16'
   - name: URL-TEST
     type: url-test
@@ -80,7 +78,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '❔XX | 🟢 | vmess | @Hope_Net | 0'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 1'
-      - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @FreakConfig | 16'
   - name: FALLBACK
     type: fallback
@@ -106,7 +103,6 @@ proxy-groups:
       - '❔XX | 🟢 | vmess | @yaney_01 | 4'
       - '❔XX | 🟢 | vmess | @Hope_Net | 0'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 1'
-      - '🇩🇪DE | 🟢 | vmess | @Hope_Net | 3'
       - '🇩🇪DE | 🟢 | vmess | @FreakConfig | 16'
 rules:
  - GEOIP,IR,DIRECT
