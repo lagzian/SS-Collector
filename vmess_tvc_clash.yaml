@@ -33,8 +33,6 @@ proxies:
   - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 7","type":"vmess","server":"104.18.114.224","port":2082,"cipher":"auto","uuid":"5f3f09ad-89cb-4e94-a7ad-aa8239913555","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"e4.6929198.xyz"}},"client-fingerprint":"chrome"}
   - {"name":"🇷🇺RU | 🟢 | vmess | @Hope_Net | 10","type":"vmess","server":"195.58.49.12","port":2579,"cipher":"auto","uuid":"d96881bf-51a3-4a32-865d-8b046caf9093","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":""}},"client-fingerprint":"chrome"}
   - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 11","type":"vmess","server":"104.21.238.79","port":2082,"cipher":"auto","uuid":"5f3f09ad-89cb-4e94-a7ad-aa8239913555","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"e4.6929198.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 13","type":"vmess","server":"162.159.45.181","port":2095,"cipher":"auto","uuid":"18d96190-c10f-448f-a82a-2d36df5c3cde","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"c3.6016725.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"🚩CF | 🟢 | vmess | @Hope_Net | 14","type":"vmess","server":"190.93.245.174","port":2082,"cipher":"auto","uuid":"5f3f09ad-89cb-4e94-a7ad-aa8239913555","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/github.com/Alvin9999","headers":{"host":"ip18.6929198.xyz"}},"client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -67,8 +65,6 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @Hope_Net | 7'
       - '🇷🇺RU | 🟢 | vmess | @Hope_Net | 10'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 11'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 13'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 14'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -101,8 +97,6 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @Hope_Net | 7'
       - '🇷🇺RU | 🟢 | vmess | @Hope_Net | 10'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 11'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 13'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 14'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -134,8 +128,6 @@ proxy-groups:
       - '🚩CF | 🟢 | vmess | @Hope_Net | 7'
       - '🇷🇺RU | 🟢 | vmess | @Hope_Net | 10'
       - '🚩CF | 🟢 | vmess | @Hope_Net | 11'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 13'
-      - '🚩CF | 🟢 | vmess | @Hope_Net | 14'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
