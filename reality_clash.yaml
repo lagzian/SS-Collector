@@ -70,6 +70,7 @@ proxies:
   - {"name":"🇩🇪DE | 🟢 | vless | @kingofilter | 2","type":"vless","server":"91.99.216.9","port":8443,"udp":false,"uuid":"77834f67-2b29-4adf-b39b-b4f1bcd729dc","tls":false,"servername":"refersion.com","network":"tcp","reality-opts":{"public-key":"r3FLw76bxhgit74mzJTglRM-ujPZ9f-HemByQ-uZqms","short-id":"27e6b66aa77662fb","client-fingerprint":"firefox"},"client-fingerprint":"firefox"}
   - {"name":"🇩🇪DE | 🔴 | vless | @kingofilter | 3","type":"vless","server":"91.99.216.9","port":8443,"udp":false,"uuid":"b7aba45f-5cdd-4543-a619-8124a5fe7f87","tls":false,"servername":"refersion.com","network":"tcp","reality-opts":{"public-key":"r3FLw76bxhgit74mzJTglRM-ujPZ9f-HemByQ-uZqms","short-id":"27e6b66aa77662fb","client-fingerprint":"firefox"},"client-fingerprint":"firefox"}
   - {"name":"🇩🇪DE | 🟢 | vless | @kingofilter | 5","type":"vless","server":"91.99.216.9","port":8443,"udp":false,"uuid":"72efd5fb-8614-4549-881f-136648f914bf","tls":false,"servername":"refersion.com","network":"tcp","reality-opts":{"public-key":"r3FLw76bxhgit74mzJTglRM-ujPZ9f-HemByQ-uZqms","short-id":"27e6b66aa77662fb","client-fingerprint":"firefox"},"client-fingerprint":"firefox"}
+  - {"name":"🇩🇪DE | 🔴 | vless | @kingofilter | 7","type":"vless","server":"91.99.216.9","port":8443,"udp":false,"uuid":"c928cc14-4bb1-48bd-b4da-69448ec797ba","tls":false,"servername":"refersion.com","network":"tcp","reality-opts":{"public-key":"r3FLw76bxhgit74mzJTglRM-ujPZ9f-HemByQ-uZqms","short-id":"27e6b66aa77662fb","client-fingerprint":"firefox"},"client-fingerprint":"firefox"}
 proxy-groups:
   - name: MANUAL
     type: select
@@ -139,6 +140,7 @@ proxy-groups:
       - '🇩🇪DE | 🟢 | vless | @kingofilter | 2'
       - '🇩🇪DE | 🔴 | vless | @kingofilter | 3'
       - '🇩🇪DE | 🟢 | vless | @kingofilter | 5'
+      - '🇩🇪DE | 🔴 | vless | @kingofilter | 7'
   - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -208,6 +210,7 @@ proxy-groups:
       - '🇩🇪DE | 🟢 | vless | @kingofilter | 2'
       - '🇩🇪DE | 🔴 | vless | @kingofilter | 3'
       - '🇩🇪DE | 🟢 | vless | @kingofilter | 5'
+      - '🇩🇪DE | 🔴 | vless | @kingofilter | 7'
   - name: FALLBACK
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -276,6 +279,7 @@ proxy-groups:
       - '🇩🇪DE | 🟢 | vless | @kingofilter | 2'
       - '🇩🇪DE | 🔴 | vless | @kingofilter | 3'
       - '🇩🇪DE | 🟢 | vless | @kingofilter | 5'
+      - '🇩🇪DE | 🔴 | vless | @kingofilter | 7'
 rules:
  - GEOIP,IR,DIRECT
  - MATCH,MANUAL
