@@ -118,6 +118,7 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
+                "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 106",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 120",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 131",
                 "❔XX | 🟢 | vmess | @prrofile_purple | 132",
@@ -151,6 +152,7 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
+                "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 106",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 120",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 131",
                 "❔XX | 🟢 | vmess | @prrofile_purple | 132",
@@ -389,6 +391,30 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 106",
+            "type": "vmess",
+            "server": "51.68.191.233",
+            "server_port": 80,
+            "uuid": "f0eda072-9ae8-494c-a495-215fa5729467",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/vmess\/",
+                "headers": {
+                    "Host": ""
+                }
             }
         },
         {
