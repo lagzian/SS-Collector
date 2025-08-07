@@ -30,7 +30,6 @@ proxies:
   - {"name":"🇹🇷TR | 🟢 | vmess | @Hope_Net | 2","type":"vmess","server":"45.94.169.163","port":2082,"cipher":"auto","uuid":"5f3f09ad-89cb-4e94-a7ad-aa8239913555","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/github.com/Alvin9999","headers":{"host":"ip18.6929198.xyz"}},"client-fingerprint":"chrome"}
   - {"name":"🇳🇱NL | 🟢 | vmess | @Hope_Net | 3","type":"vmess","server":"188.42.88.198","port":2082,"cipher":"auto","uuid":"5f3f09ad-89cb-4e94-a7ad-aa8239913555","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/github.com/Alvin9999","headers":{"host":"ip18.6929198.xyz"}},"client-fingerprint":"chrome"}
   - {"name":"🇳🇱NL | 🟢 | vmess | @Hope_Net | 4","type":"vmess","server":"94.242.231.188","port":2082,"cipher":"auto","uuid":"5f3f09ad-89cb-4e94-a7ad-aa8239913555","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/github.com/Alvin9999","headers":{"host":"ip18.6929198.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"🇺🇸US | 🟢 | vmess | @Hope_Net | 5","type":"vmess","server":"185.135.9.41","port":2082,"cipher":"auto","uuid":"5f3f09ad-89cb-4e94-a7ad-aa8239913555","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/github.com/Alvin9999","headers":{"host":"ip18.6929198.xyz"}},"client-fingerprint":"chrome"}
   - {"name":"🇸🇬SG | 🟢 | vmess | @FreakConfig | 0","type":"vmess","server":"109.123.239.98","port":8080,"cipher":"chacha20-poly1305","uuid":"eff3b1fe-b458-59e2-b32a-73f0b8efd5b8","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp","client-fingerprint":"chrome"}
 proxy-groups:
   - name: MANUAL
@@ -61,7 +60,6 @@ proxy-groups:
       - '🇹🇷TR | 🟢 | vmess | @Hope_Net | 2'
       - '🇳🇱NL | 🟢 | vmess | @Hope_Net | 3'
       - '🇳🇱NL | 🟢 | vmess | @Hope_Net | 4'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 5'
       - '🇸🇬SG | 🟢 | vmess | @FreakConfig | 0'
   - name: URL-TEST
     type: url-test
@@ -92,7 +90,6 @@ proxy-groups:
       - '🇹🇷TR | 🟢 | vmess | @Hope_Net | 2'
       - '🇳🇱NL | 🟢 | vmess | @Hope_Net | 3'
       - '🇳🇱NL | 🟢 | vmess | @Hope_Net | 4'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 5'
       - '🇸🇬SG | 🟢 | vmess | @FreakConfig | 0'
   - name: FALLBACK
     type: fallback
@@ -122,7 +119,6 @@ proxy-groups:
       - '🇹🇷TR | 🟢 | vmess | @Hope_Net | 2'
       - '🇳🇱NL | 🟢 | vmess | @Hope_Net | 3'
       - '🇳🇱NL | 🟢 | vmess | @Hope_Net | 4'
-      - '🇺🇸US | 🟢 | vmess | @Hope_Net | 5'
       - '🇸🇬SG | 🟢 | vmess | @FreakConfig | 0'
 rules:
  - GEOIP,IR,DIRECT
