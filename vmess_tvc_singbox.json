@@ -120,8 +120,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 120",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 134",
+                "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 145",
+                "❔XX | 🟢 | vmess | @prrofile_purple | 146",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 0",
-                "❔XX | 🟢 | vmess | @ConfigsHUB | 11",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -152,8 +153,9 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 120",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 134",
+                "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 145",
+                "❔XX | 🟢 | vmess | @prrofile_purple | 146",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 0",
-                "❔XX | 🟢 | vmess | @ConfigsHUB | 11",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -431,11 +433,11 @@
             }
         },
         {
-            "tag": "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 0",
+            "tag": "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 145",
             "type": "vmess",
-            "server": "customers.tele-shop-too.studio",
-            "server_port": 33203,
-            "uuid": "eaae52d7-bc1a-4979-bd66-b6b428107173",
+            "server": "prom.learn-new.ir",
+            "server_port": 80,
+            "uuid": "ff453ef4-1c89-4045-a42f-603f4e5850fb",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -448,11 +450,35 @@
             }
         },
         {
-            "tag": "❔XX | 🟢 | vmess | @ConfigsHUB | 11",
+            "tag": "❔XX | 🟢 | vmess | @prrofile_purple | 146",
             "type": "vmess",
-            "server": null,
-            "server_port": 0,
-            "uuid": null,
+            "server": "nl.bypasser.info",
+            "server_port": 8080,
+            "uuid": "02466dc0-4d10-4b7e-b4b4-28d098895287",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 0",
+            "type": "vmess",
+            "server": "customers.tele-shop-too.studio",
+            "server_port": 33203,
+            "uuid": "eaae52d7-bc1a-4979-bd66-b6b428107173",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
