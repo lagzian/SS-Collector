@@ -123,8 +123,8 @@
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 145",
                 "❔XX | 🟢 | vmess | @prrofile_purple | 146",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 0",
-                "🇮🇳IN | 🟢 | vmess | @ConfigsHUB | 0",
-                "🇬🇧GB | 🟢 | vmess | @ConfigsHUB | 11",
+                "🇮🇩ID | 🟢 | vmess | @ConfigsHUB | 0",
+                "🚩CF | 🟢 | vmess | @ConfigsHUB | 16",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -158,8 +158,8 @@
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 145",
                 "❔XX | 🟢 | vmess | @prrofile_purple | 146",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 0",
-                "🇮🇳IN | 🟢 | vmess | @ConfigsHUB | 0",
-                "🇬🇧GB | 🟢 | vmess | @ConfigsHUB | 11",
+                "🇮🇩ID | 🟢 | vmess | @ConfigsHUB | 0",
+                "🚩CF | 🟢 | vmess | @ConfigsHUB | 16",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -495,11 +495,11 @@
             }
         },
         {
-            "tag": "🇮🇳IN | 🟢 | vmess | @ConfigsHUB | 0",
+            "tag": "🇮🇩ID | 🟢 | vmess | @ConfigsHUB | 0",
             "type": "vmess",
-            "server": "94.136.185.230",
-            "server_port": 10534,
-            "uuid": "b01c7ef9-33ec-41f6-bfbf-77ddc4d21649",
+            "server": "154.90.49.57",
+            "server_port": 58868,
+            "uuid": "fbffeb6b-b5e5-4f77-8888-c7919fbeb0ad",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -512,11 +512,11 @@
             }
         },
         {
-            "tag": "🇬🇧GB | 🟢 | vmess | @ConfigsHUB | 11",
+            "tag": "🚩CF | 🟢 | vmess | @ConfigsHUB | 16",
             "type": "vmess",
-            "server": "138.68.174.114",
-            "server_port": 8080,
-            "uuid": "6bc7d291-6c95-751c-87c5-f5d4ae650bb0",
+            "server": "104.21.3.189",
+            "server_port": 2053,
+            "uuid": "2fc37713-3017-497e-ff2d-965f826a19a3",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -526,6 +526,23 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "cc2d4.89060004.xyz",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": "cc2d4.89060004.xyz"
+                }
             }
         },
         {
