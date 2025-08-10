@@ -118,7 +118,6 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
-                "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 103",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 127",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 141",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 0",
@@ -132,8 +131,6 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 2",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 4",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 5",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 6",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 1",
                 "🇸🇬SG | 🟢 | vmess | @FreakConfig | 3"
             ]
@@ -154,7 +151,6 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
-                "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 103",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 127",
                 "🇩🇪DE | 🟢 | vmess | @prrofile_purple | 141",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 0",
@@ -168,8 +164,6 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 2",
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 3",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 4",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 5",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 6",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 1",
                 "🇸🇬SG | 🟢 | vmess | @FreakConfig | 3"
             ],
@@ -395,30 +389,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            }
-        },
-        {
-            "tag": "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 103",
-            "type": "vmess",
-            "server": "2.188.219.43",
-            "server_port": 8443,
-            "uuid": "b2e38621-035b-43f8-84a5-e92160762fc3",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": ""
-                }
             }
         },
         {
@@ -739,64 +709,6 @@
                 "path": "\/github.com\/Alvin9999",
                 "headers": {
                     "Host": "172.64.99.22"
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 5",
-            "type": "vmess",
-            "server": "104.21.238.221",
-            "server_port": 2095,
-            "uuid": "18d96190-c10f-448f-a82a-2d36df5c3cde",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/github.com\/Alvin9999",
-                "headers": {
-                    "Host": "104.21.238.221"
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 6",
-            "type": "vmess",
-            "server": "104.16.67.38",
-            "server_port": 2096,
-            "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/glweidf.cfd\/linkws",
-                "headers": {
-                    "Host": ""
                 }
             }
         },
