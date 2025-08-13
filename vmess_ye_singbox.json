@@ -121,6 +121,7 @@
                 "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 126",
                 "🇫🇮FI | 🟢 | vmess | @v2ray1_ng | 1",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 1",
+                "🇬🇧GB | 🟢 | vmess | @ConfigsHUB | 0",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -135,7 +136,6 @@
                 "🇬🇧GB | 🟢 | vmess | @Hope_Net | 6",
                 "❔XX | 🟢 | vmess | @Hope_Net | 7",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 8",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 9",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 1",
                 "🇸🇬SG | 🟢 | vmess | @FreakConfig | 5"
             ]
@@ -159,6 +159,7 @@
                 "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 126",
                 "🇫🇮FI | 🟢 | vmess | @v2ray1_ng | 1",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 1",
+                "🇬🇧GB | 🟢 | vmess | @ConfigsHUB | 0",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -173,7 +174,6 @@
                 "🇬🇧GB | 🟢 | vmess | @Hope_Net | 6",
                 "❔XX | 🟢 | vmess | @Hope_Net | 7",
                 "🇺🇸US | 🟢 | vmess | @Hope_Net | 8",
-                "🇺🇸US | 🟢 | vmess | @Hope_Net | 9",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 1",
                 "🇸🇬SG | 🟢 | vmess | @FreakConfig | 5"
             ],
@@ -448,6 +448,23 @@
             "server": "customers.tele-shop-too.studio",
             "server_port": 33203,
             "uuid": "eaae52d7-bc1a-4979-bd66-b6b428107173",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇬🇧GB | 🟢 | vmess | @ConfigsHUB | 0",
+            "type": "vmess",
+            "server": "51.38.64.209",
+            "server_port": 44023,
+            "uuid": "7da457da-ed0f-437d-c81d-6c35885bbea3",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -859,40 +876,6 @@
             "transport": {
                 "type": "ws",
                 "path": "\/path\/181721272114",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸US | 🟢 | vmess | @Hope_Net | 9",
-            "type": "vmess",
-            "server": "23.154.136.2",
-            "server_port": 443,
-            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "",
-                "insecure": true,
-                "disable_sni": false,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/linkvws",
                 "headers": {
                     "Host": ""
                 }
