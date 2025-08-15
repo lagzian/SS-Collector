@@ -121,7 +121,7 @@
                 "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 142",
                 "🇫🇮FI | 🟢 | vmess | @v2ray1_ng | 2",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 3",
-                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 8",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 4",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -137,6 +137,7 @@
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 7",
                 "❔XX | 🟢 | vmess | @Hope_Net | 8",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 1",
+                "🇫🇷FR | 🟢 | vmess | @FreakConfig | 0",
                 "🇸🇬SG | 🟢 | vmess | @FreakConfig | 12"
             ]
         },
@@ -159,7 +160,7 @@
                 "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 142",
                 "🇫🇮FI | 🟢 | vmess | @v2ray1_ng | 2",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 3",
-                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 8",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 4",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -175,6 +176,7 @@
                 "🇨🇳CN | 🟢 | vmess | @Hope_Net | 7",
                 "❔XX | 🟢 | vmess | @Hope_Net | 8",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 1",
+                "🇫🇷FR | 🟢 | vmess | @FreakConfig | 0",
                 "🇸🇬SG | 🟢 | vmess | @FreakConfig | 12"
             ],
             "url": "https:\/\/www.gstatic.com\/generate_204",
@@ -460,11 +462,11 @@
             }
         },
         {
-            "tag": "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 8",
+            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 4",
             "type": "vmess",
-            "server": "51.254.21.193",
-            "server_port": 20086,
-            "uuid": "9bcecb26-920a-4e68-b296-88526310bff6",
+            "server": "15.204.11.190",
+            "server_port": 15361,
+            "uuid": "5d7bf9e3-415c-40f3-c66d-a54ea0fd860e",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -474,13 +476,6 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/",
-                "headers": {
-                    "Host": ""
-                }
             }
         },
         {
@@ -926,6 +921,30 @@
                 "path": "\/vmessws",
                 "headers": {
                     "Host": "v2ray.codefyinc.com"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷FR | 🟢 | vmess | @FreakConfig | 0",
+            "type": "vmess",
+            "server": "51.254.21.193",
+            "server_port": 20086,
+            "uuid": "9bcecb26-920a-4e68-b296-88526310bff6",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": ""
                 }
             }
         },
