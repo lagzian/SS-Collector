@@ -121,7 +121,8 @@
                 "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 142",
                 "🇫🇮FI | 🟢 | vmess | @v2ray1_ng | 2",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 3",
-                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 15",
+                "❔XX | 🟢 | vmess | @ConfigsHUB | 2",
+                "🇩🇪DE | 🟢 | vmess | @ConfigsHUB | 10",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -131,7 +132,6 @@
                 "❔XX | 🟢 | vmess | @Hope_Net | 1",
                 "❔XX | 🟢 | vmess | @Hope_Net | 2",
                 "❔XX | 🟢 | vmess | @Hope_Net | 3",
-                "❔XX | 🟢 | vmess | @Hope_Net | 4",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 1",
                 "🇸🇬SG | 🟢 | vmess | @FreakConfig | 11"
             ]
@@ -155,7 +155,8 @@
                 "🇮🇷IR | 🟢 | vmess | @prrofile_purple | 142",
                 "🇫🇮FI | 🟢 | vmess | @v2ray1_ng | 2",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 3",
-                "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 15",
+                "❔XX | 🟢 | vmess | @ConfigsHUB | 2",
+                "🇩🇪DE | 🟢 | vmess | @ConfigsHUB | 10",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -165,7 +166,6 @@
                 "❔XX | 🟢 | vmess | @Hope_Net | 1",
                 "❔XX | 🟢 | vmess | @Hope_Net | 2",
                 "❔XX | 🟢 | vmess | @Hope_Net | 3",
-                "❔XX | 🟢 | vmess | @Hope_Net | 4",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 1",
                 "🇸🇬SG | 🟢 | vmess | @FreakConfig | 11"
             ],
@@ -452,11 +452,28 @@
             }
         },
         {
-            "tag": "🇫🇷FR | 🟢 | vmess | @ConfigsHUB | 15",
+            "tag": "❔XX | 🟢 | vmess | @ConfigsHUB | 2",
             "type": "vmess",
-            "server": "51.254.21.193",
-            "server_port": 20086,
-            "uuid": "9bcecb26-920a-4e68-b296-88526310bff6",
+            "server": null,
+            "server_port": 0,
+            "uuid": null,
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇩🇪DE | 🟢 | vmess | @ConfigsHUB | 10",
+            "type": "vmess",
+            "server": "57.129.64.238",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -467,11 +484,21 @@
                 "protocol": "smux",
                 "max_streams": 32
             },
+            "tls": {
+                "enabled": true,
+                "server_name": "kapelleng.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
             "transport": {
                 "type": "ws",
-                "path": "\/",
+                "path": "\/linkvws",
                 "headers": {
-                    "Host": ""
+                    "Host": "kapelleng.com"
                 }
             }
         },
@@ -682,23 +709,6 @@
             "server": "127.0.0.1",
             "server_port": 8080,
             "uuid": "cababca-acba-caba-dcba-ccbbaacbaacb",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            }
-        },
-        {
-            "tag": "❔XX | 🟢 | vmess | @Hope_Net | 4",
-            "type": "vmess",
-            "server": "127.0.0.1",
-            "server_port": 8080,
-            "uuid": "caacbba-acba-acba-bcda-ccccbaaababb",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
