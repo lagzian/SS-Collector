@@ -122,7 +122,9 @@
                 "❔XX | 🟢 | vmess | @prrofile_purple | 107",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 2",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 3",
-                "❔XX | 🟢 | vmess | @ConfigsHUB | 11",
+                "🇨🇾CY | 🟢 | vmess | @ConfigsHUB | 2",
+                "🇨🇾CY | 🟢 | vmess | @ConfigsHUB | 3",
+                "🇨🇾CY | 🟢 | vmess | @ConfigsHUB | 4",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -145,8 +147,6 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 13",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 14",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 15",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 16",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 17",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 1",
                 "🇺🇸US | 🟢 | vmess | @FreakConfig | 2",
                 "🇫🇷FR | 🟢 | vmess | @FreakConfig | 11"
@@ -172,7 +172,9 @@
                 "❔XX | 🟢 | vmess | @prrofile_purple | 107",
                 "🇺🇸US | 🟢 | vmess | @ShadowProxy66 | 2",
                 "🇩🇪DE | 🟢 | vmess | @SafeNet_Server | 3",
-                "❔XX | 🟢 | vmess | @ConfigsHUB | 11",
+                "🇨🇾CY | 🟢 | vmess | @ConfigsHUB | 2",
+                "🇨🇾CY | 🟢 | vmess | @ConfigsHUB | 3",
+                "🇨🇾CY | 🟢 | vmess | @ConfigsHUB | 4",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
                 "❔XX | 🟢 | vmess | @yaney_01 | 3",
@@ -195,8 +197,6 @@
                 "🚩CF | 🟢 | vmess | @Hope_Net | 13",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 14",
                 "🚩CF | 🟢 | vmess | @Hope_Net | 15",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 16",
-                "🚩CF | 🟢 | vmess | @Hope_Net | 17",
                 "🇺🇸US | 🟢 | vmess | @fnet00 | 1",
                 "🇺🇸US | 🟢 | vmess | @FreakConfig | 2",
                 "🇫🇷FR | 🟢 | vmess | @FreakConfig | 11"
@@ -494,11 +494,11 @@
             }
         },
         {
-            "tag": "❔XX | 🟢 | vmess | @ConfigsHUB | 11",
+            "tag": "🇨🇾CY | 🟢 | vmess | @ConfigsHUB | 2",
             "type": "vmess",
-            "server": null,
-            "server_port": 0,
-            "uuid": null,
+            "server": "pubg.ac",
+            "server_port": 80,
+            "uuid": "b0a60a1a-fb2a-4d93-b0a3-6ea50d7a1dea",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -508,6 +508,61 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/profile\/telegram@ssrsub",
+                "headers": {
+                    "Host": "pubg.ac"
+                }
+            }
+        },
+        {
+            "tag": "🇨🇾CY | 🟢 | vmess | @ConfigsHUB | 3",
+            "type": "vmess",
+            "server": "fastcup.net",
+            "server_port": 80,
+            "uuid": "b0a60a1a-fb2a-4d93-b0a3-6ea50d7a1dea",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/profile\/telegram@ssrsub",
+                "headers": {
+                    "Host": "fastcup.net"
+                }
+            }
+        },
+        {
+            "tag": "🇨🇾CY | 🟢 | vmess | @ConfigsHUB | 4",
+            "type": "vmess",
+            "server": "csgo.com",
+            "server_port": 80,
+            "uuid": "b0a60a1a-fb2a-4d93-b0a3-6ea50d7a1dea",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/profile\/telegram@ssrsub",
+                "headers": {
+                    "Host": "csgo.com"
+                }
             }
         },
         {
@@ -1061,54 +1116,6 @@
                 "path": "\/github.com\/Alvin9999",
                 "headers": {
                     "Host": "104.18.114.56"
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 16",
-            "type": "vmess",
-            "server": "104.26.0.6",
-            "server_port": 2086,
-            "uuid": "bc65fac2-7dc7-426f-acdd-0779a5035bde",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/github.com\/Alvin9999",
-                "headers": {
-                    "Host": "104.26.0.6"
-                }
-            }
-        },
-        {
-            "tag": "🚩CF | 🟢 | vmess | @Hope_Net | 17",
-            "type": "vmess",
-            "server": "104.18.114.113",
-            "server_port": 2086,
-            "uuid": "bc65fac2-7dc7-426f-acdd-0779a5035bde",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/github.com\/Alvin9999",
-                "headers": {
-                    "Host": "104.18.114.113"
                 }
             }
         },
