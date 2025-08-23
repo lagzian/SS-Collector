@@ -120,8 +120,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "❔XX | 🟢 | vmess | @prrofile_purple | 138",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 4",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 7",
-                "🇹🇷TR | 🟢 | vmess | @ConfigsHUB | 18",
+                "🇹🇷TR | 🟢 | vmess | @ConfigsHUB | 1",
+                "🇬🇧GB | 🟢 | vmess | @ConfigsHUB | 16",
                 "🇫🇮FI | 🟢 | vmess | @proxystore11 | 6",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -156,8 +156,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
                 "❔XX | 🟢 | vmess | @prrofile_purple | 138",
                 "🇩🇪DE | 🟢 | vmess | @ShadowProxy66 | 4",
-                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 7",
-                "🇹🇷TR | 🟢 | vmess | @ConfigsHUB | 18",
+                "🇹🇷TR | 🟢 | vmess | @ConfigsHUB | 1",
+                "🇬🇧GB | 🟢 | vmess | @ConfigsHUB | 16",
                 "🇫🇮FI | 🟢 | vmess | @proxystore11 | 6",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -449,31 +449,7 @@
             }
         },
         {
-            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 7",
-            "type": "vmess",
-            "server": "npmjs.com",
-            "server_port": 8080,
-            "uuid": "nasnet",
-            "security": "auto",
-            "alter_id": 0,
-            "global_padding": false,
-            "authenticated_length": true,
-            "packet_encoding": "",
-            "multiplex": {
-                "enabled": false,
-                "protocol": "smux",
-                "max_streams": 32
-            },
-            "transport": {
-                "type": "ws",
-                "path": "\/NASNET\/cdn",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇹🇷TR | 🟢 | vmess | @ConfigsHUB | 18",
+            "tag": "🇹🇷TR | 🟢 | vmess | @ConfigsHUB | 1",
             "type": "vmess",
             "server": "tr.snapppro.nikastoring.ir",
             "server_port": 1616,
@@ -487,6 +463,30 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            }
+        },
+        {
+            "tag": "🇬🇧GB | 🟢 | vmess | @ConfigsHUB | 16",
+            "type": "vmess",
+            "server": "64.227.45.92",
+            "server_port": 20086,
+            "uuid": "5e02bc01-42a7-4609-b20a-4d93feea65c6",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "packet_encoding": "",
+            "multiplex": {
+                "enabled": false,
+                "protocol": "smux",
+                "max_streams": 32
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/",
+                "headers": {
+                    "Host": ""
+                }
             }
         },
         {
