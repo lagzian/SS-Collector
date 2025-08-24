@@ -118,8 +118,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
-                "🇨🇦CA | 🟢 | vmess | @ConfigsHUB | 0",
-                "🇭🇰HK | 🟢 | vmess | @ConfigsHUB | 2",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 14",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 18",
                 "🇫🇮FI | 🟢 | vmess | @proxystore11 | 6",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -151,8 +151,8 @@
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 14",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 15",
                 "🇨🇳CN | 🟢 | vmess | @mftizi | 16",
-                "🇨🇦CA | 🟢 | vmess | @ConfigsHUB | 0",
-                "🇭🇰HK | 🟢 | vmess | @ConfigsHUB | 2",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 14",
+                "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 18",
                 "🇫🇮FI | 🟢 | vmess | @proxystore11 | 6",
                 "🇹🇼TW | 🟢 | vmess | @yaney_01 | 1",
                 "🇺🇸US | 🟢 | vmess | @yaney_01 | 2",
@@ -392,11 +392,11 @@
             }
         },
         {
-            "tag": "🇨🇦CA | 🟢 | vmess | @ConfigsHUB | 0",
+            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 14",
             "type": "vmess",
-            "server": "51.79.86.182",
-            "server_port": 42610,
-            "uuid": "e0957ca6-f613-4017-ff3c-effd1da8871a",
+            "server": "linux.do",
+            "server_port": 443,
+            "uuid": "2fbe41db-0797-44f6-a3eb-9c680e5f09ce",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
@@ -406,14 +406,31 @@
                 "enabled": false,
                 "protocol": "smux",
                 "max_streams": 32
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "designs-cycles-submission-really.trycloudflare.com",
+                "insecure": true,
+                "disable_sni": false,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "\/2fbe41db-0797-44f6-a3eb-9c680e5f09ce-vm",
+                "headers": {
+                    "Host": "designs-cycles-submission-really.trycloudflare.com"
+                }
             }
         },
         {
-            "tag": "🇭🇰HK | 🟢 | vmess | @ConfigsHUB | 2",
+            "tag": "🇺🇸US | 🟢 | vmess | @ConfigsHUB | 18",
             "type": "vmess",
-            "server": "210.3.159.150",
-            "server_port": 42717,
-            "uuid": "b5803d74-c6f8-415f-e1e6-ebc9e4269b86",
+            "server": "195.211.99.143",
+            "server_port": 8443,
+            "uuid": "2e514a36-7ae8-4b6a-9e36-9c20e7228824",
             "security": "auto",
             "alter_id": 0,
             "global_padding": false,
