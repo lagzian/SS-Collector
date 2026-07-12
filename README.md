@@ -7,6 +7,7 @@
 ### Premium V2Ray/Xray Configs — Always Fresh, Always Fast
 
 [![GitHub Stars](https://img.shields.io/github/stars/lagzian/SS-Collector?style=for-the-badge&logo=github&color=yellow)](https://github.com/lagzian/SS-Collector/stargazers)
+[![Views](https://hits.sh/github.com/lagzian/SS-Collector.svg?style=for-the-badge&label=Views&color=orange)](https://hits.sh/github.com/lagzian/SS-Collector/)
 [![Last Update](https://img.shields.io/github/last-commit/lagzian/SS-Collector?style=for-the-badge&logo=github&color=blue)](https://github.com/lagzian/SS-Collector/commits)
 [![License](https://img.shields.io/github/license/lagzian/SS-Collector?style=for-the-badge&color=green)](LICENSE)
 [![Telegram](https://img.shields.io/badge/Telegram-@lagzian-blue?style=for-the-badge&logo=telegram)](https://t.me/lagzian)
