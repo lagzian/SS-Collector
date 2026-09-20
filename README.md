@@ -1,178 +1,82 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/lagzian/SS-Collector/main/.github/banner.svg" alt="SS-Collector Banner" width="100%"/>
+<img src="https://raw.githubusercontent.com/lagzian/SS-Collector/main/.github/banner.svg" alt="SS-Collector" width="100%"/>
 
 # 🚀 SS-Collector
 
-### Premium V2Ray/Xray Configs — Always Fresh, Always Fast
+### Fresh V2Ray/Xray configs — scraped, tested & published automatically
 
 [![GitHub Stars](https://img.shields.io/github/stars/lagzian/SS-Collector?style=for-the-badge&logo=github&color=yellow)](https://github.com/lagzian/SS-Collector/stargazers)
-[![Views](https://hits.sh/github.com/lagzian/SS-Collector.svg?style=for-the-badge&label=Views&color=orange)](https://hits.sh/github.com/lagzian/SS-Collector/)
-[![Last Update](https://img.shields.io/github/last-commit/lagzian/SS-Collector?style=for-the-badge&logo=github&color=blue)](https://github.com/lagzian/SS-Collector/commits)
-[![License](https://img.shields.io/github/license/lagzian/SS-Collector?style=for-the-badge&color=green)](LICENSE)
+[![Views](https://hits.sh/github.com/lagzian/SS-Collector.svg?style=for-the-badge&label=Views&color=orange)](https://github.com/lagzian/SS-Collector)
+[![Last Update](https://img.shields.io/badge/last-update-2026-09-20%2022%3A09%20UTC?style=for-the-badge&color=blue)](https://github.com/lagzian/SS-Collector/commits/main)
+[![Configs](https://img.shields.io/badge/configs-167?style=for-the-badge&color=green)](configs/)
+[![License](https://img.shields.io/badge/license-MIT?style=for-the-badge&color=green)](LICENSE)
 [![Telegram](https://img.shields.io/badge/Telegram-@lagzian-blue?style=for-the-badge&logo=telegram)](https://t.me/lagzian)
 
-**🔥 Tested • 🌍 Global • ⚡ Updated Hourly**
+> 🔍 **167 working configs** across 36 countries • auto-tested every 2h • dead configs dropped
 
 </div>
 
 ---
 
-## 🎯 What's Inside?
+## 📥 Subscription (all protocols, all countries)
 
-High-quality **V2Ray/Xray** subscription links for multiple protocols:
-
-<div align="center">
-
-| Protocol | Description | Status |
-|:--------:|-------------|:------:|
-| 🌐 **CDN** | CDN-optimized routes | ✅ Active |
-| 🚄 **Hysteria2** | Ultra-fast QUIC protocol | ✅ Active |
-| 🛡️ **Reality** | Anti-detection stealth | ✅ Active |
-| 💎 **VLESS** | Lightweight & efficient | ✅ Active |
-| ⚡ **VMess** | Classic reliability | ✅ Active |
-| 🎭 **Mix** | All protocols combined | ✅ Active |
-
-</div>
-
-> 📡 **Source:** Powered by [@itsyebekhe's PSG](https://github.com/itsyebekhe/PSG) — updated every hour automatically
+```
+https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/subscription-all.txt
+```
+<sub>📋 paste into V2RayNG / Shadowrocket / V2RayN</sub>
 
 ---
 
-## 📥 Subscription Links
+## 🌍 By country & protocol
 
-<details open>
-<summary><b>🔗 Click to expand all protocols</b></summary>
-
-### 🌐 CDN-Optimized
-```
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/cdn
-```
-<sub>📋 [Copy](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/cdn) • 🔐 [Base64](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/cdn.b64)</sub>
-
-### 🚄 Hysteria2 (Latest)
-```
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/hy2
-```
-<sub>📋 [Copy](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/hy2) • 🔐 [Base64](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/hy2.b64) • 🌐 [IPv4 Only](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/hy2_ipv4)</sub>
-
-### 🛡️ Reality (Stealth)
-```
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/reality
-```
-<sub>📋 [Copy](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/reality) • 🔐 [Base64](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/reality.b64)</sub>
-
-### 💎 VLESS
-```
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/vless
-```
-<sub>📋 [Copy](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/vless) • 🔐 [Base64](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/vless.b64)</sub>
-
-### ⚡ VMess
-```
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/vmess
-```
-<sub>📋 [Copy](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/vmess) • 🔐 [Base64](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/vmess.b64)</sub>
-
-### 🎭 Mix (All Protocols)
-```
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/mix
-```
-<sub>📋 [Copy](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/mix) • 🔐 [Base64](https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/mix.b64)</sub>
-
-</details>
+| Country | Working | Protocols | Subscribe |
+|:-------:|:-------:|:----------|:---------:|
+| `AM` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/am/vless.txt) |
+| `AT` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/at/vless.txt) |
+| `AU` | 2 | vless×2 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/au/vless.txt) |
+| `BG` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/bg/vless.txt) |
+| `BR` | 2 | vless×2 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/br/vless.txt) |
+| `CA` | 11 | ss×1 vless×10 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/ss.txt) |
+| `DE` | 10 | trojan×1 vless×9 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/trojan.txt) |
+| `EE` | 5 | vless×5 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/ee/vless.txt) |
+| `ES` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/es/vless.txt) |
+| `FI` | 6 | ss×1 vless×5 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/ss.txt) |
+| `FR` | 15 | trojan×12 vless×3 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/trojan.txt) |
+| `GB` | 4 | vless×4 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/gb/vless.txt) |
+| `GR` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/gr/vless.txt) |
+| `GT` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/gt/vless.txt) |
+| `HK` | 7 | trojan×3 vless×4 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/trojan.txt) |
+| `ID` | 1 | trojan×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/id/trojan.txt) |
+| `IN` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/in/vless.txt) |
+| `IT` | 5 | vless×5 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/it/vless.txt) |
+| `JP` | 17 | ss×3 vless×14 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/ss.txt) |
+| `KR` | 6 | vless×6 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/kr/vless.txt) |
+| `LT` | 2 | vless×2 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/lt/vless.txt) |
+| `MY` | 1 | trojan×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/my/trojan.txt) |
+| `NL` | 4 | trojan×1 vless×3 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/trojan.txt) |
+| `NO` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/no/vless.txt) |
+| `PL` | 11 | ss×1 vless×10 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/ss.txt) |
+| `RO` | 3 | ss×1 vless×2 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/ss.txt) |
+| `RU` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/ru/vless.txt) |
+| `SA` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/sa/vless.txt) |
+| `SE` | 5 | vless×5 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/se/vless.txt) |
+| `SG` | 8 | vless×8 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/sg/vless.txt) |
+| `TH` | 5 | vless×5 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/th/vless.txt) |
+| `TR` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/tr/vless.txt) |
+| `TW` | 7 | ss×2 vless×5 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/ss.txt) |
+| `US` | 17 | ss×1 trojan×1 vless×15 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/ss.txt) |
+| `UZ` | 1 | vless×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/uz/vless.txt) |
+| `ZA` | 1 | ss×1 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/za/ss.txt) |
 
 ---
 
-## 🚀 Quick Setup (3 Steps)
+## 📂 Browse raw configs
 
-<table>
-<tr>
-<td width="33%" align="center">
-<h3>1️⃣ Install Client</h3>
-<p>Download V2RayNG, Shadowrocket, or Clash</p>
-</td>
-<td width="33%" align="center">
-<h3>2️⃣ Add Subscription</h3>
-<p>Paste any link from above</p>
-</td>
-<td width="33%" align="center">
-<h3>3️⃣ Connect</h3>
-<p>Update & choose a server</p>
-</td>
-</tr>
-</table>
-
-### 📱 Recommended Apps
-
-<div align="center">
-
-| Platform | Client | Link |
-|:--------:|:------:|:----:|
-| 🤖 **Android** | V2RayNG | [Download](https://github.com/2dust/v2rayNG/releases) |
-| 🍎 **iOS** | Shadowrocket | [App Store](https://apps.apple.com/app/shadowrocket/id932747118) |
-| 🪟 **Windows** | V2RayN | [Download](https://github.com/2dust/v2rayN/releases) |
-| 🐧 **Linux** | V2Ray Core | [v2fly.org](https://www.v2fly.org/) |
-| 🍏 **macOS** | ClashX | [Download](https://github.com/yichengchen/clashX/releases) |
-
-</div>
+`configs/{country}/{protocol}.txt` — e.g. `configs/sg/vless.txt`
 
 ---
 
-## 💡 Why This Repo?
+⚠️ Educational use only. No warranty. Use at your own risk.
 
-<div align="center">
-
-| Feature | Benefit |
-|:-------:|---------|
-| ⏱️ **Hourly Updates** | Fresh configs every 60 minutes |
-| 🔍 **Pre-Tested** | Only working servers |
-| 🌍 **Global Coverage** | Servers worldwide |
-| 📦 **Zero Maintenance** | Just copy & paste |
-| 🆓 **Totally Free** | No signup, no payment |
-
-</div>
-
----
-
-## 🙏 Credits & Thanks
-
-<div align="center">
-
-**Config Source:** [@itsyebekhe/PSG](https://github.com/itsyebekhe/PSG) 🎯  
-**Curated by:** [@lagzian](https://github.com/lagzian) 💙
-
-Special thanks to the PSG project for maintaining fresh configs!
-
-</div>
-
----
-
-## ⚠️ Legal Notice
-
-```
-Educational & privacy purposes only.
-Respect local laws and regulations.
-No warranty provided — use at your own risk.
-```
-
----
-
-## 📬 Support & Contact
-
-<div align="center">
-
-[![GitHub Issues](https://img.shields.io/badge/Issues-Report%20Here-red?style=for-the-badge&logo=github)](https://github.com/lagzian/SS-Collector/issues)
-[![Telegram](https://img.shields.io/badge/Telegram-@lagzian-blue?style=for-the-badge&logo=telegram)](https://t.me/lagzian)
-
-</div>
-
----
-
-<div align="center">
-
-### ⭐ **Star this repo if it helps you!** ⭐
-
-<sub>Made with ❤️ by the community • Updated 2026</sub>
-
-</div>
+*Generated 2026-09-20 22:09 UTC by GitHub Actions.*
