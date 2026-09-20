@@ -2,10 +2,9 @@ name: SS-Collector
 
 on:
   schedule:
-    - cron: "0 */2 * * *"   # every 2 hours — v2nodes keys rotate frequently
+    - cron: "0 */2 * * *"
   workflow_dispatch: {}
 
-# ponytail: concurrency cancels stale runs; add if a run ever overlaps on a busy key
 concurrency:
   group: ss-collector
   cancel-in-progress: true
@@ -13,24 +12,26 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
-      - name: Scrape configs (fresh keys)
+      - name: Scrape configs (keys rotate — fresh every run)
         run: python3 scripts/scrape.py
 
-      - name: Test reachability (TCP)
+      # ponytail: TCP reachability test on the GitHub runner (assumption a).
+      # ~415 configs × 8s timeout across 128 workers ≈ 5 min. Upgrade to
+      # protocol-level (v2ray handshake) only if TCP proves too permissive.
+      - name: Test reachability (TCP, inside GitHub)
         run: python3 scripts/test.py
 
-      - name: Publish + regenerate README
+      - name: Publish configs + regenerate README
         run: python3 scripts/publish.py
 
-      - name: Commit
+      - name: Commit & push
         run: |
           git config user.name "SS-Collector Bot"
           git config user.email "ss-collector@users.noreply.github.com"
-          # clean up intermediates — only ship user-facing artifacts
           rm -f scraped.json tested.json
           git add -A configs test_report.json README.md
           git diff --cached --quiet || {
