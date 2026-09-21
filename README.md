@@ -18,6 +18,84 @@
 
 ---
 
+## 📖 What is SS-Collector?
+
+**SS-Collector** automatically scrapes, tests, and publishes working V2Ray/Xray proxy configurations from public sources. Updated every 2 hours via GitHub Actions.
+
+### 🎯 Key Features
+
+- **Country-specific IPs** — need a Japanese IP? Subscribe to `configs/jp/vless.b64`. Need multiple countries? Chain them.
+- **Protocol-sorted** — separate subscriptions for VLESS, Shadowsocks, Trojan
+- **Auto-tested** — TCP reachability check every run; dead configs dropped instantly
+- **Zero setup** — paste the subscription link, that's it
+
+### 🔒 Security & Privacy
+
+- **Public configs only** — no private servers, no authentication harvesting
+- **Open source** — audit the scraper yourself ([scripts/](scripts/))
+- **No logs, no tracking** — GitHub hosts the files; we don't see who subscribes
+- **Educational purpose** — test your client, understand proxy protocols, learn automation
+
+> ⚠️ **Legal Notice:** Respect local laws. SS-Collector provides tools, not legal advice. Use at your own risk.
+
+---
+
+## 🚀 Quick Start
+
+### 1️⃣ Choose your subscription
+
+| Need | Link |
+|------|------|
+| 🌍 **All countries** | `https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/subscription-all.b64` |
+| 🇯🇵 **Japan only** | `https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/jp/all.b64` |
+| 🇺🇸 **US only** | `https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/us/all.b64` |
+| 🌐 **VLESS only (all countries)** | `https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/vless.b64` |
+
+### 2️⃣ Add to your client
+
+<details>
+<summary><b>V2RayNG (Android)</b></summary>
+
+1. Open V2RayNG
+2. Tap `+` → **Import config from clipboard** or **Subscription**
+3. Paste the link above
+4. Tap **Update subscription**
+5. Select a server → Connect
+</details>
+
+<details>
+<summary><b>V2RayN (Windows)</b></summary>
+
+1. Open V2RayN
+2. **Subscription** → **Subscription settings**
+3. Add subscription URL
+4. **Update subscription**
+5. Right-click a server → **Set as active server**
+</details>
+
+<details>
+<summary><b>Shadowrocket (iOS)</b></summary>
+
+1. Open Shadowrocket
+2. Tap `+` → **Type: Subscribe**
+3. Paste URL → **Save**
+4. Swipe left on the subscription → **Update**
+5. Tap a config → Connect
+</details>
+
+### 3️⃣ Advanced: Chain for specific country IPs
+
+Need a Japanese IP but your current VPN doesn't have Japan servers?
+
+1. **Add your main VPN** to your client (e.g., WireGuard, Outline)
+2. **Import Japan configs** from `configs/jp/all.b64`
+3. **Connect to your main VPN first**, then connect to a Japan config from SS-Collector
+4. Your traffic: `You → Main VPN → Japan SS-Collector node → Internet`
+
+Result: websites see a Japanese IP, even if your main VPN doesn't offer Japan.
+
+---
+
 ## 📥 Quick Subscribe
 
 <details open>
