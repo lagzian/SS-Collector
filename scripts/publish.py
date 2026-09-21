@@ -132,8 +132,7 @@ def main() -> None:
 ### Fresh V2Ray/Xray configs — scraped, tested & published automatically
 
 [![GitHub Stars](https://img.shields.io/github/stars/lagzian/SS-Collector?style=for-the-badge&logo=github&color=yellow)](https://github.com/lagzian/SS-Collector/stargazers)
-[![Views](https://hits.sh/github.com/lagzian/SS-Collector.svg?style=for-the-badge&label=Views&color=orange)](https://github.com/lagzian/SS-Collector)
-[![Last Update](https://img.shields.io/badge/last-update-{ts.replace(' ', '%20').replace(':', '%3A')}?style=for-the-badge&color=blue)](https://github.com/lagzian/SS-Collector/commits/main)
+[![Last Update](https://img.shields.io/github/last-commit/lagzian/SS-Collector?style=for-the-badge&color=blue&label=Updated)](https://github.com/lagzian/SS-Collector/commits/main)
 [![Configs](https://img.shields.io/badge/configs-{total}?style=for-the-badge&color=green)](configs/)
 [![License](https://img.shields.io/badge/license-MIT?style=for-the-badge&color=green)](LICENSE)
 [![Telegram](https://img.shields.io/badge/Telegram-@lagzian-blue?style=for-the-badge&logo=telegram)](https://t.me/lagzian)
