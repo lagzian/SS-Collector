@@ -8,11 +8,11 @@
 
 [![GitHub Stars](https://img.shields.io/github/stars/lagzian/SS-Collector?style=for-the-badge&logo=github&color=yellow)](https://github.com/lagzian/SS-Collector/stargazers)
 [![Last Update](https://img.shields.io/github/last-commit/lagzian/SS-Collector?style=for-the-badge&color=blue&label=Updated)](https://github.com/lagzian/SS-Collector/commits/main)
-[![Configs](https://img.shields.io/badge/configs-379?style=for-the-badge&color=green)](configs/)
+[![Configs](https://img.shields.io/badge/configs-381?style=for-the-badge&color=green)](configs/)
 [![License](https://img.shields.io/badge/license-MIT?style=for-the-badge&color=green)](LICENSE)
 [![Telegram](https://img.shields.io/badge/Telegram-@lagzian-blue?style=for-the-badge&logo=telegram)](https://t.me/lagzian)
 
-> 🔍 **379 working configs** across 47 countries • auto-tested every 2h • dead configs dropped
+> 🔍 **381 working configs** across 46 countries • auto-tested every 2h • dead configs dropped
 
 </div>
 
@@ -34,9 +34,9 @@ https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/subscription
 
 | Protocol | Working | Subscribe |
 |:--------:|:-------:|:---------:|
-| 🌐 **VLESS** | 263 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/vless.b64) |
-| 🌐 **SS** | 44 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/ss.b64) |
-| 🌐 **TROJAN** | 72 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/trojan.b64) |
+| 🌐 **VLESS** | 262 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/vless.b64) |
+| 🌐 **SS** | 46 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/ss.b64) |
+| 🌐 **TROJAN** | 73 | [subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/mixed/trojan.b64) |
 
 ---
 
@@ -55,23 +55,22 @@ https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/subscription
 | 🇨🇱 **CL** | 8 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/cl/vless.b64">vless×8</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/cl/all.b64) |
 | 🇨🇾 **CY** | 1 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/cy/vless.b64">vless×1</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/cy/all.b64) |
 | 🇨🇿 **CZ** | 1 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/cz/vless.b64">vless×1</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/cz/all.b64) |
-| 🇩🇪 **DE** | 21 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/de/ss.b64">ss×2</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/de/trojan.b64">trojan×2</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/de/vless.b64">vless×17</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/de/all.b64) |
+| 🇩🇪 **DE** | 20 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/de/ss.b64">ss×2</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/de/trojan.b64">trojan×2</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/de/vless.b64">vless×16</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/de/all.b64) |
 | 🇪🇪 **EE** | 9 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/ee/trojan.b64">trojan×1</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/ee/vless.b64">vless×8</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/ee/all.b64) |
 | 🇪🇸 **ES** | 3 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/es/ss.b64">ss×1</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/es/vless.b64">vless×2</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/es/all.b64) |
 | 🇫🇮 **FI** | 19 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/fi/ss.b64">ss×1</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/fi/vless.b64">vless×18</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/fi/all.b64) |
-| 🇫🇷 **FR** | 24 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/fr/ss.b64">ss×1</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/fr/trojan.b64">trojan×8</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/fr/vless.b64">vless×15</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/fr/all.b64) |
+| 🇫🇷 **FR** | 25 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/fr/ss.b64">ss×1</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/fr/trojan.b64">trojan×9</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/fr/vless.b64">vless×15</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/fr/all.b64) |
 | 🇬🇧 **GB** | 16 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/gb/ss.b64">ss×4</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/gb/vless.b64">vless×12</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/gb/all.b64) |
 | 🇬🇷 **GR** | 2 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/gr/vless.b64">vless×2</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/gr/all.b64) |
 | 🇭🇰 **HK** | 7 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/hk/vless.b64">vless×7</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/hk/all.b64) |
-| 🇭🇷 **HR** | 1 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/hr/ss.b64">ss×1</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/hr/all.b64) |
 | 🇭🇺 **HU** | 1 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/hu/vless.b64">vless×1</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/hu/all.b64) |
 | 🇮🇩 **ID** | 4 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/id/ss.b64">ss×1</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/id/trojan.b64">trojan×1</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/id/vless.b64">vless×2</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/id/all.b64) |
 | 🇮🇪 **IE** | 21 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/ie/trojan.b64">trojan×3</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/ie/vless.b64">vless×18</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/ie/all.b64) |
 | 🇮🇱 **IL** | 3 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/il/vless.b64">vless×3</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/il/all.b64) |
-| 🇮🇳 **IN** | 3 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/in/vless.b64">vless×3</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/in/all.b64) |
-| 🇮🇹 **IT** | 10 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/it/ss.b64">ss×1</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/it/vless.b64">vless×9</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/it/all.b64) |
-| 🇯🇵 **JP** | 21 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/jp/ss.b64">ss×2</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/jp/trojan.b64">trojan×19</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/jp/all.b64) |
-| 🇰🇷 **KR** | 19 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/kr/ss.b64">ss×2</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/kr/trojan.b64">trojan×15</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/kr/vless.b64">vless×2</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/kr/all.b64) |
+| 🇮🇳 **IN** | 4 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/in/ss.b64">ss×1</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/in/vless.b64">vless×3</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/in/all.b64) |
+| 🇮🇹 **IT** | 10 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/it/ss.b64">ss×2</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/it/vless.b64">vless×8</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/it/all.b64) |
+| 🇯🇵 **JP** | 22 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/jp/ss.b64">ss×2</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/jp/trojan.b64">trojan×19</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/jp/vless.b64">vless×1</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/jp/all.b64) |
+| 🇰🇷 **KR** | 20 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/kr/ss.b64">ss×3</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/kr/trojan.b64">trojan×15</a>  <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/kr/vless.b64">vless×2</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/kr/all.b64) |
 | 🇰🇿 **KZ** | 2 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/kz/vless.b64">vless×2</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/kz/all.b64) |
 | 🇱🇻 **LV** | 2 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/lv/vless.b64">vless×2</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/lv/all.b64) |
 | 🇲🇩 **MD** | 1 | <a href="https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/md/vless.b64">vless×1</a> | [🔗](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/md/all.b64) |
@@ -102,4 +101,4 @@ https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/subscription
 
 ⚠️ Educational use only. No warranty. Use at your own risk.
 
-*Generated 2026-10-11 21:19 UTC by GitHub Actions.*
+*Generated 2026-10-12 00:53 UTC by GitHub Actions.*
