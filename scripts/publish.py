@@ -163,6 +163,22 @@ def main() -> None:
 
 ---
 
+## 📦 Additional subscriptions (PSG)
+
+These upstream lists refresh independently every 4 hours. The feed names describe their upstream category; **they are not endorsements or guarantees of compatibility/availability**. The `openai` label does not imply that a node provides access to any AI service.
+
+| Feed | Subscribe | Plain text |
+|:-----|:----------|:------------|
+| AI-labelled (`openai`) | [Base64](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/openai.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/openai.txt) |
+| Reality | [Base64](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/reality.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/reality.txt) |
+| Mixed protocols | [Base64](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/mix.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/mix.txt) |
+| VLESS | [Base64](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/vless.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/vless.txt) |
+| Shadowsocks IPv4 | [Base64](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/ss_ipv4.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/ss_ipv4.txt) |
+
+> These upstream subscriptions are mirrored as provided and are **not** subjected to this repository's country collector TCP test. Check the upstream source and local laws before use.
+
+---
+
 ## 🌍 By country
 
 | Country | Working | Protocols | Subscribe |

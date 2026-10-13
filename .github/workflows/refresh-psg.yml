@@ -1,0 +1,34 @@
+name: Refresh PSG subscriptions
+
+on:
+  schedule:
+    - cron: "17 */4 * * *"
+  workflow_dispatch: {}
+
+# Shares a lock with the country collector so the two jobs never push at once.
+concurrency:
+  group: ss-collector
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch and validate feeds
+        run: python3 scripts/fetch_psg.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "SS-Collector Bot"
+          git config user.email "ss-collector@users.noreply.github.com"
+          git add configs/psg
+          git diff --cached --quiet || {
+            git commit -m "Auto: refresh PSG subscriptions ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git push
+          }
