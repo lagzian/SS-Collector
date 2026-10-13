@@ -113,12 +113,12 @@ def main() -> None:
         sub_url = f"{RAW}/configs/{code}/all.b64"
         rows.append(
             f'| {flag(code)} **{code.upper()}** | {cnt} | {proto_cell} | '
-            f'[`Copy Subscription`]({sub_url}) |'
+            f'<pre><code>{sub_url}</code></pre> |'
         )
 
     protocol_bars = "\n".join(
         f'| 🌐 **{p.upper()}** | {len(mixed[p])} | '
-        f'[`Copy Subscription`]({RAW}/configs/mixed/{p}.b64) |'
+        f'<pre><code>{RAW}/configs/mixed/{p}.b64</code></pre> |'
         for p in PROTOS if mixed[p]
     )
 
@@ -183,16 +183,59 @@ def main() -> None:
 
 These upstream lists refresh independently every 4 hours with political promo nodes stripped.
 
-| Feed | Subscription Link | Plain text |
-|:-----|:------------------|:------------|
-| AI-labelled (`openai`) | [`Copy Subscription`]({RAW}/configs/psg/openai.b64) | [TXT]({RAW}/configs/psg/openai.txt) |
-| Reality | [`Copy Subscription`]({RAW}/configs/psg/reality.b64) | [TXT]({RAW}/configs/psg/reality.txt) |
-| VMess | [`Copy Subscription`]({RAW}/configs/psg/vmess.b64) | [TXT]({RAW}/configs/psg/vmess.txt) |
-| Mixed protocols | [`Copy Subscription`]({RAW}/configs/psg/mix.b64) | [TXT]({RAW}/configs/psg/mix.txt) |
-| VLESS | [`Copy Subscription`]({RAW}/configs/psg/vless.b64) | [TXT]({RAW}/configs/psg/vless.txt) |
-| Shadowsocks IPv4 | [`Copy Subscription`]({RAW}/configs/psg/ss_ipv4.b64) | [TXT]({RAW}/configs/psg/ss_ipv4.txt) |
+| Feed | Subscription Link (One-Click Copy) | Plain text |
+|:-----|:-----------------------------------|:------------|
+| AI-labelled (`openai`) | <pre><code>{RAW}/configs/psg/openai.b64</code></pre> | [TXT]({RAW}/configs/psg/openai.txt) |
+| Reality | <pre><code>{RAW}/configs/psg/reality.b64</code></pre> | [TXT]({RAW}/configs/psg/reality.txt) |
+| VMess | <pre><code>{RAW}/configs/psg/vmess.b64</code></pre> | [TXT]({RAW}/configs/psg/vmess.txt) |
+| Mixed protocols | <pre><code>{RAW}/configs/psg/mix.b64</code></pre> | [TXT]({RAW}/configs/psg/mix.txt) |
+| VLESS | <pre><code>{RAW}/configs/psg/vless.b64</code></pre> | [TXT]({RAW}/configs/psg/vless.txt) |
+| Shadowsocks IPv4 | <pre><code>{RAW}/configs/psg/ss_ipv4.b64</code></pre> | [TXT]({RAW}/configs/psg/ss_ipv4.txt) |
 
 > ⚠️ These upstream subscriptions are mirrored as provided and are **not** subjected to the country-feed TCP tester.
+
+---
+
+## 📱 Recommended Client: Hiddify
+
+[**Hiddify**](https://github.com/hiddify/hiddify-app) is an ultra-fast, multi-platform universal proxy client supporting Sing-box, Xray, VLESS, VMess, Shadowsocks, Reality, and TUIC.
+
+### ⬇️ Download Links & QR Codes
+
+<table>
+<tr>
+<th align="center">Platform</th>
+<th align="center">Direct Download Link</th>
+<th align="center">Scan to Download (Mobile/TV)</th>
+</tr>
+<tr>
+<td align="center">🤖 <b>Android (Universal APK)</b></td>
+<td align="center"><a href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Android-universal.apk">Hiddify-Android-universal.apk</a><br><sub><a href="https://play.google.com/store/apps/details?id=app.hiddify.com">Google Play Store</a></sub></td>
+<td align="center"><img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https%3A//github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Android-universal.apk" width="110" height="110" alt="Android QR"/></td>
+</tr>
+<tr>
+<td align="center">🪟 <b>Windows (Installer)</b></td>
+<td align="center"><a href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Windows-Setup-x64.exe">Hiddify-Windows-Setup-x64.exe</a><br><sub><a href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Windows-Portable-x64.zip">Portable ZIP</a></sub></td>
+<td align="center"><img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https%3A//github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Windows-Setup-x64.exe" width="110" height="110" alt="Windows QR"/></td>
+</tr>
+<tr>
+<td align="center">🍏 <b>macOS (DMG)</b></td>
+<td align="center"><a href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-MacOS.dmg">Hiddify-MacOS.dmg</a><br><sub><a href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-MacOS-Installer.pkg">Installer PKG</a></sub></td>
+<td align="center"><img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https%3A//github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-MacOS.dmg" width="110" height="110" alt="macOS QR"/></td>
+</tr>
+<tr>
+<td align="center">🐧 <b>Linux (AppImage / DEB)</b></td>
+<td align="center"><a href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Linux-x64-AppImage.AppImage">Hiddify-Linux-x64-AppImage</a><br><sub><a href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Debian-x64.deb">Debian / Ubuntu DEB</a></sub></td>
+<td align="center"><img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https%3A//github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Linux-x64-AppImage.AppImage" width="110" height="110" alt="Linux QR"/></td>
+</tr>
+<tr>
+<td align="center">🍎 <b>iOS / iPadOS</b></td>
+<td align="center"><a href="https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532">Apple App Store</a></td>
+<td align="center"><img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https%3A//apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532" width="110" height="110" alt="iOS App Store QR"/></td>
+</tr>
+</table>
+
+<sub>📦 Full release list & assets: <a href="https://github.com/hiddify/hiddify-app/releases">hiddify/hiddify-app/releases</a></sub>
 
 ---
 
