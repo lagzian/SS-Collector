@@ -113,12 +113,12 @@ def main() -> None:
         sub_url = f"{RAW}/configs/{code}/all.b64"
         rows.append(
             f'| {flag(code)} **{code.upper()}** | {cnt} | {proto_cell} | '
-            f'<pre><code>{sub_url}</code></pre> |'
+            f'[Subscribe]({sub_url}) |'
         )
 
     protocol_bars = "\n".join(
         f'| 🌐 **{p.upper()}** | {len(mixed[p])} | '
-        f'<pre><code>{RAW}/configs/mixed/{p}.b64</code></pre> |'
+        f'[Subscribe]({RAW}/configs/mixed/{p}.b64) |'
         for p in PROTOS if mixed[p]
     )
 
@@ -173,8 +173,8 @@ def main() -> None:
 
 ## 🌐 By protocol
 
-| Protocol | Working | Subscription Link (Tap to open/copy) |
-|:--------:|:-------:|:-------------------------------------|
+| Protocol | Working | Subscribe |
+|:--------:|:-------:|:---------:|
 {protocol_bars}
 
 ---
@@ -183,14 +183,14 @@ def main() -> None:
 
 These upstream lists refresh independently every 4 hours with political promo nodes stripped.
 
-| Feed | Subscription Link (One-Click Copy) | Plain text |
-|:-----|:-----------------------------------|:------------|
-| AI-labelled (`openai`) | <pre><code>{RAW}/configs/psg/openai.b64</code></pre> | [TXT]({RAW}/configs/psg/openai.txt) |
-| Reality | <pre><code>{RAW}/configs/psg/reality.b64</code></pre> | [TXT]({RAW}/configs/psg/reality.txt) |
-| VMess | <pre><code>{RAW}/configs/psg/vmess.b64</code></pre> | [TXT]({RAW}/configs/psg/vmess.txt) |
-| Mixed protocols | <pre><code>{RAW}/configs/psg/mix.b64</code></pre> | [TXT]({RAW}/configs/psg/mix.txt) |
-| VLESS | <pre><code>{RAW}/configs/psg/vless.b64</code></pre> | [TXT]({RAW}/configs/psg/vless.txt) |
-| Shadowsocks IPv4 | <pre><code>{RAW}/configs/psg/ss_ipv4.b64</code></pre> | [TXT]({RAW}/configs/psg/ss_ipv4.txt) |
+| Feed | Subscribe | Plain text |
+|:-----|:----------|:------------|
+| AI-labelled (`openai`) | [Subscribe]({RAW}/configs/psg/openai.b64) | [TXT]({RAW}/configs/psg/openai.txt) |
+| Reality | [Subscribe]({RAW}/configs/psg/reality.b64) | [TXT]({RAW}/configs/psg/reality.txt) |
+| VMess | [Subscribe]({RAW}/configs/psg/vmess.b64) | [TXT]({RAW}/configs/psg/vmess.txt) |
+| Mixed protocols | [Subscribe]({RAW}/configs/psg/mix.b64) | [TXT]({RAW}/configs/psg/mix.txt) |
+| VLESS | [Subscribe]({RAW}/configs/psg/vless.b64) | [TXT]({RAW}/configs/psg/vless.txt) |
+| Shadowsocks IPv4 | [Subscribe]({RAW}/configs/psg/ss_ipv4.b64) | [TXT]({RAW}/configs/psg/ss_ipv4.txt) |
 
 > ⚠️ These upstream subscriptions are mirrored as provided and are **not** subjected to the country-feed TCP tester.
 
@@ -241,8 +241,8 @@ These upstream lists refresh independently every 4 hours with political promo no
 
 ## 🌍 By country
 
-| Country | Working | Protocols | Subscription Link |
-|:-------:|:-------:|:----------|:------------------|
+| Country | Working | Protocols | Subscribe |
+|:-------:|:-------:|:----------|:---------:|
 {country_table}
 
 ---
