@@ -41,15 +41,26 @@ def subscription_url(code: str) -> str:
 
 
 def fetch_configs(url: str) -> list[str]:
-    """Return list of raw config lines (decoded)."""
+    """Return list of raw config lines (decoded), with ad-filtering."""
     import base64
+    import urllib.parse
     b64 = curl(url)
     b64 = b64.strip()
     try:
         raw = base64.b64decode(b64).decode("utf-8", "replace")
     except Exception:
         raw = b64  # maybe not base64
-    return [l.strip() for l in raw.splitlines() if l.strip()]
+    lines = [l.strip() for l in raw.splitlines() if l.strip()]
+    blocked = ("جاویدشاه", "kingrezapahlavi", "همکاریملی")
+    clean = []
+    for line in lines:
+        if line.startswith("#"):
+            continue
+        unquoted = urllib.parse.unquote(line).lower()
+        norm = re.sub(r"[\s_\-\u200c\u200b\u0640]+", "", unquoted)
+        if not any(p in norm for p in blocked):
+            clean.append(line)
+    return clean
 
 
 def main() -> int:

@@ -110,14 +110,15 @@ def main() -> None:
             f'<a href="{RAW}/configs/{code}/{p}.b64">{p}×{len(v)}</a>'
             for p, v in sorted(protos.items())
         )
+        sub_url = f"{RAW}/configs/{code}/all.b64"
         rows.append(
             f'| {flag(code)} **{code.upper()}** | {cnt} | {proto_cell} | '
-            f'[🔗]({RAW}/configs/{code}/all.b64) |'
+            f'[`Copy Subscription`]({sub_url}) |'
         )
 
     protocol_bars = "\n".join(
         f'| 🌐 **{p.upper()}** | {len(mixed[p])} | '
-        f'[subscribe]({RAW}/configs/mixed/{p}.b64) |'
+        f'[`Copy Subscription`]({RAW}/configs/mixed/{p}.b64) |'
         for p in PROTOS if mixed[p]
     )
 
@@ -137,9 +138,23 @@ def main() -> None:
 [![License](https://img.shields.io/badge/license-MIT?style=for-the-badge&color=green)](LICENSE)
 [![Telegram](https://img.shields.io/badge/Telegram-@lagzian-blue?style=for-the-badge&logo=telegram)](https://t.me/lagzian)
 
-> 🔍 **{total} working configs** across {len(by_code)} countries • auto-tested every 2h • dead configs dropped
+> 🔍 **{total} working configs** across {len(by_code)} countries • auto-tested every 2h • dead configs & political ads dropped
 
 </div>
+
+---
+
+## 📖 What is SS-Collector?
+
+**SS-Collector** automatically scrapes, tests, and publishes working V2Ray/Xray proxy configurations from public sources. Updated every 2 hours via GitHub Actions.
+
+### 🎯 Key Features
+
+- **Country-specific IPs** — need a specific country IP? Subscribe to that country's sub or chain it with your existing setup.
+- **Protocol-sorted** — separate subscriptions for VLESS, Shadowsocks, Trojan, VMess.
+- **Auto-tested** — TCP reachability check every run; dead configs dropped instantly.
+- **Ad-filtered** — political spam, fake local listeners, and promo nodes are stripped automatically.
+- **One-click copy** — click/tap any subscription link to copy directly into your client.
 
 ---
 
@@ -151,38 +166,40 @@ def main() -> None:
 ```
 {RAW}/configs/subscription-all.b64
 ```
+<sub>📋 Click the copy icon on the right side of the code box above, or long-press on mobile.</sub>
 </details>
 
 ---
 
 ## 🌐 By protocol
 
-| Protocol | Working | Subscribe |
-|:--------:|:-------:|:---------:|
+| Protocol | Working | Subscription Link (Tap to open/copy) |
+|:--------:|:-------:|:-------------------------------------|
 {protocol_bars}
 
 ---
 
 ## 📦 Additional subscriptions (PSG)
 
-These upstream lists refresh independently every 4 hours. The feed names describe their upstream category; **they are not endorsements or guarantees of compatibility/availability**. The `openai` label does not imply that a node provides access to any AI service.
+These upstream lists refresh independently every 4 hours with political promo nodes stripped.
 
-| Feed | Subscribe | Plain text |
-|:-----|:----------|:------------|
-| AI-labelled (`openai`) | [Base64](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/openai.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/openai.txt) |
-| Reality | [Base64](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/reality.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/reality.txt) |
-| Mixed protocols | [Base64](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/mix.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/mix.txt) |
-| VLESS | [Base64](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/vless.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/vless.txt) |
-| Shadowsocks IPv4 | [Base64](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/ss_ipv4.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/ss_ipv4.txt) |
+| Feed | Subscription Link | Plain text |
+|:-----|:------------------|:------------|
+| AI-labelled (`openai`) | [`Copy Subscription`]({RAW}/configs/psg/openai.b64) | [TXT]({RAW}/configs/psg/openai.txt) |
+| Reality | [`Copy Subscription`]({RAW}/configs/psg/reality.b64) | [TXT]({RAW}/configs/psg/reality.txt) |
+| VMess | [`Copy Subscription`]({RAW}/configs/psg/vmess.b64) | [TXT]({RAW}/configs/psg/vmess.txt) |
+| Mixed protocols | [`Copy Subscription`]({RAW}/configs/psg/mix.b64) | [TXT]({RAW}/configs/psg/mix.txt) |
+| VLESS | [`Copy Subscription`]({RAW}/configs/psg/vless.b64) | [TXT]({RAW}/configs/psg/vless.txt) |
+| Shadowsocks IPv4 | [`Copy Subscription`]({RAW}/configs/psg/ss_ipv4.b64) | [TXT]({RAW}/configs/psg/ss_ipv4.txt) |
 
-> These upstream subscriptions are mirrored as provided and are **not** subjected to this repository's country collector TCP test. Check the upstream source and local laws before use.
+> ⚠️ These upstream subscriptions are mirrored as provided and are **not** subjected to the country-feed TCP tester.
 
 ---
 
 ## 🌍 By country
 
-| Country | Working | Protocols | Subscribe |
-|:-------:|:-------:|:----------|:---------:|
+| Country | Working | Protocols | Subscription Link |
+|:-------:|:-------:|:----------|:------------------|
 {country_table}
 
 ---
