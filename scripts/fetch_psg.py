@@ -7,9 +7,9 @@ import subprocess
 import urllib.parse
 
 FEEDS = {
-    "openai": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/openai.b64",
     "reality": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/reality.b64",
     "vmess": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/vmess.b64",
+    "xhttps": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/xhttp.b64",
     "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/mix.b64",
     "vless": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/vless.b64",
     "ss_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/ss_ipv4.b64",
@@ -57,6 +57,12 @@ def main() -> None:
         with open(f"{OUT}/{name}.txt", "w", encoding="utf-8") as f:
             f.write("\n".join(clean_configs) + "\n")
         print(f"{name}: {len(clean_configs)} clean configs (from {len(lines)} raw lines)")
+
+    # Remove the retired feed only after every replacement feed fetched cleanly.
+    for suffix in (".b64", ".txt"):
+        old_path = f"{OUT}/openai{suffix}"
+        if os.path.exists(old_path):
+            os.remove(old_path)
 
 
 if __name__ == "__main__":

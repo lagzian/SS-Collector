@@ -185,9 +185,9 @@ These upstream lists refresh independently every 4 hours with political promo no
 
 | Feed | Subscribe | Plain text |
 |:-----|:----------|:------------|
-| AI-labelled (`openai`) | [Subscribe]({RAW}/configs/psg/openai.b64) | [TXT]({RAW}/configs/psg/openai.txt) |
 | Reality | [Subscribe]({RAW}/configs/psg/reality.b64) | [TXT]({RAW}/configs/psg/reality.txt) |
 | VMess | [Subscribe]({RAW}/configs/psg/vmess.b64) | [TXT]({RAW}/configs/psg/vmess.txt) |
+| XHTTP (`xhttp`, listed as `xhttps`) | [Subscribe]({RAW}/configs/psg/xhttps.b64) | [TXT]({RAW}/configs/psg/xhttps.txt) |
 | Mixed protocols | [Subscribe]({RAW}/configs/psg/mix.b64) | [TXT]({RAW}/configs/psg/mix.txt) |
 | VLESS | [Subscribe]({RAW}/configs/psg/vless.b64) | [TXT]({RAW}/configs/psg/vless.txt) |
 | Shadowsocks IPv4 | [Subscribe]({RAW}/configs/psg/ss_ipv4.b64) | [TXT]({RAW}/configs/psg/ss_ipv4.txt) |

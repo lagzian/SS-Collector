@@ -61,9 +61,9 @@ These upstream lists refresh independently every 4 hours with political promo no
 
 | Feed | Subscribe | Plain text |
 |:-----|:----------|:------------|
-| AI-labelled (`openai`) | [Subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/openai.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/openai.txt) |
 | Reality | [Subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/reality.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/reality.txt) |
 | VMess | [Subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/vmess.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/vmess.txt) |
+| XHTTP (`xhttp`, listed as `xhttps`) | [Subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/xhttps.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/xhttps.txt) |
 | Mixed protocols | [Subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/mix.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/mix.txt) |
 | VLESS | [Subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/vless.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/vless.txt) |
 | Shadowsocks IPv4 | [Subscribe](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/ss_ipv4.b64) | [TXT](https://raw.githubusercontent.com/lagzian/SS-Collector/main/configs/psg/ss_ipv4.txt) |
